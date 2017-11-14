@@ -1,0 +1,1538 @@
+@charset "utf-8";
+/*rewrite browser scrollbar stylesheet*/
+/*滚动条整体部分,必须要设置*/
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: #B0AEDA;
+}
+/*滚动条的轨道*/
+::-webkit-scrollbar-track {
+  width: 8px;
+  background-color: #fff;
+}
+/*滚动条的滑块按钮*/
+::-webkit-scrollbar-thumb {
+  background-color: #8ec060;
+  border: solid 1px #8ec060;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #8ec060;
+}
+/*滚动条的上下两端的按钮*/
+::-webkit-scrollbar-button {
+  height: 0px;
+  background-color: #1f2c5c;
+}
+/* IE下滚动条 */
+/*三角箭头的颜色*/
+* {
+  scrollbar-arrow-color: #1f2c5c;
+  /*滚动条滑块按钮的颜色*/
+  scrollbar-face-color: #8ec060;
+  /*滚动条整体颜色*/
+  scrollbar-highlight-color: #8ec060;
+  /*滚动条阴影*/
+  scrollbar-shadow-color: none;
+  /*滚动条轨道颜色*/
+  scrollbar-track-color: #fff;
+}
+/* reset.css */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+input {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  color: #666;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  /*color:#ff0700;*/
+  text-decoration: none;
+  outline: none;
+}
+input {
+  border: 0;
+  outline: none;
+}
+img {
+  vertical-align: middle;
+  border: none;
+}
+input::-ms-clear {
+  display: none;
+}
+.ovfHiden {
+  overflow: hidden;
+  height: 100%;
+}
+/* project mcins style sheet*/
+body {
+  min-width: 320px;
+  font-size: 12px;
+  font-family: "Microsoft YaHei", sans-serif;
+}
+/* 图片懒加载loading */
+.lazy {
+  background: url(../../../libs/lazyload/loader.gif) 50% no-repeat;
+}
+/* 页脚固定在底部 */
+.fixBottom {
+  position: fixed;
+  bottom: 0;
+}
+input.active {
+  border: 2px solid #8EC060 !important;
+  border-bottom: none !important;
+}
+.bottomLine,
+.ENbottomLine {
+  position: absolute;
+  top: 78px;
+  left: 8px;
+  display: inline-block;
+  width: 240px;
+  height: 2px;
+  z-index: 9999;
+  background: #ccc;
+  display: none;
+}
+.ENbottomLine {
+  width: 110px;
+  top: 60px;
+  left: 10px;
+}
+.bottomLine300 {
+  width: 280px;
+  top: 70px;
+  left: 10px;
+}
+.bottomLine460 {
+  width: 440px;
+  top: 70px;
+  left: 10px;
+}
+.bottomLine140 {
+  width: 120px;
+  top: 70px;
+  left: 10px;
+}
+.ticketLine {
+  background: #808080;
+  width: 960px;
+  height: 1px;
+  margin: 20px auto;
+}
+.dashedLine {
+  width: 960px;
+  border-top: 1px dashed #ccc;
+  margin: 0px auto;
+  margin-bottom: 20px;
+}
+.dashedLine940 {
+  width: 940px;
+  margin: 2px auto;
+  text-align: center;
+}
+.dashedLine940MB10 {
+  width: 940px;
+  margin: 0px auto;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.dashedLine960 {
+  width: 960px;
+  margin: 0px auto;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.nextBtn {
+  overflow: hidden;
+  margin-bottom: 70px;
+  margin-top: 50px;
+}
+.nextBtn a {
+  float: right;
+  display: inline-block;
+  background: #8ec060;
+  border-radius: 2px;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+}
+.nextBtn a:hover {
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+  background: #1f2c5c !important;
+}
+.nextBtn a img {
+  position: relative;
+  left: 30px;
+}
+/* 定义变量 */
+/* 定义颜色变量 */
+/* loading */
+.lm-loading {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 99999;
+  background: #f2f2f2;
+}
+.lm-loading img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+/* 头部样式 */
+.lanmeiHeader {
+  height: 210px;
+  position: relative;
+  background: url("../../../images/EN/navbarBg.png") center no-repeat;
+}
+.lanmeiHeader .lanmeiNav {
+  width: 960px;
+  height: 78px;
+  line-height: 78px;
+  border-bottom: 1px solid #1f2c5c;
+  margin: 0 auto;
+}
+.lanmeiHeader .lanmeiNav .lanmeiLogo {
+  float: left;
+  height: 78px;
+  line-height: 78px;
+}
+.lanmeiHeader .lanmeiNav .lanmeiLogo .navbar-brand {
+  height: 78px;
+}
+.lanmeiHeader .lanmeiNav .lanmeiHeadInfo {
+  float: right;
+  height: 78px;
+  line-height: 78px;
+}
+.lanmeiHeader .lanmeiNav .lanmeiHeadInfo > ul {
+  height: 78px;
+  line-height: 78px;
+}
+.lanmeiHeader .lanmeiNav .lanmeiHeadInfo > ul > li {
+  float: left;
+  position: relative;
+  height: 78px;
+  line-height: 78px;
+  margin-right: 20px;
+  font-size: 14px;
+}
+.lanmeiHeader .lanmeiNav .lanmeiHeadInfo > ul > li a {
+  font-size: 14px;
+}
+.lanmeiHeader .lanmeiNav .lanmeiHeadInfo > ul > li .phoneBtn {
+  font-size: 14px;
+  color: #1f2c5c;
+}
+.lanmeiHeader .lanmeiNav .lanmeiHeadInfo > ul > li .loginBtn {
+  display: inline-block;
+  height: 20px;
+  line-height: 20px;
+  line-height: 7px;
+  color: #1f2c5c;
+  padding: 0;
+}
+.lanmeiHeader .lanmeiNav .lanmeiHeadInfo > ul > li .loginBtn img {
+  margin-right: 6px;
+}
+.lanmeiHeader .lanmeiNav .lanmeiHeadInfo > ul > li .REGISTEREDBtn {
+  display: inline-block;
+  text-align: left;
+  height: 20px;
+  line-height: 20px;
+  line-height: 7px;
+  color: #1f2c5c;
+  padding: 0;
+}
+.lanmeiHeader .lanmeiNav .lanmeiHeadInfo > ul > li .REGISTEREDBtn img {
+  margin-right: 6px;
+}
+.lanmeiHeader .lanmeiNav .lanmeiHeadInfo > ul .nth-child1 {
+  line-height: 52px;
+}
+.lanmeiHeader .lanmeiNav .lanmeiHeadInfo > ul .nth-child1 > img {
+  margin-top: 26px;
+  margin-right: 11px;
+}
+.lanmeiHeader .lanmeiNav .lanmeiHeadInfo > ul .nth-child1 > div {
+  float: right;
+  height: 78px;
+  line-height: 78px;
+}
+.lanmeiHeader .lanmeiNav .lanmeiHeadInfo > ul .nth-child1 > div > span {
+  margin-right: 10px;
+}
+.lanmeiHeader .lanmeiNav .lanmeiHeadInfo > ul .nth-child3 {
+  margin-right: 0;
+}
+.lanmeiHeader .lanmeiNav .lanmeiHeadInfo > ul .languageSelectBox {
+  width: 60px;
+  margin-right: 10px;
+}
+.lanmeiHeader .lanmeiNav .lanmeiHeadInfo > ul .languageSelectBox .languageBox {
+  position: relative;
+  top: 16px;
+  display: inline-block;
+  width: 60px;
+  height: 50px;
+}
+.lanmeiHeader .lanmeiNav .lanmeiHeadInfo > ul .languageSelectBox .languageBox .ENbottomLine {
+  width: 40px;
+  top: 50px;
+  left: 10px;
+}
+.lanmeiHeader .lanmeiNav .lanmeiHeadInfo > ul .languageSelectBox .languageBox .languageSelect {
+  display: inline-block;
+  width: 60px;
+  height: 50px;
+  border: 1px solid transparent;
+  border-bottom: none;
+  background: url("../../../images/EN/selectUSA.png") center no-repeat;
+}
+.lanmeiHeader .lanmeiNav .lanmeiHeadInfo > ul .languageSelectBox .languageBox .active {
+  border-color: #ddd;
+  background-color: #fff;
+}
+.lanmeiHeader .lanmeiNav .lanmeiHeadInfo > ul .languageSelectBox .languageBox .languageDownMenu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 60px;
+  border: 1px solid #ddd;
+  border-top: none;
+  background: #fff;
+  z-index: 999;
+}
+.lanmeiHeader .lanmeiNav .lanmeiHeadInfo > ul .languageSelectBox .languageBox .languageDownMenu > li {
+  height: 50px;
+}
+.lanmeiHeader .lanmeiNav .lanmeiHeadInfo > ul .languageSelectBox .languageBox .languageDownMenu > li a {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.lanmeiHeader .lanmeiNav .lanmeiHeadInfo > ul .languageSelectBox .languageBox .languageDownMenu .nth-child1 a {
+  background: url("../../../images/EN/selectChina.png") center no-repeat;
+}
+.lanmeiHeader .lanmeiNav .lanmeiHeadInfo > ul .languageSelectBox .languageBox .languageDownMenu .nth-child2 a {
+  background: url("../../../images/EN/selectUSA.png") center no-repeat;
+}
+.lanmeiHeader .LMCompanyInfo {
+  position: relative;
+  width: 960px;
+  height: 30px;
+  line-height: 30px;
+  margin: 0 auto;
+}
+.lanmeiHeader .LMCompanyInfo .lm-nav {
+  width: 100%;
+  height: 38px;
+}
+.lanmeiHeader .LMCompanyInfo .lm-nav > li {
+  position: relative;
+  float: left;
+  height: 38px;
+  line-height: 38px;
+  width: 16.66%;
+  padding: 0 10px;
+  text-align: left;
+}
+.lanmeiHeader .LMCompanyInfo .lm-nav > li a {
+  font-weight: bold;
+  font-size: 14px;
+  color: #1f2c5c;
+}
+.lanmeiHeader .LMCompanyInfo .lm-nav > li > i {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-width: 6px 6px 0;
+  border-style: solid;
+  border-color: #1f2c5c transparent transparent;
+  /*灰 透明 透明 */
+}
+.lanmeiHeader .LMCompanyInfo .lm-nav .nth-child1 {
+  width: 16.7%;
+}
+.lanmeiHeader .LMCompanyInfo .lm-nav .active {
+  color: #8EC060;
+}
+.lanmeiHeader .LMCompanyInfo .lm-nav .active a {
+  color: #8ec060;
+}
+.lanmeiHeader .LMCompanyInfo .lm-nav .active i {
+  border-color: #8ec060 transparent transparent;
+  /*灰 透明 透明 */
+}
+.lanmeiHeader .LMCompanyInfo .lm-nav-line {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 10px;
+  width: 940px;
+  height: 1px;
+  background: #ccc;
+  z-index: 999999;
+}
+.lanmeiHeader .LMCompanyInfo .LMCompanyDownMenu {
+  display: none;
+  position: absolute;
+  top: 38px;
+  left: 0px;
+  z-index: 99;
+  width: 960px;
+  height: 240px;
+  line-height: 50px;
+  padding-top: 10px;
+  background: #fff;
+  -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  z-index: 99999;
+}
+.lanmeiHeader .LMCompanyInfo .LMCompanyDownMenu > li {
+  float: left;
+  width: 20%;
+  height: 214px;
+  line-height: 36px;
+}
+.lanmeiHeader .LMCompanyInfo .LMCompanyDownMenu > li > a {
+  width: 100%;
+  height: 36px;
+  line-height: 36px;
+  color: #1f2c5c;
+  font-weight: bold;
+  text-align: left;
+  font-size: 13px;
+  padding-left: 30px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.lanmeiHeader .LMCompanyInfo .LMCompanyDownMenu > li .subMenu > li {
+  height: 36px;
+}
+.lanmeiHeader .LMCompanyInfo .LMCompanyDownMenu > li .subMenu > li > a {
+  height: 36px;
+  display: inline-block;
+  width: 100%;
+  padding-left: 30px;
+  color: #808080;
+  font-size: 13px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.lanmeiHeader .LMCompanyInfo .LMCompanyDownMenu > li .subMenu > li > a:hover {
+  color: #8ec060;
+  transition: all 0.3s;
+}
+.lanmeiHeader .LMCompanyInfo #lm-experience {
+  height: 446px;
+}
+.lanmeiHeader .LMCompanyInfo #lm-community {
+  height: 310px;
+}
+.lanmeiHeader .LMCompanyInfo #about-us li {
+  height: 50px;
+}
+.lanmeiHeader .sliderInfo {
+  width: 960px;
+  height: 43px;
+  line-height: 43px;
+  margin: 0 auto;
+  margin-top: 60px;
+  padding: 0 10px;
+  overflow: hidden;
+}
+.lanmeiHeader .sliderInfo > p {
+  float: left;
+  height: 30px;
+  line-height: 30px;
+  color: #8ec060;
+  font-size: 16px;
+}
+.lanmeiHeader .sliderInfo > p img {
+  margin-right: 10px;
+  vertical-align: text-bottom;
+}
+.lanmeiHeader .sliderInfo ul.line {
+  float: left;
+  height: 30px;
+  overflow: hidden;
+}
+.lanmeiHeader .sliderInfo ul.line li {
+  height: 30px;
+  text-indent: 15px;
+  font-size: 16px;
+  line-height: 30px;
+  list-style: none;
+}
+.lanmeiHeader .sliderInfo ul.line li a {
+  display: inline-block;
+  width: 600px;
+  color: #fff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.lanmeiHeader .sliderInfo .view-all {
+  float: right;
+  height: 30px;
+  line-height: 30px;
+}
+.lanmeiHeader .sliderInfo .view-all a {
+  font-size: 16px;
+  color: #fff;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+.lanmeiHeader .sliderInfo .view-all a:hover {
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  color: #8ec060;
+}
+/* 子页面头部样式 */
+.lanmeiHeader-subpage {
+  height: 200px;
+  background: url("../../../images/EN/subNavbarBg.png") center no-repeat;
+}
+.lanmeiHeader-subpage .lanmeiNav {
+  width: 960px;
+  margin: 0 auto;
+}
+.lanmeiHeader-subpage .lanmeiNav .lanmeiLogo {
+  float: left;
+  height: 100px;
+  line-height: 100px;
+  margin-top: 16px;
+}
+.lanmeiHeader-subpage .lanmeiNav .lanmeiLogo .navbar-brand {
+  height: 100px;
+}
+.lanmeiHeader-subpage .lanmeiNav .lanmeiHeadInfo {
+  float: left;
+  margin-left: 20px;
+  margin-top: 16px;
+}
+.lanmeiHeader-subpage .lanmeiNav .lanmeiHeadInfo > ul > li {
+  float: left;
+  position: relative;
+  height: 100px;
+  line-height: 100px;
+  margin-right: 20px;
+  font-size: 14px;
+}
+.lanmeiHeader-subpage .lanmeiNav .lanmeiHeadInfo > ul > li a {
+  font-size: 14px;
+}
+.lanmeiHeader-subpage .lanmeiNav .lanmeiHeadInfo > ul > li .phoneBtn {
+  font-size: 14px;
+  color: #1f2c5c;
+}
+.lanmeiHeader-subpage .lanmeiNav .lanmeiHeadInfo > ul .nth-child1 {
+  line-height: 52px;
+}
+.lanmeiHeader-subpage .lanmeiNav .lanmeiHeadInfo > ul .nth-child1 > img {
+  margin-top: 26px;
+  margin-right: 11px;
+}
+.lanmeiHeader-subpage .lanmeiNav .lanmeiHeadInfo > ul .nth-child1 > div {
+  float: right;
+  height: 78px;
+  line-height: 78px;
+}
+.lanmeiHeader-subpage .lanmeiNav .lanmeiHeadInfo > ul .nth-child1 > div > span {
+  margin-right: 10px;
+}
+/* 页脚样式 */
+.footerInfo {
+  width: 100%;
+  height: 270px;
+  background: url("../../../images/EN/footerBg.jpg") no-repeat;
+}
+.footerInfo .footerBg {
+  width: 100%;
+  height: 270px;
+  background: rgba(31, 44, 92, 0.7);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#B21F2C5C", endColorstr="#B21F2C5C");
+}
+.footerInfo .footerBg > div {
+  width: 960px;
+  margin: 0 auto;
+}
+.footerInfo .HelpfulInformation {
+  height: 70px;
+  line-height: 70px;
+  padding: 0 10px;
+  border-bottom: 1px solid #fff;
+}
+.footerInfo .HelpfulInformation > p {
+  float: left;
+  font-weight: bold;
+  font-size: 18px;
+  color: #ffffff;
+}
+.footerInfo .HelpfulInformation .languageSelectBox {
+  height: 70px;
+  float: right;
+  font-weight: bold;
+  font-size: 18px;
+  color: #ffffff;
+}
+.footerInfo .HelpfulInformation .languageSelectBox .languageBox {
+  position: relative;
+  top: 10px;
+  display: inline-block;
+  width: 60px;
+  height: 50px;
+  vertical-align: top;
+}
+.footerInfo .HelpfulInformation .languageSelectBox .languageBox .ENbottomLine {
+  width: 40px;
+  top: 50px;
+  left: 10px;
+}
+.footerInfo .HelpfulInformation .languageSelectBox .languageBox .languageSelect {
+  display: inline-block;
+  width: 60px;
+  height: 50px;
+  border: 1px solid transparent;
+  border-bottom: none;
+  background: url("../../../images/EN/selectUSA.png") center no-repeat;
+}
+.footerInfo .HelpfulInformation .languageSelectBox .languageBox .active {
+  border-color: #ddd;
+  background-color: #fff;
+}
+.footerInfo .HelpfulInformation .languageSelectBox .languageBox .languageDownMenu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 60px;
+  border: 1px solid #ddd;
+  border-top: none;
+  background: #fff;
+  z-index: 999;
+}
+.footerInfo .HelpfulInformation .languageSelectBox .languageBox .languageDownMenu > li {
+  height: 50px;
+}
+.footerInfo .HelpfulInformation .languageSelectBox .languageBox .languageDownMenu > li a {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.footerInfo .HelpfulInformation .languageSelectBox .languageBox .languageDownMenu .nth-child1 a {
+  background: url("../../../images/EN/selectChina.png") center no-repeat;
+}
+.footerInfo .HelpfulInformation .languageSelectBox .languageBox .languageDownMenu .nth-child2 a {
+  background: url("../../../images/EN/selectUSA.png") center no-repeat;
+}
+.footerInfo .contactUs {
+  height: 60px;
+  padding: 20px 10px;
+  font-size: 14px;
+  color: #ffffff;
+}
+.footerInfo .contactUs .nth-child1 {
+  float: left;
+}
+.footerInfo .contactUs .nth-child1 span {
+  font-size: 14px;
+  color: #ffffff;
+  margin-left: 20px;
+}
+.footerInfo .contactUs .nth-child2 {
+  float: right;
+}
+.footerInfo .contactUs .nth-child2 span {
+  font-size: 14px;
+  color: #ffffff;
+}
+.footerInfo .contactUs .nth-child2 a {
+  color: #fff;
+  -webkit-transition-duration: .5s;
+  transition-duration: .5s;
+}
+.footerInfo .contactUs .nth-child2 a i {
+  font-size: 26px;
+  margin-left: 18px;
+}
+.footerInfo .contactUs .nth-child2 a:hover {
+  -webkit-transition-duration: .5s;
+  transition-duration: .5s;
+  color: #8ec060;
+}
+.footerInfo .location {
+  padding: 10px;
+}
+.footerInfo .location a {
+  font-size: 14px;
+  color: #ffffff;
+  margin-left: 20px;
+}
+.footerInfo .LanmeiAirlinesBerhad {
+  height: 60px;
+  padding: 20px 10px;
+  font-size: 14px;
+  color: #ffffff;
+}
+.footerInfo .LanmeiAirlinesBerhad > a {
+  float: left;
+}
+.footerInfo .LanmeiAirlinesBerhad > a img {
+  vertical-align: text-bottom;
+}
+.footerInfo .LanmeiAirlinesBerhad > div {
+  float: left;
+  margin-left: 20px;
+}
+.footerInfo .LanmeiAirlinesBerhad > div .p1 {
+  font-size: 14px;
+  color: #ffffff;
+  display: inline-block;
+  padding-top: 12px;
+  visibility: hidden;
+}
+.footerInfo .LanmeiAirlinesBerhad > div .p2 {
+  font-size: 14px;
+  color: #ffffff;
+}
+.footerInfo .LanmeiAirlinesBerhad > div .p2 a {
+  color: #8ec060;
+}
+/* 返回页面顶部 */
+.BackToTop {
+  position: fixed;
+  right: 0;
+  bottom: 130px;
+  z-index: 99999;
+  border-radius: 2px;
+  width: 60px;
+  height: 150px;
+  padding-top: 9px;
+  text-align: center;
+  cursor: pointer;
+  background: #8ec060;
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
+}
+.BackToTop .QRcode {
+  margin-bottom: 15px;
+}
+.BackToTop .QRcode p {
+  line-height: 14px;
+  margin-bottom: 8px;
+}
+.BackToTop .QRcode .small-code:hover + .big-code {
+  display: block;
+}
+.BackToTop .QRcode .big-code {
+  display: none;
+  position: absolute;
+  left: -200px;
+  top: 0;
+}
+.BackToTop p {
+  font-size: 12px;
+  color: #fff;
+  letter-spacing: 0;
+  text-align: center;
+}
+.BackToTop:hover {
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
+  background: #8ec060;
+  border-color: transparent;
+}
+/* 出发地和目的地选择 选择时间和选择航班*/
+.selectAir {
+  height: 200px;
+}
+.selectAir .local_timeSelect,
+.selectAir .passenger_Select {
+  float: left;
+  width: 360px;
+  height: 220px;
+}
+.selectAir .local_timeSelect > div,
+.selectAir .passenger_Select > div {
+  width: 220px;
+  height: 82px;
+  float: left;
+  position: relative;
+  margin-bottom: 20px;
+}
+.selectAir .local_timeSelect > div p span,
+.selectAir .passenger_Select > div p span {
+  font-weight: bold;
+  font-size: 20px;
+  color: #8ec060;
+  text-align: left;
+}
+.selectAir .local_timeSelect > div p img,
+.selectAir .passenger_Select > div p img {
+  margin-right: 30px;
+  vertical-align: top;
+}
+.selectAir .local_timeSelect > div input,
+.selectAir .passenger_Select > div input {
+  margin-top: 10px;
+  border-bottom: none;
+  font-size: 14px;
+  color: #121c3e;
+  padding: 0 20px;
+  padding-right: 40px;
+  background: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 2px;
+  width: 218px;
+  height: 38px;
+  line-height: 38px;
+  text-overflow: ellipsis;
+}
+.selectAir .local_timeSelect > div input :focus,
+.selectAir .passenger_Select > div input :focus {
+  border-color: #8ec060;
+}
+.selectAir .local_timeSelect > div #timeFrom,
+.selectAir .passenger_Select > div #timeFrom,
+.selectAir .local_timeSelect > div #timeTo,
+.selectAir .passenger_Select > div #timeTo {
+  width: 220px;
+}
+.selectAir .local_timeSelect > div > img,
+.selectAir .passenger_Select > div > img {
+  position: absolute;
+  right: 50px;
+  top: 51px;
+}
+.selectAir .local_timeSelect > div #localChangeImg,
+.selectAir .passenger_Select > div #localChangeImg {
+  position: absolute;
+  right: 10px;
+  top: 44px;
+  display: inline-block;
+  width: 20px;
+  height: 18px;
+  cursor: pointer;
+}
+.selectAir .local_timeSelect > div .clear,
+.selectAir .passenger_Select > div .clear {
+  display: none;
+  position: absolute;
+  right: 69px;
+  top: 44px;
+  font-size: 12px !important;
+  cursor: pointer;
+}
+.selectAir .local_timeSelect > div .img01,
+.selectAir .passenger_Select > div .img01 {
+  background: url("../../../images/EN/localChange2-active.png") no-repeat;
+}
+.selectAir .local_timeSelect > div .img02,
+.selectAir .passenger_Select > div .img02 {
+  background: url("../../../images/EN/localChange-active.png") no-repeat;
+}
+.selectAir .local_timeSelect .localSelectEnd .clear,
+.selectAir .passenger_Select .localSelectEnd .clear {
+  right: 30px;
+}
+.selectAir .local_timeSelect {
+  width: 580px;
+}
+.selectAir .local_timeSelect .localSelectStart {
+  width: 260px;
+}
+.selectAir .local_timeSelect .timeSelectStart {
+  width: 260px;
+}
+.selectAir .local_timeSelect .timeSelectEnd img,
+.selectAir .local_timeSelect .localSelectEnd img {
+  right: 13px !important;
+}
+.selectAir .local_timeSelect .timeSelectEnd {
+  visibility: hidden;
+}
+.selectAir .passenger_Select .AdultSelect,
+.selectAir .passenger_Select .ChildSelect,
+.selectAir .passenger_Select .InfantSelect {
+  width: 155px;
+}
+.selectAir .passenger_Select .AdultSelect input,
+.selectAir .passenger_Select .ChildSelect input,
+.selectAir .passenger_Select .InfantSelect input {
+  width: 155px;
+}
+.selectAir .passenger_Select .AdultSelect > div,
+.selectAir .passenger_Select .ChildSelect > div,
+.selectAir .passenger_Select .InfantSelect > div {
+  position: relative;
+  width: 155px;
+  height: 40px;
+}
+.selectAir .passenger_Select .AdultSelect > div .addArrow,
+.selectAir .passenger_Select .ChildSelect > div .addArrow,
+.selectAir .passenger_Select .InfantSelect > div .addArrow,
+.selectAir .passenger_Select .AdultSelect > div .downArrow,
+.selectAir .passenger_Select .ChildSelect > div .downArrow,
+.selectAir .passenger_Select .InfantSelect > div .downArrow {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  display: inline-block;
+  width: 16px;
+  height: 20px;
+  line-height: 30px;
+  cursor: pointer;
+  z-index: 99;
+}
+.selectAir .passenger_Select .AdultSelect > div .downArrow,
+.selectAir .passenger_Select .ChildSelect > div .downArrow,
+.selectAir .passenger_Select .InfantSelect > div .downArrow {
+  top: 30px;
+  line-height: 10px;
+}
+.selectAir .passenger_Select .AdultSelect p img,
+.selectAir .passenger_Select .ChildSelect p img,
+.selectAir .passenger_Select .InfantSelect p img {
+  margin-right: 10px;
+}
+.selectAir .passenger_Select .ChildSelect .ageTip,
+.selectAir .passenger_Select .InfantSelect .ageTip {
+  position: absolute;
+  bottom: -30px;
+  left: 26px;
+  color: #ccc;
+}
+.selectAir .passenger_Select .ChildSelect {
+  margin-left: 40px;
+}
+.selectAir .passenger_Select .ChildSelect .ageTip {
+  left: 43px !important;
+}
+.selectAir .passenger_Select .InfantSelect {
+  width: 100px;
+}
+.selectAir .passenger_Select .CabinSelect {
+  width: 260px;
+}
+.selectAir .passenger_Select .searchAir {
+  width: 100px;
+  margin-top: 32px;
+}
+.selectAir .passenger_Select .searchAir a {
+  background: #8ec060;
+  border-radius: 2px;
+  width: 90px;
+  height: 40px;
+  line-height: 28px;
+  font-size: 14px;
+  color: #ffffff;
+  text-align: center;
+}
+.selectAir .passenger_Select .searchAir a:hover {
+  background: #1f2c5c;
+}
+.selectAir .passenger_Select .searchAir .active {
+  background: #1f2c5c;
+}
+.selectAir .bottomLine {
+  width: 198px;
+}
+.selectAir .menu-com {
+  display: none;
+  position: absolute;
+  top: 75px;
+  left: 0;
+  width: 218px;
+  background: #fff;
+  border: 2px solid #8ec060;
+  z-index: 999;
+  border-top: none;
+  height: 220px;
+  overflow-y: scroll;
+}
+.selectAir .menu-com > li {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  overflow: hidden;
+}
+.selectAir .menu-com > li a {
+  display: inline-block;
+  width: 100%;
+  height: 40px;
+  font-size: 14px;
+  padding: 0px 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.selectAir .menu-com > li a:hover {
+  background: #8ec060;
+  color: #fff;
+}
+.selectAir .flightMenu {
+  width: 480px;
+  top: 71px;
+}
+.selectAir .CabinMenu {
+  height: 100px;
+}
+/* 选择航班路线 */
+.flightSelectWrapper {
+  width: 960px;
+  overflow: hidden;
+  padding: 0 10px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.flightSelectWrapper .flightSelectCommon {
+  border: 1px solid #ccc;
+  margin-bottom: 30px;
+}
+.flightSelectWrapper .flightSelectCommon .flightSelectTitle {
+  overflow: hidden;
+  padding: 0 30px;
+  height: 40px;
+  line-height: 40px;
+  background: #8ec060;
+  border-bottom-right-radius: 30px;
+}
+.flightSelectWrapper .flightSelectCommon .flightSelectTitle > h2 {
+  float: left;
+  height: 40px;
+  line-height: 40px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #fff;
+}
+.flightSelectWrapper .flightSelectCommon .flightSelectTitle > div {
+  float: left;
+  width: 500px;
+  margin-left: 180px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+.flightSelectWrapper .flightSelectCommon .flightSelectTitle > div span {
+  color: #121c3e;
+}
+.flightSelectWrapper .flightSelectCommon .flightSelectTitle > p {
+  float: right;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  color: #ffffff;
+}
+.flightSelectWrapper .flightSelectCommon .flightListCommon {
+  height: 182px;
+  padding: 10px 30px 20px 30px;
+}
+.flightSelectWrapper .flightSelectCommon .flightListCommon .flightListCommonLeft,
+.flightSelectWrapper .flightSelectCommon .flightListCommon .flightListCommonRight {
+  width: 50%;
+  position: relative;
+  float: left;
+}
+.flightSelectWrapper .flightSelectCommon .flightListCommon .flightListCommonLeft > .nth-child1,
+.flightSelectWrapper .flightSelectCommon .flightListCommon .flightListCommonRight > .nth-child1 {
+  color: #808080;
+}
+.flightSelectWrapper .flightSelectCommon .flightListCommon .flightListCommonLeft > .nth-child1 span,
+.flightSelectWrapper .flightSelectCommon .flightListCommon .flightListCommonRight > .nth-child1 span {
+  color: #8ec060;
+}
+.flightSelectWrapper .flightSelectCommon .flightListCommon .flightListCommonLeft > .nth-child2,
+.flightSelectWrapper .flightSelectCommon .flightListCommon .flightListCommonRight > .nth-child2 {
+  width: 100%;
+  height: 90px;
+  padding-top: 20px;
+  text-align: center;
+}
+.flightSelectWrapper .flightSelectCommon .flightListCommon .flightListCommonLeft > .nth-child2 > h2,
+.flightSelectWrapper .flightSelectCommon .flightListCommon .flightListCommonRight > .nth-child2 > h2 {
+  font-weight: bold;
+  font-size: 18px;
+  color: #1f2c5c;
+}
+.flightSelectWrapper .flightSelectCommon .flightListCommon .flightListCommonLeft > .nth-child2 .p1,
+.flightSelectWrapper .flightSelectCommon .flightListCommon .flightListCommonRight > .nth-child2 .p1 {
+  font-size: 14px;
+  color: #1f2c5c;
+}
+.flightSelectWrapper .flightSelectCommon .flightListCommon .flightListCommonLeft > .nth-child2 .p2,
+.flightSelectWrapper .flightSelectCommon .flightListCommon .flightListCommonRight > .nth-child2 .p2 {
+  font-size: 14px;
+  color: #808080;
+  margin-top: 3px;
+}
+.flightSelectWrapper .flightSelectCommon .flightListCommon .flightListCommonLeft > .nth-child3 .p1,
+.flightSelectWrapper .flightSelectCommon .flightListCommon .flightListCommonRight > .nth-child3 .p1,
+.flightSelectWrapper .flightSelectCommon .flightListCommon .flightListCommonLeft > .nth-child3 .p2,
+.flightSelectWrapper .flightSelectCommon .flightListCommon .flightListCommonRight > .nth-child3 .p2 {
+  font-size: 14px;
+  color: #1f2c5c;
+  margin-bottom: 10px;
+}
+.flightSelectWrapper .flightSelectCommon .flightListCommon .flightListCommonLeft > .nth-child3 .p1 span,
+.flightSelectWrapper .flightSelectCommon .flightListCommon .flightListCommonRight > .nth-child3 .p1 span,
+.flightSelectWrapper .flightSelectCommon .flightListCommon .flightListCommonLeft > .nth-child3 .p2 span,
+.flightSelectWrapper .flightSelectCommon .flightListCommon .flightListCommonRight > .nth-child3 .p2 span {
+  color: #808080;
+}
+.flightSelectWrapper .flightSelectCommon .flightListCommon .flightListCommonLeft > .nth-child4,
+.flightSelectWrapper .flightSelectCommon .flightListCommon .flightListCommonRight > .nth-child4 {
+  position: absolute;
+  top: 55px;
+  right: 0px;
+}
+.flightSelectWrapper .flightSelectCommon .flightListCommon .flightListCommonLeft > .nth-child4 p,
+.flightSelectWrapper .flightSelectCommon .flightListCommon .flightListCommonRight > .nth-child4 p {
+  font-size: 14px;
+  color: #cccccc;
+}
+.flightSelectWrapper .flightSelectCommon .flightListCommon .flightListCommonRight > .nth-child1 {
+  height: 20px;
+  text-align: right;
+  font-size: 14px;
+  color: #808080;
+}
+.flightSelectWrapper .flightSelectCommon .flightListCommon .flightListCommonRight > .nth-child1 span {
+  color: #1f2c5c;
+}
+.flightSelectWrapper .flightSelectCommon .flightListCommon .flightListCommonRight > .nth-child3 {
+  text-align: right;
+}
+.flightSelectWrapper .flightSelectCommon .flightListLine {
+  position: relative;
+  width: 900px;
+  margin: 0 auto;
+  border: none;
+}
+.flightSelectWrapper .flightSelectCommon .flightListLine p {
+  position: absolute;
+  top: -2px;
+  left: 380px;
+  width: 130px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 14px;
+  text-align: center;
+  border: 1px solid #8ec060;
+  color: #8ec060;
+  z-index: 99;
+  background: #fff;
+}
+.flightSelectWrapper .flightSelectCommon .flightListLine p span {
+  color: #808080;
+}
+.flightSelectWrapper .flightSelectCommon .flightListLine p span b {
+  font-weight: 100;
+}
+.flightSelectWrapper .flightSelect2 .flightSelectTitle {
+  background: #4aa374;
+}
+/* 修改行程日期 选择日期和选择时间页面 */
+.changeSearch {
+  width: 960px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.changeSearch .changeSearchTitle {
+  height: 36px;
+  line-height: 36px;
+}
+.changeSearch .changeSearchTitle > h2 {
+  float: left;
+  font-weight: bold;
+  font-size: 20px;
+  color: #121c3e;
+  text-align: left;
+}
+.changeSearch .changeSearchTitle > h2 img {
+  margin-right: 20px;
+}
+.changeSearch .selectWay {
+  height: 84px;
+  padding: 30px 20px;
+}
+.changeSearch .selectWay > a {
+  display: inline-block;
+  border-radius: 100px;
+  width: 100px;
+  height: 24px;
+  line-height: 24px;
+  font-size: 14px;
+  color: #1f2c5c;
+  text-align: center;
+  margin-right: 20px;
+}
+.changeSearch .selectWay > a.active {
+  background: #8ec060;
+  color: #ffffff;
+}
+.changeSearch .selectWay .Stopover {
+  width: 170px;
+}
+.departureDate {
+  float: right;
+  font-size: 14px;
+  color: #808080;
+  text-align: left;
+}
+.departureDate label {
+  position: relative;
+}
+.departureDate label i {
+  display: inline-block;
+  border: 1px solid #1f2c5c;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: text-top;
+  cursor: pointer;
+}
+.departureDate label b {
+  display: none;
+  position: absolute;
+  left: 3px;
+  top: 13px;
+  background: #8ec060;
+  width: 11px;
+  height: 11px;
+  border-radius: 100%;
+}
+.departureDate label span {
+  cursor: pointer;
+}
+.departureDate .nth-child1 {
+  margin-right: 30px;
+}
+/* 购买机票流程 */
+.buyTicketList {
+  width: 960px;
+  height: 180px;
+  margin: 0 auto;
+  padding: 30px 10px 50px 10px;
+}
+.buyTicketList > dl {
+  float: left;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  color: #ccc;
+}
+.buyTicketList .SelectDate {
+  color: #1f2c5c;
+}
+.buyTicketList .circleArrow {
+  margin: 5px 3px;
+  margin-top: 40px;
+}
+/* 配置屏幕 针对小屏幕*/
+@media screen and (max-width: 960px) {
+  .footerInfo,
+  .carousel-inner,
+  .lanmeiHeader {
+    width: 960px;
+  }
+}
+/* 修改页面顶部 */
+@media screen and (max-width: 1366px) {
+  .lanmeiHeader {
+    height: 170px;
+  }
+  .lanmeiHeader .headImg {
+    height: 170px;
+  }
+  .lanmeiHeader .lanmeiNav {
+    height: 60px;
+  }
+  .lanmeiHeader .lanmeiNav .lanmeiLogo {
+    height: 60px;
+    line-height: 60px;
+  }
+  .lanmeiHeader .lanmeiNav .lanmeiLogo .navbar-brand {
+    height: 60px;
+    padding: 10px;
+  }
+  .lanmeiHeader .lanmeiNav .lanmeiLogo .navbar-brand img {
+    width: 110px;
+  }
+  .lanmeiHeader .lanmeiNav .lanmeiHeadInfo {
+    height: 60px;
+    line-height: 60px;
+  }
+  .lanmeiHeader .lanmeiNav .lanmeiHeadInfo > ul {
+    height: 60px;
+    line-height: 60px;
+  }
+  .lanmeiHeader .lanmeiNav .lanmeiHeadInfo > ul > li {
+    height: 60px;
+    line-height: 60px;
+    font-size: 12px;
+  }
+  .lanmeiHeader .lanmeiNav .lanmeiHeadInfo > ul > li .languageDownMenu {
+    top: 50px !important;
+  }
+  .lanmeiHeader .lanmeiNav .lanmeiHeadInfo > ul > li .ENbottomLine {
+    top: 50px !important;
+  }
+  .lanmeiHeader .lanmeiNav .lanmeiHeadInfo > ul .nth-child1 {
+    line-height: 32px;
+  }
+  .lanmeiHeader .lanmeiNav .lanmeiHeadInfo > ul .nth-child1 > img {
+    margin-top: 20px;
+  }
+  .lanmeiHeader .lanmeiNav .lanmeiHeadInfo > ul .languageSelectBox .languageBox {
+    top: 5px;
+  }
+  .lanmeiHeader .sliderInfo {
+    margin-top: 37px;
+  }
+  .selectAir .local_timeSelect > div > img,
+  .selectAir .passenger_Select > div > img {
+    top: 52px;
+  }
+  .lanmeiHeader .lanmeiNav .lanmeiHeadInfo > ul .nth-child4 .languageBox {
+    top: 3px;
+  }
+}
+/* 移动端新增代码 */
+.m-header {
+  display: none;
+}
+@media screen and (max-width: 992px) {
+  .lanmeiHeader-subpage {
+    display: none;
+  }
+  .footerInfo {
+    display: none;
+  }
+  .BackToTop {
+    display: none;
+    width: 0.3rem;
+    height: 0.6rem;
+    padding: 0.08rem 0 0.1rem;
+  }
+  .BackToTop .QRcode {
+    height: 0.2rem;
+    line-height: 0.2rem;
+    margin-bottom: 0.04rem;
+  }
+  .BackToTop .QRcode p {
+    display: none;
+  }
+  .BackToTop .QRcode .small-code {
+    width: 0.2rem;
+  }
+  .BackToTop .QRcode .bg-code {
+    width: 1rem;
+    left: -1rem;
+  }
+  .BackToTop .top {
+    height: 0.2rem;
+    line-height: 0.2rem;
+  }
+  .BackToTop .top img {
+    width: 0.14rem;
+  }
+  .BackToTop .top p {
+    display: none;
+  }
+  .m-header {
+    display: block;
+    position: fixed;
+    top: 0;
+    z-index: 9;
+    width: 100%;
+    height: 0.4rem;
+    background: #1f2c5c;
+  }
+  .m-header i {
+    float: left;
+    color: #fff;
+    font-size: 0.16rem;
+    margin-top: 0.04rem;
+    margin-left: 0.1rem;
+  }
+  .m-header h2 {
+    width: 100%;
+    height: 0.4rem;
+    line-height: 0.4rem;
+    color: #fff;
+    font-size: 0.16rem;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 767px) {
+  .BackToTop {
+    display: none;
+  }
+}
+/* 登录窗口适配 */
+@media screen and (max-width: 500px) {
+  .modal .modal-dialog {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+  .modal .modal-dialog .modal-content {
+    width: 100%;
+  }
+  .modal .modal-dialog .modal-content .modal-header {
+    background-size: 110px 28px;
+    padding: 8px;
+  }
+  .modal .modal-dialog .modal-content .modal-header .close {
+    top: 0;
+    font-size: 14px;
+  }
+  .modal .modal-dialog .modal-content .modal-header .close span {
+    top: -6px;
+    font-size: 24px;
+  }
+  .modal .modal-dialog .modal-content .modal-body .loginTitle {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  .modal .modal-dialog .modal-content .modal-body form {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .modal .modal-dialog .modal-content .modal-body form input,
+  .modal .modal-dialog .modal-content .modal-body form .on_changes,
+  .modal .modal-dialog .modal-content .modal-body form button {
+    width: 90%;
+  }
+  .modal .modal-dialog .modal-content .modal-body form input {
+    height: 40px;
+    font-size: 12px;
+  }
+  .modal .modal-dialog .modal-content .modal-body form #LanmeiPassword {
+    margin-top: 10px;
+  }
+  .modal .modal-dialog .modal-content .modal-body form .on_changes {
+    top: 39px;
+    left: 5%;
+  }
+  .modal .modal-dialog .modal-content .modal-body form #f-LanmeiPassword {
+    width: 50%;
+  }
+  .modal .modal-dialog .modal-content .modal-body form #f-getPasswordBtn {
+    width: 38%;
+    margin-left: 2%;
+  }
+  .modal .modal-dialog .modal-content .modal-body form .userLoginBtn {
+    margin-top: 0;
+  }
+  .modal .modal-dialog .modal-content .modal-body form .agree {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .modal .modal-dialog .modal-content .modal-body form .agree p {
+    width: 90%;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .modal .modal-dialog .modal-content .modal-body form .agree p a {
+    font-size: 12px;
+  }
+  .modal .modal-dialog .modal-content .modal-body form .agree span {
+    margin-top: 1px;
+  }
+  .modal .modal-dialog .modal-content .modal-body .registerWrapper > h2 {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  .modal .modal-dialog .modal-content .modal-body .registerWrapper > img {
+    display: none;
+  }
+  .modal .modal-dialog .modal-content .modal-body .registerWrapper .registerContent {
+    margin-top: 10px;
+  }
+  .modal .modal-dialog .modal-content .modal-body .registerWrapper .registerContent .agree {
+    padding: 0 !important;
+    width: 90%;
+    margin: 0 auto 10px;
+  }
+  .modal .modal-dialog .modal-content .modal-body .registerWrapper .registerContent .agree p {
+    width: 88%;
+  }
+  .modal .modal-dialog .modal-content .modal-body .registerWrapper .registerInfo input {
+    padding-left: 50px !important;
+  }
+  .modal .modal-dialog .modal-content .modal-body .registerWrapper .registerInfo img {
+    left: 36px;
+    top: 14px;
+  }
+  .modal .modal-dialog .modal-content .modal-body .registerWrapper .registerInfo p {
+    padding: 1px 10px 1px 29px;
+  }
+  .modal .modal-dialog .modal-content .modal-body .registerWrapper .registerPassword img,
+  .modal .modal-dialog .modal-content .modal-body .registerWrapper .repeatPassword img {
+    left: 36px;
+    top: 10px;
+  }
+  .modal .modal-dialog .modal-content .modal-body .registerWrapper .registerPassword p,
+  .modal .modal-dialog .modal-content .modal-body .registerWrapper .repeatPassword p {
+    padding: 1px 10px 1px 29px;
+  }
+  .modal .modal-dialog .modal-content .modal-body .registerWrapper .registerPassword p span,
+  .modal .modal-dialog .modal-content .modal-body .registerWrapper .repeatPassword p span {
+    display: none;
+  }
+  .modal .modal-dialog .modal-content .modal-footer {
+    padding-bottom: 20px;
+  }
+  #logonModal .agree p {
+    display: none;
+    width: 65%;
+  }
+  #logonModal .agree span {
+    display: none;
+  }
+  #logonModal .agree a {
+    height: 25px;
+    line-height: 25px;
+  }
+}

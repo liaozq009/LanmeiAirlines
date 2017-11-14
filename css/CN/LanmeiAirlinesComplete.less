@@ -1,0 +1,383 @@
+
+.buyTicketList{
+	.SelectFlight,.PassengerInformation,.LanmeiPay,.Complete{color:#1f2c5c;}
+}
+
+/* 完成信息展示 */
+.completeInfo{
+	width: 940px;
+	height: 150px;
+	padding:0 10px;
+	margin:0 auto;
+	padding-bottom: 50px;
+	border-bottom:1px solid #ccc;
+	>div{
+		display: inline-block;
+		width: 138px;
+		height: 104px;
+		margin-left: 130px;
+		margin-right: 38px;
+		vertical-align: bottom;
+	}
+	p{
+		display: inline-block;
+		width: 470px;
+		height: 104px;
+		font-size:14px;
+		color:#808080;
+		line-height: 20px;
+		a{color:#00908c;}
+		span{color:#8ec060;}
+	}
+}
+
+/* 计算机码 */
+.computerCode{
+	position: relative;
+	width: 960px;
+	overflow: hidden;
+	margin:0 auto;
+	padding:10px 0 50px 0;
+	.bankCode,.thankInfo{
+		float: left;
+		width: 460px;
+		height: 120px;
+	}
+	.bankCode{
+		position: relative;
+		img{
+			position: absolute;
+			left:4px;
+			z-index: -1;
+		}
+		p{
+			margin-left: 60px;
+			margin-bottom: 8px;
+			font-size:14px;
+			color:#808080;
+			span{
+				font-weight:bold;
+				font-size:18px;
+				color:#1f2c5c;
+				margin-left: 30px;
+			}
+		}
+		.p1{
+			margin-top: 22px;
+		}
+	}
+	.thankInfo{
+		margin-left: 30px;
+		font-size:14px;
+		color:#808080;
+		line-height: 30px;
+	}
+	.verticalLine{
+		position: absolute;
+		left: 480px;
+		top: 30px;
+		background:#cccccc;
+		width:1px;
+		height:90px;
+	}
+}
+
+/* 乘客信息 */
+.passengerInfoDetail{
+	width: 960px;
+	margin: 0 auto;
+	padding:0 10px;
+	.passengerInfoDetailTitle{
+		line-height: 36px;
+		margin-bottom: 8px;
+		font-size:14px;
+		color:#808080;
+	}
+	.passengerInfoDetailContent{
+		overflow: hidden;
+		>div{
+			float: left;
+			width:300px;
+			height:100px;
+			border-radius:2px;
+			margin-left: 20px;
+			margin-bottom: 20px;
+			background: url(../../images/EN/passengerBg.png) no-repeat;
+			.passengerBg{
+				width:300px;
+				height:100px;
+				text-align: center;
+				padding-top: 20px;
+				h2{
+					font-weight:bold;
+					font-size:20px;
+					color:#ffffff;
+				}
+				p{
+					margin-top: 20px;
+					font-size:14px;
+					color:#ffffff;
+					span{
+						font-weight:bold;
+						font-size:18px;
+					}
+				}
+			}
+		}
+		.passenger1,.passenger4{
+			margin-left: 0;
+		}
+		.passenger1{
+			.passengerBg{
+				background:rgba(142,192,96,0.70);
+				filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#B28EC060,endColorstr=#B28EC060);
+			}
+		}
+		.passenger2{
+			.passengerBg{
+				background:rgba(73,163,116,0.70);
+				filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#B249A374,endColorstr=#B249A374);
+			}
+		}
+		.passenger3{
+			.passengerBg{
+				background:rgba(0,144,140,0.70);
+				filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#B200908C,endColorstr=#B200908C);
+			}
+		}
+		.passenger4{
+			.passengerBg{
+				background:rgba(0,108,147,0.70);
+				filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#B2006C93,endColorstr=#B2006C93);
+			}
+		}
+		.passenger5{
+			.passengerBg{
+				background:rgba(0,64,144,0.70);
+				filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#B2004090,endColorstr=#B2004090);
+			}
+		}
+	}
+	.contactInformation{
+		// border-bottom:1px dashed #ccc;
+		padding-bottom: 20px;
+		h2{
+			font-weight:bold;
+			font-size:14px;
+			color:#1f2c5c;
+		}
+		p{
+			font-size:14px;
+			color:#808080;
+			margin-top: 10px;
+		}
+	}
+}
+
+
+/* 支付 */
+.ticketFareWrapper{
+	width: 960px;
+	margin: 0 auto;
+	padding:0 10px;
+	margin-bottom: 90px;
+	.ticketFareTitle{
+		height: 36px;
+		line-height: 36px;
+		margin-bottom: 30px;
+		>h2{
+			float: left;
+			font-weight:bold;
+			font-size:20px;
+			color:#121c3e;
+			text-align:left;
+			img{margin-right: 20px;}
+		}
+	}
+	.ticketFareContent{
+		.ticketFare,.fareInformation,.taxesSurcharges{
+			width:960px;
+			margin:0 auto;
+			padding:0 20px;
+			>ul{
+				overflow:hidden;
+				li{
+					float: left;
+					font-weight:bold;
+					font-size:18px;
+					color:#666;
+					width: 50%;
+					margin-bottom: 10px;
+					text-align: center;
+				}
+			}
+			.priceTitleComment{
+				padding-bottom: 10px;
+				// border-bottom:1px dashed #ccc;
+				.nth-child1,.nth-child3{text-align: left;}
+				.nth-child2,.nth-child4{text-align: right;}
+			}
+			.priceContentComment{
+				overflow: hidden;
+				>ul{
+					padding-top: 20px;
+					li{
+						float: left;
+						height: 50px;
+						font-size:18px;
+						width: 50%;
+						text-align: center;
+						font-weight:bold;
+						color:#8ec060;
+					}
+				}
+				.priceContent1{
+					height: 60px;
+					.nth-child1{
+						text-align: left;
+						line-height: 70px;
+					}
+					.nth-child2{
+						text-align: right;
+						font-size:36px;
+					}
+				}
+			}
+			.fareTitle{
+				overflow: hidden;
+				h2{
+					float: left;
+					font-weight:bold;
+					font-size:14px;
+					color:#1f2c5c;
+				}
+				p{
+					float: right;
+					font-weight:bold;
+					font-size:14px;
+					color:#8ec060;
+				}
+			}
+		}
+		.taxesSurcharges{
+			>ul{
+				li{
+					width: 100%;
+				}
+			}
+			.priceContentComment{
+				>ul{
+					>li{width: 50%;}
+					>.nth-child1{text-align: left;}
+					>.nth-child2{text-align: right;}
+				}
+			}
+		}
+		.promoCode{
+			width:960px;
+			margin:0 auto;
+			overflow: hidden;
+			height: 45px;
+			line-height: 45px;
+			.discount{
+				float: left;
+				font-weight:bold;
+				font-size:14px;
+				color:#1f2c5c;
+				line-height: 60px;
+				input{
+					background:#ffffff;
+					border:1px solid #cccccc;
+					width:238px;
+					height:28px;
+					margin-left: 10px;
+					padding:0 5px;
+					vertical-align: text-bottom;
+				}
+			}
+			.totlePrice{
+				float: right;
+				font-weight:bold;
+				font-size:14px;
+				color:#8ec060;
+				h2{
+					display: inline-block;
+					font-size:36px;
+				}
+			}
+		}
+	}
+}
+
+/* 规则 */
+.flightRuleDetail{
+	width: 940px;
+	margin:0 auto;
+	padding: 0 10px;
+	>h2{
+		font-weight:bold;
+		font-size:14px;
+		color:#1f2c5c;
+		margin-bottom: 10px;
+		a{
+			font-weight:bold;
+			font-size:14px;
+			color:#00908c;
+		}
+	}
+	.ruleContent{
+		.ruleContent1{
+			margin-bottom: 30px;
+		}
+		h3{
+			font-size: 14px;
+			font-weight:bold;
+			color:#808080;
+		}
+		p{
+			font-size: 14px;
+			color:#808080;
+		}
+		span{
+			font-size: 14px;
+			font-family:Comfortaa;
+		}
+	}
+}
+
+
+/* 配置屏幕 针对小屏幕*/
+html {
+	font-size: 100px;
+}
+@media screen and (max-width: 768px) {
+	html {
+		font-size: 50px;
+	}
+}
+@media screen and (min-width: 768px) {
+	html {
+		font-size: 64px;
+	}
+}
+@media screen and (min-width: 992px) {
+	html {
+		font-size: 82px;
+	}
+}
+@media screen and (min-width: 1200px) {
+	html {
+		font-size: 100px;
+	}
+}
+
+@media (max-width: 980px), (max-device-width: 980px){
+	.s-type {
+		display: inline-block;
+		width: 2.5rem;
+		height: 1.1rem;
+		line-height: 1.1rem;
+		color: black;
+	}
+}
+

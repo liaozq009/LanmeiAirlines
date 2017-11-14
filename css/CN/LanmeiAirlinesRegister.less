@@ -1,0 +1,182 @@
+
+/* 定义变量 */
+@green:#8ec060;
+@purple:#1f2c5c;
+@gray:#808080;
+@red:#d0011b;
+@link:#4aa374;
+
+.registerWrapper{
+	width: 340px;
+	margin:50px auto;
+	text-align: center;
+	>h2{
+		font-weight: bold;
+		font-size:24px;
+		color:#1f2c5c;
+	}
+	>p{
+		font-size:14px;
+		color:@gray;
+		margin-top:10px;
+		a{
+			color:@green;
+			&:hover{color:@purple;}
+		}
+	}
+	.registerContent{
+		margin-top: 40px;
+		.registerInfo,.registerPassword,.repeatPassword{
+			position: relative;
+			img{
+				position: absolute;
+				left:20px;
+				top:18px;
+			}
+			input{
+				font-size:14px;
+				color:@gray;
+				border:1px solid #cccccc;
+				border-radius:2px;
+				width:338px;
+				height:48px;
+				line-height: 48px;
+				padding-left: 60px;
+				padding-right: 10px;
+				&:focus{border-color:@green;}
+			}
+			p{
+				color:@red;
+				text-align: left;
+				padding:8px 8px 10px 10px;
+				visibility: hidden;
+			}
+			.visible{visibility: visible;}
+		}
+		.registerInfo{
+			.on_changes{
+				width:338px; 
+				position:absolute; 
+				top:40px; 
+				left: 1px;
+				z-index: 99;
+				list-style:none; 
+				background:#FFF; 
+				border:1px solid @green; 
+				display:none; 
+				padding:10px 0;
+				li{
+					margin:4px 0;
+					padding:2px 0;
+					cursor: pointer;
+					color: @gray;
+				}
+				li.active{ background:@purple;color:#fff;}
+			}
+		}
+		.registerPassword{
+			p{
+				color:#ccc;
+				span{margin-left: 5px;}
+				i{
+					display: inline-block;
+					width:30px;
+					height:4px;
+					margin-right: 4px;
+				}
+				.i1{background: #1f2c5c;}
+				.i2{background: #004190;}
+				.i3{background: #006d94;}
+				.i4{background: #00908c;}
+				.i5{background: #4aa374;}
+				.i6{background: #8ec060;}
+			}
+		}
+		.repeatPassword{
+			span{
+				display: inline-block;
+				font-size:14px;
+				color:@gray;
+				padding:0;
+				text-align: left;
+			}
+		}
+		.agree{
+			margin-top:30px;
+			margin-bottom: 40px;
+			overflow: hidden;
+			span{
+				float: left;
+				display: inline-block;
+				width: 16px;
+				height: 16px;
+				border:1px solid #cccccc;
+				border-radius:2px;
+				margin-right: 10px;
+				margin-top:4px;
+				cursor: pointer;
+			}
+			.agreeConditions{
+				background: @green;
+			}
+			p{
+				float: left;
+				width: 314px;
+				display: inline-block;
+				font-size:14px;
+				text-align: left;
+				color:@gray;
+				line-height: 25px;
+				a{
+					font-size:14px;
+					color:@link;
+					&:hover{color:@purple;}
+				}
+			}
+		}
+		.registerBtn{
+			button{
+				border:none;
+				outline: none;
+				background:@green;
+				border-radius:2px;
+				width:340px;
+				height:40px;
+				color:#fff;
+				font-size:18px;
+				font-weight: bold;
+				&:hover{
+					background: @purple;
+				}
+			}
+		}
+	}
+}
+
+
+
+/* 配置屏幕 针对小屏幕*/
+html {
+	font-size: 100px;
+}
+@media screen and (max-width: 768px) {
+	html {
+		font-size: 50px;
+	}
+}
+@media screen and (min-width: 768px) {
+	html {
+		font-size: 64px;
+	}
+}
+@media screen and (min-width: 992px) {
+	html {
+		font-size: 82px;
+	}
+}
+@media screen and (min-width: 1200px) {
+	html {
+		font-size: 100px;
+	}
+}
+

@@ -1,0 +1,323 @@
+
+/* 定义变量 */
+@url:"../../images/EN/";
+/* 定义颜色变量 */
+@green:#8ec060;
+@purple:#1f2c5c;
+@gray:#808080;
+@red:#d0011b;
+@link:#4aa374;
+
+
+/* 选择机票信息 */
+.changeSearch{
+	margin-top: 50px;
+	.selectWay{
+		a{width: 120px;}
+	}
+	.selectAirCommon{
+		height: 74px;
+		.local_timeSelect{
+			height: 100%;
+			width: 100%;
+			.timeSelectEnd{display: none;}
+			.localSelectEnd{
+				margin-right: 110px;
+			}
+			.flightSelectStart{
+				display: none;
+				width: 480px;
+				margin-right: 110px;
+				.bottomLine{width: 460px;}
+				input{
+					width: 480px;
+				}
+				img{right:20px;}
+				.clear{right: 50px;}
+				.fromcityMenu{width: 480px;}
+			}
+			.f-search-btn{
+				display: inline-block;
+				background: @green;
+				border-radius: 2px;
+				width: 90px;
+				height: 40px;
+				line-height: 40px;
+				font-size: 14px;
+				color: #fff;
+				text-align: center;
+				margin-top: 33px;
+				-webkit-transition:all 0.6s;
+				transition:all 0.6s;
+				&:hover{
+					background:@purple;
+					-webkit-transition:all 0.6s;
+					transition:all 0.6s;
+				}
+			}
+		}
+	}
+}
+
+/* 航班信息 */
+.lm-flight-wrap{
+	width: 940px;
+	min-height: 200px;
+	margin:0 auto;
+	margin-top: 50px;
+	.f-info-time{
+		height: 100px;
+		background:@purple;
+		padding-top: 10px;
+		.f-info-bg{
+			float: left;
+			width: 128px;
+			padding-left: 12px;
+			padding-top: 30px;
+		}
+		.f-time-select{
+			float: right;
+			width: 812px;
+			height: 90px;
+			background:#fff;
+			border:1px solid #ccc;
+			li{
+				float: left;
+				width: 14.2857%;
+				height: 100%;
+				padding:14px 0 14px 16px;
+				a{
+					display: inline-block;
+					width: 100%;
+					height: 100%;
+					border-right:1px solid #ccc;
+					p{
+						font-size:14px;
+						color:@purple;
+						opacity:0.5;
+						filter:alpha(opacity=50);
+					}
+					.f-date{
+						font-size: 20px;
+						color: @purple;
+						opacity: 1;
+						filter:alpha(opacity=100);
+						font-weight: bold;
+					}
+				}
+			}
+			.active{
+				background:@green;
+				a{
+					p{
+						color:#fff;
+						opacity: 1;
+						filter:alpha(opacity=100);
+					}
+				}
+			}
+		}
+	}
+	.f-info-detail{
+		margin-top: 50px;
+		.f-info-title{
+			font-size: 18px;
+			color:@purple;
+			font-weight: bold;
+			span{color:#00908c;}
+			.f-from-city{margin-right: 10px;}
+			.f-to-city{margin-left: 10px;}
+		}
+		.f-info-content{
+			margin-top: 20px;
+			.i-content-title{
+				width: 100%;
+				height: 70px;
+				background:@purple;
+				border-radius:4px;
+				>p{
+					float: left;
+					width: 86px;
+					height: 70px;
+					font-size: 14px;
+					color: #fff;
+					padding:15px 0;
+					text-align: center;
+					span{
+						display: inline-block;
+						width: 100%;
+						height: 100%;
+						line-height: 40px;
+						border-right:2px solid #fff;
+					}
+				}
+				.f-no{
+					width: 88px;
+				}
+				.f-remarks,.f-time{
+					span{
+						border:none;
+						border-left:2px solid #fff;
+					}
+				}
+				.f-time{
+					span{line-height: 20px;}
+				}
+				>div{
+					float: left;
+					width: 340px;
+					height: 70px;
+					padding:0 10px; 
+					>h2{
+						height: 35px;
+						line-height: 35px;
+						color: @green;
+						font-size: 14px;
+						text-align: center;
+						border-bottom:2px solid #fff;
+					}
+					>div{
+						width: 100%;
+						height: 35px;
+						padding:5px 0;
+						>span{
+							display: inline-block;
+							float: left;
+							width: 50%;
+							height: 25px;
+							line-height: 25px;
+							text-align: center;
+							color: #fff;
+							font-size: 14px;
+						}
+						.s-1{border-right:2px solid #fff;}
+					}
+				}
+				.f-departure{
+					position: relative;
+					b{
+						position: absolute;
+						right: 0;
+						top: 15px;
+						width: 2px;
+						height: 40px;
+						background: #fff;
+					}
+				}
+			}
+			.i-content-inner{
+				overflow:hidden;
+				>li{
+					height: 50px;
+					padding:15px 0;
+					>span{
+						float: left;
+						display: inline-block;
+						width: 170px;
+						height: 20px;
+						line-height: 20px;
+						text-align: center;
+						color: @purple;
+						font-size: 20px;
+						font-weight: bold;
+						border-right:2px solid #ccc;
+						b{
+							font-size: 14px;
+							color: #F44336;
+						}
+					}
+					.c-inner-no{
+						width: 88px;
+						font-size: 14px;
+						color: @gray;
+						font-weight: normal;
+					}
+					.c-inner-remarks,.c-inner-time{
+						width: 86px;
+						border:none;
+						font-size: 14px;
+						color:@green;
+						font-weight: normal;
+					}
+					.c-inner-time{
+						color:@purple;
+						font-weight: bold;
+						border-right:2px solid #ccc;
+					}
+				}
+				// >li:nth-of-type(even){background-color: #f2f2f2;}
+			}
+			.i-attention{
+				margin-top: 30px;
+				padding:0 25px;
+				.i-attention-title{
+					font-size: 18px;
+					font-weight: bold;
+					color: @purple;
+				}
+				.i-attention-content{
+					font-size: 14px;
+					color: @gray;
+					margin-top: 14px;
+					line-height: 20px;
+				}
+			}
+		}
+	}
+}
+
+.no-flight-info{
+	position: relative;
+	width: 960px;
+	margin:30px auto 70px;
+	text-align: center;
+	p{
+		position: absolute;
+		bottom: 0px;
+		left: 50%;
+		margin-left: -325px;
+		width: 650px;
+		height: 60px;
+		font-size:18px;
+		color:#ccc;
+	}
+}
+
+
+/* 修改公共样式 */
+.selectAirCommon{
+	span{font-size:14px !important;}
+}
+.local_timeSelect{
+	>div{
+		p{
+			img{
+				margin-right: 10px !important;
+				vertical-align: bottom !important;
+			}
+		}
+	}
+}
+.CabinSelect{
+	p{
+		img{
+			margin-right: 10px !important;
+			vertical-align: bottom !important;
+		}
+	}
+}
+
+.bottomLine{
+	top:70px !important;
+}
+
+.selectAir .fromcityMenu, .selectAir .tocityMenu, .selectAir .CabinMenu{
+	top: 70px !important;
+}
+
+.calendar{
+	position:relative;
+}
+
+
+/* 配置屏幕 针对小屏幕*/

@@ -1,0 +1,315 @@
+*{
+	scrollbar-arrow-color: #1f2c5c;
+	/*滚动条滑块按钮的颜色*/
+	scrollbar-face-color: #8ec060;
+	/*滚动条整体颜色*/
+	scrollbar-highlight-color: #8ec060;
+	/*滚动条阴影*/
+	scrollbar-shadow-color: none;
+	/*滚动条轨道颜色*/
+	scrollbar-track-color: #fff;
+}
+
+/* reset.css */
+body,h1,h2,h3,h4,h5,h6,p,ul,li,input {
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+}
+ul,li {
+	list-style: none;
+}
+a {
+	color:#666;
+	text-decoration: none;
+}
+a:hover,
+a:focus {
+	/*color:#ff0700;*/
+	text-decoration:none;
+	outline:none;
+}
+input {
+	border:0;
+	outline: none;
+}
+img {
+	vertical-align:middle;
+	border:none;
+}
+input::-ms-clear{display : none; }
+.ovfHiden{overflow: hidden;height: 100%;}
+
+/* project mcins style sheet*/
+body {
+	min-width: 320px;
+	font-size: 12px;
+	// font-family: "Comfortaa";
+	font-family: "Microsoft YaHei",sans-serif;
+}
+
+
+/* 称谓 */
+.greetings{
+	width: 960px;
+	margin:0 auto;
+	padding:30px 10px 20px;
+	font-weight: bold;
+	font-size:18px;
+	color:#1f2c5c;
+	border-bottom:2px solid #1f2c5c;
+}
+
+/* 计算机码 */
+.computerCode{
+	position: relative;
+	width: 960px;
+	overflow: hidden;
+	margin:0 auto;
+	.bankCode,.thankInfo{
+		
+	}
+	.bankCode{
+		position: relative;
+		img{
+			position: absolute;
+			left:4px;
+			z-index: -1;
+		}
+		p{
+			margin-bottom: 8px;
+			font-size:14px;
+			color:#808080;
+			span{
+				font-weight:bold;
+				font-size:18px;
+				color:#1f2c5c;
+				margin-left: 30px;
+			}
+		}
+		.p1{
+			margin-top: 22px;
+		}
+	}
+	.thankInfo{
+		font-size:14px;
+		color:#808080;
+		line-height: 30px;
+	}
+}
+/* 限制条件 */
+.limitCondition{
+	width: 960px;
+	margin:0 auto;
+	padding:20px 0 24px;
+	h2{
+		font-weight: bold;
+		font-size:18px;
+		color:#1a1a1a;
+		line-height: 30px;
+	}
+	h3{
+		font-weight: bold;
+		font-size:16px;
+		color:#1a1a1a;
+	}
+	p{
+		font-size: 14px;
+		color:#808080;
+	}
+	h3{
+		margin-top: 20px;
+	}
+	>p,>div{
+		margin-top: 10px;
+		>p{line-height: 22px;}
+	}
+}
+
+/* 乘客信息 */
+.passengerInfoDetail{
+	width: 960px;
+	margin: 0 auto;
+	.passengerInfoDetailTitle{
+		font-size:18px;
+		color:#1a1a1a;
+		font-weight: bold;
+	}
+	.passengerInfoDetailContent{
+		overflow: hidden;
+		>div{
+			margin-top: 20px;
+			h2{
+				display: inline-block;
+				font-size: 20px;
+				font-weight: bold;
+				color: #1f2c5c;
+				margin-right: 2px;
+			}
+			p{
+				display: inline-block;
+				font-size: 20px;
+				font-weight: bold;
+				color: #1f2c5c;
+			}
+		}
+	}
+}
+
+.verticalLine{
+	width:100%;
+	border-bottom:2px dashed #ccc;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.dashedLine960{
+	width: 960px;
+	margin: 0px auto;
+	text-align: center;
+	border-bottom:2px dashed #ccc;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.ticketLine {
+    background: #808080;
+    width: 960px;
+    height: 1px;
+    margin: 20px auto;
+}
+
+/* 已选择航班 */
+.flightSelectWrapper{
+	width: 960px;
+	overflow: hidden;
+	margin: 0 auto;
+	margin-top: 20px;
+	padding:0;
+	.flightSelectCommon{
+		margin-bottom: 16px;
+		border:none;
+		.flightSelectTitle{
+			background: none;
+			padding:0;
+			> h2{
+				height: 22px;
+				line-height: 22px;
+				padding-left: 6px;
+				font-size:20px;
+				font-weight: bold;
+				color:#1a1a1a;
+				border-left: 2px solid #8ec060;
+			}
+		}
+	}
+	.flightList1{
+		ul{
+			overflow: hidden;
+			li{
+				float: left;
+				width: 20%;
+				text-align: center;
+				font-size:14px;
+			}
+		}
+		ul.flightTitle{
+			ul{
+				li{
+					color:#808080;
+				}
+			}
+		}
+		ul.flightContentCommon{
+			padding-bottom: 10px;
+			li{
+				font-weight: bold;
+				color:#666666;
+			}
+		}
+	}
+	.flightListCommon{
+		padding:14px 0 10px !important;
+		height: auto !important;
+	}
+}
+
+
+/* 票价计算结果 */
+.ticketFareWrapper{
+	width: 960px;
+	margin: 0 auto;
+	margin-bottom: 90px;
+	.ticketFareTitle{
+		height: 36px;
+		line-height: 36px;
+		margin-bottom: 30px;
+		>h2{
+			float: left;
+			padding-left: 6px;
+			font-weight:bold;
+			font-size:20px;
+			color:#121c3e;
+			text-align:left;
+			border-left:2px solid #8ec060;
+		}
+	}
+	.ticketFareContent{
+		.priceTitle{
+			overflow: hidden;
+			li{
+				float: left;
+				width: 25%;
+				font-size:14px;
+				color:#808080;
+				text-align: center;
+			}
+		}
+		.priceContent{
+			ul{
+				overflow: hidden;
+				li{
+					float: left;
+					width: 25%;
+					font-weight: bold;
+					font-size:14px;
+					color:#666666;
+					text-align:center;
+					margin-bottom: 10px;
+				}
+			}
+		}
+		.subtotal,.priceTotle{
+			overflow: hidden;
+			padding:0 30px;
+			margin-bottom: 10px;
+			li{
+				float: left;
+				width: 50%;
+				font-weight: bold;
+				font-size:18px;
+				color:#666666;
+			}
+			.nth-child2{
+				text-align: right;
+			}
+		}
+		.priceTotle{
+			margin-top: 10px;
+			li{
+				font-weight: bold;
+				font-size:18px;
+				color:#8ec060;
+			}
+			.nth-child1{
+				height: 50px;
+				line-height: 70px;
+			}
+			.nth-child2{
+				font-size:36px;
+			}
+		}
+	}
+}
+
+

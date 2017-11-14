@@ -1,0 +1,405 @@
+.buyTicketList .SelectFlight,
+.buyTicketList .PassengerInformation,
+.buyTicketList .LanmeiPay,
+.buyTicketList .Complete {
+  color: #1f2c5c;
+}
+/* 完成信息展示 */
+.completeInfo {
+  width: 940px;
+  height: 150px;
+  padding: 0 10px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #ccc;
+}
+.completeInfo > div {
+  display: inline-block;
+  width: 138px;
+  height: 104px;
+  margin-left: 130px;
+  margin-right: 38px;
+  vertical-align: bottom;
+}
+.completeInfo p {
+  display: inline-block;
+  width: 470px;
+  height: 104px;
+  font-size: 14px;
+  color: #808080;
+  line-height: 20px;
+}
+.completeInfo p a {
+  color: #00908c;
+}
+.completeInfo p span {
+  color: #8ec060;
+}
+/* 计算机码 */
+.computerCode {
+  position: relative;
+  width: 960px;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 10px 0 50px 0;
+}
+.computerCode .bankCode,
+.computerCode .thankInfo {
+  float: left;
+  width: 460px;
+  height: 120px;
+}
+.computerCode .bankCode {
+  position: relative;
+}
+.computerCode .bankCode img {
+  position: absolute;
+  left: 4px;
+  z-index: -1;
+}
+.computerCode .bankCode p {
+  margin-left: 60px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #808080;
+}
+.computerCode .bankCode p span {
+  font-weight: bold;
+  font-size: 18px;
+  color: #1f2c5c;
+  margin-left: 30px;
+}
+.computerCode .bankCode .p1 {
+  margin-top: 22px;
+}
+.computerCode .thankInfo {
+  margin-left: 30px;
+  font-size: 14px;
+  color: #808080;
+  line-height: 30px;
+}
+.computerCode .verticalLine {
+  position: absolute;
+  left: 480px;
+  top: 30px;
+  background: #cccccc;
+  width: 1px;
+  height: 90px;
+}
+/* 乘客信息 */
+.passengerInfoDetail {
+  width: 960px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.passengerInfoDetail .passengerInfoDetailTitle {
+  line-height: 36px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #808080;
+}
+.passengerInfoDetail .passengerInfoDetailContent {
+  overflow: hidden;
+}
+.passengerInfoDetail .passengerInfoDetailContent > div {
+  float: left;
+  width: 300px;
+  height: 100px;
+  border-radius: 2px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  background: url(../../images/EN/passengerBg.png) no-repeat;
+}
+.passengerInfoDetail .passengerInfoDetailContent > div .passengerBg {
+  width: 300px;
+  height: 100px;
+  text-align: center;
+  padding-top: 20px;
+}
+.passengerInfoDetail .passengerInfoDetailContent > div .passengerBg h2 {
+  font-weight: bold;
+  font-size: 20px;
+  color: #ffffff;
+}
+.passengerInfoDetail .passengerInfoDetailContent > div .passengerBg p {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #ffffff;
+}
+.passengerInfoDetail .passengerInfoDetailContent > div .passengerBg p span {
+  font-weight: bold;
+  font-size: 18px;
+}
+.passengerInfoDetail .passengerInfoDetailContent .passenger1,
+.passengerInfoDetail .passengerInfoDetailContent .passenger4 {
+  margin-left: 0;
+}
+.passengerInfoDetail .passengerInfoDetailContent .passenger1 .passengerBg {
+  background: rgba(142, 192, 96, 0.7);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#B28EC060, 60, endColorstr=#B28EC060, 60);
+}
+.passengerInfoDetail .passengerInfoDetailContent .passenger2 .passengerBg {
+  background: rgba(73, 163, 116, 0.7);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#B249A374, 74, endColorstr=#B249A374, 74);
+}
+.passengerInfoDetail .passengerInfoDetailContent .passenger3 .passengerBg {
+  background: rgba(0, 144, 140, 0.7);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#B200908C, 8C, endColorstr=#B200908C, 8C);
+}
+.passengerInfoDetail .passengerInfoDetailContent .passenger4 .passengerBg {
+  background: rgba(0, 108, 147, 0.7);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#B2006C93, 93, endColorstr=#B2006C93, 93);
+}
+.passengerInfoDetail .passengerInfoDetailContent .passenger5 .passengerBg {
+  background: rgba(0, 64, 144, 0.7);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#B2004090, 90, endColorstr=#B2004090, 90);
+}
+.passengerInfoDetail .contactInformation {
+  padding-bottom: 20px;
+}
+.passengerInfoDetail .contactInformation h2 {
+  font-weight: bold;
+  font-size: 14px;
+  color: #1f2c5c;
+}
+.passengerInfoDetail .contactInformation p {
+  font-size: 14px;
+  color: #808080;
+  margin-top: 10px;
+}
+/* 支付 */
+.ticketFareWrapper {
+  width: 960px;
+  margin: 0 auto;
+  padding: 0 10px;
+  margin-bottom: 90px;
+}
+.ticketFareWrapper .ticketFareTitle {
+  height: 36px;
+  line-height: 36px;
+  margin-bottom: 30px;
+}
+.ticketFareWrapper .ticketFareTitle > h2 {
+  float: left;
+  font-weight: bold;
+  font-size: 20px;
+  color: #121c3e;
+  text-align: left;
+}
+.ticketFareWrapper .ticketFareTitle > h2 img {
+  margin-right: 20px;
+}
+.ticketFareWrapper .ticketFareContent .ticketFare,
+.ticketFareWrapper .ticketFareContent .fareInformation,
+.ticketFareWrapper .ticketFareContent .taxesSurcharges {
+  width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.ticketFareWrapper .ticketFareContent .ticketFare > ul,
+.ticketFareWrapper .ticketFareContent .fareInformation > ul,
+.ticketFareWrapper .ticketFareContent .taxesSurcharges > ul {
+  overflow: hidden;
+}
+.ticketFareWrapper .ticketFareContent .ticketFare > ul li,
+.ticketFareWrapper .ticketFareContent .fareInformation > ul li,
+.ticketFareWrapper .ticketFareContent .taxesSurcharges > ul li {
+  float: left;
+  font-weight: bold;
+  font-size: 18px;
+  color: #666;
+  width: 50%;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.ticketFareWrapper .ticketFareContent .ticketFare .priceTitleComment,
+.ticketFareWrapper .ticketFareContent .fareInformation .priceTitleComment,
+.ticketFareWrapper .ticketFareContent .taxesSurcharges .priceTitleComment {
+  padding-bottom: 10px;
+}
+.ticketFareWrapper .ticketFareContent .ticketFare .priceTitleComment .nth-child1,
+.ticketFareWrapper .ticketFareContent .fareInformation .priceTitleComment .nth-child1,
+.ticketFareWrapper .ticketFareContent .taxesSurcharges .priceTitleComment .nth-child1,
+.ticketFareWrapper .ticketFareContent .ticketFare .priceTitleComment .nth-child3,
+.ticketFareWrapper .ticketFareContent .fareInformation .priceTitleComment .nth-child3,
+.ticketFareWrapper .ticketFareContent .taxesSurcharges .priceTitleComment .nth-child3 {
+  text-align: left;
+}
+.ticketFareWrapper .ticketFareContent .ticketFare .priceTitleComment .nth-child2,
+.ticketFareWrapper .ticketFareContent .fareInformation .priceTitleComment .nth-child2,
+.ticketFareWrapper .ticketFareContent .taxesSurcharges .priceTitleComment .nth-child2,
+.ticketFareWrapper .ticketFareContent .ticketFare .priceTitleComment .nth-child4,
+.ticketFareWrapper .ticketFareContent .fareInformation .priceTitleComment .nth-child4,
+.ticketFareWrapper .ticketFareContent .taxesSurcharges .priceTitleComment .nth-child4 {
+  text-align: right;
+}
+.ticketFareWrapper .ticketFareContent .ticketFare .priceContentComment,
+.ticketFareWrapper .ticketFareContent .fareInformation .priceContentComment,
+.ticketFareWrapper .ticketFareContent .taxesSurcharges .priceContentComment {
+  overflow: hidden;
+}
+.ticketFareWrapper .ticketFareContent .ticketFare .priceContentComment > ul,
+.ticketFareWrapper .ticketFareContent .fareInformation .priceContentComment > ul,
+.ticketFareWrapper .ticketFareContent .taxesSurcharges .priceContentComment > ul {
+  padding-top: 20px;
+}
+.ticketFareWrapper .ticketFareContent .ticketFare .priceContentComment > ul li,
+.ticketFareWrapper .ticketFareContent .fareInformation .priceContentComment > ul li,
+.ticketFareWrapper .ticketFareContent .taxesSurcharges .priceContentComment > ul li {
+  float: left;
+  height: 50px;
+  font-size: 18px;
+  width: 50%;
+  text-align: center;
+  font-weight: bold;
+  color: #8ec060;
+}
+.ticketFareWrapper .ticketFareContent .ticketFare .priceContentComment .priceContent1,
+.ticketFareWrapper .ticketFareContent .fareInformation .priceContentComment .priceContent1,
+.ticketFareWrapper .ticketFareContent .taxesSurcharges .priceContentComment .priceContent1 {
+  height: 60px;
+}
+.ticketFareWrapper .ticketFareContent .ticketFare .priceContentComment .priceContent1 .nth-child1,
+.ticketFareWrapper .ticketFareContent .fareInformation .priceContentComment .priceContent1 .nth-child1,
+.ticketFareWrapper .ticketFareContent .taxesSurcharges .priceContentComment .priceContent1 .nth-child1 {
+  text-align: left;
+  line-height: 70px;
+}
+.ticketFareWrapper .ticketFareContent .ticketFare .priceContentComment .priceContent1 .nth-child2,
+.ticketFareWrapper .ticketFareContent .fareInformation .priceContentComment .priceContent1 .nth-child2,
+.ticketFareWrapper .ticketFareContent .taxesSurcharges .priceContentComment .priceContent1 .nth-child2 {
+  text-align: right;
+  font-size: 36px;
+}
+.ticketFareWrapper .ticketFareContent .ticketFare .fareTitle,
+.ticketFareWrapper .ticketFareContent .fareInformation .fareTitle,
+.ticketFareWrapper .ticketFareContent .taxesSurcharges .fareTitle {
+  overflow: hidden;
+}
+.ticketFareWrapper .ticketFareContent .ticketFare .fareTitle h2,
+.ticketFareWrapper .ticketFareContent .fareInformation .fareTitle h2,
+.ticketFareWrapper .ticketFareContent .taxesSurcharges .fareTitle h2 {
+  float: left;
+  font-weight: bold;
+  font-size: 14px;
+  color: #1f2c5c;
+}
+.ticketFareWrapper .ticketFareContent .ticketFare .fareTitle p,
+.ticketFareWrapper .ticketFareContent .fareInformation .fareTitle p,
+.ticketFareWrapper .ticketFareContent .taxesSurcharges .fareTitle p {
+  float: right;
+  font-weight: bold;
+  font-size: 14px;
+  color: #8ec060;
+}
+.ticketFareWrapper .ticketFareContent .taxesSurcharges > ul li {
+  width: 100%;
+}
+.ticketFareWrapper .ticketFareContent .taxesSurcharges .priceContentComment > ul > li {
+  width: 50%;
+}
+.ticketFareWrapper .ticketFareContent .taxesSurcharges .priceContentComment > ul > .nth-child1 {
+  text-align: left;
+}
+.ticketFareWrapper .ticketFareContent .taxesSurcharges .priceContentComment > ul > .nth-child2 {
+  text-align: right;
+}
+.ticketFareWrapper .ticketFareContent .promoCode {
+  width: 960px;
+  margin: 0 auto;
+  overflow: hidden;
+  height: 45px;
+  line-height: 45px;
+}
+.ticketFareWrapper .ticketFareContent .promoCode .discount {
+  float: left;
+  font-weight: bold;
+  font-size: 14px;
+  color: #1f2c5c;
+  line-height: 60px;
+}
+.ticketFareWrapper .ticketFareContent .promoCode .discount input {
+  background: #ffffff;
+  border: 1px solid #cccccc;
+  width: 238px;
+  height: 28px;
+  margin-left: 10px;
+  padding: 0 5px;
+  vertical-align: text-bottom;
+}
+.ticketFareWrapper .ticketFareContent .promoCode .totlePrice {
+  float: right;
+  font-weight: bold;
+  font-size: 14px;
+  color: #8ec060;
+}
+.ticketFareWrapper .ticketFareContent .promoCode .totlePrice h2 {
+  display: inline-block;
+  font-size: 36px;
+}
+/* 规则 */
+.flightRuleDetail {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.flightRuleDetail > h2 {
+  font-weight: bold;
+  font-size: 14px;
+  color: #1f2c5c;
+  margin-bottom: 10px;
+}
+.flightRuleDetail > h2 a {
+  font-weight: bold;
+  font-size: 14px;
+  color: #00908c;
+}
+.flightRuleDetail .ruleContent .ruleContent1 {
+  margin-bottom: 30px;
+}
+.flightRuleDetail .ruleContent h3 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #808080;
+}
+.flightRuleDetail .ruleContent p {
+  font-size: 14px;
+  color: #808080;
+}
+.flightRuleDetail .ruleContent span {
+  font-size: 14px;
+  font-family: Comfortaa;
+}
+/* 配置屏幕 针对小屏幕*/
+html {
+  font-size: 100px;
+}
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 50px;
+  }
+}
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 64px;
+  }
+}
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 82px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 100px;
+  }
+}
+@media (max-width: 980px), (max-device-width: 980px) {
+  .s-type {
+    display: inline-block;
+    width: 2.5rem;
+    height: 1.1rem;
+    line-height: 1.1rem;
+    color: black;
+  }
+}

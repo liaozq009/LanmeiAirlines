@@ -1,0 +1,299 @@
+@charset "utf-8";
+/* 定义变量 */
+/* 定义颜色变量 */
+/* reset.css */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+input {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+ul,
+li {
+  list-style: none;
+}
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  text-decoration: none;
+  outline: none;
+}
+input {
+  border: 0;
+  outline: none;
+}
+img {
+  vertical-align: middle;
+}
+input::-ms-clear {
+  display: none;
+}
+.lanmeiHeader-subpage {
+  height: 200px;
+  background: url('../../images/EN/navbarBg.png') center no-repeat;
+}
+.lanmeiHeader-subpage .lanmeiNav .lanmeiHeadInfo > ul .nth-child1 > div > span {
+  color: #1f2c5c;
+}
+/* 主要代码 */
+body {
+  min-width: 320px;
+  min-height: 760px;
+  font-size: 14px;
+  color: #fff;
+  background: #232627;
+  font-family: "Microsoft YaHei", sans-serif;
+}
+.lanmeiHeader-subpage {
+  position: fixed;
+  width: 100%;
+  z-index: 9;
+}
+#myCanvas {
+  position: fixed;
+  width: 100%;
+}
+.wrapper {
+  position: absolute;
+}
+.wrapper .w-head {
+  width: 100%;
+}
+.wrapper .w-head img {
+  width: 100%;
+}
+.wrapper .w-content {
+  width: 960px;
+  margin: 0 auto;
+  padding-bottom: 100px;
+}
+.wrapper .w-content img {
+  width: 100%;
+  margin-top: 50px;
+}
+.wrapper .w-content .s-com {
+  position: relative;
+  text-align: center;
+}
+.wrapper .w-content .s-com .p1 {
+  margin-bottom: 10px;
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  color: #fff;
+}
+.wrapper .w-content .s-com .p2 {
+  color: #beecff;
+}
+.wrapper .w-content .s-flight {
+  overflow: hidden;
+}
+.wrapper .w-content .s-flight img {
+  float: left;
+  width: 30%;
+  margin-top: 5%;
+  cursor: pointer;
+}
+.wrapper .w-content .s-flight .s-flight-2,
+.wrapper .w-content .s-flight .s-flight-5 {
+  margin: 5% 5% 0;
+}
+.wrapper .w-content .s-rules {
+  margin-top: 50px;
+  padding: 0 20px;
+}
+.wrapper .w-content .s-rules .s-head {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.wrapper .w-content .s-rules .s-head .p1 {
+  margin-bottom: 8px;
+}
+.wrapper .w-content .s-rules .s-head .p2 {
+  color: #beecff;
+}
+.wrapper .w-content .s-rules .s-content {
+  margin-bottom: 20px;
+}
+.wrapper .w-content .s-rules .s-content .p1 {
+  margin-bottom: 8px;
+}
+.wrapper .w-content .s-rules .s-content .p2 {
+  color: #beecff;
+}
+.wrapper .w-content .get-coupon {
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+.wrapper .w-content .get-coupon a {
+  display: inline-block;
+  color: #fff;
+  width: 220px;
+  padding: 10px;
+  font-size: 18px;
+  text-align: center;
+  background: #8ec060;
+  border-radius: 6px;
+}
+.wrapper .w-content .get-coupon a span {
+  font-size: 16px;
+}
+.wrapper .w-content .s-gift {
+  text-align: center;
+}
+.wrapper .w-content .s-gift img {
+  width: 50%;
+}
+.wrapper .w-content .s-gift .p1 {
+  margin-top: 10px;
+  margin-bottom: 8px;
+  color: #fff;
+}
+.wrapper .w-content .s-gift .p2 {
+  color: #beecff;
+}
+.wrapper .w-content .bags-wrap {
+  width: 100%;
+  overflow: hidden;
+}
+.wrapper .w-content .bags-wrap .s-bags {
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+.wrapper .w-content .bags-wrap .s-bags img {
+  width: 100%;
+}
+.wrapper .w-content .bags-wrap .s-bags .p1 {
+  color: #fff;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+.wrapper .w-content .bags-wrap .s-bags .p2 {
+  color: #beecff;
+  margin-bottom: 8px;
+}
+.wrapper .w-content .bags-wrap .s-bags .p3 {
+  color: #beecff;
+}
+.wrapper .w-content .bags-wrap .bage-note {
+  float: left;
+  width: 100%;
+  margin-top: 50px;
+  padding-left: 60px;
+}
+.wrapper .w-content .bags-wrap .bage-note .p1 {
+  color: #fff;
+  margin-bottom: 8px;
+}
+.wrapper .w-content .bags-wrap .bage-note .p2 {
+  color: #beecff;
+}
+/* 配置屏幕 针对小屏幕*/
+@media screen and (max-width: 992px) {
+  .lanmeiHeader-subpage {
+    display: none;
+  }
+  .wrapper {
+    width: 100%;
+  }
+  .wrapper .w-content {
+    width: 100%;
+    padding: 0 0.15rem 0.5rem;
+  }
+  .wrapper .w-content img {
+    margin-top: 0.2rem;
+  }
+  .wrapper .w-content .s-com .p1 {
+    position: static;
+    font-size: 0.1rem;
+    margin-bottom: 0.04rem;
+  }
+  .wrapper .w-content .s-com .p2 {
+    font-size: 0.1rem;
+  }
+  .wrapper .w-content .s-rules {
+    margin-top: 0.2rem;
+    padding: 0;
+  }
+  .wrapper .w-content .s-rules .s-head {
+    margin-bottom: 0.15rem;
+  }
+  .wrapper .w-content .s-rules .s-head .p1 {
+    font-size: 0.1rem;
+    margin-bottom: 0.04rem;
+  }
+  .wrapper .w-content .s-rules .s-head .p2 {
+    font-size: 0.1rem;
+  }
+  .wrapper .w-content .s-rules .s-content {
+    margin-bottom: 0.1rem;
+  }
+  .wrapper .w-content .s-rules .s-content .p1 {
+    font-size: 0.1rem;
+    margin-bottom: 0.04rem;
+  }
+  .wrapper .w-content .s-rules .s-content .p2 {
+    font-size: 0.1rem;
+  }
+  .wrapper .w-content .get-coupon {
+    margin-top: 0.2rem;
+  }
+  .wrapper .w-content .get-coupon a {
+    width: 1.6rem;
+    padding: 0.04rem 0.08rem;
+    font-size: 0.14rem;
+  }
+  .wrapper .w-content .get-coupon a span {
+    font-size: 0.12rem;
+  }
+  .wrapper .w-content .s-gift .p1 {
+    font-size: 0.1rem;
+    margin-top: 0.06rem;
+    margin-bottom: 0.04rem;
+  }
+  .wrapper .w-content .s-gift .p2 {
+    font-size: 0.1rem;
+  }
+  .wrapper .w-content .bags-wrap .s-bags .p1 {
+    margin-top: 0.1rem;
+    margin-bottom: 0.04rem;
+    padding: 0 0.04rem;
+    font-size: 0.1rem;
+  }
+  .wrapper .w-content .bags-wrap .s-bags .p2 {
+    font-size: 0.1rem;
+    margin-bottom: 0.04rem;
+    padding: 0 0.04rem;
+  }
+  .wrapper .w-content .bags-wrap .s-bags .p3 {
+    font-size: 0.1rem;
+  }
+  .wrapper .w-content .bags-wrap .bage-note {
+    margin-top: 0.2rem;
+    padding: 0;
+  }
+  .wrapper .w-content .bags-wrap .bage-note .p1 {
+    margin-bottom: 0.04rem;
+    font-size: 0.1rem;
+  }
+  .wrapper .w-content .bags-wrap .bage-note .p2 {
+    font-size: 0.1rem;
+  }
+}

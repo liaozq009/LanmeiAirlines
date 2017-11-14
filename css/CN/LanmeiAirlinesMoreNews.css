@@ -1,0 +1,224 @@
+/* 定义颜色变量 */
+.newsInfoWrapper {
+  width: 960px;
+  margin: 0 auto;
+  padding: 0 10px;
+  margin-top: 50px;
+}
+.newsInfoWrapper .newsInfoMain {
+  width: 100%;
+  height: 450px;
+  background: #ffffff;
+  border-radius: 10px;
+}
+.newsInfoWrapper .newsInfoMain .dateInfoTitle {
+  overflow: hidden;
+  float: right;
+  width: 450px;
+}
+.newsInfoWrapper .newsInfoMain .dateInfoTitle > h2 {
+  font-size: 24px;
+  color: #1f2c5c;
+  margin-bottom: 20px;
+}
+.newsInfoWrapper .newsInfoMain .dateInfoTitle > img {
+  margin-bottom: 30px;
+}
+.newsInfoWrapper .newsInfoMain .dateInfoTitle p {
+  font-size: 16px;
+  line-height: 26px;
+}
+.newsInfoWrapper .newsInfoMain .dateInfoTitle .p1 {
+  height: 320px;
+  color: #808080;
+  text-overflow: ellipsis;
+  text-indent: 2em;
+}
+.newsInfoWrapper .newsInfoMain .dateInfoTitle .p2 {
+  float: left;
+  color: #ccc;
+}
+.newsInfoWrapper .newsInfoMain .dateInfoTitle .p3 {
+  float: right;
+  color: #ccc;
+}
+.newsInfoWrapper .newsInfoMain .dateInfoTitle .p3 img {
+  margin-left: 10px;
+}
+.newsInfoWrapper .newsInfoMain .leftImg {
+  float: left;
+  margin-right: 20px;
+}
+.newsList .newsList1 {
+  width: 960px;
+  margin: 0 auto;
+  padding-top: 30px;
+  overflow: hidden;
+}
+.newsList .newsList1 .listMainCommon {
+  float: left;
+  width: 460px;
+  height: 170px;
+  background: #ffffff;
+  border: 1px solid #f2f2f2;
+  border-radius: 10px;
+  margin: 0 10px;
+  margin-bottom: 30px;
+  padding: 10px;
+  cursor: pointer;
+  transition: all .2s linear;
+}
+.newsList .newsList1 .listMainCommon:hover {
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.16);
+  transform: translate3d(0, -2px, 0);
+}
+.newsList .newsList1 .listMainCommon .leftImg {
+  float: left;
+  display: inline-block;
+  margin-right: 18px;
+}
+.newsList .newsList1 .listMainCommon .listTitle {
+  float: left;
+  display: inline-block;
+  width: 296px;
+}
+.newsList .newsList1 .listMainCommon .listTitle > h2 {
+  font-size: 18px;
+  color: #1f2c5c;
+}
+.newsList .newsList1 .listMainCommon .listTitle > img {
+  margin: 8px 0;
+}
+.newsList .newsList1 .listMainCommon .listTitle .p1 {
+  width: 296px;
+  font-size: 14px;
+  color: #808080;
+  text-overflow: ellipsis;
+  text-indent: 2em;
+}
+.newsList .newsList1 .listMainCommon .dateInfo {
+  float: left;
+  width: 440px;
+  border-top: 1px solid #f2f2f2;
+  margin-top: 10px;
+  padding: 0 10px;
+  padding-top: 6px;
+}
+.newsList .newsList1 .listMainCommon .dateInfo .p2 {
+  float: left;
+  color: #ccc;
+  font-size: 12px;
+}
+.newsList .newsList1 .listMainCommon .dateInfo .p3 {
+  float: right;
+  color: #ccc;
+  font-size: 12px;
+}
+.newsList .newsList1 .listMainCommon .dateInfo .p3 img {
+  margin-left: 10px;
+  vertical-align: sub;
+}
+.newsList .newsArrow {
+  width: 960px;
+  height: 28px;
+  line-height: 28px;
+  margin: 20px auto 100px;
+  text-align: center;
+}
+.newsList .newsArrow img {
+  vertical-align: top;
+  cursor: pointer;
+}
+.newsList .newsArrow span {
+  font-size: 18px;
+  color: #8ec060;
+  font-weight: bold;
+  margin: 0 84px;
+}
+/* 配置屏幕 针对小屏幕*/
+@media screen and (max-width: 992px) {
+  .newsInfoWrapper {
+    width: 100%;
+    padding: 0 0.15rem;
+    margin-top: 0.5rem;
+  }
+  .newsInfoWrapper .newsInfoMain {
+    height: auto;
+  }
+  .newsInfoWrapper .newsInfoMain .dateInfoTitle {
+    width: 100%;
+  }
+  .newsInfoWrapper .newsInfoMain .dateInfoTitle p {
+    font-size: 0.12rem;
+  }
+  .newsInfoWrapper .newsInfoMain .dateInfoTitle > h2 {
+    font-size: 0.16rem;
+    margin-bottom: 0.1rem;
+  }
+  .newsInfoWrapper .newsInfoMain .dateInfoTitle > img {
+    width: 100%;
+    margin-bottom: 0.1rem;
+  }
+  .newsInfoWrapper .newsInfoMain .dateInfoTitle > p {
+    margin-bottom: 20px;
+  }
+  .newsInfoWrapper .newsInfoMain .dateInfoTitle .p1 {
+    height: auto;
+  }
+  .newsInfoWrapper .newsInfoMain .leftImg {
+    margin-right: 0;
+    width: 100%;
+  }
+  .newsList {
+    width: 100%;
+    padding: 0 0.15rem;
+  }
+  .newsList .newsList1 {
+    width: 100%;
+  }
+  .newsList .newsList1 .listMainCommon {
+    width: 100%;
+    margin: 0;
+    height: auto;
+  }
+  .newsList .newsList1 .listMainCommon .leftImg {
+    width: 20%;
+    margin-right: 2%;
+  }
+  .newsList .newsList1 .listMainCommon .dateInfo {
+    width: 100%;
+  }
+  .newsList .newsList1 .listMainCommon .dateInfo .p2,
+  .newsList .newsList1 .listMainCommon .dateInfo .p3 {
+    font-size: 0.12rem;
+  }
+  .newsList .newsList1 .listMainCommon .listTitle {
+    width: 78%;
+  }
+  .newsList .newsList1 .listMainCommon .listTitle > h2 {
+    font-size: 0.14rem;
+  }
+  .newsList .newsList1 .listMainCommon .listTitle > img {
+    width: 100%;
+    height: 2px;
+    margin: 0.04rem 0;
+  }
+  .newsList .newsList1 .listMainCommon .listTitle .p1 {
+    font-size: 0.12rem;
+  }
+  .newsList .newsArrow {
+    width: 100%;
+    margin: 20px auto;
+  }
+  .newsList .newsArrow > img {
+    width: 0.06rem;
+  }
+  .newsList .newsArrow > span {
+    font-size: 0.14rem;
+  }
+}
+@media screen and (max-width: 460px) {
+  .newsInfoWrapper .newsInfoMain .leftImg {
+    width: 100%;
+  }
+}
