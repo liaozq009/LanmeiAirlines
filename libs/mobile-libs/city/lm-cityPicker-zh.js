@@ -1,5 +1,6 @@
+
 var cities = {
-    "A": [["Cambodia","Sihanouk ville/KOS/Cambodia","KOS"],["Macao","Macao/MFM/Macao","MFM"],["Cambodia","Phnom Penh/PNH/Cambodia","PNH"],["Cambodia","Siem Reap/REP/Cambodia","REP"],["Vietnam","Ho Chi Minh/SGN/Vietnam","SGN"],["Vietnam","Hanoi/HAN/Vietnam","HAN"],["HongKong","HongKong/HKG/Hong Kong","HKG"],["Korea","SEOUL/ICN/Korea","ICN"]],
+    "A": [["柬埔寨","西哈努克市(xihanuke)/KOS/柬埔寨","KOS"],["澳门","澳门(aomen)/MFM/中华人民共和国澳门特别行政区","MFM"],["柬埔寨","金边(jinbian)/PNH/柬埔寨","PNH"],["柬埔寨","暹粒(xianli)/REP/柬埔寨","REP"],["越南","胡志明(huzhiming)/SGN/越南","SGN"],["越南","河内(henei)/HAN/越南","HAN"],["香港","香港(xianggang)/HKG/香港","HKG"],["韩国","首尔(shouer)/ICN/韩国","ICN"]],
     // "A": [["anshun","安顺","as"]],
     // "B": [['pek','北京','beijing'],["baoding","保定","bd"]],
     // "C": [['csx','长沙','changsha','cs'],['ctu','成都','chengdu','cd'],['ckg','重庆','chongqing','cq']],

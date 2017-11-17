@@ -52,6 +52,10 @@ a {
 	padding: 8px 20px;
 	border-bottom: 1px solid #dbdbdb;
 }
+.picker-box dd.active{
+	background: #8ec060;
+	color:#fff;
+}
 
 .pro-picker,.city-picker,.search-box {
 	position: fixed;

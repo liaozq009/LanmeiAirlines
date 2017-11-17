@@ -1049,7 +1049,7 @@ var LanmeiAirlines = {
 				startDate: startTime,
 				endDate: endTime,
 				maxTime: maxTime,
-				isTodayValid:false,//判断今天是否可选
+				isTodayValid:true,//判断今天是否可选
 				defaultText : ' ~ ',
 				autoSubmit : false,
 				stopToday : true,
@@ -1372,7 +1372,7 @@ var LanmeiAirlines = {
 			 	endDate: endTime,
 			 	maxTime: maxTime,
 			 	defaultText : ' ~ ',
-			 	isTodayValid:false,//判断今天是否可选
+			 	isTodayValid:true,//判断今天是否可选
 			 	autoSubmit : false,
 			 	stopToday : true,
 			 	theme : 'ta',
