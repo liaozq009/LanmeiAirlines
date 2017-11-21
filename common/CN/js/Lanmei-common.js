@@ -51,17 +51,8 @@ var LanmeiAirlinesCommon = {
 
 		// 点击登录
 		$('.loginBtn,.m-user-btn').click(function(e){
-			e.preventDefault();e.stopPropagation();
-			$('.mobile-user-menu').show();
-		});
-		$('html').click(function(){
-			$('.mobile-user-menu').hide();
-		});
-		$('.js-m-login').click(function(){
+			e.preventDefault();
 			$('#logonModal').modal();
-		});
-		$('.js-m-singUp').click(function(){
-			$('#registerModal').modal();
 		});
 
 		// 点击注册 

@@ -21,8 +21,8 @@ var flightInfo = {
 		$('html').click(function(){
 			hideMenu();
 		});
-		var fromcityData = ['Sihanoukville/KOS/ Cambodia','Macao/MFM/Macao','Phnom Penh/PNH/Cambodia','Siem Reap/REP/Cambodia','Palau/ROR/The Republic of Palau','Ho Chi Minh/SGN/Vietnam','Hanoi/HAN/Vietnam','HongKong/HKG/Hong Kong','SEOUL/ICN/Korea'];
-		var tocityData =   ['Sihanoukville/KOS/ Cambodia','Macao/MFM/Macao','Phnom Penh/PNH/Cambodia','Siem Reap/REP/Cambodia','Palau/ROR/The Republic of Palau','Ho Chi Minh/SGN/Vietnam','Hanoi/HAN/Vietnam','HongKong/HKG/Hong Kong','SEOUL/ICN/Korea'];
+		var fromcityData = ['Sihanoukville/KOS/ Cambodia','Macao/MFM/Macao','Phnom Penh/PNH/Cambodia','Siem Reap/REP/Cambodia','Palau/ROR/The Republic of Palau'];
+		var tocityData =   ['Sihanoukville/KOS/ Cambodia','Macao/MFM/Macao','Phnom Penh/PNH/Cambodia','Siem Reap/REP/Cambodia','Palau/ROR/The Republic of Palau'];
 
 
 		var indexLi = 0; //定义键盘移动index 

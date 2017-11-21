@@ -1242,11 +1242,9 @@ var LanmeiAirlines = {
 		});
 
 		// 移动端城市选择
-		$(".m-local-start").CityPicker({cityId:'startCity',FCity:'出发'});
-		$(".m-local-end").CityPicker({cityId:'endCity',TCity:'到达'});
-		$(".h-local-start").CityPicker({cityId:'h-startCity',FCity:'出发'});
-		$(".f-local-start").CityPicker({cityId:'f-startCity',FCity:'出发'});
-		$(".f-local-end").CityPicker({cityId:'f-endCity',TCity:'到达'});
+		$(".m-local-start").CityPicker({cityId:'startCity',});
+		$(".m-local-end").CityPicker({cityId:'endCity',});
+		$(".h-local-start").CityPicker({cityId:'h-startCity',});
 
 		// 起始点切换
 		$('.m-localChange').click(function(e){
@@ -1261,7 +1259,7 @@ var LanmeiAirlines = {
 		var resetFun = function(){
 			// 订票重置
 			$('.js-ticket-reset').click(function(){
-				$('.m-local-start').val('金边(jinbian)/PNH/柬埔寨');
+				$('.m-local-start').val('Phnom Penh/PNH/Cambodia');
 				$('.m-local-end').val('');
 				$('#m-ticket-selectTime').val(startTime);
 				$('.ticket-cabin-select').val('ECONOMY');
@@ -1274,13 +1272,13 @@ var LanmeiAirlines = {
 
 			//酒店重置
 			$('.js-hotel-reset').click(function(){
-				$('.h-local-start').val('金边(jinbian)/PNH/柬埔寨');
+				$('.h-local-start').val('Phnom Penh/PNH/Cambodia');
 				// $('#m-hotel-selectTime').val(timeResult(today));
 			});
 
 			//航班动态重置
 			$('.js-flight-reset').click(function(){
-				$('.f-local-start').val('金边(jinbian)/PNH/柬埔寨');
+				$('.f-local-start').val('Phnom Penh/PNH/Cambodia');
 				$('.f-local-end').val('');
 				$('.js-flight-select').val('XU-738');
 				$('#m-flight-selectTime').val(timeResult(today));
@@ -1558,7 +1556,7 @@ var LanmeiAirlines = {
 		   	$('.js-pTicket-reset').click(function(){
 		   		var $parent = $(this).parents('.p-ticket-wrap');
 
-		   		$parent.find('.p-local-start').val('金边(jinbian)/PNH/柬埔寨');
+		   		$parent.find('.p-local-start').val('Phnom Penh/PNH/Cambodia');
 		   		$parent.find('.p-local-end').val('');
 		   		$parent.find('.p-cabin-input').val('ECONOMY');
 		   		$parent.find('.p-adult-input').val('1');
@@ -1573,7 +1571,7 @@ var LanmeiAirlines = {
 		   	$('.js-pHotel-reset').click(function(){
 		   		var $parent = $(this).parents('.p-hotel-wrap');
 
-		   		$parent.find('.p-local-start').val('金边(jinbian)/PNH/柬埔寨');
+		   		$parent.find('.p-local-start').val('Phnom Penh/PNH/Cambodia');
 		   		// $('#m-hotel-selectTime').val(timeResult(today));
 		   	});
 
@@ -1581,7 +1579,7 @@ var LanmeiAirlines = {
 		   	$('.js-pFlight-reset').click(function(){
 		   		var $parent = $(this).parents('.p-flight-wrap');
 
-		   		$parent.find('.p-local-start').val('金边(jinbian)/PNH/柬埔寨');
+		   		$parent.find('.p-local-start').val('Phnom Penh/PNH/Cambodia');
 		   		$parent.find('.p-local-end').val('');
 		   		$parent.find('.js-pFlight-select').val('XU-738');
 		   		$parent.find('#p-flight-selectTime').val(timeResult(today));

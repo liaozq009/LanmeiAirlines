@@ -1,3 +1,4 @@
+
 var cities = {
     "A": [["Cambodia","Sihanouk ville/KOS/Cambodia","KOS"],["Macao","Macao/MFM/Macao","MFM"],["Cambodia","Phnom Penh/PNH/Cambodia","PNH"],["Cambodia","Siem Reap/REP/Cambodia","REP"],["Vietnam","Ho Chi Minh/SGN/Vietnam","SGN"],["Vietnam","Hanoi/HAN/Vietnam","HAN"],["HongKong","HongKong/HKG/Hong Kong","HKG"],["Korea","SEOUL/ICN/Korea","ICN"]],
     // "A": [["anshun","安顺","as"]],
@@ -190,7 +191,6 @@ var cities = {
         $("#"+this.cityId+"-pro").on("click", function (e) {
             var target = e.target;
             if ($(target).is("dd")) {
-                $(target).addClass('active').siblings('dd').removeClass('active');
                 that.pro = $(target).html();
                 var letter = $(target).data("letter");
                 // that.createCityList(letter, that.pro);
@@ -201,7 +201,7 @@ var cities = {
                     that.el.html(that.pro );
                 }
 
-                $("#"+that.cityId+"-box").fadeOut(800);
+                $("#"+that.cityId+"-box").fadeOut();
                 $('html,body').removeClass('ovfHiden'); //使网页恢复可滚
             }
         });

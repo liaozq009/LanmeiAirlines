@@ -47,28 +47,6 @@
 	</style>
 <![endif]-->
 
-<style type="text/css">
-.mobile-user{
-	position: relative;
-}
-.mobile-user-menu{
-	display: none;
-	position: absolute;
-	right: 0;
-	z-index: 9;
-	width: 0.66rem;
-	background: #fff;
-	padding: 2px 7px;
-	text-align: center;
-	border-radius: 2px;
-}
-.mobile-user-menu li{
-	font-size: 0.12rem;
-	line-height: 0.26rem;
-	color: #1f2c5c;
-}
-</style>
-
 <script type="text/javascript">
 
 	/* 小于ie8的版本跳转到浏览器版本过低下载新浏览器页面 */
@@ -136,13 +114,7 @@
 				</ul>
 			</div>
 			<a href="#" class="mobile-menu"><img src="images/CN/mobile-menu.png"></a>
-			<a href="#" class="mobile-user">
-				<img src="images/CN/mobile-user.png" class="m-user-btn">
-				<ul class="mobile-user-menu">
-					<li class="js-m-login">登录</li>
-					<li class="js-m-singUp">注册</li>
-				</ul>
-			</a>
+			<a href="#" class="mobile-user"><img src="images/CN/mobile-user.png" class="m-user-btn"></a>
 		</nav>
 
 		<!-- 登录模态框 -->
@@ -202,69 +174,17 @@
 					</div>
 					<div class="modal-body">
 						<!-- <h2 class="loginTitle">Registered</h2>
-							<span class="verifyInfo">Account or password error !</span> -->
-							<form class="registerWrapper" method="POST" action="">
-								<h2>Registered</h2>
-								<!-- <p>There have been accounts ? <a href="#" data-toggle="modal" data-target="#logonModal">Login</a></p> -->
-								<img src="images/EN/verticalTitleLine.png">
-								<div class="registerContent">
-									<div class="registerInfo">
-										<input type="text" name="" value="" id="registerUserName" placeholder="Please enter email address">
-										<img src="images/EN/register-email.png">
-										<p>This email is already in use !</p>
-										<ul class="register_on_changes on_changes">
-											<li email="@gmail.com"></li>
-											<li email="@qq.com"></li>
-											<li email="@sina.com"></li>
-											<li email="@163.com"></li>
-											<li email="@hotmail.com"></li>
-											<li email="@126.com"></li>
-											<li email="@yahoo.com"></li>
-										</ul>
-									</div>
-									<div class="registerPassword">
-										<input type="password" name="" value="" id="registerPassword" placeholder="Password with 8-16 characters">
-										<img src="images/EN/register-password.png">
-										<p>Password strength : <span><i class="i1"></i><i class="i2"></i><i class="i3"></i><i class="i4"></i><i class="i5"></i><i class="i6"></i></span></p>
-									</div>
-									<div class="repeatPassword">
-										<input type="password" name="" value="" id="repeatPassword" placeholder="Please repeat password">
-										<img src="images/EN/register-password.png">
-										<p>Passwords don’t match !</p>
-										<span>
-											Password must be with 3 or 4 combination with 
-											number (0-9), lowercase letter (a-z), uppercase 
-											letter (A-Z) or special characters.
-										</span>
-									</div>
-									<div class="agree">
-										<span></span>
-										<p>I hereby agree to    <a href="#">Lanmeiairlines’ terms and conditions</a></p>
-									</div>
-									<div class="registerBtn">
-										<button id="registerBtn">Register</button>
-									</div>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<!-- 忘记密码模态框 -->
-			<div class="modal fade" id="forgetModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-				<div class="modal-dialog" role="document">
-					<div class="modal-content">
-						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">Close<span aria-hidden="true">&times;</span></button>
-						</div>
-						<div class="modal-body">
-							<h2 class="loginTitle">Forget Password</h2>
-							<span class="verifyInfo">Account or password error !</span>
-							<form id="f-loginForm" method="POST" action="">
-								<div class="form-group">
-									<input type="text" class="form-control" id="f-LanmeiUserName" placeholder="Email">
-									<ul class="forget_on_changes on_changes">
+						<span class="verifyInfo">Account or password error !</span> -->
+						<form class="registerWrapper" method="POST" action="">
+							<h2>Registered</h2>
+							<!-- <p>There have been accounts ? <a href="#" data-toggle="modal" data-target="#logonModal">Login</a></p> -->
+							<img src="images/EN/verticalTitleLine.png">
+							<div class="registerContent">
+								<div class="registerInfo">
+									<input type="text" name="" value="" id="registerUserName" placeholder="Please enter email address">
+									<img src="images/EN/register-email.png">
+									<p>This email is already in use !</p>
+									<ul class="register_on_changes on_changes">
 										<li email="@gmail.com"></li>
 										<li email="@qq.com"></li>
 										<li email="@sina.com"></li>
@@ -274,16 +194,68 @@
 										<li email="@yahoo.com"></li>
 									</ul>
 								</div>
-								<div class="form-group">
-									<input type="password" class="form-control" id="f-LanmeiPassword" placeholder="Password">
-									<button type="button" id="f-getPasswordBtn">Get Password</button>
+								<div class="registerPassword">
+									<input type="password" name="" value="" id="registerPassword" placeholder="Password with 8-16 characters">
+									<img src="images/EN/register-password.png">
+									<p>Password strength : <span><i class="i1"></i><i class="i2"></i><i class="i3"></i><i class="i4"></i><i class="i5"></i><i class="i6"></i></span></p>
 								</div>
-								<div class="agree form-group">
-									<p>Please pay attention to the E-mail information</p>
+								<div class="repeatPassword">
+									<input type="password" name="" value="" id="repeatPassword" placeholder="Please repeat password">
+									<img src="images/EN/register-password.png">
+									<p>Passwords don’t match !</p>
+									<span>
+										Password must be with 3 or 4 combination with 
+										number (0-9), lowercase letter (a-z), uppercase 
+										letter (A-Z) or special characters.
+									</span>
 								</div>
-								<div class="form-group">
-									<button type="button" class="btn f-userLoginBtn">Login</button>
+								<div class="agree">
+									<span></span>
+									<p>I hereby agree to    <a href="#">Lanmeiairlines’ terms and conditions</a></p>
 								</div>
+								<div class="registerBtn">
+									<button id="registerBtn">Register</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 忘记密码模态框 -->
+		<div class="modal fade" id="forgetModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">Close<span aria-hidden="true">&times;</span></button>
+					</div>
+					<div class="modal-body">
+						<h2 class="loginTitle">Forget Password</h2>
+						<span class="verifyInfo">Account or password error !</span>
+						<form id="f-loginForm" method="POST" action="">
+							<div class="form-group">
+								<input type="text" class="form-control" id="f-LanmeiUserName" placeholder="Email">
+								<ul class="forget_on_changes on_changes">
+									<li email="@gmail.com"></li>
+									<li email="@qq.com"></li>
+									<li email="@sina.com"></li>
+									<li email="@163.com"></li>
+									<li email="@hotmail.com"></li>
+									<li email="@126.com"></li>
+									<li email="@yahoo.com"></li>
+								</ul>
+							</div>
+							<div class="form-group">
+								<input type="password" class="form-control" id="f-LanmeiPassword" placeholder="Password">
+								<button type="button" id="f-getPasswordBtn">Get Password</button>
+							</div>
+							<div class="agree form-group">
+								<p>Please pay attention to the E-mail information</p>
+							</div>
+							<div class="form-group">
+								<button type="button" class="btn f-userLoginBtn">Login</button>
+							</div>
 							<!-- <div class="loginOther">
 								<p>Login With</p>
 								<button  type="button" class="btn Facebook">Facebook</button>
@@ -700,7 +672,8 @@
 								<span class="clear">X</span>
 								<b class="bottomLine"></b>
 								<ul class="hotelMenu menu-com">
-									<li><a href="javascript:void(0)">金边</a></li>
+									<li><a href="javascript:void(0)">广州</a></li>
+									<li><a href="javascript:void(0)">深圳</a></li>
 								</ul>
 							</div>
 							<div class="timeSelectStart">
@@ -955,7 +928,7 @@
 						<div class="m-ticket-local">
 							<div class="m-ticket-local-start">
 								<img src="images/CN/m-local-start.png">
-								<input type="text" class="m-local-start" value="金边(jinbian)/PNH/柬埔寨" placeholder="出发地" readonly>
+								<input type="text" class="m-local-start" value="Phnom Penh/PNH/Cambodia" placeholder="出发地" readonly>
 							</div>
 							<div class="m-ticket-local-end">
 								<img src="images/CN/m-local-end.png">
@@ -1010,7 +983,7 @@
 					<div class="m-ticket-local">
 						<div class="m-ticket-local-start m-h-local-start">
 							<img src="images/CN/m-location.png">
-							<input type="text" name="" class="h-local-start" value="金边(jinbian)/PNH/柬埔寨" placeholder="出发地" readonly>
+							<input type="text" name="" class="h-local-start" value="广州" placeholder="From" readonly>
 						</div>
 					</div>
 					<div class="m-ticket-date">
@@ -1059,11 +1032,11 @@
 					<div class="m-ticket-local js-f-local">
 						<div class="m-ticket-local-start">
 							<img src="images/CN/m-local-start.png">
-							<input type="text" class="f-local-start" name="localStart" value="金边(jinbian)/PNH/柬埔寨" placeholder="出发地" readonly>
+							<input type="text" class="f-local-start" name="localStart" value="广州" placeholder="From" readonly>
 						</div>
 						<div class="m-ticket-local-end">
 							<img src="images/CN/m-local-end.png">
-							<input type="text" class="f-local-end" name="localEnd" value="" placeholder="目的地" readonly>
+							<input type="text" class="f-local-end" name="localEnd" value="" placeholder="To" readonly>
 						</div>
 						<img src="images/CN/m-local-change.png" class="m-localChange">
 					</div>
@@ -1125,7 +1098,7 @@
 					<div class="p-localSelect">
 						<div class="p-localSelect-start">
 							<p><img src="images/CN/originStart2.png">出发地</p>
-							<input type="text" value="金边(jinbian)/PNH/柬埔寨" class="p-local-start" readonly>
+							<input type="text" value="Phnom Penh/PNH/Cambodia" class="p-local-start" readonly>
 						</div>
 						<div class="p-changeLocal-wrap"><img src="images/CN/localChange2-active.png" class="p-changeLocal"></div>
 						<div class="p-localSelect-end">
@@ -1167,7 +1140,7 @@
 				<div class="p-localSelect">
 					<div class="p-localSelect-start">
 						<p><img src="images/CN/m-location.png">目的地</p>
-						<input type="text" name="" value="金边(jinbian)/PNH/柬埔寨" class="p-local-start" readonly>
+						<input type="text" name="" value="广州" class="p-local-start" readonly>
 					</div>
 				</div>
 				<div class="p-dateSelect">
@@ -1191,7 +1164,7 @@
 				<div class="p-localSelect">
 					<div class="p-localSelect-start">
 						<p><img src="images/CN/originStart2.png">出发地</p>
-						<input type="text" name="" value="金边(jinbian)/PNH/柬埔寨" class="p-local-start" readonly>
+						<input type="text" name="" value="广州" class="p-local-start" readonly>
 					</div>
 					<div class="p-changeLocal-wrap"><img src="images/CN/localChange2-active.png" class="p-changeLocal"></div>
 					<div class="p-localSelect-end">
@@ -1229,539 +1202,554 @@
 		</div>
 		<div class="coupon-wrap">
 			<div class='poster-main carousel' data-setting='{
-			"width":940,
-			"height":160,
-			"posterWidth":450,
-			"posterHeight":160,
-			"verticalAlign":"middle",
-			"autoPlay":false,
-			"speed":1000,
-			"delay":1000,
-			"scale":0.9
-		}'>
-		<div class='poster-btn poster-prev-btn'></div>
-		<ul class='poster-list'>
-			<li class="list-item">
-				<div class="coupon-con">
-					<h2><span class="s1">$</span><span class="s2">200</span></h2>
-					<p class="p1">机票优惠券</p>
-					<p class="p2">立即领取</p>
-				</div>
-				<a href="#"><img src="images/EN/coupon1.png" alt=""></a>
-			</li>
-			<li class="list-item">
-				<div class="coupon-con">
-					<h2><span class="s1">$</span><span class="s2">200</span></h2>
-					<p class="p1">机票优惠券</p>
-					<p class="p2">立即领取</p>
-				</div>
-				<a href="#"><img src="./images/EN/coupon2.png" alt=""></a>
-			</li>
-			<li class="list-item">
-				<div class="coupon-con">
-					<h2><span class="s1">$</span><span class="s2">200</span></h2>
-					<p class="p1">机票优惠券</p>
-					<p class="p2">立即领取</p>
-				</div>
-				<a href="#"><img src="images/EN/coupon1.png" alt=""></a>
-			</li>
-		</ul>
-		<div class='poster-btn poster-next-btn'></div>
-	</div>
-</div>
-<!-- 移动端 -->
-<div class="mobile-coupon-container">
-	<div class="swiper-container c-swiper-container">
-		<div class="swiper-wrapper">
-			<div class="swiper-slide">
-				<div class="coupon-con">
-					<h2><span class="s1">$</span><span class="s2">200</span></h2>
-					<p class="p1">机票优惠券</p>
-					<p class="p2">立即领取</p>
-				</div>
-				<a href="#"><img src="images/EN/coupon1.png" alt=""></a>
-			</div>
-			<div class="swiper-slide">
-				<div class="coupon-con">
-					<h2><span class="s1">$</span><span class="s2">200</span></h2>
-					<p class="p1">机票优惠券</p>
-					<p class="p2">立即领取</p>
-				</div>
-				<a href="#"><img src="images/EN/coupon1.png" alt=""></a>
-			</div>
-			<div class="swiper-slide">
-				<div class="coupon-con">
-					<h2><span class="s1">$</span><span class="s2">200</span></h2>
-					<p class="p1">机票优惠券</p>
-					<p class="p2">立即领取</p>
-				</div>
-				<a href="#"><img src="images/EN/coupon1.png" alt=""></a>
+			         "width":940,
+		             "height":160,
+		             "posterWidth":450,
+		             "posterHeight":160,
+		             "verticalAlign":"middle",
+		             "autoPlay":false,
+		             "speed":1000,
+		             "delay":1000,
+		             "scale":0.9
+			}'>
+			<div class='poster-btn poster-prev-btn'></div>
+			<ul class='poster-list'>
+				<li class="list-item">
+					<div class="coupon-con">
+						<h2><span class="s1">$</span><span class="s2">200</span></h2>
+						<p class="p1">机票优惠券</p>
+						<p class="p2">立即领取</p>
+					</div>
+					<a href="#"><img src="images/EN/coupon1.png" alt=""></a>
+				</li>
+				<li class="list-item">
+					<div class="coupon-con">
+						<h2><span class="s1">$</span><span class="s2">200</span></h2>
+						<p class="p1">机票优惠券</p>
+						<p class="p2">立即领取</p>
+					</div>
+					<a href="#"><img src="./images/EN/coupon2.png" alt=""></a>
+				</li>
+				<li class="list-item">
+					<div class="coupon-con">
+						<h2><span class="s1">$</span><span class="s2">200</span></h2>
+						<p class="p1">机票优惠券</p>
+						<p class="p2">立即领取</p>
+					</div>
+					<a href="#"><img src="images/EN/coupon1.png" alt=""></a>
+				</li>
+			</ul>
+				<div class='poster-btn poster-next-btn'></div>
 			</div>
 		</div>
+		<!-- 移动端 -->
+		<div class="mobile-coupon-container">
+			<div class="swiper-container c-swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="coupon-con">
+							<h2><span class="s1">$</span><span class="s2">200</span></h2>
+							<p class="p1">机票优惠券</p>
+							<p class="p2">立即领取</p>
+						</div>
+						<a href="#"><img src="images/EN/coupon1.png" alt=""></a>
+					</div>
+					<div class="swiper-slide">
+						<div class="coupon-con">
+							<h2><span class="s1">$</span><span class="s2">200</span></h2>
+							<p class="p1">机票优惠券</p>
+							<p class="p2">立即领取</p>
+						</div>
+						<a href="#"><img src="images/EN/coupon1.png" alt=""></a>
+					</div>
+					<div class="swiper-slide">
+						<div class="coupon-con">
+							<h2><span class="s1">$</span><span class="s2">200</span></h2>
+							<p class="p1">机票优惠券</p>
+							<p class="p2">立即领取</p>
+						</div>
+						<a href="#"><img src="images/EN/coupon1.png" alt=""></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="pagination c-pagination"></div>
 	</div>
-</div>
-<div class="pagination c-pagination"></div>
-</div>
 
-<!-- 特价机票 -->
-<div class="lowestFares">
-	<div class="lowestFaresTitle lanmeiCommonTitle">
-		<h2>特别优惠</h2>
-		<p><i class="i1"></i><i class="i2"></i><i class="i3"></i><i class="i4"></i><i class="i5"></i><i class="i6"></i></p>
-	</div>
-	<!-- 滚动信息 -->
-	<div class='slide_container'>
-		<div class="slide_content"> <!-- 小框 -->
-			<!-- 左右箭头 -->
-			<div class="prev_arrow">
-				<i class="iconfont icon-fangxiang-copy1"></i>
-			</div>
-			<div class="next_arrow">
-				<i class="iconfont icon-fangxiang-copy"></i>
-			</div>
-			<!-- IPAD 显示-->
-			<div class="prev_arrow iPad_prev_arrow">
-				<i class="iconfont icon-fangxiang-copy1"></i>
-			</div>
-			<div class="next_arrow iPad_next_arrow">
-				<i class="iconfont icon-fangxiang-copy"></i>
-			</div>
-			<!-- 小圆点 -->
-			<div class="circle_arrow"></div>
-			<div class="tabslider"> <!-- 大框 -->
-				<!-- 一级菜单1 -->
-				<div id="tabslider1"> <!-- 小框 -->
-					<div class="second_slider"> <!-- 大框 -->
-						<ul class="slider-ul-1">
-							<li class="nth-child1">
-								<div class="pathSelectWrapper">
-									<div class="localPath">
-										<img src="images/CN/fly-icon.png">
-										<p class="startPath">金边</p>
-										<p class="endPath">暹粒</p>
-									</div>
-									<div class="priceInfo">
-										<div class="nth-child1">
-											<p>From <br/><span>USD</span></p>
-											<h3>--</h3>
-										</div>
-										<div class="nth-child2">
-											<p>经济舱</p>
-										</div>
-										<p class="line-icon">
-											<i class="i1"></i><i class="i2"></i><i class="i3"></i><i class="i4"></i><i class="i5"></i><i class="i6"></i>
-										</p>
-									</div>
-								</div>
-							</li>
-							<li class="nth-child2">
-								<div class="pathSelectWrapper">
-									<div class="localPath">
-										<img src="images/CN/fly-icon.png">
-										<p class="startPath">金边</p>
-										<p class="endPath">暹粒</p>
-									</div>
-									<div class="priceInfo">
-										<div class="nth-child1">
-											<p>From <br/><span>USD</span></p>
-											<h3>--</h3>
-										</div>
-										<div class="nth-child2">
-											<p>经济舱</p>
-										</div>
-										<p class="line-icon">
-											<i class="i1"></i><i class="i2"></i><i class="i3"></i><i class="i4"></i><i class="i5"></i><i class="i6"></i>
-										</p>
-									</div>
-								</div>
-							</li>
-							<li class="nth-child3">
-								<div class="pathSelectWrapper">
-									<div class="localPath">
-										<img src="images/CN/fly-icon.png">
-										<p class="startPath">金边</p>
-										<p class="endPath">暹粒</p>
-									</div>
-									<div class="priceInfo">
-										<div class="nth-child1">
-											<p>From <br/><span>USD</span></p>
-											<h3>--</h3>
-										</div>
-										<div class="nth-child2">
-											<p>经济舱</p>
-										</div>
-										<p class="line-icon">
-											<i class="i1"></i><i class="i2"></i><i class="i3"></i><i class="i4"></i><i class="i5"></i><i class="i6"></i>
-										</p>
-									</div>
-								</div>
-							</li>
-						</ul>
-						<ul class="slider-ul-2">
-							<li class="nth-child1">
-								<div class="pathSelectWrapper">
-									<div class="localPath">
-										<img src="images/CN/fly-icon.png">
-										<p class="startPath">金边</p>
-										<p class="endPath">暹粒</p>
-									</div>
-									<div class="priceInfo">
-										<div class="nth-child1">
-											<p>From <br/><span>USD</span></p>
-											<h3>--</h3>
-										</div>
-										<div class="nth-child2">
-											<p>经济舱</p>
-										</div>
-										<p class="line-icon">
-											<i class="i1"></i><i class="i2"></i><i class="i3"></i><i class="i4"></i><i class="i5"></i><i class="i6"></i>
-										</p>
-									</div>
-								</div>
-							</li>
-							<li class="nth-child2">
-								<div class="pathSelectWrapper">
-									<div class="localPath">
-										<img src="images/CN/fly-icon.png">
-										<p class="startPath">金边</p>
-										<p class="endPath">暹粒</p>
-									</div>
-									<div class="priceInfo">
-										<div class="nth-child1">
-											<p>From <br/><span>USD</span></p>
-											<h3>--</h3>
-										</div>
-										<div class="nth-child2">
-											<p>经济舱</p>
-										</div>
-										<p class="line-icon">
-											<i class="i1"></i><i class="i2"></i><i class="i3"></i><i class="i4"></i><i class="i5"></i><i class="i6"></i>
-										</p>
-									</div>
-								</div>
-							</li>
-							<li class="nth-child3">
-								<div class="pathSelectWrapper">
-									<div class="localPath">
-										<img src="images/CN/fly-icon.png">
-										<p class="startPath">金边</p>
-										<p class="endPath">暹粒</p>
-									</div>
-									<div class="priceInfo">
-										<div class="nth-child1">
-											<p>From <br/><span>USD</span></p>
-											<h3>--</h3>
-										</div>
-										<div class="nth-child2">
-											<p>经济舱</p>
-										</div>
-										<p class="line-icon">
-											<i class="i1"></i><i class="i2"></i><i class="i3"></i><i class="i4"></i><i class="i5"></i><i class="i6"></i>
-										</p>
-									</div>
-								</div>
-							</li>
-						</ul>
-						<ul class="slider-ul-3">
-							<li class="nth-child1">
-								<div class="pathSelectWrapper">
-									<div class="localPath">
-										<img src="images/CN/fly-icon.png">
-										<p class="startPath">金边</p>
-										<p class="endPath">暹粒</p>
-									</div>
-									<div class="priceInfo">
-										<div class="nth-child1">
-											<p>From <br/><span>USD</span></p>
-											<h3>--</h3>
-										</div>
-										<div class="nth-child2">
-											<p>经济舱</p>
-										</div>
-										<p class="line-icon">
-											<i class="i1"></i><i class="i2"></i><i class="i3"></i><i class="i4"></i><i class="i5"></i><i class="i6"></i>
-										</p>
-									</div>
-								</div>
-							</li>
-							<li class="nth-child2">
-								<div class="pathSelectWrapper">
-									<div class="localPath">
-										<img src="images/CN/fly-icon.png">
-										<p class="startPath">金边</p>
-										<p class="endPath">暹粒</p>
-									</div>
-									<div class="priceInfo">
-										<div class="nth-child1">
-											<p>From <br/><span>USD</span></p>
-											<h3>--</h3>
-										</div>
-										<div class="nth-child2">
-											<p>经济舱</p>
-										</div>
-										<p class="line-icon">
-											<i class="i1"></i><i class="i2"></i><i class="i3"></i><i class="i4"></i><i class="i5"></i><i class="i6"></i>
-										</p>
-									</div>
-								</div>
-							</li>
-							<li class="nth-child3">
-								<div class="pathSelectWrapper">
-									<div class="localPath">
-										<img src="images/CN/fly-icon.png">
-										<p class="startPath">金边</p>
-										<p class="endPath">暹粒</p>
-									</div>
-									<div class="priceInfo">
-										<div class="nth-child1">
-											<p>From <br/><span>USD</span></p>
-											<h3>--</h3>
-										</div>
-										<div class="nth-child2">
-											<p>经济舱</p>
-										</div>
-										<p class="line-icon">
-											<i class="i1"></i><i class="i2"></i><i class="i3"></i><i class="i4"></i><i class="i5"></i><i class="i6"></i>
-										</p>
-									</div>
-								</div>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
+	<!-- 特价机票 -->
+	<div class="lowestFares">
+		<div class="lowestFaresTitle lanmeiCommonTitle">
+			<h2>特别优惠</h2>
+			<p><i class="i1"></i><i class="i2"></i><i class="i3"></i><i class="i4"></i><i class="i5"></i><i class="i6"></i></p>
 		</div>
-	</div>
-	<div class="mobile-slide-container">
-		<div class="swiper-container d-swiper-container">
-			<div class="swiper-wrapper">
-				<div class="swiper-slide">
-					<div class="pathSelectWrapper">
-						<div class="localPath">
-							<img src="images/CN/fly-icon.png">
-							<p class="startPath">PhnomPenh</p>
-							<p class="endPath">SiemReap</p>
-						</div>
-						<div class="priceInfo">
-							<div class="nth-child1">
-								<p>From <br/><span>USD</span></p>
-								<h3>--</h3>
-							</div>
-							<div class="nth-child2">
-								<p>Economy class</p>
-							</div>
-							<p class="line-icon">
-								<i class="i1"></i><i class="i2"></i><i class="i3"></i><i class="i4"></i><i class="i5"></i><i class="i6"></i>
-							</p>
-						</div>
-					</div>
+		<!-- 滚动信息 -->
+		<div class='slide_container'>
+			<div class="slide_content"> <!-- 小框 -->
+				<!-- 左右箭头 -->
+				<div class="prev_arrow">
+					<i class="iconfont icon-fangxiang-copy1"></i>
 				</div>
-				<div class="swiper-slide">
-					<div class="pathSelectWrapper">
-						<div class="localPath">
-							<img src="images/CN/fly-icon.png">
-							<p class="startPath">PhnomPenh</p>
-							<p class="endPath">SiemReap</p>
-						</div>
-						<div class="priceInfo">
-							<div class="nth-child1">
-								<p>From <br/><span>USD</span></p>
-								<h3>--</h3>
-							</div>
-							<div class="nth-child2">
-								<p>Economy class</p>
-							</div>
-							<p class="line-icon">
-								<i class="i1"></i><i class="i2"></i><i class="i3"></i><i class="i4"></i><i class="i5"></i><i class="i6"></i>
-							</p>
-						</div>
-					</div>
+				<div class="next_arrow">
+					<i class="iconfont icon-fangxiang-copy"></i>
 				</div>
-				<div class="swiper-slide">
-					<div class="pathSelectWrapper">
-						<div class="localPath">
-							<img src="images/CN/fly-icon.png">
-							<p class="startPath">PhnomPenh</p>
-							<p class="endPath">SiemReap</p>
-						</div>
-						<div class="priceInfo">
-							<div class="nth-child1">
-								<p>From <br/><span>USD</span></p>
-								<h3>--</h3>
-							</div>
-							<div class="nth-child2">
-								<p>Economy class</p>
-							</div>
-							<p class="line-icon">
-								<i class="i1"></i><i class="i2"></i><i class="i3"></i><i class="i4"></i><i class="i5"></i><i class="i6"></i>
-							</p>
+				<!-- IPAD 显示-->
+				<div class="prev_arrow iPad_prev_arrow">
+					<i class="iconfont icon-fangxiang-copy1"></i>
+				</div>
+				<div class="next_arrow iPad_next_arrow">
+					<i class="iconfont icon-fangxiang-copy"></i>
+				</div>
+				<!-- 小圆点 -->
+				<div class="circle_arrow"></div>
+				<div class="tabslider"> <!-- 大框 -->
+					<!-- 一级菜单1 -->
+					<div id="tabslider1"> <!-- 小框 -->
+						<div class="second_slider"> <!-- 大框 -->
+							<ul class="slider-ul-1">
+								<li class="nth-child1">
+									<div class="pathSelectWrapper">
+										<div class="localPath">
+											<img src="images/CN/fly-icon.png">
+											<p class="startPath">金边</p>
+											<p class="endPath">暹粒</p>
+										</div>
+										<div class="priceInfo">
+											<div class="nth-child1">
+												<p>From <br/><span>USD</span></p>
+												<h3>--</h3>
+											</div>
+											<div class="nth-child2">
+												<p>经济舱</p>
+											</div>
+											<p class="line-icon">
+												<i class="i1"></i><i class="i2"></i><i class="i3"></i><i class="i4"></i><i class="i5"></i><i class="i6"></i>
+											</p>
+										</div>
+									</div>
+								</li>
+								<li class="nth-child2">
+									<div class="pathSelectWrapper">
+										<div class="localPath">
+											<img src="images/CN/fly-icon.png">
+											<p class="startPath">金边</p>
+											<p class="endPath">暹粒</p>
+										</div>
+										<div class="priceInfo">
+											<div class="nth-child1">
+												<p>From <br/><span>USD</span></p>
+												<h3>--</h3>
+											</div>
+											<div class="nth-child2">
+												<p>经济舱</p>
+											</div>
+											<p class="line-icon">
+												<i class="i1"></i><i class="i2"></i><i class="i3"></i><i class="i4"></i><i class="i5"></i><i class="i6"></i>
+											</p>
+										</div>
+									</div>
+								</li>
+								<li class="nth-child3">
+									<div class="pathSelectWrapper">
+										<div class="localPath">
+											<img src="images/CN/fly-icon.png">
+											<p class="startPath">金边</p>
+											<p class="endPath">暹粒</p>
+										</div>
+										<div class="priceInfo">
+											<div class="nth-child1">
+												<p>From <br/><span>USD</span></p>
+												<h3>--</h3>
+											</div>
+											<div class="nth-child2">
+												<p>经济舱</p>
+											</div>
+											<p class="line-icon">
+												<i class="i1"></i><i class="i2"></i><i class="i3"></i><i class="i4"></i><i class="i5"></i><i class="i6"></i>
+											</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<ul class="slider-ul-2">
+								<li class="nth-child1">
+									<div class="pathSelectWrapper">
+										<div class="localPath">
+											<img src="images/CN/fly-icon.png">
+											<p class="startPath">金边</p>
+											<p class="endPath">暹粒</p>
+										</div>
+										<div class="priceInfo">
+											<div class="nth-child1">
+												<p>From <br/><span>USD</span></p>
+												<h3>--</h3>
+											</div>
+											<div class="nth-child2">
+												<p>经济舱</p>
+											</div>
+											<p class="line-icon">
+												<i class="i1"></i><i class="i2"></i><i class="i3"></i><i class="i4"></i><i class="i5"></i><i class="i6"></i>
+											</p>
+										</div>
+									</div>
+								</li>
+								<li class="nth-child2">
+									<div class="pathSelectWrapper">
+										<div class="localPath">
+											<img src="images/CN/fly-icon.png">
+											<p class="startPath">金边</p>
+											<p class="endPath">暹粒</p>
+										</div>
+										<div class="priceInfo">
+											<div class="nth-child1">
+												<p>From <br/><span>USD</span></p>
+												<h3>--</h3>
+											</div>
+											<div class="nth-child2">
+												<p>经济舱</p>
+											</div>
+											<p class="line-icon">
+												<i class="i1"></i><i class="i2"></i><i class="i3"></i><i class="i4"></i><i class="i5"></i><i class="i6"></i>
+											</p>
+										</div>
+									</div>
+								</li>
+								<li class="nth-child3">
+									<div class="pathSelectWrapper">
+										<div class="localPath">
+											<img src="images/CN/fly-icon.png">
+											<p class="startPath">金边</p>
+											<p class="endPath">暹粒</p>
+										</div>
+										<div class="priceInfo">
+											<div class="nth-child1">
+												<p>From <br/><span>USD</span></p>
+												<h3>--</h3>
+											</div>
+											<div class="nth-child2">
+												<p>经济舱</p>
+											</div>
+											<p class="line-icon">
+												<i class="i1"></i><i class="i2"></i><i class="i3"></i><i class="i4"></i><i class="i5"></i><i class="i6"></i>
+											</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<ul class="slider-ul-3">
+								<li class="nth-child1">
+									<div class="pathSelectWrapper">
+										<div class="localPath">
+											<img src="images/CN/fly-icon.png">
+											<p class="startPath">金边</p>
+											<p class="endPath">暹粒</p>
+										</div>
+										<div class="priceInfo">
+											<div class="nth-child1">
+												<p>From <br/><span>USD</span></p>
+												<h3>--</h3>
+											</div>
+											<div class="nth-child2">
+												<p>经济舱</p>
+											</div>
+											<p class="line-icon">
+												<i class="i1"></i><i class="i2"></i><i class="i3"></i><i class="i4"></i><i class="i5"></i><i class="i6"></i>
+											</p>
+										</div>
+									</div>
+								</li>
+								<li class="nth-child2">
+									<div class="pathSelectWrapper">
+										<div class="localPath">
+											<img src="images/CN/fly-icon.png">
+											<p class="startPath">金边</p>
+											<p class="endPath">暹粒</p>
+										</div>
+										<div class="priceInfo">
+											<div class="nth-child1">
+												<p>From <br/><span>USD</span></p>
+												<h3>--</h3>
+											</div>
+											<div class="nth-child2">
+												<p>经济舱</p>
+											</div>
+											<p class="line-icon">
+												<i class="i1"></i><i class="i2"></i><i class="i3"></i><i class="i4"></i><i class="i5"></i><i class="i6"></i>
+											</p>
+										</div>
+									</div>
+								</li>
+								<li class="nth-child3">
+									<div class="pathSelectWrapper">
+										<div class="localPath">
+											<img src="images/CN/fly-icon.png">
+											<p class="startPath">金边</p>
+											<p class="endPath">暹粒</p>
+										</div>
+										<div class="priceInfo">
+											<div class="nth-child1">
+												<p>From <br/><span>USD</span></p>
+												<h3>--</h3>
+											</div>
+											<div class="nth-child2">
+												<p>经济舱</p>
+											</div>
+											<p class="line-icon">
+												<i class="i1"></i><i class="i2"></i><i class="i3"></i><i class="i4"></i><i class="i5"></i><i class="i6"></i>
+											</p>
+										</div>
+									</div>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="pagination d-pagination"></div>
-</div>
-
-<!-- 澜湄服务 -->
-<div class="characteristicServe">
-	<div class="characteristicServeTitle lanmeiCommonTitle">
-		<h2>旅行服务</h2>
-		<p><i class="i1"></i><i class="i2"></i><i class="i3"></i><i class="i4"></i><i class="i5"></i><i class="i6"></i></p>
-	</div>
-	<div class="characteristicServeList">
-		<ul>
-			<li class="nth-child1">
-				<a href="javascript:void(0)"><img src="images/CN/lanmeiServe1.png"><p>托运行李</p></a>
-			</li>
-			<li class="nth-child2">
-				<a href="javascript:void(0)"><img src="images/CN/lanmeiServe2.png"><p>机上餐食</p></a>
-			</li>
-			<li class="nth-child3">
-				<a href="javascript:void(0)"><img src="images/CN/lanmeiServe3.png"><p>提前选座</p></a>
-			</li>
-			<li class="nth-child4">
-				<a href="http://www.travelsky.com/tsky/validate.jsp" target="_blank"><img src="images/CN/lanmeiServe4.png"><p>机票验真</p></a>
-			</li>
-		</ul>
-	</div>
-</div>
-
-<!-- 旅行日记 -->
-<div class="lm-travel">
-	<div class="lm-travel-title lanmeiCommonTitle">
-		<h2>旅行日记</h2>
-		<p><i class="i1"></i><i class="i2"></i><i class="i3"></i><i class="i4"></i><i class="i5"></i><i class="i6"></i></p>
-	</div>
-	<div class="lm-travel-inner pc-travel-inner">
-		<div class="nth-child1 active transformBox">
-			<a href="javascript:void(0)"><img class="lazy" src="images/CN/travel-01.jpg"></a>
-			<p class="t-maskBox" data="mask-1">金边</p>
-		</div>
-		<div class="nth-child2">
-			<img src="images/CN/travel-detail.png" class="p-travel-detail">
-			<img src="images/CN/m-travel-detail.png" class="m-travel-detail">
-			<div class="lm-travel-detail">
-				<a href="javascript:void(0)">
-					<h2 class="lm-travel-deltail-title">柬埔寨(金边皇宫)</h2>
-				</a>
-				<p class="lm-travel-detail-con">
-				金边皇宫也称四臂湾大王宫，因位于上湄公河、洞里萨河、下湄公河与巴萨河的交汇处而得名，是诺罗敦国王于1866-1870年建造的，是柬埔寨国王的皇宫。</br>王宫的建筑具有高棉传统建筑风格和宗教色彩，宫殿均有尖塔，代表繁荣；殿身涂以黄、白两色，黄色代表佛教，白色代表婆罗门教,大小宫殿二十多座。
-			</p>
-			<a href="https://goo.gl/maps/SfKrMapEBXN2" class="lm-travel-detail-local" target="_blank"><img src="images/CN/travel-local.png"><span>Phnom Penh</span></a>
-			<div class="lm-travel-detail-see">
-				<p class="lm-travel-see-left"><img src="images/CN/travel-head-icon.png" alt=""><span>Lanmei Airlines</span></p>
-				<p class="lm-travel-see-right"><span>1729</span><img src="images/CN/travel-see.png" alt=""></p>
-			</div>
-		</div>
-	</div>
-	<div class="nth-child3 transformBox">
-		<a href="javascript:void(0)"><img class="lazy" src="images/CN/travel-02.jpg"></a>
-		<p class="t-maskBox" data="mask-2">澳门</p>
-	</div>
-	<div class="nth-child4 transformBox">
-		<a href="javascript:void(0)"><img class="lazy" src="images/CN/travel-03.jpg"></a>
-		<p class="t-maskBox" data="mask-3">暹粒</p>
-	</div>
-</div>
-<div class="lm-travel-inner m-travel-inner">
-	<div class="nth-child1 active transformBox">
-		<a href="javascript:void(0)"><img class="lazy" src="images/EN/travel-01.jpg"></a>
-		<p class="t-maskBox" data="mask-1">Phnom Penh</p>
-	</div>
-	<div class="nth-child2">
-		<img src="images/EN/travel-detail.png" class="p-travel-detail">
-		<img src="images/EN/m-travel-detail.png" class="m-travel-detail">
-		<div class="lm-travel-detail">
-			<a href="javascript:void(0)">
-				<h2 class="lm-travel-deltail-title">Cambodia,Royal Palace</h2>
-			</a>
-			<p class="lm-travel-detail-con">
-				The Royal Palace of Phnom Penh, also known as the four-arm bay palace, was named because of the river junction among the Up-Mekong River, the Tonle Sap River, the Down- Mekong River and the Bassac River. It was built by King Norodom in 1866-1870 to be the palace of the Kingdom of Cambodia.</ Br> The building of palaces has traditional Khmer architectural style with religious characters. All palaces have a minaret, which has the meaning of prosperity; the hall of palaces was painted by yellow and white, yellow represents Buddhism, white represents Brahmanism, the scale of palaces is more than twenty.
-			</p>
-			<a href="https://goo.gl/maps/SfKrMapEBXN2" class="lm-travel-detail-local" target="_blank"><img src="images/EN/travel-local.png"><span>Phnom Penh</span></a>
-			<div class="lm-travel-detail-see">
-				<p class="lm-travel-see-left"><img src="images/EN/travel-head-icon.png" alt=""><span>Lanmeiairlines</span></p>
-				<p class="lm-travel-see-right"><span>1729</span><img src="images/EN/travel-see.png" alt=""></p>
-			</div>
-		</div>
-	</div>
-	<div class="nth-child3 transformBox">
-		<a href="javascript:void(0)"><img class="lazy" src="images/EN/travel-02.jpg"></a>
-		<p class="t-maskBox" data="mask-2"> Macau</p>
-	</div>
-	<div class="nth-child4 transformBox">
-		<a href="javascript:void(0)"><img class="lazy" src="images/EN/travel-03.jpg"></a>
-		<p class="t-maskBox" data="mask-3">Siem Reap</p>
-	</div>
-</div>
-<p class="moreNews js-travel-more"><a href="travel/LMTravel-zh.html" target="_Blank">更多 <i class="iconfont icon-xiangshang-copy-copy-copy lm-page-bounceRight"></i></a></p>
-</div>
-
-<!-- 澜湄动态 -->
-<div class="lanmeiDynamic">
-	<div class="lanmeiDynamicTitle lanmeiCommonTitle">
-		<h2>澜湄动态</h2>
-		<p><i class="i1"></i><i class="i2"></i><i class="i3"></i><i class="i4"></i><i class="i5"></i><i class="i6"></i></p>
-	</div>
-	<div class="lanmeiDynamicInfo">
-		<div class="nth-child1" title="澜湄航空圆满完成首次中国籍乘务员招聘" alt="澜湄航空圆满完成首次中国籍乘务员招聘">
-			<div class="dynamicInfo-hover hover-shadow">
-				<a href="tpls/CN/LanmeiNews201705060001.html" target="_Blank"><img class="lazy" src="images/CN/lanmeiNews1.jpg"></a>
-				<span><img src="images/CN/lanmeiNewsHot.png"></span>
-				<p class="maskBox">澜湄航空圆满完成首次中国籍乘务员招聘</p>
-			</div>
-		</div>
-		<div class="nth-child2">
-			<div class="dynamicInfo-hover hover-shadow">
-				<a href="javascript:void(0)"></a><img src="images/CN/lanmeiNews2.jpg">
-				<p class="maskBox">澜湄航空</p>
-			</div>
-		</div>
-		<div class="nth-child3"> 
-			<div class="dynamicInfo-hover hover-shadow">
-				<a href="javascript:void(0)"><img src="images/CN/lanmeiNews3.jpg"></a>
-				<p class="maskBox">澜湄航空</p>
-			</div>
-		</div>
-		<div class="nth-child4">
-			<div class="dynamicInfo-hover hover-shadow">
-				<a href="javascript:void(0)"><img src="images/CN/lanmeiNews4.jpg"></a>
-				<p class="maskBox">澜湄航空</p>
-			</div>
-		</div>
-		<div class="nth-child5">
-			<div class="dynamicInfo-hover hover-shadow">
-				<a href="javascript:void(0)"><img src="images/CN/lanmeiNews5.jpg"></a>
-				<p class="maskBox">澜湄航空</p>
-			</div>
-		</div>
-	</div>
-	<p class="moreNews js-dynamic-more"><a href="javascript:void(0)" target="_Blank">更多 <i class="iconfont icon-xiangshang-copy-copy-copy lm-page-bounceRight"></i></a></p>
-</div>
-
-<!-- 页脚 -->
-<div class="footerInfo">
-	<div class="footerBg">
-		<div class="HelpfulInformation">
-			<p>帮助信息</p>
-			<div class="languageSelectBox">
-				<span>目前选择的语言</span>
-				<div class="languageBox">
-					<a href="javascript:void(0)" class="languageSelect"></a>
-					<b class="ENbottomLine"></b>
-					<ul class="languageDownMenu">
-						<li class="nth-child1"><a href="index-zh.html"></a></li>
-						<li class="nth-child2"><a href="index.html"></a></li>
-					</ul>
+		<div class="mobile-slide-container">
+			<div class="swiper-container d-swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="pathSelectWrapper">
+							<div class="localPath">
+								<img src="images/CN/fly-icon.png">
+								<p class="startPath">PhnomPenh</p>
+								<p class="endPath">SiemReap</p>
+							</div>
+							<div class="priceInfo">
+								<div class="nth-child1">
+									<p>From <br/><span>USD</span></p>
+									<h3>--</h3>
+								</div>
+								<div class="nth-child2">
+									<p>Economy class</p>
+								</div>
+								<p class="line-icon">
+									<i class="i1"></i><i class="i2"></i><i class="i3"></i><i class="i4"></i><i class="i5"></i><i class="i6"></i>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="pathSelectWrapper">
+							<div class="localPath">
+								<img src="images/CN/fly-icon.png">
+								<p class="startPath">PhnomPenh</p>
+								<p class="endPath">SiemReap</p>
+							</div>
+							<div class="priceInfo">
+								<div class="nth-child1">
+									<p>From <br/><span>USD</span></p>
+									<h3>--</h3>
+								</div>
+								<div class="nth-child2">
+									<p>Economy class</p>
+								</div>
+								<p class="line-icon">
+									<i class="i1"></i><i class="i2"></i><i class="i3"></i><i class="i4"></i><i class="i5"></i><i class="i6"></i>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="pathSelectWrapper">
+							<div class="localPath">
+								<img src="images/CN/fly-icon.png">
+								<p class="startPath">PhnomPenh</p>
+								<p class="endPath">SiemReap</p>
+							</div>
+							<div class="priceInfo">
+								<div class="nth-child1">
+									<p>From <br/><span>USD</span></p>
+									<h3>--</h3>
+								</div>
+								<div class="nth-child2">
+									<p>Economy class</p>
+								</div>
+								<p class="line-icon">
+									<i class="i1"></i><i class="i2"></i><i class="i3"></i><i class="i4"></i><i class="i5"></i><i class="i6"></i>
+								</p>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div class="contactUs">
-			<div class="nth-child1"><img src="images/CN/email.png"><span>LM-EC@lanmeiairlines.com</span></div>
+		<div class="pagination d-pagination"></div>
+	</div>
+
+	<!-- 澜湄服务 -->
+	<div class="characteristicServe">
+		<div class="characteristicServeTitle lanmeiCommonTitle">
+			<h2>旅行服务</h2>
+			<p><i class="i1"></i><i class="i2"></i><i class="i3"></i><i class="i4"></i><i class="i5"></i><i class="i6"></i></p>
+		</div>
+		<div class="characteristicServeList">
+			<ul>
+				<li class="nth-child1">
+					<a href="javascript:void(0)"><img src="images/CN/lanmeiServe1.png"><p>托运行李</p></a>
+				</li>
+				<li class="nth-child2">
+					<a href="javascript:void(0)"><img src="images/CN/lanmeiServe2.png"><p>机上餐食</p></a>
+				</li>
+				<li class="nth-child3">
+					<a href="javascript:void(0)"><img src="images/CN/lanmeiServe3.png"><p>提前选座</p></a>
+				</li>
+				<li class="nth-child4">
+					<a href="http://www.travelsky.com/tsky/validate.jsp" target="_blank"><img src="images/CN/lanmeiServe4.png"><p>机票验真</p></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- 旅行日记 -->
+	<div class="lm-travel">
+		<div class="lm-travel-title lanmeiCommonTitle">
+			<h2>旅行日记</h2>
+			<p><i class="i1"></i><i class="i2"></i><i class="i3"></i><i class="i4"></i><i class="i5"></i><i class="i6"></i></p>
+		</div>
+		<div class="lm-travel-inner pc-travel-inner">
+			<div class="nth-child1 active transformBox">
+				<a href="javascript:void(0)"><img class="lazy" src="images/CN/travel-01.jpg"></a>
+				<p class="t-maskBox" data="mask-1">金边</p>
+			</div>
 			<div class="nth-child2">
-				<span>FOLLOW</span>
+				<img src="images/CN/travel-detail.png" class="p-travel-detail">
+				<img src="images/CN/m-travel-detail.png" class="m-travel-detail">
+				<div class="lm-travel-detail">
+					<a href="javascript:void(0)">
+						<h2 class="lm-travel-deltail-title">柬埔寨(金边皇宫)</h2>
+					</a>
+					<p class="lm-travel-detail-con">
+					金边皇宫也称四臂湾大王宫，因位于上湄公河、洞里萨河、下湄公河与巴萨河的交汇处而得名，是诺罗敦国王于1866-1870年建造的，是柬埔寨国王的皇宫。</br>王宫的建筑具有高棉传统建筑风格和宗教色彩，宫殿均有尖塔，代表繁荣；殿身涂以黄、白两色，黄色代表佛教，白色代表婆罗门教,大小宫殿二十多座。
+					</p>
+					<a href="https://goo.gl/maps/SfKrMapEBXN2" class="lm-travel-detail-local" target="_blank"><img src="images/CN/travel-local.png"><span>Phnom Penh</span></a>
+					<div class="lm-travel-detail-see">
+						<p class="lm-travel-see-left"><img src="images/CN/travel-head-icon.png" alt=""><span>Lanmei Airlines</span></p>
+						<p class="lm-travel-see-right"><span>1729</span><img src="images/CN/travel-see.png" alt=""></p>
+					</div>
+				</div>
+			</div>
+			<div class="nth-child3 transformBox">
+				<a href="javascript:void(0)"><img class="lazy" src="images/CN/travel-02.jpg"></a>
+				<p class="t-maskBox" data="mask-2">澳门</p>
+			</div>
+			<div class="nth-child4 transformBox">
+				<a href="javascript:void(0)"><img class="lazy" src="images/CN/travel-03.jpg"></a>
+				<p class="t-maskBox" data="mask-3">暹粒</p>
+			</div>
+		</div>
+		<div class="lm-travel-inner m-travel-inner">
+			<div class="nth-child1 active transformBox">
+				<a href="javascript:void(0)"><img class="lazy" src="images/EN/travel-01.jpg"></a>
+				<p class="t-maskBox" data="mask-1">Phnom Penh</p>
+			</div>
+			<div class="nth-child2">
+				<img src="images/EN/travel-detail.png" class="p-travel-detail">
+				<img src="images/EN/m-travel-detail.png" class="m-travel-detail">
+				<div class="lm-travel-detail">
+					<a href="javascript:void(0)">
+						<h2 class="lm-travel-deltail-title">Cambodia,Royal Palace</h2>
+					</a>
+					<p class="lm-travel-detail-con">
+						The Royal Palace of Phnom Penh, also known as the four-arm bay palace, was named because of the river junction among the Up-Mekong River, the Tonle Sap River, the Down- Mekong River and the Bassac River. It was built by King Norodom in 1866-1870 to be the palace of the Kingdom of Cambodia.</ Br> The building of palaces has traditional Khmer architectural style with religious characters. All palaces have a minaret, which has the meaning of prosperity; the hall of palaces was painted by yellow and white, yellow represents Buddhism, white represents Brahmanism, the scale of palaces is more than twenty.
+					</p>
+					<a href="https://goo.gl/maps/SfKrMapEBXN2" class="lm-travel-detail-local" target="_blank"><img src="images/EN/travel-local.png"><span>Phnom Penh</span></a>
+					<div class="lm-travel-detail-see">
+						<p class="lm-travel-see-left"><img src="images/EN/travel-head-icon.png" alt=""><span>Lanmeiairlines</span></p>
+						<p class="lm-travel-see-right"><span>1729</span><img src="images/EN/travel-see.png" alt=""></p>
+					</div>
+				</div>
+			</div>
+			<div class="nth-child3 transformBox">
+				<a href="javascript:void(0)"><img class="lazy" src="images/EN/travel-02.jpg"></a>
+				<p class="t-maskBox" data="mask-2"> Macau</p>
+			</div>
+			<div class="nth-child4 transformBox">
+				<a href="javascript:void(0)"><img class="lazy" src="images/EN/travel-03.jpg"></a>
+				<p class="t-maskBox" data="mask-3">Siem Reap</p>
+			</div>
+		</div>
+		<p class="moreNews js-travel-more"><a href="travel/LMTravel-zh.html" target="_Blank">更多 <i class="iconfont icon-xiangshang-copy-copy-copy lm-page-bounceRight"></i></a></p>
+	</div>
+
+	<!-- 澜湄动态 -->
+	<div class="lanmeiDynamic">
+		<div class="lanmeiDynamicTitle lanmeiCommonTitle">
+			<h2>澜湄动态</h2>
+			<p><i class="i1"></i><i class="i2"></i><i class="i3"></i><i class="i4"></i><i class="i5"></i><i class="i6"></i></p>
+		</div>
+		<div class="lanmeiDynamicInfo">
+			<div class="nth-child1" title="澜湄航空圆满完成首次中国籍乘务员招聘" alt="澜湄航空圆满完成首次中国籍乘务员招聘">
+				<div class="dynamicInfo-hover hover-shadow">
+					<a href="tpls/CN/LanmeiNews201705060001.html" target="_Blank"><img class="lazy" src="images/CN/lanmeiNews1.jpg"></a>
+					<span><img src="images/CN/lanmeiNewsHot.png"></span>
+					<p class="maskBox">澜湄航空圆满完成首次中国籍乘务员招聘</p>
+				</div>
+			</div>
+			<div class="nth-child2">
+				<div class="dynamicInfo-hover hover-shadow">
+					<a href="javascript:void(0)"></a><img src="images/CN/lanmeiNews2.jpg">
+					<p class="maskBox">澜湄航空</p>
+				</div>
+			</div>
+			<div class="nth-child3"> 
+				<div class="dynamicInfo-hover hover-shadow">
+					<a href="javascript:void(0)"><img src="images/CN/lanmeiNews3.jpg"></a>
+					<p class="maskBox">澜湄航空</p>
+				</div>
+			</div>
+			<div class="nth-child4">
+				<div class="dynamicInfo-hover hover-shadow">
+					<a href="javascript:void(0)"><img src="images/CN/lanmeiNews4.jpg"></a>
+					<p class="maskBox">澜湄航空</p>
+				</div>
+			</div>
+			<div class="nth-child5">
+				<div class="dynamicInfo-hover hover-shadow">
+					<a href="javascript:void(0)"><img src="images/CN/lanmeiNews5.jpg"></a>
+					<p class="maskBox">澜湄航空</p>
+				</div>
+			</div>
+		</div>
+		<p class="moreNews js-dynamic-more"><a href="javascript:void(0)" target="_Blank">更多 <i class="iconfont icon-xiangshang-copy-copy-copy lm-page-bounceRight"></i></a></p>
+	</div>
+
+	<!-- 页脚 -->
+	<div class="footerInfo">
+		<div class="footerBg">
+			<div class="HelpfulInformation">
+				<p>帮助信息</p>
+				<div class="languageSelectBox">
+					<span>目前选择的语言</span>
+					<div class="languageBox">
+						<a href="javascript:void(0)" class="languageSelect"></a>
+						<b class="ENbottomLine"></b>
+						<ul class="languageDownMenu">
+							<li class="nth-child1"><a href="index-zh.html"></a></li>
+							<li class="nth-child2"><a href="index.html"></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="contactUs">
+				<div class="nth-child1"><img src="images/CN/email.png"><span>LM-EC@lanmeiairlines.com</span></div>
+				<div class="nth-child2">
+					<span>FOLLOW</span>
+					<a href="https://www.facebook.com/lanmeiairlines/">
+						<i class="iconfont icon-facebook"></i>
+					</a>
+					<a href="#"><i class="iconfont icon-in"></i></a>
+					<a href="#"><i class="iconfont icon-inst"></i></a>
+					<a href="#"><i class="iconfont icon-youtube"></i></a>
+					<a href="#"><i class="iconfont icon-googleplus"></i></a>
+					<a href="http://weibo.com/lanmeiair"><i class="iconfont icon-wb"></i></a>
+					<a href="#"><i class="iconfont icon-tuite"></i></a>
+				</div>
+			</div>
+			<div class="location">
+				<img src="images/CN/location.png"><a href="http://www.google.cn/maps/place/Lanmei+Airlines/@11.5637363,104.8836365,17.75z/data=!4m5!3m4!1s0x310951a3c5cdaf97:0x77359b117b2ff068!8m2!3d11.5637363!4d104.8852876" target="_blank">柬埔寨金边市俄罗斯大道575号</a>
+			</div>
+			<div class="mobile-contactUs" style="display: none;">
 				<a href="https://www.facebook.com/lanmeiairlines/">
 					<i class="iconfont icon-facebook"></i>
 				</a>
@@ -1772,70 +1760,55 @@
 				<a href="http://weibo.com/lanmeiair"><i class="iconfont icon-wb"></i></a>
 				<a href="#"><i class="iconfont icon-tuite"></i></a>
 			</div>
-		</div>
-		<div class="location">
-			<img src="images/CN/location.png"><a href="http://www.google.cn/maps/place/Lanmei+Airlines/@11.5637363,104.8836365,17.75z/data=!4m5!3m4!1s0x310951a3c5cdaf97:0x77359b117b2ff068!8m2!3d11.5637363!4d104.8852876" target="_blank">柬埔寨金边市俄罗斯大道575号</a>
-		</div>
-		<div class="mobile-contactUs" style="display: none;">
-			<a href="https://www.facebook.com/lanmeiairlines/">
-				<i class="iconfont icon-facebook"></i>
-			</a>
-			<a href="#"><i class="iconfont icon-in"></i></a>
-			<a href="#"><i class="iconfont icon-inst"></i></a>
-			<a href="#"><i class="iconfont icon-youtube"></i></a>
-			<a href="#"><i class="iconfont icon-googleplus"></i></a>
-			<a href="http://weibo.com/lanmeiair"><i class="iconfont icon-wb"></i></a>
-			<a href="#"><i class="iconfont icon-tuite"></i></a>
-		</div>
-		<div class="LanmeiAirlinesBerhad">
-			<div class="nth-child2">
-				<span>使用条款 | 隐私策略 | Cookies</span>
+			<div class="LanmeiAirlinesBerhad">
+				<div class="nth-child2">
+					<span>使用条款 | 隐私策略 | Cookies</span>
+				</div>
+				<div class="nth-child1"><a href="index.html" rel="nofollow"><img src="images/CN/lanmeiFooterLogo.png"></a><span>© Copyright 2017 澜湄航空 粤<a href="http://www.miitbeian.gov.cn" target="_Blank">ICP备17005494-1</a></span></div>
 			</div>
-			<div class="nth-child1"><a href="index.html" rel="nofollow"><img src="images/CN/lanmeiFooterLogo.png"></a><span>© Copyright 2017 澜湄航空 粤<a href="http://www.miitbeian.gov.cn" target="_Blank">ICP备17005494-1</a></span></div>
 		</div>
 	</div>
-</div>
 
-<!-- 回到顶部 -->
-<div class="BackToTop">
-	<div class="QRcode">
-		<p>微信<br>公众号</p>
-		<img src="images/EN/QR-code-s.png" class="small-code">
-		<img src="images/EN/QR-code-b.png" class="big-code">
+	<!-- 回到顶部 -->
+	<div class="BackToTop">
+		<div class="QRcode">
+			<p>微信<br>公众号</p>
+			<img src="images/EN/QR-code-s.png" class="small-code">
+			<img src="images/EN/QR-code-b.png" class="big-code">
+		</div>
+		<div class="top">
+			<img src="images/EN/ToTop-icon-active.png" class="img02">
+			<p>置顶</p>
+		</div>
 	</div>
-	<div class="top">
-		<img src="images/EN/ToTop-icon-active.png" class="img02">
-		<p>置顶</p>
-	</div>
-</div>
 
-<!-- 第三方库-->
-<script type="text/javascript" src="libs/jQuery/jquery-1.11.3.js"></script>
-<script type="text/javascript" src="libs/layer/layer.js"></script>
-<script type="text/javascript" src="libs/auto-complete-mail.js"></script>
-<script type="text/javascript" src="libs/dataRange/lanmei-calendar-zh.js"></script>
-<script type="text/javascript" src="libs/lanmei-date-select.js"></script>
-<script type="text/javascript" src="libs/slider/lm-hiSlider.js"></script>
-<script type="text/javascript" src="libs/lazyload/lm-lazyload.js"></script>
-<script type="text/javascript" src="libs/lm-nicescroll.min.js"></script>
-<script type="text/javascript" src="libs/carousel/carousel.js"></script>
-<script type="text/javascript" src="libs/bootstrap/js/bootstrap.min.js"></script>
+	<!-- 第三方库-->
+	<script type="text/javascript" src="libs/jQuery/jquery-1.11.3.js"></script>
+	<script type="text/javascript" src="libs/layer/layer.js"></script>
+	<script type="text/javascript" src="libs/auto-complete-mail.js"></script>
+	<script type="text/javascript" src="libs/dataRange/lanmei-calendar-zh.js"></script>
+	<script type="text/javascript" src="libs/lanmei-date-select.js"></script>
+	<script type="text/javascript" src="libs/slider/lm-hiSlider.js"></script>
+	<script type="text/javascript" src="libs/lazyload/lm-lazyload.js"></script>
+	<script type="text/javascript" src="libs/lm-nicescroll.min.js"></script>
+	<script type="text/javascript" src="libs/carousel/carousel.js"></script>
+	<script type="text/javascript" src="libs/bootstrap/js/bootstrap.min.js"></script>
 
-<script type="text/javascript" src="libs/mobile-libs/fastclick/fastclick.js"></script>
-<script type="text/javascript" src="libs/mobile-libs/swiper/lm-swiper.min.js"></script>
-<script type="text/javascript" src="libs/mobile-libs/city/lm-cityPicker-zh.js"></script>
-<script type="text/javascript" src="libs/mobile-libs/date/lm-dateRange-zh.js"></script>
-<script type="text/javascript" src="libs/mobile-libs/mobileSelect/mobileSelect.js"></script>
+	<script type="text/javascript" src="libs/mobile-libs/fastclick/fastclick.js"></script>
+	<script type="text/javascript" src="libs/mobile-libs/swiper/lm-swiper.min.js"></script>
+	<script type="text/javascript" src="libs/mobile-libs/city/lm-cityPicker.js"></script>
+	<script type="text/javascript" src="libs/mobile-libs/date/lm-dateRange-zh.js"></script>
+	<script type="text/javascript" src="libs/mobile-libs/mobileSelect/mobileSelect.js"></script>
 
-<!-- 公共JS -->
-<script type="text/javascript" src="common/CN/js/flight-info.js"></script>
-<script type="text/javascript" src="common/CN/js/Lanmei-common.js?rev=20170817"></script>
-<!-- 业务代码 -->
-<script type="text/javascript" src="js/CN/LanmeiAirlines.js?rev=20170817"></script>
-<script type="text/javascript" charset="utf-8">
-	$(function(){
-
-	})
-</script>
+	<!-- 公共JS -->
+	<script type="text/javascript" src="common/CN/js/flight-info.js"></script>
+	<script type="text/javascript" src="common/CN/js/Lanmei-common.js?rev=20170817"></script>
+	<!-- 业务代码 -->
+	<script type="text/javascript" src="js/CN/LanmeiAirlines.js?rev=20170817"></script>
+	<script type="text/javascript" charset="utf-8">
+		$(function(){
+	        
+		})
+	</script>
 </body>
 </html>

@@ -25,7 +25,7 @@ if(!window.jQuery){
             
             return this.each(function (){
                var oDepDate  = new Date();
-               var curDate  = new Date(oDepDate.getFullYear(), oDepDate.getMonth(), oDepDate.getDate());
+               var curDate  = new Date(oDepDate.getFullYear(), oDepDate.getMonth(), oDepDate.getDate() + 1);
                var oBackDate = new Date(oDepDate.getFullYear(), oDepDate.getMonth(), oDepDate.getDate() + 2);
                //出发时间实例 
                var oDepCal = new Calendar({
@@ -164,10 +164,10 @@ if(!window.jQuery){
                // oBackCal.keyup();
 
                //默认出发时间和返程时间
-               oDepCal.startDate = _CAL.formatStrDate(new Date(curDate.getTime()+86400000*1));
-                // console.log(new Date(curDate.getTime()+86400000*1));
+               oDepCal.startDate = _CAL.formatStrDate(curDate);
+                // console.log(_CAL.formatStrDate(curDate));
                // oDepCal.endDate   = oBackCal.endDate   = _CAL.formatStrDate(oBackDate);
-               oDepCal.setDateInfo(_CAL.formatStrDate(new Date(curDate.getTime()+86400000*1)));
+               oDepCal.setDateInfo(_CAL.formatStrDate(curDate));
                // oBackCal.setDateInfo(_CAL.formatStrDate(oBackDate));
                
                //单程和双程切换 定义公共函数,使从双程切换到单程的时候，选择日期不显示rang

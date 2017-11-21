@@ -22,8 +22,8 @@ var flightInfo = {
 			hideMenu();
 		});
 
-		var fromcityData = ['西哈努克市(xihanuke)/KOS/柬埔寨','澳门(aomen)/MFM/中华人民共和国澳门特别行政区','金边(jinbian)/PNH/柬埔寨','暹粒(XianLi)/REP/柬埔寨','帕劳(palao)/ROR/帕劳共和国','胡志明(huzhiming)/SGN/越南','河内/HAN/越南','香港/HKG/香港','首尔/ICN/韩国'];
-		var tocityData =   ['西哈努克市(xihanuke)/KOS/柬埔寨','澳门(aomen)/MFM/中华人民共和国澳门特别行政区','金边(jinbian)/PNH/柬埔寨','暹粒(XianLi)/REP/柬埔寨','帕劳(palao)/ROR/帕劳共和国','胡志明(huzhiming)/SGN/越南','河内/HAN/越南','香港/HKG/香港','首尔/ICN/韩国'];
+		var fromcityData = ['西哈努克市(xihanuke)/KOS/柬埔寨','澳门(aomen)/MFM/中华人民共和国澳门特别行政区','金边(jinbian)/PNH/柬埔寨','暹粒(XianLi)/REP/柬埔寨','帕劳(palao)/ROR/帕劳共和国'];
+		var tocityData =   ['西哈努克市(xihanuke)/KOS/柬埔寨','澳门(aomen)/MFM/中华人民共和国澳门特别行政区','金边(jinbian)/PNH/柬埔寨','暹粒(XianLi)/REP/柬埔寨','帕劳(palao)/ROR/帕劳共和国'];
 		// var fromcityData = ['Phnom Penh, Cambodia (Pochentong - PNH)','Siem Reap, Cambodia (Siem Reap - REP)'];
 		// var tocityData = ['Phnom Penh, Cambodia (Pochentong - PNH)','Siem Reap, Cambodia (Siem Reap - REP)'];
 
