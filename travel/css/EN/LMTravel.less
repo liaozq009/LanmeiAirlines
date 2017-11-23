@@ -37,10 +37,42 @@
 
 .lm-banner{
 	position: relative;
+	margin-bottom: 100px;
 	.lm-banner-left{
 		width: 80%;
 		>img{
 			width: 100%;
+		}
+		.travel-start{
+			position: absolute;
+			top: 130px;
+			left:150px;
+			>h2{
+				font-size: 28px;
+				color:#fff;
+				font-weight: bold;
+			}
+			>p{
+				font-size: 14px;
+				color: #F1FAFF;
+				margin-top: 8px;
+			}
+			>a{
+				width: 120px;
+				height: 40px;
+				line-height: 40px;
+				display: inline-block;
+				text-align: center;
+				background: #FFF;
+				box-shadow: 0 0 70px 0 #1051A2;
+				border-radius: 4px;
+				margin-top: 30px;
+				span{
+					background: @linear;
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
+				}
+			}
 		}
 	}
 	.lm-banner-right{
@@ -77,6 +109,8 @@ section{
 	margin-bottom: 100px;
 }
 
+.clearfloat{clear:both;}
+
 .section-1{
 	>ul{
 		width: 940px;
@@ -90,7 +124,6 @@ section{
 				display: inline-block;
 				width: 140px;
 				height: 140px;
-				border:1px solid #f2f2f2;
 				-webkit-transition:all 0.6s;
 				transition:all 0.6s;
 				.p1{
@@ -122,9 +155,8 @@ section{
 
 .section-3{
 	>ul{
-		width: 70%;
+		width: 960px;
 		margin:0 auto;
-		overflow: hidden;
 		>li{
 			float: left;
 			width: 30%;
@@ -192,8 +224,7 @@ section{
 				font-size: 20px;
 				font-weight: bold;
 				color: #fff;
-				margin:0 auto;
-				margin-top: 20px;
+				margin:20px auto;
 				background: @linear;
 				border-radius: 4px;
 			}
@@ -224,7 +255,7 @@ section{
 		.s4-wrapper{
 			margin-top: 40px;
 			>div{
-				width: 70%;
+				width: 960px;
 				margin:0 auto;
 				>img{
 					width: 50%;
@@ -249,6 +280,8 @@ section{
 						}
 					}
 					>.p2{
+						height: 120px;
+						overflow: hidden;
 						font-size: 14px;
 						line-height: 25px;
 						color:@blue3;
@@ -257,12 +290,16 @@ section{
 					>.p3{
 						margin-top: 20px;
 						overflow: hidden;
-						>img{float: left;}
+						>img{
+							float: left;
+							margin-top: 20px;
+						}
 						>span{
 							float: left;
 							font-size: 14px;
 							color:#fff;
 							margin-left: 10px;
+							margin-top: 20px;
 						}
 						>a{
 							float: right;
@@ -302,14 +339,14 @@ section{
 			}
 		}
 		.s4-arrow-prev{
-			left: 50px;
+			left: 15px;
 			margin-top: -76px;
 			>img{
 				left: 24px;
 			}
 		}
 		.s4-arrow-next{
-			right: 50px;
+			right: 15px;
 			margin-top: -38px;
 			>img{
 				right: 24px;
@@ -320,7 +357,7 @@ section{
 
 .section-5{
 	.travel-diary{
-		width: 70%;
+		width: 960px;
 		margin:0 auto;
 		margin-top: 30px;
 		.t-title{
@@ -467,9 +504,33 @@ section{
 	}
 }
 
-/* PC端增加hover事件 */
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1920px) {
 	
+}
+
+@media screen and (min-width: 1366px) {
+	// .section-4{
+	// 	height: 460px;
+	// 	.s4-content{
+	// 		padding-top: 20px;
+	// 		>h2{
+	// 			font-size: 30px;
+	// 		}
+	// 		.s4-wrapper > div > div{
+	// 			padding-left: 30px;
+	// 			>h3{
+	// 				font-size: 22px;
+	// 			}
+	// 			>.p1{
+	// 				font-size: 16px;
+	// 				>img{width: 24px;}
+	// 			}
+	// 			>.p2{
+	// 				margin-top: 10px;
+	// 			}
+	// 		}
+	// 	}
+	// }
 }
 
 @media screen and (max-width: 992px) {
