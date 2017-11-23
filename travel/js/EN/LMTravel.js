@@ -52,7 +52,7 @@ var LMTravelList = {
 				if(scrollTop+windowHeight>=offsetTop){
 					var y = scrollTop+windowHeight-offsetTop;
 					// console.log(y);
-					$('.section-4').css('backgroundPosition','center '+(parseInt(y/4)-154)+'px');
+					$('.section-4').css('backgroundPosition','center '+(parseInt(y/3)-320)+'px');
 				}else{
 					// console.log(222);
 					// $('.section-4').css('backgroundPosition','center 0');
