@@ -19,8 +19,8 @@
 	position: absolute;
 	top: 0;
 	z-index: 9;
-	padding-left: 30px;
-	padding-top: 20px;
+	padding-left: 90px;
+	padding-top: 30px;
 	.lanmeiNav{
 		overflow: hidden;
 		.lanmeiLogo{
@@ -39,35 +39,36 @@
 	position: relative;
 	margin-bottom: 100px;
 	.lm-banner-left{
-		width: 80%;
+		width: 76%;
 		>img{
 			width: 100%;
 		}
 		.travel-start{
 			position: absolute;
-			top: 130px;
-			left:150px;
+			top: 20%;
+			left:12%;
 			>h2{
-				font-size: 28px;
+				font-size: 48px;
 				color:#fff;
 				font-weight: bold;
 			}
 			>p{
-				font-size: 14px;
+				font-size: 18px;
 				color: #F1FAFF;
 				margin-top: 8px;
 			}
 			>a{
-				width: 120px;
-				height: 40px;
-				line-height: 40px;
+				width: 200px;
+				height: 60px;
+				line-height: 60px;
 				display: inline-block;
 				text-align: center;
 				background: #FFF;
 				box-shadow: 0 0 70px 0 #1051A2;
 				border-radius: 4px;
-				margin-top: 30px;
+				margin-top: 40px;
 				span{
+					font-size: 20px;
 					background: @linear;
 					-webkit-background-clip: text;
 					-webkit-text-fill-color: transparent;
@@ -77,30 +78,33 @@
 	}
 	.lm-banner-right{
 		position: absolute;
-		top: 0;
-		right: 0;
-		width: 50%;
+		top: 150px;
+		right: 14%;
+		width: 32%;
+		height: 600px;
 		>img{
 			position: absolute;
-			width: 30%;
+			// width: 30%;
 		}
 		.img2{
-			right:300px;
-			top:220px;
-			width: 30%;
+			right:0;
+			top:0px;
+			width: 63%;
 		}
 		.img3{
-			right:300px;
-			top:480px;
+			right:0;
+			bottom:-20%;
+			width:63%;
 		}
 		.img4{
-			right: 296px;
-			top: 358px;
-			width: 30%;
+			right: 0;
+			top: 42%;
+			width: 63%;
 		}
 		.img5{
-			right:458px;
-			top:417px;
+			top: 44%;
+			left: -22%;
+			width: 76%;
 		}
 	}
 }
@@ -113,7 +117,7 @@ section{
 
 .section-1{
 	>ul{
-		width: 940px;
+		width: 70%;
 		margin:0 auto;
 		overflow: hidden;
 		li{
@@ -155,7 +159,7 @@ section{
 
 .section-3{
 	>ul{
-		width: 960px;
+		width: 70%;
 		margin:0 auto;
 		>li{
 			float: left;
@@ -191,6 +195,10 @@ section{
 					padding-left: 30px;
 					color:@blue2;
 					background: @green3;
+					>div{
+						display: inline-block;
+						>img{margin-left: 10px;}
+					}
 				}
 				.s-n2{
 					margin-top: 11px;
@@ -201,7 +209,9 @@ section{
 						color:@blue2;
 					}
 					>div{
+						height: 90px;
 						margin-top: 6px;
+						overflow: hidden;
 						>p{
 							float: left;
 							font-size: 14px;
@@ -253,17 +263,21 @@ section{
 			text-align: center;
 		}
 		.s4-wrapper{
+			width: 1320px;
+			margin:0 auto;
 			margin-top: 40px;
-			>div{
-				width: 960px;
+			overflow: hidden;
+			.s4-slide-large>div{
+				float: left;
+				width: 1320px;
 				margin:0 auto;
-				>img{
+				>a>img{
 					width: 50%;
 				}
 				>div{
 					float: right;
 					width: 50%;
-					padding:10px;
+					padding:30px;
 					padding-left: 50px;
 					>h3{
 						font-size: 26px;
@@ -271,7 +285,7 @@ section{
 						color:#fff;
 					}
 					>.p1{
-						font-size: 18px;
+						font-size: 20px;
 						color:@blue3;
 						margin-top: 14px;
 						>img{
@@ -280,12 +294,12 @@ section{
 						}
 					}
 					>.p2{
-						height: 120px;
+						height: 170px;
 						overflow: hidden;
-						font-size: 14px;
+						font-size: 16px;
 						line-height: 25px;
 						color:@blue3;
-						margin-top: 20px;
+						margin-top: 30px;
 					}
 					>.p3{
 						margin-top: 20px;
@@ -319,7 +333,7 @@ section{
 						}
 					}
 				}
-			}			
+			}
 		}
 		>p{
 			position: absolute;
@@ -357,7 +371,7 @@ section{
 
 .section-5{
 	.travel-diary{
-		width: 960px;
+		width: 70%;
 		margin:0 auto;
 		margin-top: 30px;
 		.t-title{
@@ -452,7 +466,7 @@ section{
 					}
 				}
 				.t-time{
-					margin-bottom: 24px;
+					margin-bottom: 14px;
 					margin-top: 6px;
 					>a{
 						color:@blue2;
@@ -481,6 +495,7 @@ section{
 						font-size: 14px;
 						padding:3px 10px;
 						margin-right: 10px;
+						margin-top: 10px;
 						color:#fff;
 						background:@linear;
 					}
@@ -505,38 +520,200 @@ section{
 }
 
 @media screen and (min-width: 1920px) {
-	
+	.section-1>ul,.section-3 > ul,.section-5 .travel-diary{
+		width: 1320px;
+	}
 }
 
-@media screen and (min-width: 1366px) {
-	// .section-4{
-	// 	height: 460px;
-	// 	.s4-content{
-	// 		padding-top: 20px;
-	// 		>h2{
-	// 			font-size: 30px;
-	// 		}
-	// 		.s4-wrapper > div > div{
-	// 			padding-left: 30px;
-	// 			>h3{
-	// 				font-size: 22px;
-	// 			}
-	// 			>.p1{
-	// 				font-size: 16px;
-	// 				>img{width: 24px;}
-	// 			}
-	// 			>.p2{
-	// 				margin-top: 10px;
-	// 			}
-	// 		}
-	// 	}
-	// }
+@media screen and (max-width: 1600px) {
+	.lm-banner .lm-banner-left .travel-start{
+		> h2{
+			font-size: 40px;
+		}
+		>p{
+			font-size: 16px;
+		}
+		>a{
+			width: 170px;
+			height: 50px;
+			line-height: 50px;
+		}
+	}
+}
+
+@media screen and (max-width: 1366px) {
+	.lanmeiHeader {
+		padding-left: 50px;
+		padding-top: 20px;
+	}
+	.lm-banner .lm-banner-left .travel-start{
+		> h2{
+			font-size: 32px;
+		}
+		>p{
+			font-size: 14px;
+		}
+		>a{
+			width: 150px;
+			margin-top: 30px;
+		}
+	}
+	.section-4 .s4-content .s4-wrapper{
+		width: 960px;
+		.s4-slide-large > div{
+			width: 960px;
+			>div{
+				padding: 10px;
+				padding-left: 30px;
+				>.p2{
+					height: 104px;
+					margin-top: 20px;
+				}
+				>.p3{
+					margin-top: 26px;
+				}
+			}
+		}
+	}
+	.section-4{
+		height: 480px;
+	}
+	.section-3 > ul > li > ul .s-n1 > div > img{
+		width: 16px;
+		margin-left: 4px;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.lm-banner .lm-banner-left .travel-start{
+		left: 6%;
+		> h2{
+			font-size: 26px;
+		}
+		>a{
+			width: 150px;
+			margin-top: 30px;
+		}
+	}
 }
 
 @media screen and (max-width: 992px) {
-	
+	.lm-banner{
+		margin-bottom: 30px;
+		.lm-banner-left{
+			width: 100%;
+			.travel-start{left: 10%;}
+		}
+		.lm-banner-right{display: none;}
+	}
+	.section-1 > ul{
+		width: 100%;
+		li a .p2{display: none;}
+	}
+	section{margin-bottom: 30px;}
+	.section-3 > ul{
+		width: 100%;
+		padding:0 10px;
+		>li{width: 32%;}
+		>.n2{margin:0 2%;}
+	}
+	.section-4{
+		height: auto;
+		background: none;
+		.s4-content{
+			padding-top: 20px;
+			background: none;
+			>h2{
+				display: none;
+				background: @linear;
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+			.s4-wrapper{
+				width: 100%;
+				margin-top: 0;
+				.s4-slide-large{
+					width: 100%!important;
+					> div{
+						width: 50%;
+						padding:0 10px;
+						>a>img{width: 100%;}
+						>div{
+							width: 100%;
+							float: none;
+							>h3{
+								font-size: 20px;
+								background: @linear;
+								-webkit-background-clip: text;
+								-webkit-text-fill-color: transparent;
+							}
+							>.p1{
+								float: left;
+								font-size: 8px;
+								>img{width: 20px;}
+							}
+							>.p2{display: none;}
+							>.p3{
+								float: right;
+								margin-top: 8px;
+								>span{
+									color:@blue3;
+									margin-top: 0;
+								}
+								>img{
+									margin-top: 0;
+								}
+								a{display: none;}
+							}
+						}
+					}
+					.s4-inner-3{display: none;}
+				}
+			}
+			.s4-arrow-prev,.s4-arrow-next{display: none;}
+		}
+	}
+	.section-5 .travel-diary{
+		width: 100%;
+		padding:0 10px;
+	}
 }
 
 @media screen and (max-width: 767px) {
-	
+	.lanmeiHeader {
+	    padding-left: 0.3rem;
+	    padding-top: 0.1rem;
+	 }
+	.lanmeiLogo>img{width: 0.8rem;}
+	.lm-banner .lm-banner-left .travel-start{
+		top:34%;
+		>h2{
+			font-size: 0.14rem;
+			width: 64%;
+		}
+		>p{display: none;}
+		>a{
+			width: 0.8rem;
+			height: 0.3rem;
+			line-height: 0.3rem;
+			margin-top: 0.16rem;
+			>span{
+				font-size: 0.12rem;
+			}
+		}
+	}
+}
+
+/* 其他小设置 */
+@media screen and (max-width: 1660px) {
+	.section-5 .travel-diary .t-content .t-main .t-imgs > .n5{display: none;}
+}
+@media screen and (max-width: 1366px) {
+	.section-5 .travel-diary .t-content .t-main .t-imgs > .n4{display: none;}
+}
+@media screen and (max-width: 1100px) {
+	.section-5 .travel-diary .t-content .t-main .t-imgs > .n3{display: none;}
+	.section-3 > ul > li > ul .s-n1 > div > img{
+		width: 12px;
+	}
 }
