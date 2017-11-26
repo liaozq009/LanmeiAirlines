@@ -438,6 +438,7 @@ button {
 }
 /* 返回页面顶部 */
 .lm-toTop {
+  display: none;
   position: fixed;
   right: 0;
   bottom: 130px;

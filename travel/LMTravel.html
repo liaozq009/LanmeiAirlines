@@ -26,6 +26,42 @@
 	<script src="libs/bootstrap/js/respond.min.js"></script>
 <![endif]-->
 
+	<style>
+	.lm-banner{
+		perspective: 1000px;
+		transform-style: preserve-3d;
+	}
+	.lm-banner-right{
+		pointer-events: none;
+		transform: translateZ(0);
+		transform-style: preserve-3d;
+		backface-visibility: hidden;
+	}
+
+	.card .card-content{
+		margin: auto;
+		text-align:center;
+		transform-style: preserve-3d;
+	}
+
+	.card h1{
+		transform: translateZ(100px);
+	}
+	.card p{
+		transform: translateZ(50px);
+		display: block;
+
+	}
+	.card .related{
+		transform: translateZ(80px);
+		font-style: italic;
+	}
+	a{
+		color:#69c6b8;
+		pointer-events: auto;
+	}
+	</style>
+
 </head>
 <body>
 	<!-- 页面顶部 -->
@@ -56,7 +92,7 @@
 	<div class="lm-banner">
 		<div class="lm-banner-left">
 			<img src="images/EN/lm-banner-1.png" alt="">
-			<div class="travel-start">
+			<div class="travel-start animated fadeInLeft">
 				<h2>Your ideal journey starts here</h2>
 				<p>—</p>
 				<p>Easy to operate,</p> 
@@ -68,26 +104,26 @@
 			</div>
 		</div>
 		<div class="lm-banner-right">
-			<img src="images/EN/lm-banner-2.png" alt="" class="img2">
-			<img src="images/EN/lm-banner-3.png" alt="" class="img3">
-			<img src="images/EN/lm-banner-4.png" alt="" class="img4">
-			<img src="images/EN/lm-banner-5.png" alt="" class="img5">
+			<div class="d2 animated zoomInUp"><img src="images/EN/lm-banner-2.png" alt="" class="img2"></div>
+			<div class="d3 animated slideInUp"><img src="images/EN/lm-banner-3.png" alt="" class="img3"></div>
+			<div class="d4 animated bounceInDown"><img src="images/EN/lm-banner-4.png" alt="" class="img4"></div>
+			<div class="d5 animated slideInUp"><img src="images/EN/lm-banner-5.png" alt="" class="img5"></div>
 		</div>
 	</div>
 
 	<!-- 主体内容 -->
 	<section class="section-1">
 		<ul>
-			<li class="nth-child1 lm-page-moveFromLeft">
+			<li class="nth-child1 lm-page-moveFromLeft animated fadeInUp">
 				<a href="javascript:void(0)"><img src="images/EN/m-s1-1.png"><p class="p1">One-stop service</p><p class="p2">One stop shopping necessities, no worries,convenient and quick</p></a>
 			</li>
-			<li class="nth-child2 lm-page-moveFromBottom">
+			<li class="nth-child2 lm-page-moveFromBottom animated fadeInUp">
 				<a href="javascript:void(0)"><img src="images/EN/m-s1-2.png"><p class="p1">Travel to share</p><p class="p2">Share your travel notes and recommend your experiences to others</p></a>
 			</li>
-			<li class="nth-child3 lm-page-moveFromBottom">
+			<li class="nth-child3 lm-page-moveFromBottom animated fadeInUp">
 				<a href="javascript:void(0)"><img src="images/EN/m-s1-3.png"><p class="p1">Tourism planning</p><p class="p2">Plan the trip you want, and prepare for the next trip</p></a>
 			</li>
-			<li class="nth-child4 lm-page-moveFromRight">
+			<li class="nth-child4 lm-page-moveFromRight animated fadeInUp">
 				<a href="http://www.travelsky.com/tsky/validate.jsp" target="_blank"><img src="images/EN/m-s1-4.png"><p class="p1">Private custom route</p><p class="p2">Help you customize the itinerary that suits you best</p></a>
 			</li>
 		</ul>
@@ -276,53 +312,11 @@
 					</ul>
 				</div>
 			</div>
-			<div class="t-content">
-				<p class="t-head"><img src="images/EN/PersonalCenter-icon.png"></p>
-				<div class="t-main">
-					<h2><a href="tpls/EN/LMTravelInfo.html" target="_blank">2017 for the Sihanoukville !</a></h2>
-					<div class="t-time"><a href="#">Ann Larson</a><span>2017-05-02</span><p><span>1000</span><img src="images/EN/see.png"></p></div>
-					<ul class="t-money">
-						<li class="n1"><span>Destination : Cambodia , Sihanoukville</span></li>
-						<li class="n2">Days : <span>2</span></li>
-						<li class="n3">Time : <span>June</span></li>
-						<li class="n4">People : <span>4</span></li>
-						<li class="n5">Money : <span>$480</span></li>
-					</ul>
-					<ul class="t-imgs">
-						<li class="n1"><img src="images/EN/s3.jpg" alt=""></li>
-						<li class="n2"><img src="images/EN/s9.jpg" alt=""></li>
-						<li class="n3"><img src="images/EN/s17.jpg" alt=""></li>
-						<li class="n4"><img src="images/EN/s33.jpg" alt=""></li>
-						<li class="n5"><img src="images/EN/s3.jpg" alt=""></li>
-					</ul>
-				</div>
-			</div>
-			<div class="t-content">
-				<p class="t-head"><img src="images/EN/PersonalCenter-icon.png"></p>
-				<div class="t-main">
-					<h2><a href="tpls/EN/LMTravelInfo.html" target="_blank">2017 for the Sihanoukville !</a></h2>
-					<div class="t-time"><a href="#">Ann Larson</a><span>2017-05-02</span><p><span>1000</span><img src="images/EN/see.png"></p></div>
-					<ul class="t-money">
-						<li class="n1"><span>Destination : Cambodia , Sihanoukville</span></li>
-						<li class="n2">Days : <span>2</span></li>
-						<li class="n3">Time : <span>June</span></li>
-						<li class="n4">People : <span>4</span></li>
-						<li class="n5">Money : <span>$480</span></li>
-					</ul>
-					<ul class="t-imgs">
-						<li class="n1"><img src="images/EN/s3.jpg" alt=""></li>
-						<li class="n2"><img src="images/EN/s9.jpg" alt=""></li>
-						<li class="n3"><img src="images/EN/s17.jpg" alt=""></li>
-						<li class="n4"><img src="images/EN/s33.jpg" alt=""></li>
-						<li class="n5"><img src="images/EN/s3.jpg" alt=""></li>
-					</ul>
-				</div>
-			</div>
 		</div>
 	</section>
 
 	<section class="section-6">
-		<!-- <div id="box">
+		<div id="box">
 		    <pre class="prev">prev</pre>
 		    <pre class="next">next</pre>
 		    <ul>
@@ -333,7 +327,7 @@
 		        <li><img src="images/EN/South America.png" /></li>
 		        <li><img src="images/EN/Africa.png" /></li>
 		    </ul>
-		</div> -->
+		</div>
 	</section>
 
 	<!-- 页脚 -->
@@ -387,10 +381,33 @@
 	<script type="text/javascript" src="libs/jqueryPage.js"></script>
 	<script type="text/javascript" src="libs/mobile-libs/fastclick/fastclick.js"></script>
 	<script type="text/javascript" src="libs/slider/LM-carousel.js"></script>
-	<!-- <script type="text/javascript" src="libs/travelMap/travel-map.js"></script> -->
+	<script type="text/javascript" src="libs/travelMap/travel-map.js"></script>
 	<!-- 公共JS -->
 	<script type="text/javascript" src="common/EN/js/LMTravel-common.js"></script>
 	<!-- 业务代码 -->
 	<script type="text/javascript" src="js/EN/LMTravel.js"></script>
+	<script>
+		// why it doesn't work on firefox?
+		var card1 = $(".lm-banner-right .img2");
+		var card3 = $(".lm-banner-right .img4");
+
+		$('.lm-banner').on("mousemove",function(e) {  
+			var ax1 = -parseInt(($(this).innerWidth()- e.pageX)/90);
+			var ay1 = -parseInt(($(this).innerHeight()- e.pageY)/60);
+
+			var ax3 = -parseInt(($(this).innerWidth()- e.pageX)/60);
+			var ay3 = -parseInt(($(this).innerHeight()- e.pageY)/60);
+			// console.log(ay);
+
+			var winW = $(window).width();
+			var height = winW*600/1920;
+			// $('.lm-banner-right').height(winW*600/1920);
+
+			// card.attr("style", "transform: rotateY("+ax+"deg) rotateX("+ay+"deg);-webkit-transform: rotateY("+ax+"deg) rotateX("+ay+"deg);-moz-transform: rotateY("+ax+"deg) rotateX("+ay+"deg)");
+			// card.attr("style", "transform: rotateY("+ax+"deg) rotateX("+ay+"deg);height:"+height+"px");
+			card1.attr("style", "transform: rotateY("+ax1+"deg) rotateX("+ay1+"deg)");
+			card3.attr("style", "transform: rotateY("+ax3+"deg) rotateX("+ay3+"deg)");
+		});
+	</script>
 </body>
 </html>

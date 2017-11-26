@@ -157,25 +157,29 @@ var LMTravelList = {
 			// 定义滚动容器
 			var $sliderContainer = $('.s4-slide-large');
 
-			// 小容器宽
-			var slideWidth = $('.s4-wrapper').width();
+			var winW,wrapW;
+			var resize = function(){
+				// 获取窗口宽度
+				winW = $(window).width();
+				wrapW = winW*0.7;
 
-			// 大容器宽度
-			$sliderContainer.width(slideWidth*page_last);
+				// 小容器宽
+				$('.s4-wrapper').width(wrapW);
+
+				// 大容器宽度
+				$sliderContainer.width(wrapW*page_last);
+
+				// 大容器中的div宽度
+				$sliderContainer.children('div').width(wrapW);
+
+			}
+			resize();
 
 			var $next = $('.s4-arrow-next');
 			var $prev = $('.s4-arrow-prev');
 
-			// 获取窗口宽度
-			var wrapW = 960;
-			var winW;
 			$(window).resize(function(){
-				slideWidth = $('.s4-wrapper').width();
-				$sliderContainer.width(slideWidth*page_last);
-				winW = $(window).width();
-				if(winW>1366){
-					wrapW = 1320;
-				}
+				resize();
 			});
 
 			// 左边箭头点击
@@ -232,11 +236,11 @@ var LMTravelList = {
 			offsetPages : 3,//默认可视最大条数
 			direct : "left",//滚动的方向
 			initPage : 1,//默认当前显示第几条
-			autoPlay : false, //自动播放
+			autoPlay : true, //自动播放
 			autoWidth : true,//默认不用设置宽
 			width : 1600,//最外层宽，需要使用的时候在传,默认由程序自动判断
 			height : 'auto',//最外层高  
-			delay : 5000,//滚动间隔（毫秒）
+			delay : 3600,//滚动间隔（毫秒）
 			speed : 500 //滚动速度毫秒
 		},
 		[
@@ -254,9 +258,13 @@ var LMTravelList = {
 		);
 
 		/* banner的地球和小人 */
-		$(window).resize(function(){
+		var reload = function(){
 			var winW = $(window).width();
 			$('.lm-banner-right').height(winW*600/1920);
+		}
+		reload();
+		$(window).resize(function(){
+			reload();
 		});
 	},
 

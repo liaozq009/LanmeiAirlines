@@ -151,7 +151,7 @@
 				_this.rightNav.show();
 			});
 			this.parent.mouseout(function(){
-				// _this.start();
+				_this.start();
 				//_this.leftNav.hide();
 				//_this.rightNav.hide();
 			});

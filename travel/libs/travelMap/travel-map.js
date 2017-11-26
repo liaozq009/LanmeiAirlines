@@ -18,12 +18,12 @@ ZoomPic.prototype =
 		this._doPrev = function () {return _this.doPrev.apply(_this)};
 		this._doNext = function () {return _this.doNext.apply(_this)};
 		this.options = [
-			{width:120, height:150, top:71, left:134, zIndex:1},
-			{width:130, height:170, top:61, left:0, zIndex:2},
-			{width:170, height:218, top:37, left:110, zIndex:3},
-			{width:224, height:288, top:0, left:262, zIndex:4},
-			{width:170, height:218, top:37, left:468, zIndex:3},
-			{width:130, height:170, top:61, left:620, zIndex:2},
+			{width:120, height:150, top:71, left:152, zIndex:1},
+			{width:140, height:170, top:61, left:0, zIndex:2},
+			{width:170, height:218, top:37, left:142, zIndex:3},
+			{width:224, height:288, top:0, left:326, zIndex:4},
+			{width:170, height:218, top:37, left:550, zIndex:3},
+			{width:130, height:170, top:61, left:736, zIndex:2},
 			{width:120, height:150, top:71, left:496, zIndex:1}
 		];
 		for (var i = 0; i < this.aLi.length; i++) this.aSort[i] = this.aLi[i];
