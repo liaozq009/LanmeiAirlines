@@ -4,7 +4,8 @@ var LMTravelList = {
 		// this.animate();
 		this.otherEvent();
 		this.isPc();
-		this.winResize();
+		this.banner();
+		this.reginSelect();
 	},
 
 	/* 判断是PC端还是移动端 */
@@ -37,6 +38,36 @@ var LMTravelList = {
 		FastClick.attach(dom[0]);
 	},
 
+	/* banner */
+	banner:function(){
+		/* banner的地球和小人 */
+		var reload = function(){
+			var winW = $(window).width();
+			$('.lm-banner-right').height(winW*600/1920);
+		}
+		reload();
+		$(window).resize(function(){
+			reload();
+		});
+
+		var card1 = $(".lm-banner-right .img2");
+		var card3 = $(".lm-banner-right .img4");
+
+		$('.lm-banner').on("mousemove",function(e) {  
+			var ax1 = -parseInt(($(this).innerWidth()- e.pageX)/90);
+			var ay1 = -parseInt(($(this).innerHeight()- e.pageY)/60);
+
+			var ax3 = -parseInt(($(this).innerWidth()- e.pageX)/60);
+			var ay3 = -parseInt(($(this).innerHeight()- e.pageY)/60);
+			// console.log(ay);
+
+			var winW = $(window).width();
+			var height = winW*600/1920;
+
+			card1.attr("style", "transform: rotateY("+ax1+"deg) rotateX("+ay1+"deg)");
+			card3.attr("style", "transform: rotateY("+ax3+"deg) rotateX("+ay3+"deg)");
+		});
+	},
 
 	/* 动画特效 */
 	animate:function(){
@@ -168,6 +199,7 @@ var LMTravelList = {
 
 				// 大容器宽度
 				$sliderContainer.width(wrapW*page_last);
+				// console.log($sliderContainer.width());
 
 				// 大容器中的div宽度
 				$sliderContainer.children('div').width(wrapW);
@@ -216,9 +248,12 @@ var LMTravelList = {
 				var offsetTop = $('.section-4').offset().top; //总高度
 				var scrollTop = $(document).scrollTop(); //隐藏高度
 				var windowHeight = $(window).height();//可见窗口
-				if(scrollTop+windowHeight>=offsetTop){
-					var y = scrollTop+windowHeight-offsetTop;
-					$('.section-4').css('backgroundPosition','center '+(parseInt(y/3)-320)+'px');
+
+				var totleH = scrollTop+windowHeight;
+
+				if(totleH>=offsetTop && totleH<=offsetTop+windowHeight+570){
+					var y = totleH-offsetTop;
+					$('.section-4').css('backgroundPosition','center '+(parseInt(y/3)-430)+'px');
 				}else{
 					// console.log(222);
 					// $('.section-4').css('backgroundPosition','center 0');
@@ -226,6 +261,21 @@ var LMTravelList = {
 			});
 		}
 		bgMove();
+	},
+
+	/* 区域选择下拉菜单 */
+	reginSelect:function(){
+		$('.t-country').on('click','.t-country-val',function(e){
+			e.stopPropagation();
+			$(this).siblings('ul').slideToggle();
+		}).on('click','.t-menu>li',function(){
+			var val = $(this).html();
+			$(this).parent().slideDown('slow').siblings('span').html(val);
+		});
+
+		$('html').click(function(){
+			$('.t-country ul').slideUp('slow');
+		});
 	},
 
 	/* 其他事件 */
@@ -245,31 +295,17 @@ var LMTravelList = {
 		},
 		[
 
-		{"img":"images/EN/02.jpg","title":"","url":""},
+		{"img":"images/EN/m-s2-2.jpg","title":"","url":""},
 
-		{"img":"images/EN/01.jpg","title":"","url":""},
+		{"img":"images/EN/m-s2-1.jpg","title":"","url":""},
 
-		{"img":"images/EN/03.jpg","title":"","url":""},
+		{"img":"images/EN/m-s2-3.jpg","title":"","url":""},
 
-		{"img":"images/EN/01.jpg","title":"","url":""},
+		{"img":"images/EN/m-s2-1.jpg","title":"","url":""},
 
 		]
 
 		);
-
-		/* banner的地球和小人 */
-		var reload = function(){
-			var winW = $(window).width();
-			$('.lm-banner-right').height(winW*600/1920);
-		}
-		reload();
-		$(window).resize(function(){
-			reload();
-		});
-	},
-
-	/*窗口缩放*/
-	winResize:function(){
 
 	},
 };

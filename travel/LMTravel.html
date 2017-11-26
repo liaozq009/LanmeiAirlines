@@ -26,42 +26,6 @@
 	<script src="libs/bootstrap/js/respond.min.js"></script>
 <![endif]-->
 
-	<style>
-	.lm-banner{
-		perspective: 1000px;
-		transform-style: preserve-3d;
-	}
-	.lm-banner-right{
-		pointer-events: none;
-		transform: translateZ(0);
-		transform-style: preserve-3d;
-		backface-visibility: hidden;
-	}
-
-	.card .card-content{
-		margin: auto;
-		text-align:center;
-		transform-style: preserve-3d;
-	}
-
-	.card h1{
-		transform: translateZ(100px);
-	}
-	.card p{
-		transform: translateZ(50px);
-		display: block;
-
-	}
-	.card .related{
-		transform: translateZ(80px);
-		font-style: italic;
-	}
-	a{
-		color:#69c6b8;
-		pointer-events: auto;
-	}
-	</style>
-
 </head>
 <body>
 	<!-- 页面顶部 -->
@@ -316,7 +280,7 @@
 	</section>
 
 	<section class="section-6">
-		<div id="box">
+		<div id="boxMap">
 		    <pre class="prev">prev</pre>
 		    <pre class="next">next</pre>
 		    <ul>
@@ -327,6 +291,7 @@
 		        <li><img src="images/EN/South America.png" /></li>
 		        <li><img src="images/EN/Africa.png" /></li>
 		    </ul>
+		    <a href="javascript:void(0)" class="s6-view">View</a>
 		</div>
 	</section>
 
@@ -386,28 +351,5 @@
 	<script type="text/javascript" src="common/EN/js/LMTravel-common.js"></script>
 	<!-- 业务代码 -->
 	<script type="text/javascript" src="js/EN/LMTravel.js"></script>
-	<script>
-		// why it doesn't work on firefox?
-		var card1 = $(".lm-banner-right .img2");
-		var card3 = $(".lm-banner-right .img4");
-
-		$('.lm-banner').on("mousemove",function(e) {  
-			var ax1 = -parseInt(($(this).innerWidth()- e.pageX)/90);
-			var ay1 = -parseInt(($(this).innerHeight()- e.pageY)/60);
-
-			var ax3 = -parseInt(($(this).innerWidth()- e.pageX)/60);
-			var ay3 = -parseInt(($(this).innerHeight()- e.pageY)/60);
-			// console.log(ay);
-
-			var winW = $(window).width();
-			var height = winW*600/1920;
-			// $('.lm-banner-right').height(winW*600/1920);
-
-			// card.attr("style", "transform: rotateY("+ax+"deg) rotateX("+ay+"deg);-webkit-transform: rotateY("+ax+"deg) rotateX("+ay+"deg);-moz-transform: rotateY("+ax+"deg) rotateX("+ay+"deg)");
-			// card.attr("style", "transform: rotateY("+ax+"deg) rotateX("+ay+"deg);height:"+height+"px");
-			card1.attr("style", "transform: rotateY("+ax1+"deg) rotateX("+ay1+"deg)");
-			card3.attr("style", "transform: rotateY("+ax3+"deg) rotateX("+ay3+"deg)");
-		});
-	</script>
 </body>
 </html>

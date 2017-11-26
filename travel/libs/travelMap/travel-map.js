@@ -195,5 +195,5 @@ ZoomPic.prototype =
 };
 window.onload = function ()
 {
-	new ZoomPic("box");
+	new ZoomPic("boxMap");
 };
