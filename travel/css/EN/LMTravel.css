@@ -484,75 +484,72 @@ section {
   color: #AAC7F9;
   margin-left: 20px;
 }
-.section-5 .travel-diary .t-content {
-  padding: 20px 10px 12px;
-  overflow: hidden;
-  border-bottom: 1px dashed #AAC7F9;
-}
-.section-5 .travel-diary .t-content .t-head {
+.section-5 .travel-diary .t-content > li {
   float: left;
-  width: 80px;
+  width: 20%;
+  margin-top: 30px;
+  padding-left: 1%;
+  padding-right: 1%;
 }
-.section-5 .travel-diary .t-content .t-head img {
-  width: 80px;
+.section-5 .travel-diary .t-content > li > div {
+  border-radius: 4px;
+  padding: 10px;
+  cursor: pointer;
+  transition: all .6s;
+  -webkit-transition: all .6s;
 }
-.section-5 .travel-diary .t-content .t-main {
-  margin-left: 100px;
-  padding-top: 20px;
+.section-5 .travel-diary .t-content > li > div > h2 {
+  width: 100%;
+  height: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  background: linear-gradient(135deg, #81E5FE 0%, #1639AE 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
 }
-.section-5 .travel-diary .t-content .t-main > h2 a {
-  font-size: 20px;
-  color: #1639AE;
-  margin-bottom: 18px;
+.section-5 .travel-diary .t-content > li > div > img {
+  width: 100%;
 }
-.section-5 .travel-diary .t-content .t-main .t-time {
-  margin-bottom: 14px;
-  margin-top: 6px;
-}
-.section-5 .travel-diary .t-content .t-main .t-time > a {
+.section-5 .travel-diary .t-content > li > div > p {
   color: #3772D5;
-  font-size: 14px;
-  margin-right: 20px;
+  margin-top: 10px;
+  overflow: hidden;
 }
-.section-5 .travel-diary .t-content .t-main .t-time > span {
-  font-size: 14px;
-  color: #AAC7F9;
+.section-5 .travel-diary .t-content > li > div > p .m-s5-local,
+.section-5 .travel-diary .t-content > li > div > p .s1 {
+  float: left;
 }
-.section-5 .travel-diary .t-content .t-main .t-time > p {
+.section-5 .travel-diary .t-content > li > div > p .m-s5-see,
+.section-5 .travel-diary .t-content > li > div > p .s2 {
   float: right;
 }
-.section-5 .travel-diary .t-content .t-main .t-time > p span {
-  font-size: 14px;
-  color: #AAC7F9;
-  margin-right: 10px;
+.section-5 .travel-diary .t-content > li > div > p .m-s5-local {
+  margin-top: 3px;
+  margin-right: 6px;
 }
-.section-5 .travel-diary .t-content .t-main .t-money {
-  overflow: hidden;
-  margin-bottom: 20px;
+.section-5 .travel-diary .t-content > li > div > p .m-s5-see {
+  margin-top: 5px;
+  margin-left: 6px;
 }
-.section-5 .travel-diary .t-content .t-main .t-money li {
-  float: left;
-  height: 26px;
-  font-size: 14px;
-  padding: 3px 10px;
-  margin-right: 10px;
+.section-5 .travel-diary .t-content > li > div:hover {
+  box-shadow: 0 0 30px 0 #aac7f9;
+  transition: all .6s;
+  -webkit-transition: all .6s;
+}
+.section-5 .travel-diary .t-content > li > h3 {
   margin-top: 10px;
-  color: #fff;
-  background: linear-gradient(135deg, #81E5FE 0%, #1639AE 100%);
-}
-.section-5 .travel-diary .t-content .t-main .t-imgs {
+  padding-left: 10px;
   overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
-.section-5 .travel-diary .t-content .t-main .t-imgs > li {
-  float: left;
-  width: 198px;
-  height: 136px;
-  margin-bottom: 8px;
-  margin-right: 8px;
-}
-.section-5 .travel-diary .t-content .t-main .t-imgs > li img {
-  width: 100%;
-  height: 100%;
+.section-5 .travel-diary .t-content > li > h3 > span {
+  color: #1639AE;
+  margin-left: 10px;
 }
 @media screen and (min-width: 1920px) {
   .section-1 > ul,
@@ -612,6 +609,9 @@ section {
   .section-3 > ul > li > ul .s-n1 > div > img {
     width: 16px;
     margin-left: 4px;
+  }
+  .section-5 .travel-diary .t-content > li {
+    width: 25%;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -820,6 +820,17 @@ section {
   .section-4 .s4-content .s4-wrapper .s4-slide-large > div > div > .p3 {
     font-size: 0.12rem;
     margin-top: 0.1rem;
+  }
+  .section-5 .travel-diary {
+    margin-top: 0;
+  }
+  .section-5 .travel-diary .t-title {
+    display: none;
+  }
+  .section-5 .travel-diary .t-content > li {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0.2rem;
   }
 }
 /* 其他小设置 */
