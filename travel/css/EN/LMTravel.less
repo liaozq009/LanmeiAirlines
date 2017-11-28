@@ -309,14 +309,16 @@ section{
 					width: 50%;
 				}
 				>div{
+					position: relative;
 					float: right;
 					width: 50%;
-					padding:30px;
-					padding-left: 50px;
+					background-image:linear-gradient(-180deg, rgba(66,87,149,0.4) 0%, rgba(31,44,92,0.4) 100%);
 					>h3{
 						font-size: 26px;
 						font-weight: bold;
 						color:#fff;
+						padding-top: 50px;
+						padding-left: 30px;
 						overflow: hidden;
 						text-overflow: ellipsis;
 						white-space: nowrap;
@@ -325,6 +327,7 @@ section{
 						font-size: 20px;
 						color:@blue3;
 						margin-top: 14px;
+						padding-left: 30px;
 						>img{
 							margin-left: 20px;
 							margin-right: 10px;
@@ -336,16 +339,20 @@ section{
 						line-height: 25px;
 						color:@blue3;
 						margin-top: 30px;
+						padding-left: 30px;
 						display: -webkit-box;
 						-webkit-box-orient: vertical;
-						-webkit-line-clamp: 8;
+						-webkit-line-clamp: 4;
 						overflow: hidden;
 						white-space: normal!important;
 						text-overflow: ellipsis;
 						word-wrap: break-word;
 					}
 					>.p3{
-						margin-top: 20px;
+						position: absolute;
+						bottom: 30px;
+						width: 100%;
+						padding:0 30px;
 						overflow: hidden;
 						>img{
 							float: left;
@@ -573,6 +580,29 @@ section{
 			line-height: 50px;
 		}
 	}
+	.section-4 .s4-content .s4-wrapper{
+		width: 960px;
+		.s4-slide-large > div{
+			width: 960px;
+			>div{
+				>h3{
+					padding-top: 10px;
+					padding-left: 30px;
+				}
+				>.p2{
+					padding-left: 30px;
+					margin-top: 20px;
+				}
+				>.p3{
+					bottom:20px;
+					padding-left: 30px;
+				}
+			}
+		}
+	}
+	.section-4{
+		height: 480px;
+	}
 }
 
 @media screen and (max-width: 1366px) {
@@ -591,26 +621,6 @@ section{
 			width: 150px;
 			margin-top: 30px;
 		}
-	}
-	.section-4 .s4-content .s4-wrapper{
-		width: 960px;
-		.s4-slide-large > div{
-			width: 960px;
-			>div{
-				padding: 10px;
-				padding-left: 30px;
-				>.p2{
-					-webkit-line-clamp:4;
-					margin-top: 20px;
-				}
-				>.p3{
-					margin-top: 26px;
-				}
-			}
-		}
-	}
-	.section-4{
-		height: 480px;
 	}
 	.section-3 > ul > li > ul .s-n1 > div > img{
 		width: 16px;
@@ -642,7 +652,7 @@ section{
 		margin-bottom: 30px;
 		.lm-banner-left{
 			width: 100%;
-			.travel-start{left: 10%;}
+			.travel-start{left: 8%;}
 		}
 		.lm-banner-right{display: none;}
 	}
@@ -660,11 +670,13 @@ section{
 	.section-4{
 		height: auto;
 		background: none;
+		margin-bottom: 0;
 		.s4-content{
 			padding-top: 20px;
 			background: none;
 			>h2{
-				display: none;
+				font-size: 0.16rem;
+				margin-bottom: 0.1rem;
 				background: @linear;
 				-webkit-background-clip: text;
 				-webkit-text-fill-color: transparent;
@@ -673,7 +685,7 @@ section{
 				width: 100%;
 				margin-top: 0;
 				.s4-slide-large{
-					width: 100%!important;
+					width: 100%;
 					> div{
 						width: 50%;
 						padding:0 10px;
@@ -681,7 +693,10 @@ section{
 						>div{
 							width: 100%;
 							float: none;
+							background: none;
 							>h3{
+								padding-top:8px;
+								padding-left:8px;
 								font-size: 20px;
 								background: @linear;
 								-webkit-background-clip: text;
@@ -690,13 +705,18 @@ section{
 							>.p1{
 								float: left;
 								font-size: 14px;
+								padding:0;
+								padding-left: 8px;
 								margin-top: 8px;
 								>img{width: 20px;}
 							}
 							>.p2{display: none;}
 							>.p3{
+								position: static;
 								float: right;
+								width: auto;
 								margin-top: 8px;
+								padding:0;
 								>span{
 									color:@blue3;
 									margin-top: 0;
@@ -717,6 +737,9 @@ section{
 	.section-5 .travel-diary{
 		width: 100%;
 		padding:0 10px;
+		.t-content > li{
+			margin-top: 20px;
+		}
 	}
 }
 
@@ -783,7 +806,10 @@ section{
 			margin-bottom: 0.2rem;
 			>div{
 				padding:0.1rem 0;
-				>h3{font-size: 0.12rem;}
+				>h3{
+					padding-top:0;
+					font-size: 0.12rem;
+				}
 				>.p1,>.p3{
 					font-size: 0.12rem;
 					margin-top: 0.1rem;
@@ -794,11 +820,52 @@ section{
 	.section-5{
 		.travel-diary{
 			margin-top: 0;
-			.t-title{display: none;}
+			.t-title{
+				height: 0.62rem;
+				margin-bottom: 0.1rem;
+				>h2{
+					width: 100%;
+					font-size: 0.16rem;
+					height: auto;
+					line-height: normal;
+					margin-right: 0;
+					text-align: center;
+				}
+				.t-country{
+					height: 0.4rem;
+					line-height: 0.4rem;
+					 > span{
+						font-size: 0.12rem;
+					 }
+					.t-menu{
+						padding:0.06rem;
+						top:0.4rem;
+						> li{
+							font-size: 0.12rem;
+							line-height: 0.2rem;
+						}
+					} 
+				}
+				.hot{
+					height:0.4rem;
+					line-height: 0.4rem;
+					a{
+						font-size: 0.12rem;
+					}
+					.a1{margin-right: 10px;}
+					.a2{margin-left: 10px;}
+				}
+			}
 			.t-content > li{
 				width: 100%;
 				margin-top: 0;
 				margin-bottom: 0.2rem;
+				>div{
+					padding:0.1rem 0;
+					>h2{
+						font-size: 0.12rem;
+					}
+				}
 			}
 		}
 	} 

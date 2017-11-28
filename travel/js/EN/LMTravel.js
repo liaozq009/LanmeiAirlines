@@ -188,22 +188,42 @@ var LMTravelList = {
 			// 定义滚动容器
 			var $sliderContainer = $('.s4-slide-large');
 
+			// 定义外层容器
+			var $s4Wrap = $('.s4-wrapper');
+
 			var winW,wrapW;
+			var $img = $('.s4-slide-large > div > a > img');
+			var $rightDiv = $('.s4-slide-large > div > div');
+			// 适配
 			var resize = function(){
 				// 获取窗口宽度
 				winW = $(window).width();
 				wrapW = winW*0.7;
 
 				// 小容器宽
-				$('.s4-wrapper').width(wrapW);
+				if(winW>992){
+					$s4Wrap.width(wrapW);
+					// 大容器宽度
+					$sliderContainer.width(wrapW*page_last);
+					// 大容器中的div宽度
+					$sliderContainer.children('div').width(wrapW);
 
-				// 大容器宽度
-				$sliderContainer.width(wrapW*page_last);
-				// console.log($sliderContainer.width());
+					// 右边文字div的宽度
+					var imgH = $img.height();
+					$rightDiv.height(imgH);
+				}else if(winW>768){
+					$s4Wrap.width(winW);
+					$sliderContainer.width(winW);
+					// 大容器中的div宽度
+					$sliderContainer.children('div').width(winW*0.5-20);
 
-				// 大容器中的div宽度
-				$sliderContainer.children('div').width(wrapW);
+					$rightDiv.height(34);
+				}else{
+					$s4Wrap.width(winW);
+					$sliderContainer.children('div').width(winW-20);
 
+					$rightDiv.height(34);
+				}
 			}
 			resize();
 
@@ -306,6 +326,15 @@ var LMTravelList = {
 		]
 
 		);
+
+		// 移动端地图滑动 
+		var swiper1 = new Swiper('.js-m-boxMap', {
+			pagination: '.swiper-pagination',
+			slidesPerView: 2,
+			paginationClickable: true,
+			spaceBetween: 10,
+			freeMode: true
+		});
 
 	},
 };

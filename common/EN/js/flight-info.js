@@ -74,8 +74,7 @@ var flightInfo = {
 			}
 
 			// 初始化第一个li增加active
-			$fUl.children('li').eq(0).addClass("active");	
-			console.log($fUl.children('li').eq(0));
+			// $fUl.children('li').eq(0).addClass("active");	
 
 			if($(this).val()!==''){
 				$(this).siblings('.clear').show();
@@ -103,6 +102,7 @@ var flightInfo = {
 		$('.selectAirCommon').on('click','.menu-com a',function(e){
 			e.preventDefault();e.stopPropagation();
 			var val = $(this).html();
+			console.log(val);
 			$(this).parents('ul').hide().siblings('.bottomLine,.clear').hide().siblings('input').val(val);
 			$('.selectAirCommon .inputDown').removeClass('active');
 

@@ -309,15 +309,17 @@ section {
   width: 50%;
 }
 .section-4 .s4-content .s4-wrapper .s4-slide-large > div > div {
+  position: relative;
   float: right;
   width: 50%;
-  padding: 30px;
-  padding-left: 50px;
+  background-image: linear-gradient(-180deg, rgba(66, 87, 149, 0.4) 0%, rgba(31, 44, 92, 0.4) 100%);
 }
 .section-4 .s4-content .s4-wrapper .s4-slide-large > div > div > h3 {
   font-size: 26px;
   font-weight: bold;
   color: #fff;
+  padding-top: 50px;
+  padding-left: 30px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -326,6 +328,7 @@ section {
   font-size: 20px;
   color: #AAC7F9;
   margin-top: 14px;
+  padding-left: 30px;
 }
 .section-4 .s4-content .s4-wrapper .s4-slide-large > div > div > .p1 > img {
   margin-left: 20px;
@@ -336,16 +339,20 @@ section {
   line-height: 25px;
   color: #AAC7F9;
   margin-top: 30px;
+  padding-left: 30px;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 8;
+  -webkit-line-clamp: 4;
   overflow: hidden;
   white-space: normal!important;
   text-overflow: ellipsis;
   word-wrap: break-word;
 }
 .section-4 .s4-content .s4-wrapper .s4-slide-large > div > div > .p3 {
-  margin-top: 20px;
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+  padding: 0 30px;
   overflow: hidden;
 }
 .section-4 .s4-content .s4-wrapper .s4-slide-large > div > div > .p3 > img {
@@ -579,6 +586,27 @@ section {
     height: 50px;
     line-height: 50px;
   }
+  .section-4 .s4-content .s4-wrapper {
+    width: 960px;
+  }
+  .section-4 .s4-content .s4-wrapper .s4-slide-large > div {
+    width: 960px;
+  }
+  .section-4 .s4-content .s4-wrapper .s4-slide-large > div > div > h3 {
+    padding-top: 10px;
+    padding-left: 30px;
+  }
+  .section-4 .s4-content .s4-wrapper .s4-slide-large > div > div > .p2 {
+    padding-left: 30px;
+    margin-top: 20px;
+  }
+  .section-4 .s4-content .s4-wrapper .s4-slide-large > div > div > .p3 {
+    bottom: 20px;
+    padding-left: 30px;
+  }
+  .section-4 {
+    height: 480px;
+  }
 }
 @media screen and (max-width: 1366px) {
   .lanmeiHeader {
@@ -594,26 +622,6 @@ section {
   .lm-banner .lm-banner-left .travel-start > a {
     width: 150px;
     margin-top: 30px;
-  }
-  .section-4 .s4-content .s4-wrapper {
-    width: 960px;
-  }
-  .section-4 .s4-content .s4-wrapper .s4-slide-large > div {
-    width: 960px;
-  }
-  .section-4 .s4-content .s4-wrapper .s4-slide-large > div > div {
-    padding: 10px;
-    padding-left: 30px;
-  }
-  .section-4 .s4-content .s4-wrapper .s4-slide-large > div > div > .p2 {
-    -webkit-line-clamp: 4;
-    margin-top: 20px;
-  }
-  .section-4 .s4-content .s4-wrapper .s4-slide-large > div > div > .p3 {
-    margin-top: 26px;
-  }
-  .section-4 {
-    height: 480px;
   }
   .section-3 > ul > li > ul .s-n1 > div > img {
     width: 16px;
@@ -646,7 +654,7 @@ section {
     width: 100%;
   }
   .lm-banner .lm-banner-left .travel-start {
-    left: 10%;
+    left: 8%;
   }
   .lm-banner .lm-banner-right {
     display: none;
@@ -673,13 +681,15 @@ section {
   .section-4 {
     height: auto;
     background: none;
+    margin-bottom: 0;
   }
   .section-4 .s4-content {
     padding-top: 20px;
     background: none;
   }
   .section-4 .s4-content > h2 {
-    display: none;
+    font-size: 0.16rem;
+    margin-bottom: 0.1rem;
     background: linear-gradient(135deg, #81E5FE 0%, #1639AE 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -689,7 +699,7 @@ section {
     margin-top: 0;
   }
   .section-4 .s4-content .s4-wrapper .s4-slide-large {
-    width: 100%!important;
+    width: 100%;
   }
   .section-4 .s4-content .s4-wrapper .s4-slide-large > div {
     width: 50%;
@@ -701,8 +711,11 @@ section {
   .section-4 .s4-content .s4-wrapper .s4-slide-large > div > div {
     width: 100%;
     float: none;
+    background: none;
   }
   .section-4 .s4-content .s4-wrapper .s4-slide-large > div > div > h3 {
+    padding-top: 8px;
+    padding-left: 8px;
     font-size: 20px;
     background: linear-gradient(135deg, #81E5FE 0%, #1639AE 100%);
     -webkit-background-clip: text;
@@ -711,6 +724,8 @@ section {
   .section-4 .s4-content .s4-wrapper .s4-slide-large > div > div > .p1 {
     float: left;
     font-size: 14px;
+    padding: 0;
+    padding-left: 8px;
     margin-top: 8px;
   }
   .section-4 .s4-content .s4-wrapper .s4-slide-large > div > div > .p1 > img {
@@ -720,8 +735,11 @@ section {
     display: none;
   }
   .section-4 .s4-content .s4-wrapper .s4-slide-large > div > div > .p3 {
+    position: static;
     float: right;
+    width: auto;
     margin-top: 8px;
+    padding: 0;
   }
   .section-4 .s4-content .s4-wrapper .s4-slide-large > div > div > .p3 > span {
     color: #AAC7F9;
@@ -743,6 +761,9 @@ section {
   .section-5 .travel-diary {
     width: 100%;
     padding: 0 10px;
+  }
+  .section-5 .travel-diary .t-content > li {
+    margin-top: 20px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -823,6 +844,7 @@ section {
     padding: 0.1rem 0;
   }
   .section-4 .s4-content .s4-wrapper .s4-slide-large > div > div > h3 {
+    padding-top: 0;
     font-size: 0.12rem;
   }
   .section-4 .s4-content .s4-wrapper .s4-slide-large > div > div > .p1,
@@ -834,12 +856,55 @@ section {
     margin-top: 0;
   }
   .section-5 .travel-diary .t-title {
-    display: none;
+    height: 0.62rem;
+    margin-bottom: 0.1rem;
+  }
+  .section-5 .travel-diary .t-title > h2 {
+    width: 100%;
+    font-size: 0.16rem;
+    height: auto;
+    line-height: normal;
+    margin-right: 0;
+    text-align: center;
+  }
+  .section-5 .travel-diary .t-title .t-country {
+    height: 0.4rem;
+    line-height: 0.4rem;
+  }
+  .section-5 .travel-diary .t-title .t-country > span {
+    font-size: 0.12rem;
+  }
+  .section-5 .travel-diary .t-title .t-country .t-menu {
+    padding: 0.06rem;
+    top: 0.4rem;
+  }
+  .section-5 .travel-diary .t-title .t-country .t-menu > li {
+    font-size: 0.12rem;
+    line-height: 0.2rem;
+  }
+  .section-5 .travel-diary .t-title .hot {
+    height: 0.4rem;
+    line-height: 0.4rem;
+  }
+  .section-5 .travel-diary .t-title .hot a {
+    font-size: 0.12rem;
+  }
+  .section-5 .travel-diary .t-title .hot .a1 {
+    margin-right: 10px;
+  }
+  .section-5 .travel-diary .t-title .hot .a2 {
+    margin-left: 10px;
   }
   .section-5 .travel-diary .t-content > li {
     width: 100%;
     margin-top: 0;
     margin-bottom: 0.2rem;
+  }
+  .section-5 .travel-diary .t-content > li > div {
+    padding: 0.1rem 0;
+  }
+  .section-5 .travel-diary .t-content > li > div > h2 {
+    font-size: 0.12rem;
   }
 }
 /* 其他小设置 */

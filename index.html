@@ -80,17 +80,89 @@
 		}
 	}
 
+	.leftAside .listSelectBox .hotel-content .hotel-title{
+		margin-bottom: 20px;
+	}
+
 	.leftAside .listSelectBox .hotel-content .selectAirCommon .local_timeSelect>.timeSelectStart{
-		width: 200px;
+		width: 220px;
 	}
 	.leftAside .listSelectBox .hotel-content .selectAirCommon .local_timeSelect>.timeSelectEnd{
-		width: 200px;
+		width: 220px;
+	}
+	.leftAside .listSelectBox .hotel-content .selectAirCommon .local_timeSelect>.rooms-select{
+		width: 220px;
 	}
 	.leftAside .listSelectBox .hotel-content .selectAirCommon .local_timeSelect>.timeSelectStart input{
-		width: 160px;
+		width: 180px;
 	}
 	.leftAside .listSelectBox .hotel-content .selectAirCommon .local_timeSelect>.timeSelectEnd input{
-		width: 160px;
+		width: 180px;
+	}
+	.leftAside .listSelectBox .hotel-content .selectAirCommon .local_timeSelect>.rooms-select input{
+		width: 180px;
+	}
+	.leftAside .listSelectBox .hotel-content .selectAirCommon .local_timeSelect>.rooms-select p{
+		font-weight: bold;
+	    font-size: 20px;
+	    color: #8ec060;
+	    text-align: left;
+	}
+	.leftAside .listSelectBox .listSelectContent .selectAirCommon .rooms-select .menu-com{
+		width: 180px;
+		height: 160px;
+	}
+	.leftAside .listSelectBox .hotel-content .selectAirCommon .local_timeSelect .viewSchedules a{
+		margin-left: 0;
+	}
+	.leftAside .listSelectBox .hotel-content .selectAirCommon .local_timeSelect .viewSchedules{
+		margin-top: 10px;
+		margin-left: 310px;
+	}
+	.rooms-select-menu{
+		width: 100% !important;
+		height: auto !important;
+	}
+	.rooms-select-menu>div h2{
+		display: inline-block;
+	    font-weight: bold;
+	    font-size: 20px;
+	    color: #8ec060;
+	    margin-right: 30px;
+	}
+	.rooms-select-menu>div>div{
+		position: relative;
+		width: 140px;
+		display: inline-block;
+	}
+	.rooms-select-menu>div>div p{
+		color: #8ec060;
+		font-weight: bold;
+		margin-bottom: 6px !important;
+	}
+	.rooms-select-menu input{
+		width: 100px !important;
+		height: 30px !important;
+		padding-right: 20px !important;
+	}
+	.rooms-select-menu .menu-com{
+		top: 55px !important;
+		width: 100px !important;
+	}
+	.rooms-select .bottomLine{
+		width: 220px;
+	}
+	.rooms-select-menu .bottomLine{
+		width: 80px !important;
+		top: 52px !important;
+	}
+	.rooms-select-menu>div{
+		margin-top: 6px;
+	}
+	.rooms-select-menu img{
+		position: absolute;
+	    right: 50px;
+	    top: 40px;
 	}
 </style>
 
@@ -731,6 +803,278 @@
 								<p><img src="images/EN/departureDate.png"><span>Check - out</span></p>
 								<input type="text" id="h-timeTo" name="timeTo" value="" placeholder="" readonly>
 								<img src="images/EN/downArrow.png">
+							</div>
+							<div class="rooms-select">
+								<p>Room(s)</p>
+								<input type="text" class="inputDown" id="h-rooms" name="" value="1 Room, 2 Adults" placeholder="" readonly>
+								<img src="images/EN/downArrow.png">
+								<b class="bottomLine"></b>
+								<ul class="roomMenu menu-com">
+									<li><a href="javascript:void(0)">1 Room, 2 Adults</a></li>
+									<li><a href="javascript:void(0)">1</a></li>
+									<li><a href="javascript:void(0)">2</a></li>
+									<li><a href="javascript:void(0)">3</a></li>
+								</ul>
+							</div>
+							<div class="rooms-select-menu">
+								<div class="rooms-1">
+									<h2>Room1</h2>
+									<div>
+										<p>Adults</p>
+										<input type="text" class="inputDown" name="" value="1 Room, 2 Adults" placeholder="" readonly>
+										<img src="images/EN/downArrow.png">
+										<b class="bottomLine"></b>
+										<ul class="roomMenu menu-com">
+											<li><a href="javascript:void(0)">1</a></li>
+											<li><a href="javascript:void(0)">2</a></li>
+											<li><a href="javascript:void(0)">3</a></li>
+										</ul>
+									</div>
+									<div>
+										<p>Children</p>
+										<input type="text" class="inputDown" name="" value="1 Room, 2 Adults" placeholder="" readonly>
+										<img src="images/EN/downArrow.png">
+										<b class="bottomLine"></b>
+										<ul class="roomMenu menu-com">
+											<li><a href="javascript:void(0)">0</a></li>
+											<li><a href="javascript:void(0)">1</a></li>
+											<li><a href="javascript:void(0)">2</a></li>
+											<li><a href="javascript:void(0)">3</a></li>
+										</ul>
+									</div>
+									<div>
+										<p>Age</p>
+										<input type="text" class="inputDown" name="" value="1 Room, 2 Adults" placeholder="" readonly>
+										<img src="images/EN/downArrow.png">
+										<b class="bottomLine"></b>
+										<ul class="roomMenu menu-com">
+											<li><a href="javascript:void(0)">Age < 1 year old</a></li>
+											<li><a href="javascript:void(0)">2</a></li>
+											<li><a href="javascript:void(0)">3</a></li>
+											<li><a href="javascript:void(0)">4</a></li>
+											<li><a href="javascript:void(0)">5</a></li>
+											<li><a href="javascript:void(0)">6</a></li>
+											<li><a href="javascript:void(0)">7</a></li>
+											<li><a href="javascript:void(0)">8</a></li>
+											<li><a href="javascript:void(0)">9</a></li>
+											<li><a href="javascript:void(0)">10</a></li>
+											<li><a href="javascript:void(0)">11</a></li>
+											<li><a href="javascript:void(0)">12</a></li>
+										</ul>
+									</div>
+									<div>
+										<p>Age</p>
+										<input type="text" class="inputDown" name="" value="1 Room, 2 Adults" placeholder="" readonly>
+										<img src="images/EN/downArrow.png">
+										<b class="bottomLine"></b>
+										<ul class="roomMenu menu-com">
+											<li><a href="javascript:void(0)">Age < 1 year old</a></li>
+											<li><a href="javascript:void(0)">2</a></li>
+											<li><a href="javascript:void(0)">3</a></li>
+											<li><a href="javascript:void(0)">4</a></li>
+											<li><a href="javascript:void(0)">5</a></li>
+											<li><a href="javascript:void(0)">6</a></li>
+											<li><a href="javascript:void(0)">7</a></li>
+											<li><a href="javascript:void(0)">8</a></li>
+											<li><a href="javascript:void(0)">9</a></li>
+											<li><a href="javascript:void(0)">10</a></li>
+											<li><a href="javascript:void(0)">11</a></li>
+											<li><a href="javascript:void(0)">12</a></li>
+										</ul>
+									</div>
+									<div>
+										<p>Age</p>
+										<input type="text" class="inputDown" name="" value="1 Room, 2 Adults" placeholder="" readonly>
+										<img src="images/EN/downArrow.png">
+										<b class="bottomLine"></b>
+										<ul class="roomMenu menu-com">
+											<li><a href="javascript:void(0)">Age < 1 year old</a></li>
+											<li><a href="javascript:void(0)">2</a></li>
+											<li><a href="javascript:void(0)">3</a></li>
+											<li><a href="javascript:void(0)">4</a></li>
+											<li><a href="javascript:void(0)">5</a></li>
+											<li><a href="javascript:void(0)">6</a></li>
+											<li><a href="javascript:void(0)">7</a></li>
+											<li><a href="javascript:void(0)">8</a></li>
+											<li><a href="javascript:void(0)">9</a></li>
+											<li><a href="javascript:void(0)">10</a></li>
+											<li><a href="javascript:void(0)">11</a></li>
+											<li><a href="javascript:void(0)">12</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="rooms-2">
+									<h2>Room2</h2>
+									<div>
+										<p>Adults</p>
+										<input type="text" class="inputDown" name="" value="1 Room, 2 Adults" placeholder="" readonly>
+										<img src="images/EN/downArrow.png">
+										<b class="bottomLine"></b>
+										<ul class="roomMenu menu-com">
+											<li><a href="javascript:void(0)">1</a></li>
+											<li><a href="javascript:void(0)">2</a></li>
+											<li><a href="javascript:void(0)">3</a></li>
+										</ul>
+									</div>
+									<div>
+										<p>Children</p>
+										<input type="text" class="inputDown" name="" value="1 Room, 2 Adults" placeholder="" readonly>
+										<img src="images/EN/downArrow.png">
+										<b class="bottomLine"></b>
+										<ul class="roomMenu menu-com">
+											<li><a href="javascript:void(0)">0</a></li>
+											<li><a href="javascript:void(0)">1</a></li>
+											<li><a href="javascript:void(0)">2</a></li>
+											<li><a href="javascript:void(0)">3</a></li>
+										</ul>
+									</div>
+									<div>
+										<p>Age</p>
+										<input type="text" class="inputDown" name="" value="1 Room, 2 Adults" placeholder="" readonly>
+										<img src="images/EN/downArrow.png">
+										<b class="bottomLine"></b>
+										<ul class="roomMenu menu-com">
+											<li><a href="javascript:void(0)">Age < 1 year old</a></li>
+											<li><a href="javascript:void(0)">2</a></li>
+											<li><a href="javascript:void(0)">3</a></li>
+											<li><a href="javascript:void(0)">4</a></li>
+											<li><a href="javascript:void(0)">5</a></li>
+											<li><a href="javascript:void(0)">6</a></li>
+											<li><a href="javascript:void(0)">7</a></li>
+											<li><a href="javascript:void(0)">8</a></li>
+											<li><a href="javascript:void(0)">9</a></li>
+											<li><a href="javascript:void(0)">10</a></li>
+											<li><a href="javascript:void(0)">11</a></li>
+											<li><a href="javascript:void(0)">12</a></li>
+										</ul>
+									</div>
+									<div>
+										<p>Age</p>
+										<input type="text" class="inputDown" name="" value="1 Room, 2 Adults" placeholder="" readonly>
+										<img src="images/EN/downArrow.png">
+										<b class="bottomLine"></b>
+										<ul class="roomMenu menu-com">
+											<li><a href="javascript:void(0)">Age < 1 year old</a></li>
+											<li><a href="javascript:void(0)">2</a></li>
+											<li><a href="javascript:void(0)">3</a></li>
+											<li><a href="javascript:void(0)">4</a></li>
+											<li><a href="javascript:void(0)">5</a></li>
+											<li><a href="javascript:void(0)">6</a></li>
+											<li><a href="javascript:void(0)">7</a></li>
+											<li><a href="javascript:void(0)">8</a></li>
+											<li><a href="javascript:void(0)">9</a></li>
+											<li><a href="javascript:void(0)">10</a></li>
+											<li><a href="javascript:void(0)">11</a></li>
+											<li><a href="javascript:void(0)">12</a></li>
+										</ul>
+									</div>
+									<div>
+										<p>Age</p>
+										<input type="text" class="inputDown" name="" value="1 Room, 2 Adults" placeholder="" readonly>
+										<img src="images/EN/downArrow.png">
+										<b class="bottomLine"></b>
+										<ul class="roomMenu menu-com">
+											<li><a href="javascript:void(0)">Age < 1 year old</a></li>
+											<li><a href="javascript:void(0)">2</a></li>
+											<li><a href="javascript:void(0)">3</a></li>
+											<li><a href="javascript:void(0)">4</a></li>
+											<li><a href="javascript:void(0)">5</a></li>
+											<li><a href="javascript:void(0)">6</a></li>
+											<li><a href="javascript:void(0)">7</a></li>
+											<li><a href="javascript:void(0)">8</a></li>
+											<li><a href="javascript:void(0)">9</a></li>
+											<li><a href="javascript:void(0)">10</a></li>
+											<li><a href="javascript:void(0)">11</a></li>
+											<li><a href="javascript:void(0)">12</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="rooms-3">
+									<h2>Room3</h2>
+									<div>
+										<p>Adults</p>
+										<input type="text" class="inputDown" name="" value="1 Room, 2 Adults" placeholder="" readonly>
+										<img src="images/EN/downArrow.png">
+										<b class="bottomLine"></b>
+										<ul class="roomMenu menu-com">
+											<li><a href="javascript:void(0)">1</a></li>
+											<li><a href="javascript:void(0)">2</a></li>
+											<li><a href="javascript:void(0)">3</a></li>
+										</ul>
+									</div>
+									<div>
+										<p>Children</p>
+										<input type="text" class="inputDown" name="" value="1 Room, 2 Adults" placeholder="" readonly>
+										<img src="images/EN/downArrow.png">
+										<b class="bottomLine"></b>
+										<ul class="roomMenu menu-com">
+											<li><a href="javascript:void(0)">0</a></li>
+											<li><a href="javascript:void(0)">1</a></li>
+											<li><a href="javascript:void(0)">2</a></li>
+											<li><a href="javascript:void(0)">3</a></li>
+										</ul>
+									</div>
+									<div>
+										<p>Age</p>
+										<input type="text" class="inputDown" name="" value="1 Room, 2 Adults" placeholder="" readonly>
+										<img src="images/EN/downArrow.png">
+										<b class="bottomLine"></b>
+										<ul class="roomMenu menu-com">
+											<li><a href="javascript:void(0)">Age < 1 year old</a></li>
+											<li><a href="javascript:void(0)">2</a></li>
+											<li><a href="javascript:void(0)">3</a></li>
+											<li><a href="javascript:void(0)">4</a></li>
+											<li><a href="javascript:void(0)">5</a></li>
+											<li><a href="javascript:void(0)">6</a></li>
+											<li><a href="javascript:void(0)">7</a></li>
+											<li><a href="javascript:void(0)">8</a></li>
+											<li><a href="javascript:void(0)">9</a></li>
+											<li><a href="javascript:void(0)">10</a></li>
+											<li><a href="javascript:void(0)">11</a></li>
+											<li><a href="javascript:void(0)">12</a></li>
+										</ul>
+									</div>
+									<div>
+										<p>Age</p>
+										<input type="text" class="inputDown" name="" value="1 Room, 2 Adults" placeholder="" readonly>
+										<img src="images/EN/downArrow.png">
+										<b class="bottomLine"></b>
+										<ul class="roomMenu menu-com">
+											<li><a href="javascript:void(0)">Age < 1 year old</a></li>
+											<li><a href="javascript:void(0)">2</a></li>
+											<li><a href="javascript:void(0)">3</a></li>
+											<li><a href="javascript:void(0)">4</a></li>
+											<li><a href="javascript:void(0)">5</a></li>
+											<li><a href="javascript:void(0)">6</a></li>
+											<li><a href="javascript:void(0)">7</a></li>
+											<li><a href="javascript:void(0)">8</a></li>
+											<li><a href="javascript:void(0)">9</a></li>
+											<li><a href="javascript:void(0)">10</a></li>
+											<li><a href="javascript:void(0)">11</a></li>
+											<li><a href="javascript:void(0)">12</a></li>
+										</ul>
+									</div>
+									<div>
+										<p>Age</p>
+										<input type="text" class="inputDown" name="" value="1 Room, 2 Adults" placeholder="" readonly>
+										<img src="images/EN/downArrow.png">
+										<b class="bottomLine"></b>
+										<ul class="roomMenu menu-com">
+											<li><a href="javascript:void(0)">Age < 1 year old</a></li>
+											<li><a href="javascript:void(0)">2</a></li>
+											<li><a href="javascript:void(0)">3</a></li>
+											<li><a href="javascript:void(0)">4</a></li>
+											<li><a href="javascript:void(0)">5</a></li>
+											<li><a href="javascript:void(0)">6</a></li>
+											<li><a href="javascript:void(0)">7</a></li>
+											<li><a href="javascript:void(0)">8</a></li>
+											<li><a href="javascript:void(0)">9</a></li>
+											<li><a href="javascript:void(0)">10</a></li>
+											<li><a href="javascript:void(0)">11</a></li>
+											<li><a href="javascript:void(0)">12</a></li>
+										</ul>
+									</div>
+								</div>
 							</div>
 							<div class="viewSchedules js-hotel-search">
 								<a href="http://holidays.lanmeiairlines.com/hotels" target="_blank">SEARCH<img src="images/EN/schedulesArrow.png"></a>
