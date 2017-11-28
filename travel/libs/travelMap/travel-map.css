@@ -1,9 +1,22 @@
 @charset "utf-8";
-/* box */
-#boxMap{position:relative;width:70%;height:292px;margin:0 auto;}
+.section-6{
+	margin-bottom: 160px;
+}
+#boxMap{position:relative;height:292px;margin:0 auto;}
 #boxMap ul{position:relative;width:880px;height:292px;margin:0 auto;}
-#boxMap li{position:absolute;list-style:none;background:#fff;width:0;height:0;top:146px;left:377px;z-index:0;cursor:pointer;overflow:hidden;border-radius:3px;}
-#boxMap li img{width:100%;height:100%;vertical-align:top;}
+#boxMap li{position:absolute;list-style:none;background:#fff;width:0;height:0;top:146px;left:377px;z-index:0;cursor:pointer;border-radius:3px;text-align: center;}
+#boxMap li:nth-child(1){overflow: hidden;}
+#boxMap li img{width:100%;height:88%;vertical-align:top;}
+#boxMap li span{
+	position: relative;
+	top: 10px;
+	display: inline-block;
+	width: 100%;
+	font-size:20px;
+	background: linear-gradient(135deg, #81E5FE 0%, #1639AE 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
 // #boxMap .prev, #boxMap .next{position:absolute;top:50%;width:39px;height:80px;margin-top:-40px;overflow:hidden;text-indent:-999px;cursor:pointer;background:url(../images/btn.png) no-repeat;}
 #boxMap .prev, #boxMap .next{display:none}
 #boxMap .next{right:-60px;background-position:-39px 0;}
@@ -16,7 +29,8 @@
 	font-size: 20px;
 	font-weight: bold;
 	color: #fff;
-	margin: 20px auto;
+	margin: 0 auto;
+	margin-top: 50px;
 	background: linear-gradient(135deg, #81E5FE 0%, #1639AE 100%);
 	border-radius: 4px;
 	transition: all .6s;

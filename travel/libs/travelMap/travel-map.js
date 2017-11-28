@@ -121,10 +121,12 @@ ZoomPic.prototype =
 				this.aSort[i].onmouseover = function ()
 				{
 					_this.doMove(this.getElementsByTagName("img")[0], {opacity:100})	
+					_this.doMove(this.getElementsByTagName("span")[0], {opacity:100})	
 				};
 				this.aSort[i].onmouseout = function ()
 				{
 					_this.doMove(this.getElementsByTagName("img")[0], {opacity:35})
+					_this.doMove(this.getElementsByTagName("span")[0], {opacity:35})
 				};
 				this.aSort[i].onmouseout();
 			}

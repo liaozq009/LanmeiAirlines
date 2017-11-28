@@ -1,5 +1,8 @@
 @charset "utf-8";
 /* 定义变量 */
+body {
+  background: #FAFBFF;
+}
 .lanmeiHeader {
   position: absolute;
   top: 0;
@@ -180,9 +183,15 @@ section {
 .section-3 > ul > li {
   float: left;
   width: 30%;
-  box-shadow: 0 0 100px 0 rgba(185, 216, 255, 0.5);
   border-radius: 10px;
   overflow: hidden;
+  transition: all 0.6s;
+  -webkit-transition: all 0.6s;
+}
+.section-3 > ul > li:hover {
+  box-shadow: 0 0 100px 0 rgba(185, 216, 255, 0.5);
+  transition: all 0.6s;
+  -webkit-transition: all 0.6s;
 }
 .section-3 > ul > li > img {
   width: 100%;
