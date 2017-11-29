@@ -102,7 +102,6 @@ var flightInfo = {
 		$('.selectAirCommon').on('click','.menu-com a',function(e){
 			e.preventDefault();e.stopPropagation();
 			var val = $(this).html();
-			console.log(val);
 			$(this).parents('ul').hide().siblings('.bottomLine,.clear').hide().siblings('input').val(val);
 			$('.selectAirCommon .inputDown').removeClass('active');
 

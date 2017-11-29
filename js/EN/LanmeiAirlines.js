@@ -52,16 +52,16 @@ var LanmeiAirlines = {
 	/* 轮播 */
 	slider:function(){
 		$('.LM-hiSlider').hiSlider({
-		    isFlexible: true,
-		    isShowTitle: false,
-		    isAuto: false,
-		    intervalTime: 3600,
-		    isSupportTouch: true,
-		    prevImg:'images/EN/Previous-icon.png',
-		    nextImg:'images/EN/NextArrow.png',
-		    titleAttr: function(curIdx){
-		        return $('img', this).attr('alt');
-		    }
+			isFlexible: true,
+			isShowTitle: false,
+			isAuto: false,
+			intervalTime: 3600,
+			isSupportTouch: true,
+			prevImg:'images/EN/Previous-icon.png',
+			nextImg:'images/EN/NextArrow.png',
+			titleAttr: function(curIdx){
+				return $('img', this).attr('alt');
+			}
 		});
 	},
 	
@@ -107,29 +107,29 @@ var LanmeiAirlines = {
 			asideHeight = $('.li-slide').height(); //动态获取高度
 			switch (href) {
 				case "ticket-content":
-					animate(0);
-					break;
+				animate(0);
+				break;
 				case "hotel-content":
-					animate(asideHeight);
-					break;
+				animate(asideHeight);
+				break;
 				case "car-content":
-					animate(asideHeight*2);
-					break;
+				animate(asideHeight*2);
+				break;
 				case "flight-content":
-					animate(asideHeight*3);
-					break;
+				animate(asideHeight*3);
+				break;
 			}
 		}
 
 		var _tick = null;
 		$(window).resize(function(){
 			if (_tick) clearTimeout(_tick);
-	    	_tick = setTimeout(function() {
-	    		asideWidth = $('.listSelect').width();
-	    		boxWidth = $('.listSelectBox').width()+asideWidth;
+			_tick = setTimeout(function() {
+				asideWidth = $('.listSelect').width();
+				boxWidth = $('.listSelectBox').width()+asideWidth;
 				$('.listSelectBox').animate({left: asideWidth}, 600); 
 				changeSlide();	
-            }, 1000);
+			}, 1000);
 		});
 
 		// 关闭侧边栏
@@ -153,17 +153,17 @@ var LanmeiAirlines = {
 			$('.li-slide').fadeIn(1000);
 			switch (href) {
 				case "ticket-content":
-					animate(0);
-					break;
+				animate(0);
+				break;
 				case "hotel-content":
-					animate(asideHeight);
-					break;
+				animate(asideHeight);
+				break;
 				case "car-content":
-					animate(asideHeight*2);
-					break;
+				animate(asideHeight*2);
+				break;
 				case "flight-content":
-					animate(asideHeight*3);
-					break;
+				animate(asideHeight*3);
+				break;
 			}
 		}).one('click',function(){
 			var href = $(this).attr('href');
@@ -176,23 +176,23 @@ var LanmeiAirlines = {
 				// 	});
 				// 	break;
 				case "hotel-content":
-					$('#h-timeFrom').dateSelect({
-						timeFrom: 'h-timeFrom',
-						timeTo: 'h-timeTo',
-					});
-					break;
+				$('#h-timeFrom').dateSelect({
+					timeFrom: 'h-timeFrom',
+					timeTo: 'h-timeTo',
+				});
+				break;
 				case "car-content":
 
-					break;
+				break;
 				case "flight-content":
-					$('#f-timeFrom').dateSelect({
-						timeFrom: 'f-timeFrom',
-						isSingleDay:true,
-					});
-					break;
+				$('#f-timeFrom').dateSelect({
+					timeFrom: 'f-timeFrom',
+					isSingleDay:true,
+				});
+				break;
 				default:
-					
-					break;
+
+				break;
 			}
 		});
 
@@ -238,7 +238,7 @@ var LanmeiAirlines = {
 			e.preventDefault();
 			// 去掉空格
 			var trim = function(str){
-			    return str.replace(/(^\s*)|(\s*$)/g, "");
+				return str.replace(/(^\s*)|(\s*$)/g, "");
 			}
 
 			// 截取出发地目的地
@@ -283,7 +283,7 @@ var LanmeiAirlines = {
 
 	/* 官网特价优惠券 */
 	couponEvent:function(){
-        Carousel.init($('.carousel'));
+		Carousel.init($('.carousel'));
      //   	$('.poster-list .list-item').click(function(){
    		// 	layer.open({
    		// 	  type: 1, //Page层类型
@@ -319,12 +319,12 @@ var LanmeiAirlines = {
    		// 	  }
    		// 	});    
    		// });
-	},
+   	},
 
-	/* 特价机票滚动 */
-	lowestFares:function(){
-		this.fastClick($('.next_arrow'));
-		this.fastClick($('.prev_arrow'));
+   	/* 特价机票滚动 */
+   	lowestFares:function(){
+   		this.fastClick($('.next_arrow'));
+   		this.fastClick($('.prev_arrow'));
 
 		//计算有几个ul
 		var page=1;
@@ -422,9 +422,9 @@ var LanmeiAirlines = {
 		var _time = null;
 		$(window).resize(function(){
 			if (_time) clearTimeout(_time);
-	    	_time = setTimeout(function() {
-	    		getWidth();	
-            }, 1000);
+			_time = setTimeout(function() {
+				getWidth();	
+			}, 1000);
 		});
 
 		var flag = true;//防止连续点击造成bug
@@ -506,29 +506,29 @@ var LanmeiAirlines = {
 
 					switch (data) {
 						case 'mask-1':
-							$title.html('Cambodia,Royal Palace');
-							$con.html('The Royal Palace of Phnom Penh, also known as the four-arm bay palace, was named because of the river junction among the Up-Mekong River, the Tonle Sap River, the Down- Mekong River and the Bassac River. It was built by King Norodom in 1866-1870 to be the palace of the Kingdom of Cambodia.</ Br> The building of palaces has traditional Khmer architectural style with religious characters. All palaces have a minaret, which has the meaning of prosperity; the hall of palaces was painted by yellow and white, yellow represents Buddhism, white represents Brahmanism, the scale of palaces is more than twenty.');
-							$local.html('Phnom Penh');
-							$localURL.attr('href','https://goo.gl/maps/SfKrMapEBXN2');
-							$seeName.html('Lanmei Airlines');
-							$seeNum.html('1729');
-							break;
+						$title.html('Cambodia,Royal Palace');
+						$con.html('The Royal Palace of Phnom Penh, also known as the four-arm bay palace, was named because of the river junction among the Up-Mekong River, the Tonle Sap River, the Down- Mekong River and the Bassac River. It was built by King Norodom in 1866-1870 to be the palace of the Kingdom of Cambodia.</ Br> The building of palaces has traditional Khmer architectural style with religious characters. All palaces have a minaret, which has the meaning of prosperity; the hall of palaces was painted by yellow and white, yellow represents Buddhism, white represents Brahmanism, the scale of palaces is more than twenty.');
+						$local.html('Phnom Penh');
+						$localURL.attr('href','https://goo.gl/maps/SfKrMapEBXN2');
+						$seeName.html('Lanmei Airlines');
+						$seeNum.html('1729');
+						break;
 						case 'mask-2':
-							$title.html('Macau');
-							$con.html('Macau is divided into Macau Peninsula, Taipa Island and Coloane Island. The historical and modern senses are represented by the West Bay Bridge, the Australian Taipa Bridge and the Friendship Bridge. The Macau Peninsula gathers many cultural spots such as the Ruins of St. Paul, the Fortress, the Rose Hall, etc. Stepping on the long ladders, you can look up at the tortuous silhouette of the Ruins of St. Paul in the sky; ascending the Fortress, you can overlook the beauty of Macau from different perspectives. Many Macau stories could be found in the narrow stone road, crumbling banyan tree, accessible mottled walls and baroque carved decoration. ');
-							$local.html('Macau');
-							$localURL.attr('javascript:void(0)');
-							$seeName.html('Lanmei Airlines');
-							$seeNum.html('935');
-							break;
+						$title.html('Macau');
+						$con.html('Macau is divided into Macau Peninsula, Taipa Island and Coloane Island. The historical and modern senses are represented by the West Bay Bridge, the Australian Taipa Bridge and the Friendship Bridge. The Macau Peninsula gathers many cultural spots such as the Ruins of St. Paul, the Fortress, the Rose Hall, etc. Stepping on the long ladders, you can look up at the tortuous silhouette of the Ruins of St. Paul in the sky; ascending the Fortress, you can overlook the beauty of Macau from different perspectives. Many Macau stories could be found in the narrow stone road, crumbling banyan tree, accessible mottled walls and baroque carved decoration. ');
+						$local.html('Macau');
+						$localURL.attr('javascript:void(0)');
+						$seeName.html('Lanmei Airlines');
+						$seeNum.html('935');
+						break;
 						case 'mask-3':
-							$title.html('Siem Reap');
-							$con.html("Siem Reap is the capital of Siem Reap province, Cambodia. Angkor Wat and Great Angkor are located in the northern suburb of Siem Reap. Star hotels clustered in both sides of Siem Reap River, which flows through Siem Reap city. Siem Reap has about 14 million people, most of who believe in Buddhism. The town is quiet and unobtrusive compared to the hustle and bustle of Phnom Penh. Angkor Wat is listed as one of the world's top 7 wonders and the world's cultural heritage, and travelers from all over the world go after it in a swarm. At the first sight of Beng Mealea, a temple which had not yet been fully excavated and renovated, you can completely understand how surprise and shock they were when the French found Angkor Wat. Angkor Wat, the capital of ancient Khmer kingdom, is collectively referred to Angkor monuments and is a complete city consisting of palaces, temples, gardens and castles.");
-							$local.html('Siem Reap');
-							$localURL.attr('href','javascript:void(0)');
-							$seeName.html('Lanmei Airlines');
-							$seeNum.html('1203');
-							break;
+						$title.html('Siem Reap');
+						$con.html("Siem Reap is the capital of Siem Reap province, Cambodia. Angkor Wat and Great Angkor are located in the northern suburb of Siem Reap. Star hotels clustered in both sides of Siem Reap River, which flows through Siem Reap city. Siem Reap has about 14 million people, most of who believe in Buddhism. The town is quiet and unobtrusive compared to the hustle and bustle of Phnom Penh. Angkor Wat is listed as one of the world's top 7 wonders and the world's cultural heritage, and travelers from all over the world go after it in a swarm. At the first sight of Beng Mealea, a temple which had not yet been fully excavated and renovated, you can completely understand how surprise and shock they were when the French found Angkor Wat. Angkor Wat, the capital of ancient Khmer kingdom, is collectively referred to Angkor monuments and is a complete city consisting of palaces, temples, gardens and castles.");
+						$local.html('Siem Reap');
+						$localURL.attr('href','javascript:void(0)');
+						$seeName.html('Lanmei Airlines');
+						$seeNum.html('1203');
+						break;
 					}
 
 					// 改变flag的值
@@ -543,11 +543,11 @@ var LanmeiAirlines = {
 
 		});
 
-	},
+},
 
-	/* PC端旅行日记 */
-	pcTraval:function(){
-		/* PC端事件  */
+/* PC端旅行日记 */
+pcTraval:function(){
+	/* PC端事件  */
 		var flag = true;//防止连续点击造成bug
 		var $nth2 = $('.pc-travel-inner .nth-child2'); //获取显示文字框
 
@@ -636,29 +636,29 @@ var LanmeiAirlines = {
 
 					switch (data) {
 						case 'mask-1':
-							$title.html('Cambodia,Royal Palace');
-							$con.html('The Royal Palace of Phnom Penh, also known as the four-arm bay palace, was named because of the river junction among the Up-Mekong River, the Tonle Sap River, the Down- Mekong River and the Bassac River. It was built by King Norodom in 1866-1870 to be the palace of the Kingdom of Cambodia.</ Br> The building of palaces has traditional Khmer architectural style with religious characters. All palaces have a minaret, which has the meaning of prosperity; the hall of palaces was painted by yellow and white, yellow represents Buddhism, white represents Brahmanism, the scale of palaces is more than twenty.');
-							$local.html('Phnom Penh');
-							$localURL.attr('href','https://goo.gl/maps/SfKrMapEBXN2');
-							$seeName.html('Lanmei Airlines');
-							$seeNum.html('1729');
-							break;
+						$title.html('Cambodia,Royal Palace');
+						$con.html('The Royal Palace of Phnom Penh, also known as the four-arm bay palace, was named because of the river junction among the Up-Mekong River, the Tonle Sap River, the Down- Mekong River and the Bassac River. It was built by King Norodom in 1866-1870 to be the palace of the Kingdom of Cambodia.</ Br> The building of palaces has traditional Khmer architectural style with religious characters. All palaces have a minaret, which has the meaning of prosperity; the hall of palaces was painted by yellow and white, yellow represents Buddhism, white represents Brahmanism, the scale of palaces is more than twenty.');
+						$local.html('Phnom Penh');
+						$localURL.attr('href','https://goo.gl/maps/SfKrMapEBXN2');
+						$seeName.html('Lanmei Airlines');
+						$seeNum.html('1729');
+						break;
 						case 'mask-2':
-							$title.html('Macau');
-							$con.html('Macau is divided into Macau Peninsula, Taipa Island and Coloane Island. The historical and modern senses are represented by the West Bay Bridge, the Australian Taipa Bridge and the Friendship Bridge. The Macau Peninsula gathers many cultural spots such as the Ruins of St. Paul, the Fortress, the Rose Hall, etc. Stepping on the long ladders, you can look up at the tortuous silhouette of the Ruins of St. Paul in the sky; ascending the Fortress, you can overlook the beauty of Macau from different perspectives. Many Macau stories could be found in the narrow stone road, crumbling banyan tree, accessible mottled walls and baroque carved decoration. ');
-							$local.html('Macau');
-							$localURL.attr('javascript:void(0)');
-							$seeName.html('Lanmei Airlines');
-							$seeNum.html('935');
-							break;
+						$title.html('Macau');
+						$con.html('Macau is divided into Macau Peninsula, Taipa Island and Coloane Island. The historical and modern senses are represented by the West Bay Bridge, the Australian Taipa Bridge and the Friendship Bridge. The Macau Peninsula gathers many cultural spots such as the Ruins of St. Paul, the Fortress, the Rose Hall, etc. Stepping on the long ladders, you can look up at the tortuous silhouette of the Ruins of St. Paul in the sky; ascending the Fortress, you can overlook the beauty of Macau from different perspectives. Many Macau stories could be found in the narrow stone road, crumbling banyan tree, accessible mottled walls and baroque carved decoration. ');
+						$local.html('Macau');
+						$localURL.attr('javascript:void(0)');
+						$seeName.html('Lanmei Airlines');
+						$seeNum.html('935');
+						break;
 						case 'mask-3':
-							$title.html('Siem Reap');
-							$con.html("Siem Reap is the capital of Siem Reap province, Cambodia. Angkor Wat and Great Angkor are located in the northern suburb of Siem Reap. Star hotels clustered in both sides of Siem Reap River, which flows through Siem Reap city. Siem Reap has about 14 million people, most of who believe in Buddhism. The town is quiet and unobtrusive compared to the hustle and bustle of Phnom Penh. Angkor Wat is listed as one of the world's top 7 wonders and the world's cultural heritage, and travelers from all over the world go after it in a swarm. At the first sight of Beng Mealea, a temple which had not yet been fully excavated and renovated, you can completely understand how surprise and shock they were when the French found Angkor Wat. Angkor Wat, the capital of ancient Khmer kingdom, is collectively referred to Angkor monuments and is a complete city consisting of palaces, temples, gardens and castles.");
-							$local.html('Siem Reap');
-							$localURL.attr('href','javascript:void(0)');
-							$seeName.html('Lanmei Airlines');
-							$seeNum.html('1203');
-							break;
+						$title.html('Siem Reap');
+						$con.html("Siem Reap is the capital of Siem Reap province, Cambodia. Angkor Wat and Great Angkor are located in the northern suburb of Siem Reap. Star hotels clustered in both sides of Siem Reap River, which flows through Siem Reap city. Siem Reap has about 14 million people, most of who believe in Buddhism. The town is quiet and unobtrusive compared to the hustle and bustle of Phnom Penh. Angkor Wat is listed as one of the world's top 7 wonders and the world's cultural heritage, and travelers from all over the world go after it in a swarm. At the first sight of Beng Mealea, a temple which had not yet been fully excavated and renovated, you can completely understand how surprise and shock they were when the French found Angkor Wat. Angkor Wat, the capital of ancient Khmer kingdom, is collectively referred to Angkor monuments and is a complete city consisting of palaces, temples, gardens and castles.");
+						$local.html('Siem Reap');
+						$localURL.attr('href','javascript:void(0)');
+						$seeName.html('Lanmei Airlines');
+						$seeNum.html('1203');
+						break;
 					}
 
 					// 改变flag的值
@@ -672,10 +672,10 @@ var LanmeiAirlines = {
 			}
 
 		});
-	},
+},
 
-	/* 页面加载动画 */
-	animation:function(){
+/* 页面加载动画 */
+animation:function(){
 		// 获取元素
 		var $lowestTitle = $(".lowestFaresTitle");
 		var $travelTitle = $(".lm-travel-title");
@@ -884,7 +884,7 @@ var LanmeiAirlines = {
 	addEvent:function(){
 		// 解决ios下input出现光标问题
 		$('.m-flight-select input[readonly],.p-flight-select input[readonly]').on('focus', function() {
-		    $(this).trigger('blur');
+			$(this).trigger('blur');
 		}); 
 
 		// 图片懒加载
@@ -947,30 +947,30 @@ var LanmeiAirlines = {
 			var attr = $('.m-nav-title').attr('data-title');
 			switch (attr) {
 				case 's-nav-title':
-					$('.m-nav-wrap').animate({marginLeft:'0'}, 400);
-					$('.m-nav-title').attr('data-title','f-nav-title');
-					$('.m-nav-title').text('MENU');
-					break;
+				$('.m-nav-wrap').animate({marginLeft:'0'}, 400);
+				$('.m-nav-title').attr('data-title','f-nav-title');
+				$('.m-nav-title').text('MENU');
+				break;
 				case 't-nav-title':
-					$('.m-nav-wrap').animate({marginLeft:'-100%'}, 400);
-					$('.m-nav-title').attr('data-title','s-nav-title');
+				$('.m-nav-wrap').animate({marginLeft:'-100%'}, 400);
+				$('.m-nav-title').attr('data-title','s-nav-title');
 
-					var ul = $('.m-nav-2 ul');
-					ul.each(function(i,v){
-						if($(v).css('display')=='block'){
-							var id = $(v).attr('id');
-							var text = $('[href="#'+id+'"]').text();
-							$('.m-nav-title').text(text);
-						}
-					});
-					break;
+				var ul = $('.m-nav-2 ul');
+				ul.each(function(i,v){
+					if($(v).css('display')=='block'){
+						var id = $(v).attr('id');
+						var text = $('[href="#'+id+'"]').text();
+						$('.m-nav-title').text(text);
+					}
+				});
+				break;
 				case 'f-nav-title':
-					$('.m-nav-menu').animate({left: '-100%'}, 300);
-					$('.m-nav-mask').fadeOut(300);
+				$('.m-nav-menu').animate({left: '-100%'}, 300);
+				$('.m-nav-mask').fadeOut(300);
 					$('html,body').removeClass('ovfHiden'); //使网页恢复可滚
 					break;
-			}
-		});
+				}
+			});
 		// 点击一级菜单
 		$('.m-nav-1 a').click(function(e){
 			// 如果没有链接，则阻止跳转
@@ -999,12 +999,12 @@ var LanmeiAirlines = {
 		/* 移动端领取优惠券和特价机票滚动 */
 		var sliderWrap = function(s,p){
 			new Swiper(s,{
-			  pagination: p,
-			  paginationClickable: true,
-			  initialSlide :1,
-			  centeredSlides: true,
-			  slidesPerView: 3,
-			  watchActiveIndex: true
+				pagination: p,
+				paginationClickable: true,
+				initialSlide :1,
+				centeredSlides: true,
+				slidesPerView: 3,
+				watchActiveIndex: true
 			});
 
 			// 机票滚动动态获取left的值
@@ -1018,9 +1018,9 @@ var LanmeiAirlines = {
 			var _m_tick = null;
 			$(window).resize(function(){
 				if (_m_tick) clearTimeout(_m_tick);
-		    	_m_tick = setTimeout(function() {
-		    		getLeft();
-	            }, 1000);
+				_m_tick = setTimeout(function() {
+					getLeft();
+				}, 1000);
 			});
 		}
 
@@ -1029,11 +1029,11 @@ var LanmeiAirlines = {
 		
 		// 日期选择--动态加载
 		var formatDate = function(ymd) { //日期格式化
-		    return ymd.replace(/(\d{4})\-(\d{1,2})\-(\d{1,2})/g, function(ymdFormatDate, y, m, d){
-		        m < 10 && (m = '0' + m);
-		        d < 10 && (d = '0' + d);
-		        return y + '-' + m + '-' + d;
-		    });
+			return ymd.replace(/(\d{4})\-(\d{1,2})\-(\d{1,2})/g, function(ymdFormatDate, y, m, d){
+				m < 10 && (m = '0' + m);
+				d < 10 && (d = '0' + d);
+				return y + '-' + m + '-' + d;
+			});
 		};
 
 		var today  = new Date();
@@ -1069,14 +1069,14 @@ var LanmeiAirlines = {
 		var mTickt = function(){
 			// 移动端舱位选择
 			var mobileSelect1 = new MobileSelect({
-			    trigger: '.ticket-cabin-select', 
-			    title: 'Cabin', 
-			    wheels: [
-			                {data: ["ECONOMY"]}
-			            ],
+				trigger: '.ticket-cabin-select', 
+				title: 'Cabin', 
+				wheels: [
+				{data: ["ECONOMY"]}
+				],
 			    position:[0], //初始化定位 打开时默认选中的哪个  如果不填默认为0
 			    callback:function(indexArr, data){
-			        $('.ticket-cabin-select').val(data[0]);
+			    	$('.ticket-cabin-select').val(data[0]);
 			    },
 			});
 
@@ -1086,60 +1086,60 @@ var LanmeiAirlines = {
 
 			// 移动端机票人数选择
 			var mobileSelect2 = new MobileSelect({
-			    trigger: '.m-ticket-box',
-			    title: 'Passenger',
-			    tip1:'Adult', 
-			    tip2:'Child', 
-			    wheels: [
-			                {data:[
-			                    {
-			                        id:'1',
-			                        value:'1',
-			                        childs:[
-			                            {id:'0',value:'0'},
-			                            {id:'1',value:'1'},
-			                            {id:'2',value:'2'},
-			                            {id:'3',value:'3'},
-			                            {id:'4',value:'4'},
-			                        ]
-			                    },
-			                    {
-			                        id:'2',
-			                        value:'2',
-			                        childs:[
-				                        {id:'0',value:'0'},
-			                            {id:'1',value:'1'},
-			                            {id:'2',value:'2'},
-			                            {id:'3',value:'3'},
-			                        ]
-			                    },
-			                    {
-			                        id:'3',
-			                        value:'3',
-			                        childs:[
-			                        	{id:'0',value:'0'},
-			                            {id:'1',value:'1'},
-			                            {id:'2',value:'2'},
-			                        ]
-			                    },
-			                    {
-			                        id:'4',
-			                        value:'4',
-			                        childs:[
-			                        	{id:'0',value:'0'},
-			                            {id:'1',value:'1'},
-			                        ]
-			                    },
-			                    {
-			                        id:'5',
-			                        value:'5',
-			                        childs:[
-			                        	{id:'0',value:'0'},
-			                        ]
-			                    }
-			                ]}
-			            ],  
-			    transitionEnd:function(indexArr, data){
+				trigger: '.m-ticket-box',
+				title: 'Passenger',
+				tip1:'Adult', 
+				tip2:'Child', 
+				wheels: [
+				{data:[
+					{
+						id:'1',
+						value:'1',
+						childs:[
+						{id:'0',value:'0'},
+						{id:'1',value:'1'},
+						{id:'2',value:'2'},
+						{id:'3',value:'3'},
+						{id:'4',value:'4'},
+						]
+					},
+					{
+						id:'2',
+						value:'2',
+						childs:[
+						{id:'0',value:'0'},
+						{id:'1',value:'1'},
+						{id:'2',value:'2'},
+						{id:'3',value:'3'},
+						]
+					},
+					{
+						id:'3',
+						value:'3',
+						childs:[
+						{id:'0',value:'0'},
+						{id:'1',value:'1'},
+						{id:'2',value:'2'},
+						]
+					},
+					{
+						id:'4',
+						value:'4',
+						childs:[
+						{id:'0',value:'0'},
+						{id:'1',value:'1'},
+						]
+					},
+					{
+						id:'5',
+						value:'5',
+						childs:[
+						{id:'0',value:'0'},
+						]
+					}
+					]}
+					],  
+					transitionEnd:function(indexArr, data){
 			        // console.log(data);
 			    },
 			    callback:function(indexArr, data){
@@ -1160,16 +1160,132 @@ var LanmeiAirlines = {
 		var mFlight = function(){
 			// 移动端机型选择
 			var mobileSelect4 = new MobileSelect({
-			    trigger: '.js-flight-select', 
-			    title: 'Flight Number', 
-			    wheels: [
-			                {data: ["LQ-806","LQ-807","LQ-502","LQ-503"]}
-			            ],
+				trigger: '.js-flight-select', 
+				title: 'Flight Number', 
+				wheels: [
+				{data: ["LQ-806","LQ-807","LQ-502","LQ-503"]}
+				],
 			    position:[0], //初始化定位 打开时默认选中的哪个  如果不填默认为0
 			    callback:function(indexArr, data){
-			        $('.js-flight-select').val(data[0]);
+			    	$('.js-flight-select').val(data[0]);
 			    },
 			});
+		};
+
+		var mHotel = function(){
+			// room选择
+			new MobileSelect({
+				trigger: '.js-rooms-input', 
+				title: 'Rooms', 
+				wheels: [
+				{data: ["1 Room,2 Adults","1","2","3"]}
+				],
+			    position:[0], //初始化定位 打开时默认选中的哪个  如果不填默认为0
+			    callback:function(indexArr, data){
+			    	$('.js-rooms-input').val(data[0]);
+			    	switch (data[0]) {
+			    		case '1 Room,2 Adults':
+				    		$('.m-rooms-wrap').hide();
+				    		$('.m-rooms-title').hide();
+				    		break;
+			    		case '1':
+				    		$('.m-rooms-1').show();
+				    		$('.m-rooms-2').hide();
+				    		$('.m-rooms-3').hide();
+				    		$('.m-rooms-title').show();
+				    		break;
+			    		case '2':
+				    		$('.m-rooms-1').show();
+				    		$('.m-rooms-2').show();
+				    		$('.m-rooms-3').hide();
+				    		$('.m-rooms-title').show();
+				    		break;
+			    		case '3':
+				    		$('.m-rooms-wrap').show();
+				    		$('.m-rooms-title').show();
+				    		break;
+			    	}
+			    },
+			});
+
+			// 成人选择
+			var roomsAdult = function(adult){
+				new MobileSelect({
+					trigger: adult, 
+					title: 'Adult', 
+					wheels: [
+					{data: ["1","2","3"]}
+					],
+				    position:[0], //初始化定位 打开时默认选中的哪个  如果不填默认为0
+				    callback:function(indexArr, data){
+				    	$( adult).val(data[0]);
+				    },
+				});
+			}
+
+			roomsAdult('.rooms1-adult');
+			roomsAdult('.rooms2-adult');
+			roomsAdult('.rooms3-adult');
+
+			// 儿童选择
+			var roomsChild = function(child,roomCom,r1,r2,r3){
+				new MobileSelect({
+					trigger: child, 
+					title: 'Child', 
+					wheels: [
+					{data: ["0","1","2","3"]}
+					],
+				    position:[0], //初始化定位 打开时默认选中的哪个  如果不填默认为0
+				    callback:function(indexArr, data){
+				    	$(child).val(data[0]);
+		    	    	switch (data[0]) {
+		    	    		case '0':
+		    		    		$(roomCom).hide();
+		    		    		break;
+		    	    		case '1':
+		    	    			$(roomCom).hide();
+		    		    		$(r1).show();
+		    		    		break;
+		    	    		case '2':
+		    		    		$(r1).show();
+		    		    		$(r2).show();
+		    		    		$(r3).hide();
+		    		    		break;
+		    	    		case '3':
+		    		    		$(roomCom).show();
+		    		    		break;
+		    	    	}
+				    },
+				});
+			}
+
+			roomsChild('.rooms1-child','.rooms1-age-com','.rooms1-age1','.rooms1-age2','.rooms1-age3');
+			roomsChild('.rooms2-child','.rooms2-age-com','.rooms2-age1','.rooms2-age2','.rooms2-age3');
+			roomsChild('.rooms3-child','.rooms3-age-com','.rooms3-age1','.rooms3-age2','.rooms3-age3');
+
+			// 小孩年龄选择
+			var roomsAge = function(age){
+				new MobileSelect({
+					trigger: age, 
+					title: 'Age', 
+					wheels: [
+					{data: ["Age < 1 year old","2","3","4","5","6","7","8","9","10","11","12"]}
+					],
+				    position:[0], //初始化定位 打开时默认选中的哪个  如果不填默认为0
+				    callback:function(indexArr, data){
+				    	$(age).val(data[0]);
+				    },
+				});
+			}
+			roomsAge('.rooms1-age1');
+			roomsAge('.rooms1-age2');
+			roomsAge('.rooms1-age3');
+			roomsAge('.rooms2-age1');
+			roomsAge('.rooms2-age2');
+			roomsAge('.rooms2-age3');
+			roomsAge('.rooms3-age1');
+			roomsAge('.rooms3-age2');
+			roomsAge('.rooms3-age3');
 		};
 
 		// 航班，酒店等相互切换
@@ -1184,23 +1300,24 @@ var LanmeiAirlines = {
 
 			switch (data) {
 				case "ticket":
-					dataRange('m-ticket-selectTime','1',false);
-					mTickt();
-					break;
+				dataRange('m-ticket-selectTime','1',false);
+				mTickt();
+				break;
 				case "hotel":
-					dataRange('m-hotel-selectTime','2',true);
-					break;
+				dataRange('m-hotel-selectTime','2',true);
+				mHotel();
+				break;
 				case "car":
-					break;
+				break;
 				case "flight":
-					dataRange('m-flight-selectTime','3',false);
-					mFlight();
-					break;
+				dataRange('m-flight-selectTime','3',false);
+				mFlight();
+				break;
 				default:
 					// statements_def
 					break;
-			}
-		});
+				}
+			});
 
 		// 单程和双程切换
 		$('.m-ticket-tab a').click(function(e){
@@ -1225,11 +1342,11 @@ var LanmeiAirlines = {
 
 			switch (data) {
 				case "b-route":
-					$('.js-f-local').show().siblings('.js-f-num').hide();
-					break;
+				$('.js-f-local').show().siblings('.js-f-num').hide();
+				break;
 				case "f-num":
-					$('.js-f-num').show().siblings('.js-f-local').hide();
-					break;
+				$('.js-f-num').show().siblings('.js-f-local').hide();
+				break;
 			}
 		});
 
@@ -1289,7 +1406,7 @@ var LanmeiAirlines = {
 		$('.js-mTicket-search').click(function(){
 			// 去掉空格
 			var trim = function(str){
-			    return str.replace(/(^\s*)|(\s*$)/g, "");
+				return str.replace(/(^\s*)|(\s*$)/g, "");
 			}
 
 			// 截取出发地目的地
@@ -1313,11 +1430,11 @@ var LanmeiAirlines = {
 					var data = $(val).attr('data-way');
 					switch (data) {
 						case 'oneWay':
-							$('#m-takeoffDate').val(trim(time));
-							$('#m-tripType').val('OW');
-							break;
+						$('#m-takeoffDate').val(trim(time));
+						$('#m-tripType').val('OW');
+						break;
 						case 'roundTrip':
-							var arr = time.split('~');
+						var arr = time.split('~');
 							//删除左右两端的空格
 							var s = trim(arr[0]);
 							var e = trim(arr[1]);
@@ -1326,12 +1443,12 @@ var LanmeiAirlines = {
 							$('#m-returnDate').val(e);
 							$('#m-tripType').val('RT');
 							break;
-						default:
+							default:
 							// statements_def
 							break;
+						}
 					}
-				}
-			});
+				});
 			
 			$("#m-airTicketForm").submit();
 		});
@@ -1351,11 +1468,11 @@ var LanmeiAirlines = {
 
 		 // 日期选择--动态加载
 		 var formatDate = function(ymd) { //日期格式化
-		     return ymd.replace(/(\d{4})\-(\d{1,2})\-(\d{1,2})/g, function(ymdFormatDate, y, m, d){
-		         m < 10 && (m = '0' + m);
-		         d < 10 && (d = '0' + d);
-		         return y + '-' + m + '-' + d;
-		     });
+		 	return ymd.replace(/(\d{4})\-(\d{1,2})\-(\d{1,2})/g, function(ymdFormatDate, y, m, d){
+		 		m < 10 && (m = '0' + m);
+		 		d < 10 && (d = '0' + d);
+		 		return y + '-' + m + '-' + d;
+		 	});
 		 };
 
 		 var today  = new Date();
@@ -1365,13 +1482,13 @@ var LanmeiAirlines = {
 		 var endTime = formatDate(endTimeStr.getFullYear()+'-'+(endTimeStr.getMonth()+1)+'-'+(endTimeStr.getDate()));
 		 var maxTime = formatDate(today.getFullYear()+'-'+(today.getMonth()+13)+'-'+(today.getDate()+2)); 
 		 
-		var dataRange = function(id,num,doubleDate){
-			new pickerDateRange(id, {
-			 	canID:'data'+num,
-			 	startDate: startTime,
-			 	endDate: endTime,
-			 	maxTime: maxTime,
-			 	defaultText : ' ~ ',
+		 var dataRange = function(id,num,doubleDate){
+		 	new pickerDateRange(id, {
+		 		canID:'data'+num,
+		 		startDate: startTime,
+		 		endDate: endTime,
+		 		maxTime: maxTime,
+		 		defaultText : ' ~ ',
 			 	isTodayValid:false,//判断今天是否可选
 			 	autoSubmit : false,
 			 	stopToday : true,
@@ -1384,22 +1501,22 @@ var LanmeiAirlines = {
 			 	device:'pad',
 			 	pTab:'.p-ticket-wrap .p-radioSelect>label',
 			 	doubleDate:doubleDate,
-			});
-		};
-		dataRange('p-ticket-selectTime','5',false);
+			 });
+		 };
+		 dataRange('p-ticket-selectTime','5',false);
 
 		// 舱位选择和乘客人数选择--动态加载
 		var pTicket = function(){
 			// PC端舱位选择
 			var mobileSelect1 = new MobileSelect({
-			    trigger: '.js-ticket-cabin', 
-			    title: 'Cabin', 
-			    wheels: [
-			                {data: ["ECONOMY"]}
-			            ],
+				trigger: '.js-ticket-cabin', 
+				title: 'Cabin', 
+				wheels: [
+				{data: ["ECONOMY"]}
+				],
 			    position:[0], //初始化定位 打开时默认选中的哪个  如果不填默认为0
 			    callback:function(indexArr, data){
-			        $('.js-ticket-cabin').val(data[0]);
+			    	$('.js-ticket-cabin').val(data[0]);
 			    },
 			});
 
@@ -1409,53 +1526,53 @@ var LanmeiAirlines = {
 
 			// PC端机票人数选择
 			var mobileSelect2 = new MobileSelect({
-			    trigger: '.p-ticket-box',
-			    title: 'Passenger',
-			    tip1:'Adult', 
-			    tip2:'Child', 
-			    wheels: [
-			                {data:[
-			                    {
-			                        id:'1',
-			                        value:'1',
-			                        childs:[
-			                            {id:'0',value:'0'},
-			                            {id:'1',value:'1'},
-			                            {id:'2',value:'2'},
-			                            {id:'3',value:'3'},
-			                            {id:'4',value:'4'},
-			                        ]
-			                    },
-			                    {
-			                        id:'2',
-			                        value:'2',
-			                        childs:[
-				                        {id:'0',value:'0'},
-			                            {id:'1',value:'1'},
-			                            {id:'2',value:'2'},
-			                            {id:'3',value:'3'},
-			                        ]
-			                    },
-			                    {
-			                        id:'3',
-			                        value:'3',
-			                        childs:[
-			                        	{id:'0',value:'0'},
-			                            {id:'1',value:'1'},
-			                            {id:'2',value:'2'},
-			                        ]
-			                    },
-			                    {
-			                        id:'4',
-			                        value:'4',
-			                        childs:[
-			                        	{id:'0',value:'0'},
-			                            {id:'1',value:'1'},
-			                        ]
-			                    },
-			                ]}
-			            ],  
-			    transitionEnd:function(indexArr, data){
+				trigger: '.p-ticket-box',
+				title: 'Passenger',
+				tip1:'Adult', 
+				tip2:'Child', 
+				wheels: [
+				{data:[
+					{
+						id:'1',
+						value:'1',
+						childs:[
+						{id:'0',value:'0'},
+						{id:'1',value:'1'},
+						{id:'2',value:'2'},
+						{id:'3',value:'3'},
+						{id:'4',value:'4'},
+						]
+					},
+					{
+						id:'2',
+						value:'2',
+						childs:[
+						{id:'0',value:'0'},
+						{id:'1',value:'1'},
+						{id:'2',value:'2'},
+						{id:'3',value:'3'},
+						]
+					},
+					{
+						id:'3',
+						value:'3',
+						childs:[
+						{id:'0',value:'0'},
+						{id:'1',value:'1'},
+						{id:'2',value:'2'},
+						]
+					},
+					{
+						id:'4',
+						value:'4',
+						childs:[
+						{id:'0',value:'0'},
+						{id:'1',value:'1'},
+						]
+					},
+					]}
+					],  
+					transitionEnd:function(indexArr, data){
 			        // console.log(data);
 			    },
 			    callback:function(indexArr, data){
@@ -1474,17 +1591,133 @@ var LanmeiAirlines = {
 		};
 		pTicket();
 
+		var pHotel = function(){
+			// room选择
+			new MobileSelect({
+				trigger: '.js-Prooms-input', 
+				title: 'Rooms', 
+				wheels: [
+				{data: ["1 Room,2 Adults","1","2","3"]}
+				],
+			    position:[0], //初始化定位 打开时默认选中的哪个  如果不填默认为0
+			    callback:function(indexArr, data){
+			    	$('.js-Prooms-input').val(data[0]);
+			    	switch (data[0]) {
+			    		case '1 Room,2 Adults':
+				    		$('.p-rooms-wrap').hide();
+				    		$('.p-rooms-title').hide();
+				    		break;
+			    		case '1':
+				    		$('.p-rooms-1').show();
+				    		$('.p-rooms-2').hide();
+				    		$('.p-rooms-3').hide();
+				    		$('.p-rooms-title').show();
+				    		break;
+			    		case '2':
+				    		$('.p-rooms-1').show();
+				    		$('.p-rooms-2').show();
+				    		$('.p-rooms-3').hide();
+				    		$('.p-rooms-title').show();
+				    		break;
+			    		case '3':
+				    		$('.p-rooms-wrap').show();
+				    		$('.p-rooms-title').show();
+				    		break;
+			    	}
+			    },
+			});
+
+			// 成人选择
+			var roomsAdult = function(adult){
+				new MobileSelect({
+					trigger: adult, 
+					title: 'Adult', 
+					wheels: [
+					{data: ["1","2","3"]}
+					],
+				    position:[0], //初始化定位 打开时默认选中的哪个  如果不填默认为0
+				    callback:function(indexArr, data){
+				    	$( adult).val(data[0]);
+				    },
+				});
+			}
+
+			roomsAdult('.Prooms1-adult');
+			roomsAdult('.Prooms2-adult');
+			roomsAdult('.Prooms3-adult');
+
+			// 儿童选择
+			var roomsChild = function(child,roomCom,r1,r2,r3){
+				new MobileSelect({
+					trigger: child, 
+					title: 'Child', 
+					wheels: [
+					{data: ["0","1","2","3"]}
+					],
+				    position:[0], //初始化定位 打开时默认选中的哪个  如果不填默认为0
+				    callback:function(indexArr, data){
+				    	$(child).val(data[0]);
+		    	    	switch (data[0]) {
+		    	    		case '0':
+		    		    		$(roomCom).hide();
+		    		    		break;
+		    	    		case '1':
+		    	    			$(roomCom).hide();
+		    		    		$(r1).show();
+		    		    		break;
+		    	    		case '2':
+		    		    		$(r1).show();
+		    		    		$(r2).show();
+		    		    		$(r3).hide();
+		    		    		break;
+		    	    		case '3':
+		    		    		$(roomCom).show();
+		    		    		break;
+		    	    	}
+				    },
+				});
+			}
+
+			roomsChild('.Prooms1-child','.Prooms1-age-com','.Prooms1-age1','.Prooms1-age2','.Prooms1-age3');
+			roomsChild('.Prooms2-child','.Prooms2-age-com','.Prooms2-age1','.Prooms2-age2','.Prooms2-age3');
+			roomsChild('.Prooms3-child','.Prooms3-age-com','.Prooms3-age1','.Prooms3-age2','.Prooms3-age3');
+
+			// 小孩年龄选择
+			var roomsAge = function(age){
+				new MobileSelect({
+					trigger: age, 
+					title: 'Age', 
+					wheels: [
+					{data: ["Age < 1 year old","2","3","4","5","6","7","8","9","10","11","12"]}
+					],
+				    position:[0], //初始化定位 打开时默认选中的哪个  如果不填默认为0
+				    callback:function(indexArr, data){
+				    	$(age).val(data[0]);
+				    },
+				});
+			}
+			roomsAge('.Prooms1-age1');
+			roomsAge('.Prooms1-age2');
+			roomsAge('.Prooms1-age3');
+			roomsAge('.Prooms2-age1');
+			roomsAge('.Prooms2-age2');
+			roomsAge('.Prooms2-age3');
+			roomsAge('.Prooms3-age1');
+			roomsAge('.Prooms3-age2');
+			roomsAge('.Prooms3-age3');
+		};
+
 		var pFlight = function(){
 			// PC端机型选择
 			var mobileSelect4 = new MobileSelect({
-			    trigger: '.js-pFlight-select', 
-			    title: 'Flight Number', 
-			    wheels: [
-			                {data: ["XU-738","XU-739"]}
-			            ],
+				trigger: '.js-pFlight-select', 
+				title: 'Flight Number', 
+				wheels: [
+				{data: ["XU-738","XU-739"]}
+				],
 			    position:[0], //初始化定位 打开时默认选中的哪个  如果不填默认为0
 			    callback:function(indexArr, data){
-			        $('.js-pFlight-select').val(data[0]);
+			    	$('.js-pFlight-select').val(data[0]);
 			    },
 			});
 		};
@@ -1500,12 +1733,13 @@ var LanmeiAirlines = {
 			var href = $(this).attr('href');
 			switch (href) {
 				case "p-hotel-wrap":
-					dataRange('p-hotel-selectTime','6',true);
-					break;
+				dataRange('p-hotel-selectTime','6',true);
+				pHotel();
+				break;
 				case "p-flight-wrap":
-					dataRange('p-flight-selectTime','7',false);
-					pFlight();
-					break;
+				dataRange('p-flight-selectTime','7',false);
+				pFlight();
+				break;
 			}
 		});
 
@@ -1518,14 +1752,14 @@ var LanmeiAirlines = {
 
 			switch (dataWay) {
 				case "b-route":
-					$('.p-localSelect').show().siblings('.p-flightSelect').hide();
-					break;
+				$('.p-localSelect').show().siblings('.p-flightSelect').hide();
+				break;
 				case "f-num":
-					$('.p-localSelect').hide().siblings('.p-flightSelect').show();
-					break;
+				$('.p-localSelect').hide().siblings('.p-flightSelect').show();
+				break;
 				case "multi":
-					window.open("http://b2c.lanmeiairlines.com/lqWeb/reservation/mulCity.do?language=US");
-					break;
+				window.open("http://b2c.lanmeiairlines.com/lqWeb/reservation/mulCity.do?language=US");
+				break;
 			}
 		});
 
@@ -1542,7 +1776,7 @@ var LanmeiAirlines = {
 			$('.p-local-end').val(fromcity);
 		});
 
-	    var resetFun = function(){
+		var resetFun = function(){
 		   	// 订票重置
 		   	$('.js-pTicket-reset').click(function(){
 		   		var $parent = $(this).parents('.p-ticket-wrap');
@@ -1575,14 +1809,14 @@ var LanmeiAirlines = {
 		   		$parent.find('.js-pFlight-select').val('XU-738');
 		   		$parent.find('#p-flight-selectTime').val(timeResult(today));
 		   	});
-		};
-		resetFun();
+		   };
+		   resetFun();
 
-		/* 表单提交 */
-		$('.js-pTicket-search').click(function(){
+		   /* 表单提交 */
+		   $('.js-pTicket-search').click(function(){
 			// 去掉空格
 			var trim = function(str){
-			    return str.replace(/(^\s*)|(\s*$)/g, "");
+				return str.replace(/(^\s*)|(\s*$)/g, "");
 			}
 
 			// 截取出发地目的地
@@ -1606,11 +1840,11 @@ var LanmeiAirlines = {
 					var data = $(val).next().attr('data-way');
 					switch (data) {
 						case 'oneWay':
-							$('#p-takeoffDate').val(trim(time));
-							$('#p-tripType').val('OW');
-							break;
+						$('#p-takeoffDate').val(trim(time));
+						$('#p-tripType').val('OW');
+						break;
 						case 'roundTrip':
-							var arr = time.split('~');
+						var arr = time.split('~');
 							//删除左右两端的空格
 							var s = trim(arr[0]);
 							var e = trim(arr[1]);
@@ -1619,39 +1853,39 @@ var LanmeiAirlines = {
 							$('#p-returnDate').val(e);
 							$('#p-tripType').val('RT');
 							break;
-						default:
+							default:
 							// statements_def
 							break;
+						}
 					}
-				}
-			});
+				});
 			
 			$("#p-airTicketForm").submit();
 		});
-	},
+		},
 
-	/* 当屏幕改变时 */
-	winResize:function(){
-		var _tick = null;
+		/* 当屏幕改变时 */
+		winResize:function(){
+			var _tick = null;
 		// 存储cookie
 		var reload = true; 
 		var that = this;
 		$(window).resize(function(){
 			if (_tick) clearTimeout(_tick);
-	    	_tick = setTimeout(function() {
-	    		var winWidth = $(window).width();
-	    		if(winWidth<=992){
-		    		if(reload){
-		    			if(!loadMobile){
-				    		that.mobileEvent();
-				    		that.padEvent();
-		    			}
-			    		
-			    		reload = false;
-		    		}
-	    		}
+			_tick = setTimeout(function() {
+				var winWidth = $(window).width();
+				if(winWidth<=992){
+					if(reload){
+						if(!loadMobile){
+							that.mobileEvent();
+							that.padEvent();
+						}
 
-            }, 1000);
+						reload = false;
+					}
+				}
+
+			}, 1000);
 		});
 	},
 

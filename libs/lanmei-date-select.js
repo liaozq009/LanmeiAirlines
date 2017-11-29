@@ -25,7 +25,7 @@ if(!window.jQuery){
             
             return this.each(function (){
                var oDepDate  = new Date();
-               var curDate  = new Date(oDepDate.getFullYear(), oDepDate.getMonth(), oDepDate.getDate() + 1);
+               var curDate  = new Date(oDepDate.getFullYear(), oDepDate.getMonth(), oDepDate.getDate());
                var oBackDate = new Date(oDepDate.getFullYear(), oDepDate.getMonth(), oDepDate.getDate() + 2);
                //出发时间实例 
                var oDepCal = new Calendar({
