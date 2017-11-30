@@ -33,6 +33,22 @@
 	text-align: center;
 	margin-bottom: 20px;
 }
+.lm-section-title>a{
+	font-size: 12px;
+	margin-left: 10px;
+	color: #808080;
+	transition: all .6s;
+	-webkit-transition: all .6s;
+}
+.lm-section-title>a:hover{
+	color: #8ec060;
+	transition: all .6s;
+	-webkit-transition: all .6s;
+}
+.lm-section-title>a img{
+	width: 20px;
+	margin-left: 10px;
+}
 .search-wrap{
 	width: 100%;
 	height: 40px;
@@ -70,6 +86,64 @@
 .table > tbody > tr > td{
 	font-size: 14px;
 }
+
+.ticket-tips{
+	width: 960px;
+	margin: 20px  auto;
+	text-align:center;
+	font-size: 14px;
+    color: #808080;
+}
+.ticket-tips img{
+	margin-right: 10px;
+    vertical-align: text-bottom;
+}
+
+@media screen and (max-width: 992px){
+	.lm-section{
+		width: 100%;
+		padding:0 0.1rem;
+		margin-top: 0.5rem;
+	}
+	.ticket-tips{
+		width: 100%;
+		padding: 0.2rem;
+		margin: 0 auto;
+	}
+	.table-wrap{
+		width: 100%;
+		overflow-y: scroll;
+	}
+}
+@media screen and (max-width: 767px){
+	.lm-section-title{
+		font-size: 0.2rem;
+	}
+	.ticket-table{
+		margin-top: 0.2rem;
+	}
+	.lm-section{
+		min-height: auto;
+	}
+}
+
+@media screen and (max-width: 560px){
+	.search-wrap{
+		height: auto;
+		line-height: normal;
+		text-align: center;
+	}
+	.search-wrap .search-ticket{
+		position: static;
+		margin-top: 0.1rem;
+	}
+	.search-wrap input{
+		width: 100%;
+		margin-top: 0.1rem;
+		margin-right: 0;
+	}
+}
+
 </style>
 </head>
 <body>
@@ -101,43 +175,58 @@
 
 	<!-- 页面主体 -->
 	<section class="lm-section">
-		<h2 class="lm-section-title">Ticket Verification</h2>
+		<h2 class="lm-section-title">Ticket Verification<a href="http://www.travelsky.com/tsky/validate.jsp" target="_blank">Travel Sky<img src="../../images/EN/travelSky.png"></a></h2>
 		<form class="search-wrap">
 			<input type="text" name="" value="" placeholder="请输入机票号" class="search-input-1">
 			<input type="text" name="" value="" placeholder="请输入机票号" class="search-input-2">
 			<img src="../../images/EN/search-ticket.png" class="search-ticket">
 		</form>
-		<table class="ticket-table table table-hover">
-			<thead>
-				<tr>
-					<th>#</th>
-					<th>First Name</th>
-					<th>Last Name</th>
-					<th>Username</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<th scope="row">1</th>
-					<td>Mark</td>
-					<td>Otto</td>
-					<td>@mdo</td>
-				</tr>
-				<tr>
-					<th scope="row">2</th>
-					<td>Jacob</td>
-					<td>Thornton</td>
-					<td>@fat</td>
-				</tr>
-				<tr>
-					<th scope="row">3</th>
-					<td>Larry</td>
-					<td>the Bird</td>
-					<td>@twitter</td>
-				</tr>
-			</tbody>
-		</table>
+		<div class="table-wrap">
+			<table class="ticket-table table table-hover table-responsive">
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>Ticket Number</th>
+						<th>Route</th>
+						<th>Flight</th>
+						<th>TravelerName</th>
+						<th>DepatureDate</th>
+						<th>TraverDate</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row">1</th>
+						<td>Mark</td>
+						<td>Otto</td>
+						<td>@mdo</td>
+						<td>Mark</td>
+						<td>Otto</td>
+						<td>@mdo</td>
+					</tr>
+					<tr>
+						<th scope="row">2</th>
+						<td>Jacob</td>
+						<td>Thornton</td>
+						<td>@fat</td>
+						<td>Mark</td>
+						<td>Otto</td>
+						<td>@mdo</td>
+					</tr>
+					<tr>
+						<th scope="row">3</th>
+						<td>Larry</td>
+						<td>the Bird</td>
+						<td>@twitter</td>
+						<td>Mark</td>
+						<td>Otto</td>
+						<td>@mdo</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 	</section>
+	<p class="ticket-tips"><img alt="" src="../../images/EN/important-icon.png">The travel data is somewhat delayed. If no infomation was found, please check it later or jump to<a href="http://www.travelsky.com/tsky/validate.jsp" target="_blank"> <span style="color:#1f2c5c;">Travel Sky</span> </a>for query.</p>
 
 	<!-- 页脚 -->
 	<footer class="footerInfo">
@@ -177,6 +266,7 @@
 	<script type="text/javascript" src="../../libs/jQuery/jquery-1.11.3.js"></script>
 	<!-- <script type="text/javascript" src="../../libs/jQuery/jquery.cookie.js"></script> -->
 	<script type="text/javascript" src="../../libs/layer/layer.js"></script>
+	<script type="text/javascript" src="../../common/EN/js/Lanmei-common.js"></script>
 	<script type="text/javascript" src="../../libs/mobile-libs/fastclick/fastclick.js"></script>
 	<script type="text/javascript" src="../../libs/bootstrap/js/bootstrap.min.js"></script>
 </body>

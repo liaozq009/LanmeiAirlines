@@ -15,6 +15,7 @@ var LanmeiAirlines = {
 		this.addEvent();
 		this.isPc();
 		this.winResize();
+		this.otherEvent();
 	},
 
 	/* 判断是PC端还是移动端 */
@@ -542,12 +543,10 @@ var LanmeiAirlines = {
 			}
 
 		});
+	},
 
-},
-
-/* PC端旅行日记 */
-pcTraval:function(){
-	/* PC端事件  */
+	/* PC端旅行日记 */
+	pcTraval:function(){
 		var flag = true;//防止连续点击造成bug
 		var $nth2 = $('.pc-travel-inner .nth-child2'); //获取显示文字框
 
@@ -672,10 +671,10 @@ pcTraval:function(){
 			}
 
 		});
-},
+	},
 
-/* 页面加载动画 */
-animation:function(){
+	/* 页面加载动画 */
+	animation:function(){
 		// 获取元素
 		var $lowestTitle = $(".lowestFaresTitle");
 		var $travelTitle = $(".lm-travel-title");
@@ -1888,6 +1887,68 @@ animation:function(){
 			}, 1000);
 		});
 	},
+
+	/* 后期优化新增 */
+	otherEvent:function(){
+		// 视频
+		var videoHeight = function(){
+			var winW = $(window).width();
+
+			$('.videoLi').height(winW*700/1920);
+			$('.video-master').height(winW*700/1920);
+		}
+		videoHeight();
+		$('#videoSource')[0].play(); 
+		
+		$(window).resize(function(){
+			videoHeight();
+		});
+
+		// 酒店选择
+		$('.roomMenu a').click(function(){
+			var dataNum = $(this).attr('data-num');
+			switch (dataNum) {
+				case 'rooms-1':
+				$('.rooms-1').show().siblings('div').hide();
+				break;
+				case 'rooms-2':
+				$('.rooms-1').show();
+				$('.rooms-2').show();
+				$('.rooms-3').hide();
+				break;
+				case 'rooms-3':
+				$('.rooms-select-menu>div').show();
+				$('.hotel-content .viewSchedules').css('marginTop',10);
+				break;
+				case '0':
+				$('.rooms-select-menu>div').hide();
+				$('.hotel-content .viewSchedules').css('marginTop',64);
+				break;
+			}
+		});
+
+        // 小孩人数选择联动
+        $('.child-num-menu>li>a').click(function(){
+        	var dataChild = $(this).attr('data-child');
+        	var $childP = $(this).parents('.child-parent');
+        	switch (dataChild) {
+        		case 'child-0':
+        		$childP.siblings('.child-com').hide();
+        		break;
+        		case 'child-1':
+        		$childP.siblings('.child-1').show().siblings('.child-com').hide();
+        		break;
+        		case 'child-2':
+        		$childP.siblings('.child-1').show();
+        		$childP.siblings('.child-2').show();
+        		$childP.siblings('.child-3').hide();
+        		break;
+        		case 'child-3':
+        		$childP.siblings('.child-com').show();
+        		break;
+        	}
+        });
+	}
 
 };
 
