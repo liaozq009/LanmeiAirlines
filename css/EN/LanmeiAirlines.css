@@ -3331,6 +3331,9 @@ body .layui-layer-btn .layui-layer-btn0 {
   .leftAside .listSelectBox .hotel-content .selectAirCommon .local_timeSelect > div {
     height: 66px;
   }
+  .bs-autocomplete-menu {
+    width: 200px !important;
+  }
 }
 @media screen and (max-width: 992px) {
   .m-rooms-input,
