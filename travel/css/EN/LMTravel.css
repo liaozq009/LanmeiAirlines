@@ -32,6 +32,9 @@ body {
 .lm-banner .lm-banner-left > img {
   width: 100%;
 }
+.lm-banner .lm-banner-left .img02 {
+  display: none;
+}
 .lm-banner .lm-banner-left .travel-start {
   position: absolute;
   top: 20%;
@@ -653,6 +656,12 @@ section {
   .lm-banner .lm-banner-left {
     width: 100%;
   }
+  .lm-banner .lm-banner-left .img01 {
+    display: none;
+  }
+  .lm-banner .lm-banner-left .img02 {
+    display: block;
+  }
   .lm-banner .lm-banner-left .travel-start {
     left: 8%;
   }
@@ -896,7 +905,7 @@ section {
     margin-left: 10px;
   }
   .section-5 .travel-diary .t-content > li {
-    width: 100%;
+    width: 50%;
     margin-top: 0;
     margin-bottom: 0.2rem;
   }
