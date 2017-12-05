@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* 定义变量 */
+.lm-container {
+  position: relative;
+  width: 100%;
+  background: url('../../images/EN/travel-map.jpg') center 0 no-repeat;
+}
+.lm-container .map-bg {
+  width: 100%;
+  height: auto;
+}
+.lm-container .tipCom {
+  position: absolute;
+}
+.lm-container .seoul {
+  left: 39%;
+  top: 2%;
+  width: 210px;
+  height: 153px;
+  background: url('../../images/EN/travel-map-top.png') no-repeat;
+}
