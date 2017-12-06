@@ -1,21 +1,146 @@
 @charset "utf-8";
 /* 定义变量 */
-.lm-container {
-  position: relative;
-  width: 100%;
-  background: url('../../images/EN/travel-map.jpg') center 0 no-repeat;
+body {
+  overflow: hidden;
+  background: #1291ff;
 }
-.lm-container .map-bg {
-  width: 100%;
-  height: auto;
-}
-.lm-container .tipCom {
+/* 拖拽 */
+.img-com {
   position: absolute;
-}
-.lm-container .seoul {
-  left: 39%;
-  top: 2%;
   width: 210px;
   height: 153px;
-  background: url('../../images/EN/travel-map-top.png') no-repeat;
+  padding: 37px 30px;
+  cursor: pointer;
+}
+.img-com h2 {
+  position: relative;
+  padding: 10px;
+  font-size: 14px;
+  background: linear-gradient(135deg, #81E5FE 0%, #1639AE 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.img-com h2 img {
+  float: left;
+  margin-right: 10px;
+}
+.img-com h2:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  width: 130px;
+  height: 2px;
+  background: #aac7f9;
+}
+.img-com p {
+  padding: 10px;
+  padding-top: 4px;
+  font-size: 12px;
+  color: #3772d5;
+}
+.img-com p img {
+  float: left;
+  margin-right: 10px;
+  margin-top: 4px;
+}
+.img-bg-topRight {
+  background: url('../../images/EN/travel-map-topRight.png') no-repeat;
+}
+.img-bg-topLeft {
+  background: url('../../images/EN/travel-map-topLeft.png') no-repeat;
+}
+.img-bg-bottomLeft {
+  padding: 30px;
+  background: url('../../images/EN/travel-map-bottomLeft.png') no-repeat;
+}
+.img-bg-bottomRight {
+  padding: 30px;
+  background: url('../../images/EN/travel-map-bottomRight.png') no-repeat;
+}
+.img-seoul {
+  top: 18px;
+  left: 960px;
+}
+.img-macao {
+  top: 420px;
+  left: 660px;
+}
+.img-sihanoukville {
+  top: 690px;
+  left: 450px;
+}
+.img-HoChiMinh {
+  top: 695px;
+  left: 655px;
+}
+.img-HongKong {
+  top: 326px;
+  left: 824px;
+}
+.img-Palau {
+  top: 650px;
+  left: 1240px;
+}
+.img-PhnomPenh {
+  top: 580px;
+  left: 626px;
+}
+.img-Hanoi {
+  top: 340px;
+  left: 490px;
+}
+.img-SiemReap {
+  top: 534px;
+  left: 460px;
+}
+.dragWrap {
+  z-index: 10;
+  left: 0px;
+  width: 0px;
+  position: absolute;
+  top: 0px;
+  height: 0px;
+}
+.dragWrap .travel-map {
+  cursor: move;
+}
+.travel-nav {
+  position: fixed;
+  top: 40px;
+  left: 0;
+  z-index: 11;
+  width: 100%;
+  height: 50px;
+  padding: 0 80px;
+}
+.travel-nav > p {
+  height: 50px;
+  line-height: 50px;
+  background: #fff;
+  box-shadow: 0 0 50px 0 rgba(170, 199, 249, 0.5);
+  border-radius: 4px;
+  text-align: center;
+}
+.travel-nav > p img {
+  margin-top: -6px;
+  margin-right: 7px;
+}
+.travel-nav > p span {
+  font-size: 20px;
+  background: linear-gradient(135deg, #81E5FE 0%, #1639AE 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.travel-nav .t-return {
+  float: left;
+  width: 200px;
+}
+.travel-nav .t-share,
+.travel-nav .t-plan {
+  padding: 0 20px;
+  float: right;
+}
+.travel-nav .t-share {
+  margin-right: 40px;
 }

@@ -19,8 +19,9 @@
 		}
 		.lm-table .table-title{
 			width: 100%;
-			font-size: 16px;
+			font-size: 18px;
 			text-align: center;
+			color: #1f2c5c;
 		}
 		.lm-table .table-tip{
 			width: 940px;
@@ -47,10 +48,10 @@
 			border-bottom: 1px solid #ccc;
 		}
 		.lm-table .table tbody tr:nth-of-type(even){
-			background: #f2f2f2;
+			background: #f5f5f5;
 		}
 		.lm-table .table tbody .tr-rebook1{
-			background: #f2f2f2;
+			background: #f5f5f5;
 		}
 		.lm-table .table tbody .tr-rebook1 td,.lm-table .table tbody .tr-refund td,.lm-table .table tbody .tr-mixing td.nth-child3{
 			text-align: left;
@@ -75,12 +76,20 @@
 			margin-bottom: 6px;
 		}
 		.textLeft{text-align: left}
+		
+		.lm-table .routes{
+			margin-top: 20px;
+		}
+		.lm-table .routes thead tr{
+			background: #f2f2f2;
+			color: #1f2c5c;
+		}
 	</style>
 </head>
 <body>
 	<div class="lm-table">
 		<h2 class="table-title">General FIT Fare Rule</h2>
-		<p class="table-tip">Rule No. GR01R1</p>
+		<p class="table-tip">Rule No. GR01</p>
 		<table align="center" cellspacing="0" cellpadding="0" class="table"> 
 			<!-- 头部 -->
 			<thead>
@@ -98,7 +107,7 @@
 					<td>K/L/M</td>
 					<td>N/S/X</td>
 					<td>Q/T/V</td>
-					<td>P/O/E/U</td>
+					<td>O/E</td>
 				</tr>
 				<tr>
 					<td>Unaccompanied Minors</td>
@@ -184,9 +193,9 @@
 				<tr>
 					<td>Ticket Endorsement Box</td>
 					<td>18</td>
-					<td>REB USD20, REF USD30, NOSH USD10</td>
-					<td colspan="2">REB USD30, REF USD40, NOSH USD10</td>
-					<td colspan="2">NONREB, NONREF</td>
+					<td>NON-RER/END, REB USD20, REF USD30, NOSH USD10 </td>
+					<td colspan="2">NON-RER/END, REB USD30, REF USD40, NOSH USD10</td>
+					<td colspan="2">NON-RER/END/REB/REF</td>
 				</tr>
 				<tr>
 					<td>Child (between 2 and 12 years old) Discount</td>
@@ -215,11 +224,39 @@
 			<p>1. All fares are exclusive of taxes and other surcharges.</p>
 			<p>2. Please refer to GDS display for latest update on flight schedule and fares.</p>
 			<p>3. No child discount is applied for Rebooking/No-show/Refund/Handling Fee and other charges.</p>
-			<p>4. Infants are exempt from Rebooking Fee and Refund Fee.</p>
-			<p>5. Departure date of the first outbound sector determines the fare for the entire journey.</p>
-			<p>6. All rebooking must be applied within ticket validity.</p>
-			<p>7. For any discrepancy between this General Fare Rule and GDS, details in GDS prevail.</p>
+			<p>4. Departure date of the first outbound sector determines the fare for the entire journey.</p>
+			<p>5. All rebooking must be applied within ticket validity.</p>
+			<p>6. For any discrepancy between this General Fare Rule and GDS, details in GDS prevail.</p>
 		</div>
+
+		<table class="routes table" align="center" cellspacing="0" cellpadding="0">
+			<thead>
+				<tr>
+					<th>Applicable Routes</th>
+					<th>Booking Class</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Phnom Penh-Macao</td>
+					<td rowspan="3">Y/B/H/K/L/M/N/X/S/Q/T/V</td>
+				</tr>
+				<tr>
+					<td>Siem Reap-Macao</td>
+				</tr>
+				<tr>
+					<td>Macao-Phnom Penh</td>
+				</tr>
+
+				<tr>
+					<td>Sihanoukville-Macao</td>
+					<td rowspan="2">Y/B/H/K/L/M/N/X/S/Q/T/V/P/O/U</td>
+				</tr>
+				<tr>
+					<td>Macao-Sihanoukville</td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
 </body>
 </html>

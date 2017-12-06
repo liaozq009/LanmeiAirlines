@@ -74,12 +74,20 @@
 		font-weight: normal;
 		margin-bottom: 6px;
 	}
+
+	.lm-table .routes{
+		margin-top: 20px;
+	}
+	.lm-table .routes thead tr{
+		background: #f2f2f2;
+		color: #1f2c5c;
+	}
 </style>
 </head>
 <body>
 	<div class="lm-table">
 		<h2 class="table-title">General FIT Fare Rule</h2>
-		<p class="table-tip">Rule No. GR01R1</p>
+		<p class="table-tip">Rule No. GR02</p>
 		<table align="center" cellspacing="0" cellpadding="0" class="table"> 
 			<!-- 头部 -->
 			<thead>
@@ -97,7 +105,7 @@
 					<td>K/L/M</td>
 					<td>N/S/X</td>
 					<td>Q/T/V</td>
-					<td>P/O/E/U</td>
+					<td>O/E</td>
 				</tr>
 				<tr>
 					<td>无陪伴儿童</td>
@@ -185,19 +193,23 @@
 				<tr>
 					<td>签转栏</td>
 					<td>18</td>
-					<td>NON-RER/END, REB USD20, REF USD30, NOSH USD10</td>
-					<td colspan="2">NON-RER/END, REB USD30, REF USD40, NOSH USD10</td>
-					<td colspan="2">NON-RER/END/REB/REF</td>
+					<td>不允许更改行程/转签， 改期费20 美元，退票费30美元，误机费10美元</td>
+					<td colspan="2">不允许更改行程/转签， 改期费30 美元，退票费40美元，误机费10美元</td>
+					<td colspan="2">不得更改行程/转签/改期/退票</td>
 				</tr>
 				<tr>
 					<td>儿童（2-12岁）折扣</td>
 					<td>19</td>
-					<td colspan="5">成人适用票价的75%，Fare Basis栏中加注“/CH25”。</td>
+					<td colspan="4">成人适用票价的75%，Fare Basis栏中加注“/CH25”。</td>
+					<td>不适用</td>
 				</tr>
 				<tr class="tr-mixing">
 					<td>婴儿（2岁以下）折扣</td>
 					<td>19</td>
 					<td colspan="5" class="nth-child3">
+						国内航线：<br/>
+						不适用<br/>
+						国际航线：<br/>
 						A) 对于不占座婴儿，收取成人适用票价的10%，Fare Basis栏中加注“/IN90”。<br/>
 						B) 对于占座婴儿，收取成人适用票价的75%，Fare Basis栏中加注“/IN25”。
 					</td>
@@ -217,10 +229,39 @@
 			<p>2、票价和航班时刻可能变动，请留意最新发布票价及GDS系统中航班时刻。</p>
 			<p>3、改期、误机、退票、行政费和其它收费项目没有儿童折扣。</p>
 			<p>4、婴儿免改期费和退票费。</p>
-			<p>5、去程第一段航程的始发日期决定了整个旅行日期。</p>
+			<p>5、去程第一段航程的始发日期决定了整个行程的票价。</p>
 			<p>6、升舱、改期必须在客票有效期内进行。</p>
 			<p>7、当规则和GDS不一致时，请以GDS为准。</p>
 		</div>
+
+		<table class="routes table" align="center" cellspacing="0" cellpadding="0">
+			<thead>
+				<tr>
+					<th>适用航线</th>
+					<th>舱位</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>金边-暹粒</td>
+					<td rowspan="4">Y/B/H/K/L/M/N/X/S/Q/T/V/P/O/U</td>
+				</tr>
+				<tr>
+					<td>金边-西哈努克港</td>
+				</tr>
+				<tr>
+					<td>西哈努克港-香港</td>
+				</tr>
+
+				<tr>
+					<td>香港-西哈努克港</td>
+				</tr>
+				<tr>
+					<td>金边-河内</td>
+					<td>O</td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
 </body>
 </html>
