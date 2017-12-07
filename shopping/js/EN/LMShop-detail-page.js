@@ -442,17 +442,7 @@ var LMShopDetailPage = {
 		});
 
 		// 轮播
-		$(".pd-slider-wrap").PicCarousel({
-			"width":1000,		//幻灯片的宽度
-			"height":390,		//幻灯片的高度
-			"posterWidth":390,	//幻灯片第一帧的宽度
-			"posterHeight":390, //幻灯片第一张的高度
-			"scale":0.9,		//记录显示比例关系
-			"speed":1500,		//记录幻灯片滚动速度
-			"autoPlay":true,	//是否开启自动播放
-			"delay":1500,		//自动播放间隔
-			"verticalAlign":"top"	//图片对齐位置
-		});
+		 Carousel.init($('.carousel'));
 	},
 };
 

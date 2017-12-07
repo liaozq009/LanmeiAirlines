@@ -16,7 +16,7 @@
 	<!-- 引入图标 -->
 	<link rel="icon" href="../../images/EN/lanmeiLogo.ico">
 	<link rel="stylesheet" type="text/css" href="../../common/EN/fonts/lm-iconfont.css">
-	<link rel="stylesheet" type="text/css" href="../../libs/slider/LM-hiSlider.css">
+	<link rel="stylesheet" type="text/css" href="../../libs/mobalMap/modal-map.css">
 	<link rel="stylesheet" type="text/css" href="../../common/EN/css/LMTravel-common.css">
 	<link rel="stylesheet" type="text/css" href="../../css/EN/LMTravelMap.css">
 	<!--[if lt IE 9]>
@@ -28,11 +28,11 @@
 
 	<!-- 主体内容 -->
 	<div class="dragWrap" id="dragMap" onMouseOver="dragObj=dragMap; drag=1;" onMouseOut="" drag="0">
-	    <div class="img-seoul img-bg-topRight img-com">
+	    <div class="img-seoul img-bg-topRight img-com modal__trigger" data-modal="#modal">
 	        <h2><img src="../../images/EN/t-guide-icon.png"><span>Happy trip to Seoul</span></h2>
 	        <p><img src="../../images/EN/m-s5-local.png"><span>Seoul</span></p>
 	    </div>
-	    <div class="img-macao img-bg-topRight img-com">
+	    <div class="img-macao img-bg-topRight img-com modal__trigger" data-modal="#modal2">
 	        <h2><img src="../../images/EN/t-guide-icon.png"><span>Happy trip to Seoul</span></h2>
 	        <p><img src="../../images/EN/m-s5-local.png"><span>Macao</span></p>
 	    </div>
@@ -74,12 +74,42 @@
 		<p class="t-share"><img src="../../images/EN/travel-share.png"><span>Travel to share</span></p>
 	</div>
 
+	<!-- 弹出模态框 -->
+	<div class="travel-modal">
+		<div id="modal" class="modal modal__bg" role="dialog" aria-hidden="true">
+		  <div class="modal__dialog">
+		    <div class="modal__content">
+		      <h1>Modal</h1>
+		      <p>Church-key American Apparel trust fund, cardigan mlkshk small batch Godard mustache pickled bespoke meh seitan. Wes Anderson farm-to-table vegan, kitsch Carles 8-bit gastropub paleo YOLO jean shorts health goth lo-fi. Normcore chambray locavore Banksy, YOLO meditation master cleanse readymade Bushwick.</p>
+		      
+		      <!-- modal close button --> 
+		      <a href="" class="modal__close map-close">
+		        X
+		      </a>
+		    </div>
+		  </div>
+		</div>
+		<div id="modal2" class="modal modal__bg" role="dialog" aria-hidden="true">
+		  <div class="modal__dialog">
+		    <div class="modal__content">
+		      <h1>Modal</h1>
+		      <p>Church-key American Apparel trust fund, cardigan mlkshk small batch Godard mustache pickled bespoke meh seitan. Wes Anderson farm-to-table vegan, kitsch Carles 8-bit gastropub paleo YOLO jean shorts health goth lo-fi. Normcore chambray locavore Banksy, YOLO meditation master cleanse readymade Bushwick.</p>
+		      
+		      <!-- modal close button --> 
+		      <a href="" class="modal__close map-close">
+		        <!-- <img src="../../images/EN/mobal-close.png"> -->
+		      </a>
+		    </div>
+		  </div>
+		</div>
+	</div>
+
 	<!-- 第三方库-->
 	<script type="text/javascript" src="../../libs/jQuery/jquery-1.11.3.js"></script>
 	<script type="text/javascript" src="../../libs/layer/layer.js"></script>
 	<script type="text/javascript" src="../../libs/jqueryPage.js"></script>
-	<script type="text/javascript" src="../../libs/slider/LM-hiSlider.js"></script>
 	<script type="text/javascript" src="../../libs/drag/dragMap.js"></script>
+	<script type="text/javascript" src="../../libs/mobalMap/modal-map.js"></script>
 	<!-- 公共JS -->
 	<script type="text/javascript" src="../../common/EN/js/LMTravel-common.js"></script>
 	<!-- 业务代码 -->

@@ -17,6 +17,7 @@
 	<link rel="icon" href="../../images/EN/lanmeiLogo.ico">
 	<link rel="stylesheet" type="text/css" href="../../libs/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../../libsEdit/css/LMShop-libs-edit.css">
+	<link rel="stylesheet" type="text/css" href="../../libs/carousel/carousel.css">
 	<link rel="stylesheet" type="text/css" href="../../common/EN/css/LMShop-common.css">
 	<link rel="stylesheet" type="text/css" href="../../css/EN/LMShop-detail-page.css">
 	<!--[if lt IE 9]>
@@ -68,14 +69,26 @@
 	</header>
 
 	<!-- 轮播 -->
-	<div class="pd-slider-wrap">
-		<div class="poster-btn poster-prev-btn"></div>
-		<ul class="poster-list">
-			<li class="poster-item"><a href="#"><img src="../../images/EN/pd-detail-img1.png" width="100%" ></a></li>
-			<li class="poster-item"><a href="#"><img src="../../images/EN/pd-detail-img2.png" width="100%" ></a></li>
-			<li class="poster-item"><a href="#"><img src="../../images/EN/pd-detail-img1.png" width="100%" ></a></li>
-		</ul>
-		<div class="poster-btn poster-next-btn"></div>
+	<div class="carousel-wrap">
+		<div class='poster-main carousel' data-setting='{
+		         "width":960,
+	             "height":400,
+	             "posterWidth":332,
+	             "posterHeight":400,
+	             "verticalAlign":"middle",
+	             "autoPlay":false,
+	             "speed":1000,
+	             "delay":1000,
+	             "scale":0.9
+		}'>
+			<div class='poster-btn poster-prev-btn'></div>
+			<ul class='poster-list'>
+				<li class="list-item"><a href="#"><img src="../../images/EN/pd-detail-img1.png" alt=""></a></li>
+				<li class="list-item"><a href="#"><img src="../../images/EN/pd-detail-img2.png" alt=""></a></li>
+				<li class="list-item"><a href="#"><img src="../../images/EN/pd-detail-img3.png" alt=""></a></li>
+			</ul>
+			<div class='poster-btn poster-next-btn'></div>
+		</div>
 	</div>
 
 	<div class="lm-slider-info-wrap">
@@ -619,7 +632,7 @@
 	<script type="text/javascript" src="../../libs/bootstrap/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="../../libs/shopfly/shop-fly.js"></script>
 	<script type="text/javascript" src="../../libs/jqueryPage.js"></script>
-	<script type="text/javascript" src="../../libs/PicCarousel.js"></script>
+	<script type="text/javascript" src="../../libs/carousel/carousel.js"></script>
 	<!-- 公共JS -->
 	<script type="text/javascript" src="../../common/EN/js/LMShop-common.js"></script>
 	<!-- 业务代码 -->
