@@ -1,7 +1,23 @@
 
 var LMTravelList = {
 	init:function(){
+		this.reginSelect();
 		this.otherEvent();
+	},
+
+	/* 热度选择下拉菜单 */
+	reginSelect:function(){
+		$('.modal-hot').on('click','.modal-hot-val',function(e){
+			e.stopPropagation();
+			$(this).siblings('ul').slideToggle();
+		}).on('click','.modal-hot-menu>li',function(){
+			var val = $(this).html();
+			$(this).parent().slideDown('slow').siblings('span').html(val);
+		});
+
+		$('.modal__content').click(function(){
+			$('.modal-hot ul').slideUp('slow');
+		});
 	},
 
 	/* 其他事件 */
@@ -18,20 +34,10 @@ var LMTravelList = {
 		}
 		MM_reloadPage(true);
 
-		// 获取容器的宽
-		var $con = $('.lm-container');
-		var getHeight = function(){
-			var windowHeight = parseInt($(window).height());
-			$con.height(windowHeight);
-		};
-		getHeight();
-
-		var _time = null;
-		$(window).resize(function(){
-			if (_time) clearTimeout(_time);
-	    	_time = setTimeout(function() {
-	    		// getHeight();	
-            }, 1000);
+		$('.img-com').mousedown(function(event) {
+			$(this).css('transform','scale(0.8)');
+		}).mouseup(function(event) {
+			$(this).css('transform','scale(1)');
 		});
 	},
 };

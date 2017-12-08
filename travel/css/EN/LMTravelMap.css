@@ -15,6 +15,8 @@ body {
 .img-com h2 {
   position: relative;
   padding: 10px;
+  padding-bottom: 0;
+  margin-bottom: 10px;
   font-size: 14px;
   background: linear-gradient(135deg, #81E5FE 0%, #1639AE 100%);
   -webkit-background-clip: text;
@@ -28,10 +30,19 @@ body {
   content: "";
   display: block;
   position: absolute;
-  bottom: 0px;
+  bottom: -10px;
   width: 130px;
   height: 2px;
   background: #aac7f9;
+}
+.img-com h2 > span {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  white-space: normal!important;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
 }
 .img-com p {
   padding: 10px;
@@ -121,6 +132,7 @@ body {
   box-shadow: 0 0 50px 0 rgba(170, 199, 249, 0.5);
   border-radius: 4px;
   text-align: center;
+  cursor: pointer;
 }
 .travel-nav > p img {
   margin-top: -6px;
@@ -143,4 +155,121 @@ body {
 }
 .travel-nav .t-share {
   margin-right: 40px;
+}
+.t-content > li {
+  float: left;
+  width: 20%;
+  margin-top: 20px;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+.t-content > li > div {
+  border-radius: 4px;
+  padding: 10px;
+  cursor: pointer;
+  background: #fff;
+  transition: all .6s;
+  -webkit-transition: all .6s;
+}
+.t-content > li > div > h2 {
+  width: 100%;
+  height: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  background: linear-gradient(135deg, #81E5FE 0%, #1639AE 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+}
+.t-content > li > div > img {
+  width: 100%;
+}
+.t-content > li > div > p {
+  color: #3772D5;
+  margin-top: 10px;
+  overflow: hidden;
+}
+.t-content > li > div > p .m-s5-local,
+.t-content > li > div > p .s1 {
+  float: left;
+}
+.t-content > li > div > p .m-s5-see,
+.t-content > li > div > p .s2 {
+  float: right;
+}
+.t-content > li > div > p .m-s5-local {
+  margin-top: 3px;
+  margin-right: 6px;
+}
+.t-content > li > div > p .m-s5-see {
+  margin-top: 5px;
+  margin-left: 6px;
+}
+.t-content > li > div:hover {
+  box-shadow: 0 0 30px 0 #aac7f9;
+  transition: all .6s;
+  -webkit-transition: all .6s;
+}
+.t-content > li > h3 {
+  margin-top: 10px;
+  padding-left: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.t-content > li > h3 > span {
+  color: #1639AE;
+  margin-left: 10px;
+}
+/* Hover */
+@-webkit-keyframes hover {
+  50% {
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+  }
+  100% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+}
+@keyframes hover {
+  50% {
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+  }
+  100% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+}
+.hover {
+  display: inline-block;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.hover:hover,
+.hover:focus,
+.hover:active {
+  -webkit-transform: translateY(-6px);
+  transform: translateY(-6px);
+  -webkit-animation-name: hover;
+  animation-name: hover;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
 }
