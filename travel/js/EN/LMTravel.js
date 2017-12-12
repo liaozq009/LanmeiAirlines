@@ -1,5 +1,5 @@
 
-var LMTravelList = {
+var LMTravel = {
 	init:function(){
 		// this.animate();
 		this.otherEvent();
@@ -43,30 +43,73 @@ var LMTravelList = {
 		/* banner的地球和小人 */
 		var reload = function(){
 			var winW = $(window).width();
+			var earthW = $('.earth-d2').width();
 			$('.lm-banner-right').height(winW*600/1920);
+			$('.earth-d2').height(earthW*374/384);
 		}
 		reload();
 		$(window).resize(function(){
 			reload();
 		});
 
-		var card1 = $(".lm-banner-right .img2");
-		var card3 = $(".lm-banner-right .img4");
+		var rollEarth = function(){
+			var $content = $("#earth-content");
+			var $oBox = $("#earth-box");
+			var $oBoxImg = $("#earth-box .img2-1");
+			var oBoxImgW = $oBoxImg[0].clientWidth;
+			var step = 0;
+			var auto;
+			function moving(){
+			    auto = setInterval(function(){
+			        step--;
+			        if($oBox[0].offsetLeft<=-oBoxImgW){
+			            step=0;
+			        }
+			        $oBox.css('left',step+"px");
+			    },60);
+			}
+			
+			moving();
+			
+			$content.mousemove(function(event){
+				console.log(222);
+			    if(!(navigator.appVersion.match(/9./i)=="9.")&&(navigator.appVersion.match(/MSIE/gi)=="MSIE")){
+			        event = event || window.event;
+			        var x = event.offsetX;
+			        var y = event.offsetY;
+			        var tmp =Math.abs(x-150)*Math.abs(x-150)+Math.abs(y-150)*Math.abs(y-150);
+			        if(tmp<150*150){
+			            clearInterval(auto);
+			        }
+			    }
+			    else{
+			        clearInterval(auto);
+			    }
+			});
+			
+			$content.mouseout(function(){
+			    moving();
+			});
+		};
+		rollEarth();
 
-		$('.lm-banner').on("mousemove",function(e) {  
-			var ax1 = -parseInt(($(this).innerWidth()- e.pageX)/90);
-			var ay1 = -parseInt(($(this).innerHeight()- e.pageY)/60);
+		// var card1 = $(".lm-banner-right .img2");
+		// var card3 = $(".lm-banner-right .img4");
 
-			var ax3 = -parseInt(($(this).innerWidth()- e.pageX)/60);
-			var ay3 = -parseInt(($(this).innerHeight()- e.pageY)/60);
-			// console.log(ay);
+		// $('.lm-banner').on("mousemove",function(e) {  
+		// 	var ax1 = -parseInt(($(this).innerWidth()- e.pageX)/90);
+		// 	var ay1 = -parseInt(($(this).innerHeight()- e.pageY)/60);
 
-			var winW = $(window).width();
-			var height = winW*600/1920;
+		// 	var ax3 = -parseInt(($(this).innerWidth()- e.pageX)/60);
+		// 	var ay3 = -parseInt(($(this).innerHeight()- e.pageY)/60);
+		// 	// console.log(ay);
 
-			card1.attr("style", "transform: rotateY("+ax1+"deg) rotateX("+ay1+"deg)");
-			card3.attr("style", "transform: rotateY("+ax3+"deg) rotateX("+ay3+"deg)");
-		});
+		// 	var winW = $(window).width();
+		// 	var height = winW*600/1920;
+
+		// 	card1.attr("style", "transform: rotateY("+ax1+"deg) rotateX("+ay1+"deg)");
+		// 	card3.attr("style", "transform: rotateY("+ax3+"deg) rotateX("+ay3+"deg)");
+		// });
 	},
 
 	/* 动画特效 */
@@ -340,5 +383,5 @@ var LMTravelList = {
 };
 
 $(document).ready(function($) {
-	LMTravelList.init();
+	LMTravel.init();
 });

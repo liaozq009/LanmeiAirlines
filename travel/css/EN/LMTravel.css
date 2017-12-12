@@ -115,16 +115,37 @@ body {
 .lm-banner .lm-banner-right .d5 > img {
   width: 100%;
 }
-/* 3d */
-.lm-banner {
-  perspective: 1000px;
-  transform-style: preserve-3d;
+/* roll earth */
+.earth-d2 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 60%;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0px 0px 200px #fff inset;
 }
-.lm-banner-right {
-  pointer-events: none;
-  transform: translateZ(0);
-  transform-style: preserve-3d;
-  backface-visibility: hidden;
+.d2-box {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.d2-box img {
+  width: 800px;
+  height: 300px;
+}
+.d2-box .img2-1 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+}
+.d2-box .img2-2 {
+  position: absolute;
+  top: 0px;
+  left: 800px;
+  z-index: -1;
 }
 section {
   margin-bottom: 100px;
