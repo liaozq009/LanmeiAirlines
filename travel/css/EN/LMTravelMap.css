@@ -298,11 +298,6 @@ body {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.t-content > li > div:hover {
-  box-shadow: 0 0 30px 0 #aac7f9;
-  transition: all .6s;
-  -webkit-transition: all .6s;
-}
 .t-content > li > h3 {
   margin-top: 10px;
   padding-left: 10px;
@@ -318,6 +313,53 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+/* 游记内容模态框 */
+.travel-diary .diaryModal .page-toolbar {
+  width: 560px;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 10px;
+  margin: 0 auto;
+  background: #fff;
+  box-shadow: 0 0 30px 0 rgba(111, 162, 246, 0.5);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.travel-diary .diaryModal .page-toolbar > li {
+  float: left;
+  margin-left: 20px;
+}
+.travel-diary .diaryModal .page-toolbar > li a {
+  font-size: 14px;
+  color: #AAC7F9;
+}
+.travel-diary .diaryModal .modal-dialog {
+  width: 1260px;
+  height: auto;
+}
+.travel-diary .diaryModal .modal-dialog .modal-content {
+  height: auto;
+}
+.travel-diary .diaryModal .modal-header .close {
+  right: 300px;
+  top: 54px;
+}
+.travel-diary .diaryModal .modal-header .diary-local {
+  position: absolute;
+  top: 54px;
+  left: 300px;
+  background: url('../../images/EN/diary-local.png') center no-repeat #fff;
+  box-shadow: 0 0 30px 0 rgba(170, 199, 249, 0.5);
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  opacity: 1;
+}
+.travel-diary .diaryModal .modal-body {
+  height: 760px;
+  margin-top: 20px;
+  padding: 0;
 }
 /* Hover */
 @-webkit-keyframes hover {

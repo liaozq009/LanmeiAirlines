@@ -18,7 +18,6 @@
 	<link rel="stylesheet" type="text/css" href="../../common/EN/fonts/lm-iconfont.css">
 	<link rel="stylesheet" type="text/css" href="../../libs/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../../common/EN/css/animate.css">
-	<!-- <link rel="stylesheet" type="text/css" href="../../libs/mobalMap/modal-map.css"> -->
 	<link rel="stylesheet" type="text/css" href="../../common/EN/css/LMTravel-common.css">
 	<link rel="stylesheet" type="text/css" href="../../css/EN/LMTravelMap.css">
 	<!--[if lt IE 9]>
@@ -76,9 +75,9 @@
 	    <img style="zoom: 1" src="../../images/EN/travel-map.jpg" border="0" name="images1" class="travel-map">
 	</div>
 
-	<!-- 弹出模态框 -->
+	<!-- 弹出游记列表模态框 -->
 	<div class="travel-modal">
-		<div class="modal fade modal-com" id="seoulModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+		<div class="modal fade modal-com" id="js-seoulModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
 		  <div class="modal-dialog" role="document">
 		    <div class="modal-content">
 		     	<div class="modal-header">
@@ -179,6 +178,50 @@
 		</div>
 	</div>
 
+	<!-- 弹出游记内容模态框 -->
+	<div class="travel-diary">
+		<div class="modal fade diaryModal" id="js-diaryModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		     	<div class="modal-header">
+     		    	<ul class="page-toolbar">
+     		    		<li><a href="javascript:void(0)" class="d-head"><img src="../../images/EN/t-guide-icon.png"></a></li>
+     		    		<li><a href="javascript:void(0)" class="d-list"><img src="../../images/EN/diary-list.png"></a></li>
+     		    		<li><a href="javascript:void(0)" class="d-stop"><img src="../../images/EN/diary-stop.png"></a></li>
+     		    		<li><a href="javascript:void(0)" class="d-voice"><img src="../../images/EN/diary-voice.png"></a></li>
+     		    		<li><a href="javascript:void(0)" class="d-start"><img src="../../images/EN/diary-start.png"></a></li>
+     		    		<li><a href="javascript:void(0)" class="d-left"><img src="../../images/EN/diary-left.png"></a></li>
+     		    		<li><a href="javascript:void(0)" class="d-page">2-3/24</a></li>
+     		    		<li><a href="javascript:void(0)" class="d-right"><img src="../../images/EN/diary-right.png"></a></li>
+     		    		<li><a href="javascript:void(0)" class="d-end"><img src="../../images/EN/diary-end.png"></a></li>
+     		    		<li><a href="javascript:void(0)" class="d-rev"><img src="../../images/EN/diary-rev.png"></a></li>
+     		    		<li><a href="javascript:void(0)" class="d-downLoad"><img src="../../images/EN/diary-downLoad.png"></a></li>
+     		    		<li><a href="javascript:void(0)" class="d-star"><img src="../../images/EN/diary-star.png"></a></li>
+     		    		<li><a href="javascript:void(0)" class="d-fullScreen"><img src="../../images/EN/diary-fullScreen.png"></a></li>
+     		    	</ul>
+     				<button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+     				<button type="button" class="diary-local"></button>
+		     	</div>
+		     	<div class="modal-body">
+			      	<div class="flipbook-viewport">
+			      	    <div class="container">
+			      	        <div class="flipbook">
+			      	            <div>1</div>
+				               <div>2</div>
+				               <div>3</div>
+				               <div>4</div>
+				               <div>5</div>
+				               <div>6</div>
+				               <div>7</div>
+			      	        </div>
+			      	    </div>
+			      	</div>
+		     	</div>
+		    </div>
+		  </div>
+		</div>
+	</div>
+
 	<!-- 第三方库-->
 	<script type="text/javascript" src="../../libs/jQuery/jquery-1.11.3.js"></script>
 	<script type="text/javascript" src="../../libs/bootstrap/js/bootstrap.min.js"></script>
@@ -186,6 +229,8 @@
 	<script type="text/javascript" src="../../libs/jqueryPage.js"></script>
 	<script type="text/javascript" src="../../libs/drag/dragMap.js"></script>
 	<script type="text/javascript" src="../../libs/mobalMap/modal-map.js"></script>
+	<!-- 翻页 -->
+	<script type="text/javascript" src="../../libs/diary/turn/modernizr.2.5.3.min.js"></script>
 	<!-- 公共JS -->
 	<script type="text/javascript" src="../../common/EN/js/LMTravel-common.js"></script>
 	<!-- 业务代码 -->
