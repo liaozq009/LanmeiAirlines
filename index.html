@@ -1677,7 +1677,7 @@
 					<div id="tabslider1"> <!-- 小框 -->
 						<div class="second_slider"> <!-- 大框 -->
 							<ul class="slider-ul-1">
-								<li class="nth-child1">
+								<li class="nth-child1" data-modal="modalLi0">
 									<div class="pathSelectWrapper">
 										<div class="localPath">
 											<img src="images/EN/fly-icon.png">
@@ -1699,29 +1699,42 @@
 										</div>
 									</div>
 								</li>
-								<li class="nth-child2">
-									<div class="pathSelectWrapper">
-										<div class="localPath">
-											<img src="images/EN/fly-icon.png">
-											<p class="startPath">Phnom Penh</p>
-											<p class="endPath">Siem Reap</p>
-										</div>
-										<div class="priceInfo">
-											<div class="nth-child1">
-												<p>From <br/><span>USD</span></p>
-												<h3>--</h3>
+								<li class="nth-child2" data-modal="modalLi1">
+									<form class="" method="get" action="http://b2c.lanmeiairlines.com/lqWeb/reservation/AVQuery.do" target="_blank">
+										<input type="hidden" name="orgcity" value="HAN">
+										<input type="hidden" name="dstcity" value="PNH">
+										<input type="hidden" name="language" value="CN">
+										<input type="hidden" name="CURRENCY" value="USD">
+										<input type="hidden" name="tripType" value="MT">
+										<input type="hidden" name="sureDate" value="1">
+										<input type="hidden" name="departureDate" value="2017-12-20">
+										<input type="hidden" name="cabinType" value="ECONOMY">
+										<input type="hidden" name="adultCount" value="1">
+										<input type="hidden" name="childCount" value="0">
+										<div class="pathSelectWrapper">
+											<div class="localPath">
+												<img src="images/EN/fly-icon.png">
+												<p class="startPath">Phnom Penh</p>
+												<p class="endPath">Siem Reap</p>
 											</div>
-											<div class="nth-child2">
-												<!-- <p>2017-09-09</p> -->
-												<p>Economy Class</p>
+											<div class="priceInfo">
+												<div class="nth-child1">
+													<p>From <br/><span>USD</span></p>
+													<h3>--</h3>
+												</div>
+												<div class="nth-child2">
+													<!-- <p>2017-09-09</p> -->
+													<p>Economy Class</p>
+												</div>
+												<p class="line-icon">
+													<i class="i1"></i><i class="i2"></i><i class="i3"></i><i class="i4"></i><i class="i5"></i><i class="i6"></i>
+												</p>
 											</div>
-											<p class="line-icon">
-												<i class="i1"></i><i class="i2"></i><i class="i3"></i><i class="i4"></i><i class="i5"></i><i class="i6"></i>
-											</p>
 										</div>
-									</div>
+										<input type="submit" value="提交">
+									</form>
 								</li>
-								<li class="nth-child3">
+								<li class="nth-child3" data-modal="modalLi2">
 									<div class="pathSelectWrapper">
 										<div class="localPath">
 											<img src="images/EN/fly-icon.png">
@@ -1745,7 +1758,7 @@
 								</li>
 							</ul>
 							<ul class="slider-ul-2">
-								<li class="nth-child1">
+								<li class="nth-child1" data-modal="modalLi3">
 									<div class="pathSelectWrapper">
 										<div class="localPath">
 											<img src="images/EN/fly-icon.png">
@@ -1767,7 +1780,7 @@
 										</div>
 									</div>
 								</li>
-								<li class="nth-child2">
+								<li class="nth-child2" data-modal="modalLi4">
 									<div class="pathSelectWrapper">
 										<div class="localPath">
 											<img src="images/EN/fly-icon.png">
@@ -1789,7 +1802,7 @@
 										</div>
 									</div>
 								</li>
-								<li class="nth-child3">
+								<li class="nth-child3" data-modal="modalLi5">
 									<div class="pathSelectWrapper">
 										<div class="localPath">
 											<img src="images/EN/fly-icon.png">
@@ -1956,6 +1969,96 @@
 			</div>
 		</div>
 		<div class="pagination d-pagination"></div>
+
+		<!-- 模态框 -->
+		<div class="modal-wrap">
+			<div class="modal fade priceModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						</div>
+						<div class="modal-body">
+							<form class="form-inline" id="modal-form" method="get" action="http://b2c.lanmeiairlines.com/lqWeb/reservation/AVQuery.do" target="_blank">
+								<input type="hidden" name="orgcity" value="SGN" class="price-orgcity">
+								<input type="hidden" name="dstcity" value="REP" class="price-dstcity">
+								<input type="hidden" name="language" value="US">
+								<input type="hidden" name="CURRENCY" value="USD">
+								<input type="hidden" name="sureDate" value="1">
+								<input type="hidden" name="tripType" value="MT">
+								<input type="hidden" name="cabinType" value="ECONOMY">
+
+								<div class="form-group timeForm-group time-group">
+								    <label for="exampleInputName2">Dep:</label>
+								    <input type="text" id="price-timeFrom" class="form-control" name="departureDate" value="" placeholder="" readonly="">
+							    </div>
+								<div class="form-group adult-group">
+									<label for="exampleInputName2">Adult:</label>
+									<input type="text" class="cityinput" id="price-Adult" name="adultCount" value="1" readonly="">
+									<span class="addArrow">+</span>
+									<span class="downArrow">-</span>
+								</div>
+								<div class="form-group child-group">
+									<label for="exampleInputName2">Child:</label>
+									<input type="text" readonly="readonly" id="price-Child" name="childCount" value="0" class="">
+									<span class="addArrow">+</span>
+									<span class="downArrow">-</span>
+								</div>
+								<div class="modal-submit">
+									<button type="submit" class="btn btn-success">OK</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal fade priceModal2" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						</div>
+						<div class="modal-body">
+							<form class="form-inline" id="modal-form" method="get" action="http://b2c.lanmeiairlines.com/lqWeb/reservation/AVQuery.do" target="_blank">
+								<input type="hidden" name="orgcity" value="SGN" class="price-orgcity">
+								<input type="hidden" name="orgcity2" value="SGN" class="price-orgcity2">
+								<input type="hidden" name="dstcity" value="REP" class="price-dstcity">
+								<input type="hidden" name="dstcity2" value="REP" class="price-dstcity2">
+								<input type="hidden" name="language" value="US">
+								<input type="hidden" name="CURRENCY" value="USD">
+								<input type="hidden" name="sureDate" value="1">
+								<input type="hidden" name="tripType" value="MT">
+								<input type="hidden" name="cabinType" value="ECONOMY">
+
+								<div class="form-group timeForm-group time-group">
+								    <label for="exampleInputName2">Dep:</label>
+								    <input type="text" id="price2-timeFrom" class="form-control" name="departureDate" value="" placeholder="" readonly="">
+							    </div>
+							    	<div class="form-group timeTo-group time-group">
+							    	    <label for="exampleInputName2">Ret:</label>
+							    	    <input type="text" id="price2-timeTo" class="form-control" name="departureDate2" value="" placeholder="" readonly="">
+							        </div>
+								<div class="form-group adult-group">
+									<label for="exampleInputName2">Adult:</label>
+									<input type="text" class="cityinput" id="price-Adult" name="adultCount" value="1" readonly="">
+									<span class="addArrow">+</span>
+									<span class="downArrow">-</span>
+								</div>
+								<div class="form-group child-group">
+									<label for="exampleInputName2">Child:</label>
+									<input type="text" readonly="readonly" id="price-Child" name="childCount" value="0" class="">
+									<span class="addArrow">+</span>
+									<span class="downArrow">-</span>
+								</div>
+								<div class="modal-submit">
+									<button type="submit" class="btn btn-success">OK</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<!-- 澜湄服务 -->
@@ -2192,7 +2295,121 @@
 	<script type="text/javascript" src="libs/hotels-pc.js"></script>
 	<script type="text/javascript" charset="utf-8">
 		$(function(){
-			
+
+			$('#price-timeFrom').dateSelect({
+				timeFrom: 'price-timeFrom',
+				isSingleDay:true,
+				count:1,
+			});
+
+			$('#price2-timeFrom').dateSelect({
+				timeFrom: 'price2-timeFrom',
+				timeTo: 'price2-timeTo',
+				count:1,
+			});
+
+			$('.second_slider').on('click','>ul>li',function(){
+				
+				var data = $(this).attr('data-modal');
+
+				switch (data) {
+					case "modalLi0":
+						$('.priceModal').modal();
+						$('.price-orgcity').val('REP');
+						$('.price-dstcity').val('SGN');
+						break;
+					case "modalLi1":
+						$('.priceModal2').modal();
+
+						$('.price-orgcity').val('REP');
+						$('.price-dstcity').val('SGN');
+						$('.price-orgcity2').val('REP');
+						$('.price-dstcity2').val('SGN');
+						break;
+					case "modalLi2":
+						$('.price-orgcity').val('SGN');
+						$('.price-dstcity').val('REP');
+						break;
+					case "modalLi3":
+						$('.price-orgcity').val('SGN');
+						$('.price-dstcity').val('REP');
+						$('.price-orgcity2').val('SGN');
+						$('.price-dstcity2').val('REP');
+						break;
+					case "modalLi4":
+						$('.price-orgcity').val('HAN');
+						$('.price-dstcity').val('PNH');
+						break;
+					case "modalLi5":
+						$('.price-orgcity').val('HAN');
+						$('.price-dstcity').val('PNH');
+						$('.price-orgcity2').val('HAN');
+						$('.price-dstcity2').val('PNH');
+						break;
+					
+				}
+
+				if(data=="modelLi0" || data=="modalLi1" ){
+					$('.price-orgcity').val('REP');
+					$('.price-dstcity').val('SGN');
+				}
+				
+				if(data=="modelLi2" || data=="modalLi3" ){
+					$('.price-orgcity').val('SGN');
+					$('.price-dstcity').val('REP');
+				}
+				
+				if(data=="modelLi4" || data=="modalLi5" ){
+					$('.price-orgcity').val('HAN');
+					$('.price-dstcity').val('PNH');
+				}
+			});
+
+			/* 乘客人数选择 */
+			var AdultNum = 1;
+			var ChildNum = 0;
+
+			var adultGroup = function(){
+				$('.adult-group .addArrow').click(function(){
+					var ChildNum = $('#price-Child').val();//获取小孩人数
+					if(parseInt(ChildNum)+AdultNum<5){
+						AdultNum++;
+						$('#price-Adult').val(AdultNum);
+					}else{
+						layer.tips('Limited to 5 people only.', '#price-Adult',{
+							tips: [2, '#8ec060'],
+							time: 3000
+						});
+					}
+				});
+				$('.adult-group .downArrow').click(function(){
+					$('#price-Adult').val()>=2 && AdultNum--;
+					$('#price-Adult').val(AdultNum);
+				});
+			};
+
+			var childGroup = function(){
+				$('.child-group .addArrow').click(function(){
+					var AdultNum = $('#price-Adult').val();//获取成人人数
+					if(parseInt(AdultNum)+ChildNum<5){
+						ChildNum++;
+						$('#price-Child').val(ChildNum);
+					}else{
+						layer.tips('Limited to 5 people only.', '#price-Child',{
+							tips: [2, '#8ec060'],
+							time: 3000
+						});
+					}
+				});
+				$('.child-group .downArrow').click(function(){
+					$('#price-Child').val()>=1 && ChildNum--;
+					$('#price-Child').val(ChildNum);
+				});
+			};
+
+			adultGroup();
+			childGroup();
+
 	    })
 	</script>
 </body>
