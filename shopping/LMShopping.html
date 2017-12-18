@@ -27,6 +27,20 @@
 	<script src="libs/bootstrap/js/html5shiv.min.js"></script>
 	<script src="libs/bootstrap/js/respond.min.js"></script>
 	<![endif]-->
+
+	<style type="text/css">
+		/* 购物车遮罩 2017-12-18 */
+		.shopping-mask{
+			display: none;
+			position: fixed;
+		    top: 0px;
+		    left: 0;
+		    z-index: 98;
+		    width: 100%;
+		    height: 100%;
+		    background-color: rgba(0, 0, 0, 0.6);
+		}
+	</style>
 </head>
 <body>
 	<!-- 页面顶部 -->
@@ -1168,6 +1182,8 @@
 			</div>
 		</div>
 	</div>
+	<!-- 购物车遮罩 -->
+	<div class="shopping-mask"></div>
 
 	<!-- 页脚 -->
 	<div class="lm-footer">
@@ -1248,6 +1264,10 @@
 	<script type="text/javascript" src="common/EN/js/LMShop-common.js"></script>
 	<!-- 业务代码 -->
 	<script type="text/javascript" src="js/EN/LMShop.js"></script>
+
+	<script type="text/javascript">
+		
+	</script>
 
 </body>
 </html>

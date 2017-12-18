@@ -41,8 +41,10 @@ var LMTravelList = {
 
 		// 游记翻页
 		function loadApp() {
+			var $flipbook = $('.flipbook');
+
 		    // Create the flipbook
-		    $('.flipbook').turn({
+		    $flipbook.turn({
 		            // Width
 		            width:1260,
 		            // Height
@@ -53,6 +55,69 @@ var LMTravelList = {
 		            gradients: true,
 		            // Auto center this flipbook
 		            autoCenter: true
+		    });
+
+		    var resizeW = function(){
+		    	var winW = $(window).width();
+
+		    	if(winW<1300){
+		    		$flipbook.turn("display", "single");
+		    		$flipbook.turn("size", 630, 760);
+		    	}else{
+		    		$flipbook.turn("display", "double");
+		    		$flipbook.turn("size",1260, 760);
+		    	}
+
+		    	// if(winW<700){
+		    	// 	$flipbook.turn("destroy").remove();
+		    	// }
+		    }
+		    resizeW();
+
+		    $(window).resize(function () {
+		    	resizeW();
+		    });
+
+		    var pageCount = $flipbook.turn("pages");//总页数
+
+		    // 下一页
+		    $('.page-toolbar .d-right').click(function(){
+		    	$flipbook.turn("next");
+		    	var page = $(".flipbook").turn("page");
+		    	console.log(page);
+		    });
+
+		    // 上一页
+		    $('.page-toolbar .d-left').click(function(){
+		    	$flipbook.turn("previous");
+		    	var page = $(".flipbook").turn("page");
+		    	console.log(page);
+		    });
+
+		    // 第一页
+		    $('.page-toolbar .d-start').click(function(){
+		    	$flipbook.turn("page", 1);
+		    });
+
+		    // 上一页
+		    $('.page-toolbar .d-end').click(function(){
+		    	$flipbook.turn("page", pageCount);
+		    });
+
+		    // 翻到指定页码触发事件
+		    $('.d-page .s2').html(pageCount);
+		    $flipbook.bind("turning", function(event, page, view) {
+		     	var len = view.length;
+		     	if(len==1){
+		     		$('.d-page .s1').html(view[0]);
+		     	}else{
+		     		if(view[0]==0){
+		     			$('.d-page .s1').html(view[1]);
+		     		}else{
+		     			$('.d-page .s1').html(view[0]+'-'+view[1]);
+		     		}
+		     		
+		     	}
 		    });
 		}
 		// Load the HTML4 version if there's not CSS transform

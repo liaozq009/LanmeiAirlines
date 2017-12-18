@@ -162,14 +162,21 @@ var LMShop = {
 		var $lmPdCart = $('.lm-pd-cart');
 		var $pdCartTitle = $('.pd-cart-title');
 		var $pdCartPriceBox = $('.pd-cart-price-box');
+		// 遮罩
+		var $shopMask = $('.shopping-mask');
+
 		var pdBoxSlider = function(){
 			$lmPdCart.animate({left:0},300);
 			$pdCartTitle.animate({left:0},300);
 			$pdCartPriceBox.animate({left:0},300);
 		};
+
 		// 购物车收进
-		$('.pd-cart-title .cart-arrow').click(function(){
+		$('.pd-cart-title .cart-arrow,.shopping-mask').click(function(){
 			$('html,body').removeClass('ovfHiden'); //使网页恢复可滚
+
+			// 遮罩隐藏
+			$shopMask.hide();
 
 			if($('.lm-pd-cart').css('left')=="-"+sildeWidth){
 				pdBoxSlider();
@@ -187,6 +194,9 @@ var LMShop = {
 
 		// 展开购物车
 		$('.lm-pd-cart .pd-cart-view,.m-shopping-cart').click(function(){
+			// 遮罩显示
+			$shopMask.show();
+
 			pdBoxSlider();
 			$(this).animate({left:"-90px"},300).children('.pd-cart-select-num').animate({left:"-66px"},800);
 		});
