@@ -51,6 +51,7 @@ var LMTravelList = {
 		            height:760,
 		            // Elevation
 		            elevation: 50,
+		            duration: 2000,
 		            // Enable gradients
 		            gradients: true,
 		            // Auto center this flipbook
@@ -62,15 +63,16 @@ var LMTravelList = {
 
 		    	if(winW<1300){
 		    		$flipbook.turn("display", "single");
-		    		$flipbook.turn("size", 630, 760);
+		    		$flipbook.turn("size", 630, 760); 
+
+		    		$('.flipbook-viewport .even,.flipbook-viewport .odd').addClass('background-none');
 		    	}else{
 		    		$flipbook.turn("display", "double");
 		    		$flipbook.turn("size",1260, 760);
+
+		    		$('.flipbook-viewport .even,.flipbook-viewport .odd').removeClass('background-none');
 		    	}
 
-		    	// if(winW<700){
-		    	// 	$flipbook.turn("destroy").remove();
-		    	// }
 		    }
 		    resizeW();
 
@@ -128,6 +130,20 @@ var LMTravelList = {
 		    both: ['../../libs/diary/turn/basic.css'],
 		    complete: loadApp
 		});
+
+		//长文本分页
+		$('.longText').textify({
+		    numberOfColumn: 1,
+		    margin: 20,
+		    padding: 0,
+		    width: "630",
+		    height: "760",
+		    showNavigation: true,
+		    textAlign: 'justify'
+		});
+
+		// $('.longText').textify({width:winW});
+
 	},
 
 	/* 其他事件 */

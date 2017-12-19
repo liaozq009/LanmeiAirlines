@@ -169,6 +169,7 @@ body {
   background: #fff;
 }
 .modal-header {
+  position: relative;
   padding: 40px 70px 0;
   border-bottom: none;
 }
@@ -315,6 +316,9 @@ body {
   white-space: nowrap;
 }
 /* 游记内容模态框 */
+.travel-diary .diaryModal {
+  background: rgba(255, 255, 255, 0.5);
+}
 .travel-diary .diaryModal .page-toolbar {
   position: relative;
   width: 560px;
@@ -345,6 +349,10 @@ body {
   right: -50px;
   top: 13px;
 }
+.travel-diary .diaryModal .modal-header .m-close {
+  display: none;
+  right: 80px;
+}
 .travel-diary .diaryModal .modal-header .diary-local {
   position: absolute;
   top: 13px;
@@ -356,10 +364,30 @@ body {
   border-radius: 100%;
   opacity: 1;
 }
+.travel-diary .diaryModal .modal-content {
+  background: none;
+  box-shadow: none;
+}
 .travel-diary .diaryModal .modal-body {
   height: 760px;
   margin-top: 20px;
   padding: 0;
+}
+/* 游记内容样式 */
+.flipbook p,
+.contentText p {
+  font-size: 14px;
+  color: #3772d5;
+  line-height: 24px;
+  padding: 0 20px;
+  margin-top: 10px;
+}
+.flipbook p img,
+.contentText p img {
+  width: 100%;
+}
+.longText {
+  visibility: hidden;
 }
 @media screen and (max-width: 1300px) {
   .travel-diary .diaryModal .modal-dialog {
@@ -370,6 +398,25 @@ body {
   }
   .flipbook-viewport .container > div {
     left: 0 !important;
+  }
+}
+@media screen and (min-width: 700px) {
+}
+@media screen and (max-width: 700px) {
+  .longText {
+    display: block;
+  }
+  .flipbook-viewport {
+    display: none;
+  }
+  .travel-diary .diaryModal .modal-header .m-close {
+    display: block;
+  }
+  .page-toolbar {
+    display: none;
+  }
+  .travel-diary .diaryModal {
+    background: #fff;
   }
 }
 /* Hover */
