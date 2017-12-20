@@ -16,6 +16,8 @@ var LanmeiAirlines = {
 		this.isPc();
 		this.winResize();
 		this.otherEvent();
+		this.priceActive();
+		this.christmas();
 	},
 
 	/* 判断是PC端还是移动端 */
@@ -1948,12 +1950,221 @@ var LanmeiAirlines = {
         		break;
         	}
         });
-	}
+	},
 
+	/* 0元机票活动2017-12-16 */
+	priceActive:function(){
+		$('#price-timeFrom').dateSelect({
+			timeFrom: 'price-timeFrom',
+			isSingleDay:true,
+			count:1,
+		});
+
+		$('#price2-timeFrom').dateSelect({
+			timeFrom: 'price2-timeFrom',
+			timeTo: 'price2-timeTo',
+			count:1,
+		});
+
+		$('.second_slider').on('click','>ul>li',function(){
+			
+			var data = $(this).attr('data-modal');
+
+			switch (data) {
+				case "modalLi0":
+					$('.priceModal').modal();
+					$('.price-orgcity').val('REP');
+					$('.price-dstcity').val('SGN');
+					break;
+				case "modalLi1":
+					$('.priceModal2').modal();
+
+					$('.price-orgcity').val('REP');
+					$('.price-dstcity').val('SGN');
+					$('.price-orgcity2').val('REP');
+					$('.price-dstcity2').val('SGN');
+					break;
+				case "modalLi2":
+					$('.price-orgcity').val('SGN');
+					$('.price-dstcity').val('REP');
+					break;
+				case "modalLi3":
+					$('.price-orgcity').val('SGN');
+					$('.price-dstcity').val('REP');
+					$('.price-orgcity2').val('SGN');
+					$('.price-dstcity2').val('REP');
+					break;
+				case "modalLi4":
+					$('.price-orgcity').val('HAN');
+					$('.price-dstcity').val('PNH');
+					break;
+				case "modalLi5":
+					$('.price-orgcity').val('HAN');
+					$('.price-dstcity').val('PNH');
+					$('.price-orgcity2').val('HAN');
+					$('.price-dstcity2').val('PNH');
+					break;
+				
+			}
+
+			if(data=="modelLi0" || data=="modalLi1" ){
+				$('.price-orgcity').val('REP');
+				$('.price-dstcity').val('SGN');
+			}
+			
+			if(data=="modelLi2" || data=="modalLi3" ){
+				$('.price-orgcity').val('SGN');
+				$('.price-dstcity').val('REP');
+			}
+			
+			if(data=="modelLi4" || data=="modalLi5" ){
+				$('.price-orgcity').val('HAN');
+				$('.price-dstcity').val('PNH');
+			}
+		});
+
+		/* 乘客人数选择 */
+		var AdultNum = 1;
+		var ChildNum = 0;
+
+		var adultGroup = function(){
+			$('.adult-group .addArrow').click(function(){
+				var ChildNum = $('#price-Child').val();//获取小孩人数
+				if(parseInt(ChildNum)+AdultNum<5){
+					AdultNum++;
+					$('#price-Adult').val(AdultNum);
+				}else{
+					layer.tips('Limited to 5 people only.', '#price-Adult',{
+						tips: [2, '#8ec060'],
+						time: 3000
+					});
+				}
+			});
+			$('.adult-group .downArrow').click(function(){
+				$('#price-Adult').val()>=2 && AdultNum--;
+				$('#price-Adult').val(AdultNum);
+			});
+		};
+
+		var childGroup = function(){
+			$('.child-group .addArrow').click(function(){
+				var AdultNum = $('#price-Adult').val();//获取成人人数
+				if(parseInt(AdultNum)+ChildNum<5){
+					ChildNum++;
+					$('#price-Child').val(ChildNum);
+				}else{
+					layer.tips('Limited to 5 people only.', '#price-Child',{
+						tips: [2, '#8ec060'],
+						time: 3000
+					});
+				}
+			});
+			$('.child-group .downArrow').click(function(){
+				$('#price-Child').val()>=1 && ChildNum--;
+				$('#price-Child').val(ChildNum);
+			});
+		};
+
+		adultGroup();
+		childGroup();
+	},
+
+	/* 圣诞活动 */
+	christmas:function(){
+		/* 下雪 */
+		;(function (window, undefined) {
+		  var canvas = document.getElementById('canvas')
+		  var ctx = canvas.getContext('2d')
+		  var canvasW = window.innerWidth
+		  var canvasH = window.innerHeight
+		  var particles = []
+		  var maxParticles = 300
+
+		  var random = function (min, max) {
+		    return Math.random() * (max - min) + min
+		  }
+
+		  window.requestAnimationFrame = (function () {
+		    var FPS = 60
+
+		    return window.requestAnimationFrame  ||
+		           window.webkitRequestAnimationFrame ||
+		           window.mozRequestAnimationFrame ||
+		           window.oRequestAnimationFrame ||
+		           window.msRequestAnimationFrame ||
+		           function (callBack) {
+		             window.setTimeout(callBack, 1000/FPS)
+		           }
+		  })()
+
+		  var Particle = function () {
+		    this.x = Math.random() * canvasW
+		    this.y = Math.random() * canvasH
+		    this.r = random(1, 5)
+		    this.alpha = random(0.3, 1)
+		    this.velocity = {
+		      x: random(-0.35, 0.35),
+		      y: random(0.75, 1.5)
+		    }
+
+		    this.draw = function () {
+		      ctx.fillStyle = 'rgba(255, 255, 255, '+this.alpha+')'
+		      ctx.beginPath()
+		      ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI, false)
+		      ctx.closePath()
+		      ctx.fill()
+		    }
+
+		    this.moving = function () {
+		      this.x += this.velocity.x
+		      this.y += this.velocity.y
+
+		      if (this.y > canvasH) {
+		        this.x = Math.random() * canvasW
+		        this.y = 0
+		      }
+
+		      this.draw()
+		    }
+		  }
+
+		  init()
+
+		  function init() {
+		    canvas.width = canvasW
+		    canvas.height = canvasH
+
+		    for (var i = 0; i < maxParticles; i++) {
+		      particles.push(new Particle())
+		    }
+
+		    animate()
+		  }
+
+		  function animate() {
+		    ctx.clearRect(0, 0, canvasW, canvasH)
+		    particles.forEach(function (particle) {
+		      particle.moving()
+		    })
+
+		    requestAnimationFrame(animate)
+		  }
+		})(window)
+
+	}
 };
 
 $(function() {
 	LanmeiAirlines.init();
 	$('.lm-loading').fadeOut('slow');
+
+	setTimeout(function(){
+		$('#activeModal').modal();
+	},1000);
+
+	setTimeout(function(){
+		$('#activeModal,.modal-backdrop').fadeOut(600);
+	},6000);
+	
 });
 

@@ -37,6 +37,11 @@ var LMTravelList = {
 		//弹出模态框
 		$('.travel-modal').on('click','.t-content > li > div',function(){
 			$('#js-diaryModal').modal({backdrop: 'static', keyboard: false});
+
+			// 弹出模态框后调用函数
+			$('#js-diaryModal').on('shown.bs.modal', function () {
+			    
+			})
 		});
 
 		// 游记翻页
@@ -83,17 +88,13 @@ var LMTravelList = {
 		    var pageCount = $flipbook.turn("pages");//总页数
 
 		    // 下一页
-		    $('.page-toolbar .d-right').click(function(){
+		    $('.page-toolbar .d-right,.modal-foot .lg-d-right').click(function(){
 		    	$flipbook.turn("next");
-		    	var page = $(".flipbook").turn("page");
-		    	console.log(page);
 		    });
 
 		    // 上一页
-		    $('.page-toolbar .d-left').click(function(){
+		    $('.page-toolbar .d-left,.modal-foot .lg-d-left').click(function(){
 		    	$flipbook.turn("previous");
-		    	var page = $(".flipbook").turn("page");
-		    	console.log(page);
 		    });
 
 		    // 第一页
@@ -141,8 +142,6 @@ var LMTravelList = {
 		    showNavigation: true,
 		    textAlign: 'justify'
 		});
-
-		// $('.longText').textify({width:winW});
 
 	},
 
