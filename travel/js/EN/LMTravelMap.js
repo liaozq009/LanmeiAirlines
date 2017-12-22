@@ -4,6 +4,7 @@ var LMTravelList = {
 		this.reginSelect();
 		this.travelList();
 		this.travelDiary();
+		this.travelShare();
 		this.otherEvent();
 	},
 
@@ -29,7 +30,6 @@ var LMTravelList = {
 			var local = $(this).attr('data-local');
 			$('#js-'+local).modal();
 		});
-
 	},
 
 	/* 游记内容 */
@@ -142,7 +142,32 @@ var LMTravelList = {
 		    showNavigation: true,
 		    textAlign: 'justify'
 		});
+	},
 
+	/* 分享游记和计划旅行 */
+	travelShare:function(){
+		$('.travel-nav .t-share').click(function(){
+			$('#js-shareModal').modal();
+		});
+
+		// 定义DOM
+		var $clear = $('.search-clear');
+		var $input = $('.search-input');
+
+		// 清除按钮显示或隐藏
+		$input.keyup(function(event) {
+			if($(this).val() != ""){
+				$clear.show();
+			}else{
+				$clear.hide();
+			}
+		});
+
+		// 清除输入框
+		$clear.click(function(){
+			$input.val('');
+			$(this).hide();
+		});
 	},
 
 	/* 其他事件 */
