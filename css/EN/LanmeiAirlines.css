@@ -3515,3 +3515,13 @@ body .layui-layer-btn .layui-layer-btn0 {
   bottom: 0;
   margin: auto;
 }
+@media screen and (max-width: 992px) {
+  .activeModal .modal-dialog .modal-content .modal-header .close span {
+    top: 0.1rem;
+    right: 0.1rem;
+    font-size: 0.2rem;
+  }
+  .activeModal .modal-dialog .modal-content .modal-body {
+    padding-top: 0.36rem;
+  }
+}

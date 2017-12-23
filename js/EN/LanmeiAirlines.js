@@ -2073,12 +2073,24 @@ var LanmeiAirlines = {
 	christmas:function(){
 		/* 下雪 */
 		;(function (window, undefined) {
-		  var canvas = document.getElementById('canvas')
-		  var ctx = canvas.getContext('2d')
-		  var canvasW = window.innerWidth
-		  var canvasH = window.innerHeight
-		  var particles = []
-		  var maxParticles = 300
+		  var canvas = document.getElementById('canvas');
+		  var ctx = canvas.getContext('2d');
+		  var canvasW = window.innerWidth;
+		  var canvasH = window.innerHeight;
+		  var particles = [];
+		  var maxParticles = 300;
+
+		  var resizeW = function(){
+		  	var winW = $(window).width();
+		  	if(winW<992){
+		  		maxParticles = 100;
+		  	}
+		  }
+		  resizeW();
+
+		  $(window).resize(function(event) {
+		  	resizeW();
+		  });
 
 		  var random = function (min, max) {
 		    return Math.random() * (max - min) + min
@@ -2163,7 +2175,7 @@ $(function() {
 	},1000);
 
 	setTimeout(function(){
-		$('#activeModal,.modal-backdrop').fadeOut(600);
+		// $('#activeModal,.modal-backdrop').fadeOut(600);
 	},6000);
 	
 });
