@@ -169,6 +169,7 @@ body {
   background: #fff;
 }
 .modal-header {
+  position: relative;
   padding: 40px 70px 0;
   border-bottom: none;
 }
@@ -315,7 +316,11 @@ body {
   white-space: nowrap;
 }
 /* 游记内容模态框 */
+.travel-diary .diaryModal {
+  background: rgba(255, 255, 255, 0.8);
+}
 .travel-diary .diaryModal .page-toolbar {
+  position: relative;
   width: 560px;
   height: 50px;
   line-height: 50px;
@@ -324,7 +329,6 @@ body {
   background: #fff;
   box-shadow: 0 0 30px 0 rgba(111, 162, 246, 0.5);
   border-radius: 4px;
-  overflow: hidden;
 }
 .travel-diary .diaryModal .page-toolbar > li {
   float: left;
@@ -342,13 +346,17 @@ body {
   height: auto;
 }
 .travel-diary .diaryModal .modal-header .close {
-  right: 300px;
-  top: 54px;
+  right: -50px;
+  top: 13px;
+}
+.travel-diary .diaryModal .modal-header .m-close {
+  display: none;
+  right: 40px;
 }
 .travel-diary .diaryModal .modal-header .diary-local {
   position: absolute;
-  top: 54px;
-  left: 300px;
+  top: 13px;
+  left: -50px;
   background: url('../../images/EN/diary-local.png') center no-repeat #fff;
   box-shadow: 0 0 30px 0 rgba(170, 199, 249, 0.5);
   width: 30px;
@@ -356,10 +364,240 @@ body {
   border-radius: 100%;
   opacity: 1;
 }
+.travel-diary .diaryModal .modal-content {
+  position: relative;
+  background: none;
+  box-shadow: none;
+}
 .travel-diary .diaryModal .modal-body {
   height: 760px;
   margin-top: 20px;
   padding: 0;
+}
+.travel-diary .diaryModal .modal-foot .lg-d-left {
+  position: absolute;
+  top: 50%;
+  margin-top: -100px;
+  left: -150px;
+  width: 70px;
+  height: 200px;
+  line-height: 200px;
+  text-align: center;
+  background: #fff;
+  border-radius: 10px;
+  transition: all .6s;
+  -webkit-transition: all .6s;
+}
+.travel-diary .diaryModal .modal-foot .lg-d-left:hover {
+  box-shadow: 0 0 100px 0 rgba(55, 114, 213, 0.5);
+  transition: all .6s;
+  -webkit-transition: all .6s;
+}
+.travel-diary .diaryModal .modal-foot .lg-d-right {
+  position: absolute;
+  top: 50%;
+  margin-top: -100px;
+  right: -150px;
+  width: 70px;
+  height: 200px;
+  line-height: 200px;
+  text-align: center;
+  background: #fff;
+  border-radius: 10px;
+  transition: all .6s;
+  -webkit-transition: all .6s;
+}
+.travel-diary .diaryModal .modal-foot .lg-d-right:hover {
+  box-shadow: 0 0 100px 0 rgba(55, 114, 213, 0.5);
+  transition: all .6s;
+  -webkit-transition: all .6s;
+}
+/* 游记内容样式 */
+.flipbook p,
+.m-diary-text p {
+  font-size: 14px;
+  color: #3772d5;
+  line-height: 24px;
+  padding: 0 20px;
+  margin-top: 10px;
+}
+.flipbook p img,
+.m-diary-text p img {
+  width: 100%;
+}
+.longText {
+  visibility: hidden;
+}
+.m-diary-text {
+  display: none;
+  width: 100%;
+}
+@media screen and (max-width: 1600px) {
+  .travel-diary .diaryModal .modal-dialog {
+    margin-top: 0;
+  }
+  .travel-diary .diaryModal .modal-dialog .modal-header {
+    padding-top: 10px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .travel-diary .diaryModal .modal-dialog {
+    width: 700px;
+  }
+  .travel-diary .diaryModal .modal-foot .lg-d-left {
+    left: -80px;
+  }
+  .travel-diary .diaryModal .modal-foot .lg-d-right {
+    right: -80px;
+  }
+  .flipbook-viewport .container {
+    margin-left: -315px !important;
+  }
+  .flipbook-viewport .container > div {
+    left: 0 !important;
+  }
+}
+@media screen and (max-width: 700px) {
+  .m-diary-text {
+    display: block;
+  }
+  .flipbook-viewport {
+    display: none;
+  }
+  .travel-diary .diaryModal .modal-header .m-close {
+    display: block;
+  }
+  .travel-diary .diaryModal .modal-dialog {
+    width: 100%;
+    margin: 0;
+  }
+  .page-toolbar {
+    display: none;
+  }
+  .travel-diary .diaryModal {
+    background: #fff;
+  }
+}
+/* 分享游记和旅行计划 */
+.shareModal .modal-dialog {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+.shareModal .modal-dialog .modal-content {
+  height: 100%;
+  border-radius: 0;
+  background: rgba(255, 255, 255, 0.95);
+}
+.shareModal .modal-dialog .modal-body {
+  margin-top: 300px;
+}
+.shareModal .modal-dialog .search-box {
+  position: relative;
+  width: 960px;
+  margin: 0 auto;
+}
+.shareModal .modal-dialog .search-box input {
+  width: 100%;
+  font-size: 24px;
+  color: #aac7f9;
+  padding: 20px 30px;
+  border-bottom: 2px solid #aac7f9;
+}
+.shareModal .modal-dialog .search-box ::-webkit-input-placeholder {
+  /* WebKit browsers */
+  font-size: 36px;
+  color: #aac7f9;
+}
+.shareModal .modal-dialog .search-box :-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  font-size: 36px;
+  color: #aac7f9;
+}
+.shareModal .modal-dialog .search-box ::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  font-size: 36px;
+  color: #aac7f9;
+}
+.shareModal .modal-dialog .search-box :-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  font-size: 36px;
+  color: #aac7f9;
+}
+.shareModal .modal-dialog .search-box .search-clear {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  background: url(../../images/EN/mobal-close.png) center no-repeat #fff;
+  box-shadow: 0 0 30px 0 rgba(170, 199, 249, 0.5);
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+}
+.shareModal .modal-dialog .search-box .search-hot {
+  margin-top: 40px;
+}
+.shareModal .modal-dialog .search-box .search-hot a {
+  float: left;
+  display: inline-block;
+  width: 146px;
+  height: 58px;
+  line-height: 58px;
+  text-align: center;
+  font-size: 18px;
+  color: #aac7f9;
+  margin-left: 30px;
+  background: #fff;
+  border-radius: 8px;
+  transition: all 0.6s;
+  -webkit-transition: all 0.6s;
+}
+.shareModal .modal-dialog .search-box .search-hot a:hover {
+  box-shadow: 0 0 50px 0 rgba(170, 199, 249, 0.5);
+  transition: all 0.6s;
+  -webkit-transition: all 0.6s;
+}
+.shareModal .modal-dialog .search-box .search-title {
+  display: none;
+  font-size: 36px;
+  font-weight: bold;
+  color: #1639ae;
+  margin-top: 40px;
+}
+.shareModal .modal-dialog .search-box .search-menu {
+  display: none;
+  clear: both;
+  margin-top: 30px;
+  padding: 0 10px;
+}
+.shareModal .modal-dialog .search-box .search-menu > li {
+  background: #fff;
+  padding: 0 30px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  transition: all 0.6s;
+  -webkit-transition: all 0.6s;
+}
+.shareModal .modal-dialog .search-box .search-menu > li > a {
+  display: block;
+  font-size: 16px;
+  text-align: right;
+}
+.shareModal .modal-dialog .search-box .search-menu > li > a .s1 {
+  float: left;
+  color: #3772d5;
+}
+.shareModal .modal-dialog .search-box .search-menu > li > a .s2 {
+  color: #aac7f9;
+}
+.shareModal .modal-dialog .search-box .search-menu > li:hover {
+  box-shadow: 0 0 30px 0 rgba(170, 199, 249, 0.5);
+  transition: all 0.6s;
+  -webkit-transition: all 0.6s;
 }
 /* Hover */
 @-webkit-keyframes hover {

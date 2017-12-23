@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!-- 让 Bootstrap 兼容 IE 兼容模型 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- 让 Bootstrap 兼容 国产浏览器的高速模型 -->
+	<meta name="renderer" content="webkit">
+	<!-- 实现响应式的设置 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Be Unique,lanmei Airlines offical website find great deals now&nbsp;to our worldwide destinations.Cambodia,booking flights">
+	<meta name="keywords" content="lanmei airlines,六国,柬埔寨,澜湄航空,机票预订,lanmei,LQ,Fly to Cambodia,Special Ticket,lanmei A320,booking,ticket booking,booking flights">
+	<meta name="baidu-site-verification" content="wL5we2b5k5" />
+	<title>Be Unique, Lanmei Airlines</title>
+
+	<!-- 引入图标 -->
+	<link rel="icon" href="../../images/EN/lanmeiLogo.ico">
+	<link rel="stylesheet" type="text/css" href="../../common/EN/fonts/lm-iconfont.css">
+	<link rel="stylesheet" type="text/css" href="../../libs/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../../libs/rangeNum/jquery.range.css">
+	<link rel="stylesheet" type="text/css" href="../../common/EN/css/animate.css">
+	<link rel="stylesheet" type="text/css" href="../../common/EN/css/LMTravel-common.css">
+	<link rel="stylesheet" type="text/css" href="../../css/EN/LMTravelPlanning.css">
+	<!--[if lt IE 9]>
+	<script src="../../libs/bootstrap/js/html5shiv.min.js"></script>
+	<script src="../../libs/bootstrap/js/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<header class="p-header">
+		<div class="p-header-title">
+			<img src="../../images/EN/p-lanmeiLogo.png" class="p-logo">
+			<p class="p-local">Palau</p>
+			<p class="p-line"></p>
+			<p class="p-time"><span class="s1">Travel time :</span><span class="s2">Dec 02 - Dec 12</span></p>
+			<img src="../../images/EN/p-editor.png" class="p-edit">
+			<img src="../../images/EN/p-headPort.png" class="p-headPort">
+		</div>
+		<!-- 标题和人数等编辑框 -->
+		<div class="p-editor">
+			<div class="p-editor-title">
+				Title
+				<input type="text" name="" value="Palau" >
+			</div>
+			<div class="p-editor-time">
+				Travel time
+				<input type="text" name="" value="Dec 02 - Dec 12" readonly>
+			</div>
+			<div class="p-editor-people">
+				<p class="p-editor-adult">
+					People 
+					<a href="javascript:void(0)" class="people-add">+</a>
+					<input type="text" name="" value="0" readonly>
+					<a href="javascript:void(0)" class="people-sub">-</a>
+				</p>
+				<p class="p-editor-child">
+					Child
+					<a href="javascript:void(0)" class="people-add">+</a>
+					<input type="text" name="" value="0" readonly>
+					<a href="javascript:void(0)" class="people-sub">-</a>
+				</p>
+			</div>
+			<div class="p-editor-money">
+				Money
+				<input type="text" class="min-money" name="" value="0" readonly>
+				<div class="range-money">
+					<input class="range-slider" type="text" name="" value="0,10000" readonly>
+				</div>
+				<input type="text" class="max-money" name="" value="10000" readonly>
+			</div>
+			<div class="p-editor-type">
+				<div class="p-editor-group">
+					Group
+					<input type="text" name="" value="" readonly>
+				</div>
+				<div class="p-editor-share">
+					Share to
+					<input type="text" name="" value="" readonly>
+				</div>
+			</div>
+			<div class="p-editor-ok">
+				<button class="p-ok">OK</button>
+				<button class="p-cancel">Cancel</button>
+			</div>
+		</div>
+	</header>
+	<!-- 操作栏 -->
+	<div class="p-toolbar">
+		<ul class="p-toolbar-left">
+			<li class="n1 active"><a href="#route">Route</a></li>
+			<li class="n2"><a href="#diary">Diary</a></li>
+			<li class="n3"><a href="#cover">Cover</a></li>
+			<li class="bottom-line"></li>
+		</ul>
+		<div class="p-toolbar-right">
+			<a href="#route" class="p-preview">Preview</a>
+			<a href="#diary" class="p-save">Save</a>
+			<a href="#cover" class="p-next">Next</a>
+		</div>
+	</div>
+	<!-- 主体内容 -->
+	<section class="p-section">
+		<ul class="p-section-left">
+			<li class="complete"><a href="#day01">Day 1</a></li>
+			<li class="active"><a href="#day02">Day 2</a></li>
+			<li><a href="#day03">Day 3</a></li>
+			<li><a href="#day04">Day 4</a></li>
+			<li><a href="#day05">Day 5</a></li>
+			<li><a href="#day06">Day 6</a></li>
+			<li><a href="#day07">Day 7</a></li>
+			<li><a href="#day08">Day 8</a></li>
+			<li><a href="#day09">Day 9</a></li>
+			<li><a href="#day10">Day 10</a></li>
+			<li class="add-day"><a href="#add-day">+</a></li>
+		</ul>
+		<div class="p-section-center">
+			<div class="p-path-wrap">
+				<div class="p-path-inner">
+					<span>Babeldaob</span>
+					<img src="../../images/EN/p-direction.png">
+				</div>
+				<div class="p-path-inner">
+					<span>Koror state</span>
+					<img src="../../images/EN/p-direction.png">
+				</div>
+				<div class="p-path-inner">
+					<span>Overseas Islands</span>
+					<img src="../../images/EN/p-direction.png">
+				</div>
+			</div>
+			<div class="p-path-map"><img src="../../images/EN/p-map.jpg" alt=""></div>
+		</div>
+		<div class="p-section-right">
+			<input type="text" class="p-search-scenic" name="" value="" placeholder="Search for scenic spots">
+			<div class="p-scenic-wrap">
+				<h3>All scenic spots</h3>
+				<div class="p-scenic-inner">
+					<div class="p-scenic-box">
+						<h2>Overseas Islands</h2>
+						<div class="p-stars">
+							Ratings : 
+							<p class="p-stars-num">
+								<img src="../../images/EN/diary-star.png" alt="">
+								<img src="../../images/EN/diary-star.png" alt="">
+								<img src="../../images/EN/diary-star.png" alt="">
+								<img src="../../images/EN/diary-star.png" alt="">
+							</p>
+						</div>
+						<p class="p-introduction">Introduction</p>
+						<p class="p-add">+</p>
+					</div>
+					<div class="p-scenic-box">
+						<h2>Overseas Islands</h2>
+						<div class="p-stars">
+							Ratings : 
+							<p class="p-stars-num">
+								<img src="../../images/EN/diary-star.png" alt="">
+								<img src="../../images/EN/diary-star.png" alt="">
+								<img src="../../images/EN/diary-star.png" alt="">
+								<img src="../../images/EN/diary-star.png" alt="">
+							</p>
+						</div>
+						<p class="p-introduction">Introduction</p>
+						<p class="p-add">+</p>
+					</div>
+					<div class="p-scenic-box">
+						<h2>Babeldaob</h2>
+						<div class="p-stars">
+							Ratings : 
+							<p class="p-stars-num">
+								<img src="../../images/EN/diary-star.png" alt="">
+								<img src="../../images/EN/diary-star.png" alt="">
+								<img src="../../images/EN/diary-star.png" alt="">
+								<img src="../../images/EN/diary-star.png" alt="">
+								<img src="../../images/EN/diary-star.png" alt="">
+							</p>
+						</div>
+						<p class="p-introduction">Introduction</p>
+						<p class="p-add">+</p>
+					</div>
+					<div class="p-scenic-box">
+						<h2>Koror state</h2>
+						<div class="p-stars">
+							Ratings : 
+							<p class="p-stars-num">
+								<img src="../../images/EN/diary-star.png" alt="">
+								<img src="../../images/EN/diary-star.png" alt="">
+								<img src="../../images/EN/diary-star.png" alt="">
+							</p>
+						</div>
+						<p class="p-introduction">Introduction</p>
+						<p class="p-add">+</p>
+					</div>
+					<div class="p-scenic-box">
+						<h2>Tuol Sleng Genocide Museum</h2>
+						<div class="p-stars">
+							Ratings : 
+							<p class="p-stars-num">
+								<img src="../../images/EN/diary-star.png" alt="">
+								<img src="../../images/EN/diary-star.png" alt="">
+								<img src="../../images/EN/diary-star.png" alt="">
+								<img src="../../images/EN/diary-star.png" alt="">
+							</p>
+						</div>
+						<p class="p-introduction">Introduction</p>
+						<p class="p-add">+</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- 第三方库-->
+	<script type="text/javascript" src="../../libs/jQuery/jquery-1.11.3.js"></script>
+	<script type="text/javascript" src="../../libs/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../../libs/rangeNum/jquery.range.js"></script>
+	<!-- 公共JS -->
+	<script type="text/javascript" src="../../common/EN/js/LMTravel-common.js"></script>
+	<!-- 业务代码 -->
+	<script type="text/javascript" src="../../js/EN/LMTravelPlanning.js"></script>
+
+</body>
+</html>

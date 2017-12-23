@@ -2,7 +2,7 @@
 
 body{
 	overflow:hidden;
-	background-color:#fcfcfc;
+	// background-color:#fcfcfc;
 	margin:0;
 	padding:0;
 }
@@ -66,4 +66,16 @@ body{
 	-o-box-shadow:0 0 20px #ccc;
 	-ms-box-shadow:0 0 20px #ccc;
 	box-shadow:0 0 20px #ccc;
+}
+
+.flipbook-viewport .even{
+	background-image: -webkit-linear-gradient(left, #fff 90%, #AAC7F9 110%); 
+}
+
+.flipbook-viewport .odd{
+	background-image: -webkit-linear-gradient(right, #fff 90%, #AAC7F9 115%); 
+}
+
+.flipbook-viewport .odd.p1,.background-none{
+	background-image: none !important; 
 }

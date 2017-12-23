@@ -99,6 +99,34 @@
     vertical-align: text-bottom;
 }
 
+/* 移动端 2017-12-22 */
+.m-table-wrap{
+	display: none;
+}
+.m-table-wrap .ticket-box{
+	overflow: hidden;
+	padding: 10px;
+	padding-top: 0;
+	margin-top: 20px;
+	border-radius: 6px;
+	background: #fff;
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+}
+.m-table-wrap .ticket-box p{
+	margin-top: 10px;
+}
+.m-table-wrap .ticket-box p .s1{
+	color: #1f2c5c;
+	font-weight: bold;
+    font-size: 14px;
+}
+.m-table-wrap .ticket-box p .s2{
+	color: #333;
+    font-size: 14px;
+    margin-left: 6px;
+}
+
+/* 适配 */
 @media screen and (max-width: 992px){
 	.lm-section{
 		width: 100%;
@@ -125,6 +153,13 @@
 	.lm-section{
 		min-height: auto;
 	}
+	.table-wrap{
+		display: none;
+	}
+	.m-table-wrap{
+		width: 100%;
+		display: block;
+	}
 }
 
 @media screen and (max-width: 560px){
@@ -143,7 +178,6 @@
 		margin-right: 0;
 	}
 }
-
 </style>
 </head>
 <body>
@@ -224,6 +258,42 @@
 					</tr>
 				</tbody>
 			</table>
+		</div>
+		<!-- 移动端 -->
+		<div class="m-table-wrap">
+			<div class="ticket-box">
+				<p><span class="s1">Ticket Number:</span><span class="s2">961-2100025138</span></p>
+				<p><span class="s1">name:</span><span class="s2">GURUNG/UTTAM</span></p>
+				<p><span class="s1">Route:</span><span class="s2">Route1</span></p>
+				<p><span class="s1">Flight:</span><span class="s2">LQ315</span></p>
+				<p><span class="s1">Departure:</span><span class="s2">PNH</span></p>
+				<p><span class="s1">Destination:</span><span class="s2">2017-12-12 12:35</span></p>
+				<p><span class="s1">DepatureDate:</span><span class="s2">REP</span></p>
+				<p><span class="s1">TraverDate:</span><span class="s2">2018-01-12 12:35</span></p>
+				<p><span class="s1">TicketStatus:</span><span class="s2">Plan</span></p>
+			</div>
+			<div class="ticket-box">
+				<p><span class="s1">Ticket Number:</span><span class="s2">961-2100025138</span></p>
+				<p><span class="s1">name:</span><span class="s2">GURUNG/UTTAM</span></p>
+				<p><span class="s1">Route:</span><span class="s2">Route1</span></p>
+				<p><span class="s1">Flight:</span><span class="s2">LQ315</span></p>
+				<p><span class="s1">Departure:</span><span class="s2">PNH</span></p>
+				<p><span class="s1">Destination:</span><span class="s2">2017-12-12 12:35</span></p>
+				<p><span class="s1">DepatureDate:</span><span class="s2">REP</span></p>
+				<p><span class="s1">TraverDate:</span><span class="s2">2018-01-12 12:35</span></p>
+				<p><span class="s1">TicketStatus:</span><span class="s2">Plan</span></p>
+			</div>
+			<div class="ticket-box">
+				<p><span class="s1">Ticket Number:</span><span class="s2">961-2100025138</span></p>
+				<p><span class="s1">name:</span><span class="s2">GURUNG/UTTAM</span></p>
+				<p><span class="s1">Route:</span><span class="s2">Route1</span></p>
+				<p><span class="s1">Flight:</span><span class="s2">LQ315</span></p>
+				<p><span class="s1">Departure:</span><span class="s2">PNH</span></p>
+				<p><span class="s1">Destination:</span><span class="s2">2017-12-12 12:35</span></p>
+				<p><span class="s1">DepatureDate:</span><span class="s2">REP</span></p>
+				<p><span class="s1">TraverDate:</span><span class="s2">2018-01-12 12:35</span></p>
+				<p><span class="s1">TicketStatus:</span><span class="s2">Plan</span></p>
+			</div>
 		</div>
 	</section>
 	<p class="ticket-tips"><img alt="" src="../../images/EN/important-icon.png">The travel data is somewhat delayed. If no infomation was found, please check it later or jump to<a href="http://www.travelsky.com/tsky/validate.jsp" target="_blank"> <span style="color:#1f2c5c;">Travel Sky</span> </a>for query.</p>
