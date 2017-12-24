@@ -3515,13 +3515,28 @@ body .layui-layer-btn .layui-layer-btn0 {
   bottom: 0;
   margin: auto;
 }
+.activeModal .pad-img,
+.activeModal .mobile-img {
+  display: none;
+}
 @media screen and (max-width: 992px) {
   .activeModal .modal-dialog .modal-content .modal-header .close span {
     top: 0.1rem;
     right: 0.1rem;
     font-size: 0.2rem;
   }
-  .activeModal .modal-dialog .modal-content .modal-body {
-    padding-top: 0.36rem;
+  .activeModal .pad-img {
+    display: block;
+  }
+  .activeModal .pc-img {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .activeModal .mobile-img {
+    display: block;
+  }
+  .activeModal .pad-img {
+    display: none;
   }
 }
