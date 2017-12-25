@@ -55,6 +55,7 @@
 				-webkit-background-clip: text;
 			    -webkit-text-fill-color: transparent;
 			}
+			.s2{margin-left: 10px;}
 		}
 		.p-edit{
 			margin-left: 20px;
@@ -149,7 +150,7 @@
 	}
 	.p-editor-money{
 		height: 40px;
-		input{
+		select{
 			width:90px;
 			height:40px;
 			text-align: left;
@@ -158,12 +159,27 @@
 			padding-left:20px;
 			padding-right:10px;
 			margin-left: 20px;
+			border:none;
+			outline: none;
 			box-shadow:0 0 30px 0 rgba(170,199,249,0.50);
 			border-radius:4px;
 			background: url('@{url}p-select.png') 90% 50% no-repeat #fff;
+			appearance:none;
+			-moz-appearance:none;
+			-webkit-appearance:none;
 		}
 		.range-money{
 			display: inline-block;
+			.range-slider{
+				width: 200px;
+			    height: 40px;
+			    font-size: 16px;
+			    color: #3772D5;
+			    padding: 0 20px;
+			    margin-left: 20px;
+			    background: #f7faff;
+			    border-radius: 4px;
+			}
 		}
 		.max-money{
 			margin-left: 0;
@@ -173,13 +189,23 @@
 		height: 40px;
 		>div{
 			float: left;
-			input{
+			select{
 				width:130px;
 				height:40px;
+				text-align: left;
+				font-size:16px;
+				color:#3772d5;
+				padding-left:10px;
+				padding-right:10px;
 				margin-left: 20px;
+				border:none;
+				outline: none;
 				box-shadow:0 0 30px 0 rgba(170,199,249,0.50);
 				border-radius:4px;
 				background: url('@{url}p-select.png') 90% 50% no-repeat #fff;
+				appearance:none;
+				-moz-appearance:none;
+				-webkit-appearance:none;
 			}
 		}
 		.p-editor-share{
@@ -299,33 +325,29 @@
 			border-radius:4px;
 			margin-top: 10px;
 			background: #fff;
-			a{
-				display: block;
-				font-size: 14px;
-				padding-left: 20px;
-				border-radius:4px;
-				color:#3772d5;
-				&:hover{
-					background:#aac7f9;
-					color: #fff;
-				}
+			font-size: 14px;
+			padding-left: 20px;
+			border-radius:4px;
+			color:#3772d5;
+			cursor: pointer;
+			&:hover{
+				background:#aac7f9;
+				color: #fff;
 			}
 		}
-		.complete a{
+		.complete{
 			background-image:linear-gradient(-135deg, #81e5fe 0%, #1639ae 100%);
 			color: #fff;
 		}
-		.active a{
+		.active{
 			background:#aac7f9;
 			color: #fff;
 		}
 		.add-day{
-			a{
-				padding-left: 0;
-				text-align: center;
-				font-size: 24px;
-				font-weight: bold;
-			}
+			padding-left: 0;
+			text-align: center;
+			font-size: 24px;
+			font-weight: bold;
 		}
 	}
 	.p-section-center{
@@ -334,6 +356,7 @@
 		min-height:470px;
 		margin-left: 20px;
 		padding:20px;
+		padding-top: 0;
 		background:#e8f0fe;
 		border-radius:4px;
 		.p-path-wrap{
@@ -343,12 +366,12 @@
 				float: left;
 				height:58px;
 				padding:20px;
+				margin-top: 20px;
 				margin-right: 56px;
 				background:#fff;
 				box-shadow:0 0 50px 0 rgba(170,199,249,0.50);
 				border-radius:8px;
-				&:after{
-					content: '×';
+				>b{
 					position: absolute;
 					top: 0;
 					right: 0;
@@ -359,6 +382,7 @@
 					color: #fff;
 					background: #ff8989;
 					border-radius: 2px;
+					cursor: pointer;
 				}
 				span{
 					font-size:18px;

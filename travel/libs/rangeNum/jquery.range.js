@@ -22,6 +22,7 @@
 	'use strict';
 
 	var jRange = function() {
+		this.changeInit(arguments); //新增 2017-12-25
 		return this.init.apply(this, arguments);
 	};
 	jRange.prototype = {
@@ -65,6 +66,48 @@
 			this.clickableBar  = this.domNode.find('.clickable-dummy');
 			this.interval      = this.options.to - this.options.from;
 			this.render();
+		},
+		changeInit:function(){
+			var that = this;
+			var arg1 = arguments[0][0];
+			var arg2 = arguments[0][1];
+
+			// 金额选择
+			$('.p-editor-money .min-money').change(function(){
+				var optionVal = Number($('.p-editor-money .min-money  option:selected').val());  
+				var optionVal1 = Number(optionVal)+10000;
+
+				var children = '<option value="'+optionVal1+'">'+optionVal1+'</option><option value="0">Other</option>';
+
+				$('.p-editor-money .max-money').html(children);
+
+				// 参数改变
+				arg2.from=optionVal;
+				arg2.to=optionVal1;
+
+				// 价格范围改变
+				var rangeOption = optionVal+','+optionVal1;
+				$(arg1).val(rangeOption);
+
+				$('.range-money>div').remove();
+				that.init(arg1,arg2);
+
+			});
+
+			$('#g1').click(function(){
+				var optionVal = 10000;
+				var optionVal1 = 20000;
+
+				arg2.from=10000;
+				arg2.to=20000;
+				var rangeOption = optionVal+','+optionVal1;
+				$('.range-slider').val(rangeOption);
+
+				$(arg1).val(rangeOption);
+				console.log();
+				$('.demo>div').remove();
+				that.init(arg1,arg2);
+			});
 		},
 		render: function() {
 			// Check if inputNode is visible, and have some width, so that we can set slider width accordingly.

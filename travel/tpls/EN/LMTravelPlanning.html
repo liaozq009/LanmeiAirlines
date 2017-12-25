@@ -18,13 +18,14 @@
 	<link rel="stylesheet" type="text/css" href="../../common/EN/fonts/lm-iconfont.css">
 	<link rel="stylesheet" type="text/css" href="../../libs/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../../libs/rangeNum/jquery.range.css">
+	<link rel="stylesheet" type="text/css" href="../../libs/jedate/skin/jedate.css">
 	<link rel="stylesheet" type="text/css" href="../../common/EN/css/animate.css">
 	<link rel="stylesheet" type="text/css" href="../../common/EN/css/LMTravel-common.css">
 	<link rel="stylesheet" type="text/css" href="../../css/EN/LMTravelPlanning.css">
 	<!--[if lt IE 9]>
 	<script src="../../libs/bootstrap/js/html5shiv.min.js"></script>
 	<script src="../../libs/bootstrap/js/respond.min.js"></script>
-	<![endif]-->
+<![endif]-->
 </head>
 <body>
 	<header class="p-header">
@@ -32,7 +33,7 @@
 			<img src="../../images/EN/p-lanmeiLogo.png" class="p-logo">
 			<p class="p-local">Palau</p>
 			<p class="p-line"></p>
-			<p class="p-time"><span class="s1">Travel time :</span><span class="s2">Dec 02 - Dec 12</span></p>
+			<p class="p-time"><span class="s1">Travel time :</span><span class="s2">2017-12-25</span></p>
 			<img src="../../images/EN/p-editor.png" class="p-edit">
 			<img src="../../images/EN/p-headPort.png" class="p-headPort">
 		</div>
@@ -44,38 +45,61 @@
 			</div>
 			<div class="p-editor-time">
 				Travel time
-				<input type="text" name="" value="Dec 02 - Dec 12" readonly>
+				<input type="text" id="travel-edit-time" name="" value="2017-12-25" readonly>
 			</div>
 			<div class="p-editor-people">
 				<p class="p-editor-adult">
 					People 
 					<a href="javascript:void(0)" class="people-add">+</a>
-					<input type="text" name="" value="0" readonly>
+					<input type="text" name="" value="1" readonly>
 					<a href="javascript:void(0)" class="people-sub">-</a>
 				</p>
 				<p class="p-editor-child">
 					Child
-					<a href="javascript:void(0)" class="people-add">+</a>
+					<a href="javascript:void(0)" class="child-add">+</a>
 					<input type="text" name="" value="0" readonly>
-					<a href="javascript:void(0)" class="people-sub">-</a>
+					<a href="javascript:void(0)" class="child-sub">-</a>
 				</p>
 			</div>
 			<div class="p-editor-money">
 				Money
-				<input type="text" class="min-money" name="" value="0" readonly>
+				<select class="min-money">
+					<option value="0">0</option>
+					<option value="10000">10000</option>
+					<option value="20000">20000</option>
+					<option value="30000">30000</option>
+					<option value="40000">40000</option>
+					<option value="50000">50000</option>
+					<option value="60000">60000</option>
+					<option value="70000">70000</option>
+					<option value="80000">80000</option>
+				</select>
 				<div class="range-money">
-					<input class="range-slider" type="text" name="" value="0,10000" readonly>
+					<input class="range-slider" type="text" name="" value="0,10000" placeholder="0">
 				</div>
-				<input type="text" class="max-money" name="" value="10000" readonly>
+				<select class="max-money">
+					<option value="10000">10000</option>
+				</select>
 			</div>
 			<div class="p-editor-type">
 				<div class="p-editor-group">
 					Group
-					<input type="text" name="" value="" readonly>
+					<select name="">
+						<option value="1">parent-child</option>
+						<option value="2">parents</option>
+						<option value="3">friend</option>
+						<option value="4">one</option>
+						<option value="5">man and wife</option>
+						<option value="6">lovers</option>
+					</select>
 				</div>
 				<div class="p-editor-share">
 					Share to
-					<input type="text" name="" value="" readonly>
+					<select name="">
+						<option value="1">everyone</option>
+						<option value="2">oneself</option>
+						<option value="3">friend</option>
+					</select>
 				</div>
 			</div>
 			<div class="p-editor-ok">
@@ -101,32 +125,27 @@
 	<!-- 主体内容 -->
 	<section class="p-section">
 		<ul class="p-section-left">
-			<li class="complete"><a href="#day01">Day 1</a></li>
-			<li class="active"><a href="#day02">Day 2</a></li>
-			<li><a href="#day03">Day 3</a></li>
-			<li><a href="#day04">Day 4</a></li>
-			<li><a href="#day05">Day 5</a></li>
-			<li><a href="#day06">Day 6</a></li>
-			<li><a href="#day07">Day 7</a></li>
-			<li><a href="#day08">Day 8</a></li>
-			<li><a href="#day09">Day 9</a></li>
-			<li><a href="#day10">Day 10</a></li>
-			<li class="add-day"><a href="#add-day">+</a></li>
+			<!-- <li class="complete" data-day="day1">Day 1</li> -->
+			<li class="active" data-day="day1">Day 1</li>
+			<li class="add-day">+</li>
 		</ul>
 		<div class="p-section-center">
 			<div class="p-path-wrap">
-				<div class="p-path-inner">
+				<!-- <div class="p-path-inner">
 					<span>Babeldaob</span>
 					<img src="../../images/EN/p-direction.png">
+					<b>×</b>
 				</div>
 				<div class="p-path-inner">
 					<span>Koror state</span>
 					<img src="../../images/EN/p-direction.png">
+					<b>×</b>
 				</div>
 				<div class="p-path-inner">
 					<span>Overseas Islands</span>
 					<img src="../../images/EN/p-direction.png">
-				</div>
+					<b>×</b>
+				</div> -->
 			</div>
 			<div class="p-path-map"><img src="../../images/EN/p-map.jpg" alt=""></div>
 		</div>
@@ -214,6 +233,7 @@
 	<script type="text/javascript" src="../../libs/jQuery/jquery-1.11.3.js"></script>
 	<script type="text/javascript" src="../../libs/bootstrap/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="../../libs/rangeNum/jquery.range.js"></script>
+	<script type="text/javascript" src="../../libs/jedate/jquery.jedate.js"></script>
 	<!-- 公共JS -->
 	<script type="text/javascript" src="../../common/EN/js/LMTravel-common.js"></script>
 	<!-- 业务代码 -->

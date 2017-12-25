@@ -41,6 +41,9 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.p-header .p-header-title .p-time .s2 {
+  margin-left: 10px;
+}
 .p-header .p-header-title .p-edit {
   margin-left: 20px;
   position: relative;
@@ -126,7 +129,7 @@
 .p-editor .p-editor-money {
   height: 40px;
 }
-.p-editor .p-editor-money input {
+.p-editor .p-editor-money select {
   width: 90px;
   height: 40px;
   text-align: left;
@@ -135,12 +138,27 @@
   padding-left: 20px;
   padding-right: 10px;
   margin-left: 20px;
+  border: none;
+  outline: none;
   box-shadow: 0 0 30px 0 rgba(170, 199, 249, 0.5);
   border-radius: 4px;
   background: url('../../images/EN/p-select.png') 90% 50% no-repeat #fff;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
 }
 .p-editor .p-editor-money .range-money {
   display: inline-block;
+}
+.p-editor .p-editor-money .range-money .range-slider {
+  width: 200px;
+  height: 40px;
+  font-size: 16px;
+  color: #3772D5;
+  padding: 0 20px;
+  margin-left: 20px;
+  background: #f7faff;
+  border-radius: 4px;
 }
 .p-editor .p-editor-money .max-money {
   margin-left: 0;
@@ -151,13 +169,23 @@
 .p-editor .p-editor-type > div {
   float: left;
 }
-.p-editor .p-editor-type > div input {
+.p-editor .p-editor-type > div select {
   width: 130px;
   height: 40px;
+  text-align: left;
+  font-size: 16px;
+  color: #3772d5;
+  padding-left: 10px;
+  padding-right: 10px;
   margin-left: 20px;
+  border: none;
+  outline: none;
   box-shadow: 0 0 30px 0 rgba(170, 199, 249, 0.5);
   border-radius: 4px;
   background: url('../../images/EN/p-select.png') 90% 50% no-repeat #fff;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
 }
 .p-editor .p-editor-type .p-editor-share {
   margin-left: 20px;
@@ -267,30 +295,27 @@
   width: 120px;
   height: 30px;
   line-height: 30px;
-  border-radius: 4px;
   margin-top: 10px;
   background: #fff;
-}
-.p-section .p-section-left > li a {
-  display: block;
   font-size: 14px;
   padding-left: 20px;
   border-radius: 4px;
   color: #3772d5;
+  cursor: pointer;
 }
-.p-section .p-section-left > li a:hover {
+.p-section .p-section-left > li:hover {
   background: #aac7f9;
   color: #fff;
 }
-.p-section .p-section-left .complete a {
+.p-section .p-section-left .complete {
   background-image: linear-gradient(-135deg, #81e5fe 0%, #1639ae 100%);
   color: #fff;
 }
-.p-section .p-section-left .active a {
+.p-section .p-section-left .active {
   background: #aac7f9;
   color: #fff;
 }
-.p-section .p-section-left .add-day a {
+.p-section .p-section-left .add-day {
   padding-left: 0;
   text-align: center;
   font-size: 24px;
@@ -302,6 +327,7 @@
   min-height: 470px;
   margin-left: 20px;
   padding: 20px;
+  padding-top: 0;
   background: #e8f0fe;
   border-radius: 4px;
 }
@@ -313,13 +339,13 @@
   float: left;
   height: 58px;
   padding: 20px;
+  margin-top: 20px;
   margin-right: 56px;
   background: #fff;
   box-shadow: 0 0 50px 0 rgba(170, 199, 249, 0.5);
   border-radius: 8px;
 }
-.p-section .p-section-center .p-path-wrap .p-path-inner:after {
-  content: '×';
+.p-section .p-section-center .p-path-wrap .p-path-inner > b {
   position: absolute;
   top: 0;
   right: 0;
@@ -330,6 +356,7 @@
   color: #fff;
   background: #ff8989;
   border-radius: 2px;
+  cursor: pointer;
 }
 .p-section .p-section-center .p-path-wrap .p-path-inner span {
   font-size: 18px;
