@@ -337,9 +337,8 @@
 .p-section .p-section-center .p-path-wrap .p-path-inner {
   position: relative;
   float: left;
-  width: 164px;
   height: 58px;
-  padding: 0 10px;
+  padding: 20px;
   margin-top: 20px;
   margin-right: 56px;
   background: #fff;
@@ -347,7 +346,6 @@
   border-radius: 8px;
 }
 .p-section .p-section-center .p-path-wrap .p-path-inner > b {
-  display: none;
   position: absolute;
   top: 0;
   right: 0;
@@ -360,17 +358,9 @@
   border-radius: 2px;
   cursor: pointer;
 }
-.p-section .p-section-center .p-path-wrap .p-path-inner:hover > b {
-  display: block;
-}
 .p-section .p-section-center .p-path-wrap .p-path-inner span {
   font-size: 18px;
   color: #1f2c5c;
-  display: block;
-  line-height: 58px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 .p-section .p-section-center .p-path-wrap .p-path-inner > img {
   position: absolute;
@@ -397,7 +387,7 @@
   background: #e8f0fe;
   border-radius: 4px;
 }
-.p-section .p-section-right .p-search-scenic .s-scenic-input {
+.p-section .p-section-right .p-search-scenic {
   width: 400px;
   height: 40px;
   padding-left: 20px;
@@ -427,56 +417,6 @@
   /* Internet Explorer 10+ */
   font-size: 14px;
   color: #aac7f9;
-}
-.p-section .p-section-right .p-scenic-route {
-  margin-top: 30px;
-}
-.p-section .p-section-right .p-scenic-route > h3 {
-  font-size: 14px;
-  color: #3772d5;
-}
-.p-section .p-section-right .p-scenic-route .s-route-inner .s-route-box {
-  position: relative;
-  width: 386px;
-  margin-top: 20px;
-  background: #fff;
-  border-radius: 4px;
-  height: 80px;
-  padding: 20px;
-}
-.p-section .p-section-right .p-scenic-route .s-route-inner .s-route-box > div {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  overflow: hidden;
-  white-space: normal !important;
-  text-overflow: ellipsis;
-  word-wrap: break-word;
-}
-.p-section .p-section-right .p-scenic-route .s-route-inner .s-route-box > div > a {
-  font-size: 14px;
-  color: #1f2c5c;
-}
-.p-section .p-section-right .p-scenic-route .s-route-inner .s-route-box > div > a:after {
-  content: ">";
-  color: #3772d5;
-}
-.p-section .p-section-right .p-scenic-route .s-route-inner .s-route-box > div > a:last-child:after {
-  content: "";
-}
-.p-section .p-section-right .p-scenic-route .s-route-inner .s-route-box > p {
-  position: absolute;
-  right: -15px;
-  top: 25px;
-  width: 30px;
-  height: 30px;
-  color: #fff;
-  font-size: 26px;
-  line-height: 24px;
-  text-align: center;
-  border-radius: 4px;
-  background-image: linear-gradient(135deg, #81E5FE 0%, #1639AE 100%);
-  cursor: pointer;
 }
 .p-section .p-section-right .p-scenic-wrap {
   margin-top: 30px;
