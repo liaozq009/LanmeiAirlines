@@ -364,14 +364,16 @@
 			.p-path-inner{
 				position: relative;
 				float: left;
+				width: 164px;
 				height:58px;
-				padding:20px;
+				padding:0 10px;
 				margin-top: 20px;
 				margin-right: 56px;
 				background:#fff;
 				box-shadow:0 0 50px 0 rgba(170,199,249,0.50);
 				border-radius:8px;
 				>b{
+					display: none;
 					position: absolute;
 					top: 0;
 					right: 0;
@@ -384,9 +386,17 @@
 					border-radius: 2px;
 					cursor: pointer;
 				}
+				&:hover{
+					>b{display: block;}
+				}
 				span{
 					font-size:18px;
 					color:#1f2c5c;
+					display: block;
+				    line-height: 58px;
+				    overflow: hidden;
+				    text-overflow: ellipsis;
+				    white-space: nowrap;
 				}
 				>img{
 					position: absolute;
@@ -414,15 +424,17 @@
 		background:#e8f0fe;
 		border-radius:4px;
 		.p-search-scenic{
-			width:400px;
-			height:40px;
-			padding-left: 20px;
-			padding-right: 40px;
-			font-size:14px;
-			color:#aac7f9;
-			background:url('@{url}p-search.png') 96% 50% no-repeat #fff;
-			box-shadow:0 0 50px 0 rgba(170,199,249,0.50);
-			border-radius:4px;
+			.s-scenic-input{
+				width:400px;
+				height:40px;
+				padding-left: 20px;
+				padding-right: 40px;
+				font-size:14px;
+				color:#aac7f9;
+				background:url('@{url}p-search.png') 96% 50% no-repeat #fff;
+				box-shadow:0 0 50px 0 rgba(170,199,249,0.50);
+				border-radius:4px;
+			}
 		}
 		::-webkit-input-placeholder { /* WebKit browsers */ 
 			font-size:14px;
@@ -440,6 +452,56 @@
 			font-size:14px;
 			color:#aac7f9; 
 		} 
+		.p-scenic-route{
+			margin-top: 30px;
+			>h3{
+				font-size:14px;
+				color:#3772d5;
+			}
+			.s-route-inner{
+				.s-route-box{
+					position: relative;
+					width:386px;
+					margin-top: 20px;
+					background:#fff;
+					border-radius:4px;
+					height: 80px;
+					padding:20px;
+					>div{
+						display: -webkit-box;
+						-webkit-box-orient: vertical;
+						-webkit-line-clamp: 2;
+						overflow: hidden;
+						white-space: normal !important;
+						text-overflow: ellipsis;
+						word-wrap: break-word;
+						>a{
+							font-size:14px;
+							color:#1f2c5c;
+							&:after{
+								content: ">";
+								color: #3772d5;
+							}
+						}
+						>a:last-child:after{content:"";}
+					}
+					>p{
+						position: absolute;
+						right: -15px;
+						top: 25px;
+						width:30px;
+						height:30px;
+						color: #fff;
+						font-size: 26px;
+					    line-height: 24px;
+					    text-align: center;
+						border-radius:4px;
+						background-image:@linear;
+						cursor: pointer;
+					}
+				}
+			}
+		}
 		.p-scenic-wrap{
 			margin-top: 30px;
 			>h3{
