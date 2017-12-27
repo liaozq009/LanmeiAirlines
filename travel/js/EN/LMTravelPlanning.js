@@ -92,6 +92,9 @@ var LMTravelPlanning = {
 		$('.p-toolbar-left>li>a').click(function(){
 			var $parent =  $(this).parent('li');
 			var $bottomLine = $parent.siblings('.bottom-line');
+			var $route = $('.p-section-route');
+			var $diary = $('.p-section-diary');
+			var $cover = $('.p-section-cover');
 
 			$parent.addClass('active').siblings('li').removeClass('active');
 
@@ -99,12 +102,21 @@ var LMTravelPlanning = {
 			switch (href) {
 				case '#route':
 					$bottomLine.animate({'left':'10px'}, 300);
+					$route.show();
+					$diary.hide();
+					$cover.hide();
 					break;
 				case '#diary':
 					$bottomLine.animate({'left':'114px'}, 300);
+					$route.hide();
+					$diary.show();
+					$cover.hide();
 					break;
 				case '#cover':
 					$bottomLine.animate({'left':'218px'}, 300);
+					$route.hide();
+					$diary.hide();
+					$cover.show();
 					break;
 			}
 		});
