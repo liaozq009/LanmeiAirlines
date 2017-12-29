@@ -72,7 +72,6 @@ var LMTravel = {
 			moving();
 			
 			$content.mousemove(function(event){
-				console.log(222);
 			    if(!(navigator.appVersion.match(/9./i)=="9.")&&(navigator.appVersion.match(/MSIE/gi)=="MSIE")){
 			        event = event || window.event;
 			        var x = event.offsetX;
@@ -369,6 +368,17 @@ var LMTravel = {
 		]
 
 		);
+
+		//点击地图中的view
+		$('#boxMap .s6-view').click(function(){
+			var $boxMap = $('#boxMap ul>li span');
+			$.each($boxMap,function(index, el) {
+				var opacity = $(el).css('opacity');
+				if(opacity=='1'){
+					// console.log($(el).html());
+				}
+			});
+		});
 
 		// 移动端地图滑动 
 		var swiper1 = new Swiper('.js-m-boxMap', {

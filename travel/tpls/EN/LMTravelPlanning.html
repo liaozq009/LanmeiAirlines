@@ -130,24 +130,9 @@
 			<li class="add-day">+</li>
 		</ul>
 		<div class="p-section-center">
-			<div class="p-path-wrap">
-				<!-- <div class="p-path-inner">
-					<span>Babeldaob</span>
-					<img src="../../images/EN/p-direction.png">
-					<b>×</b>
-				</div>
-				<div class="p-path-inner">
-					<span>Koror state</span>
-					<img src="../../images/EN/p-direction.png">
-					<b>×</b>
-				</div>
-				<div class="p-path-inner">
-					<span>Overseas Islands</span>
-					<img src="../../images/EN/p-direction.png">
-					<b>×</b>
-				</div> -->
-			</div>
-			<div class="p-path-map"><img src="../../images/EN/p-map.jpg" alt=""></div>
+			<div class="p-path-wrap"></div>
+			<!-- 地图 -->
+			<div class="p-path-map" id="planningMap"></div>
 		</div>
 		<div class="p-section-right">
 			<div class="p-search-scenic">
@@ -164,7 +149,7 @@
 							<a href="javascript:void(0)">Tuol Sleng Genocide Museum</a>
 							<a href="javascript:void(0)">Granada</a>
 						</div>
-						<p>+</p>
+						<p class="s-route-add">+</p>
 					</div>
 					<div class="s-route-box">
 						<div>
@@ -178,7 +163,7 @@
 							<a href="javascript:void(0)">Chefchaouen</a>
 							<a href="javascript:void(0)">Madrid</a>
 						</div>
-						<p>+</p>
+						<p class="s-route-add">+</p>
 					</div>
 				</div>
 			</div>
@@ -197,7 +182,7 @@
 							</p>
 						</div>
 						<p class="p-introduction">Introduction</p>
-						<p class="p-add">+</p>
+						<p class="p-add p-add-1">+</p>
 					</div>
 					<div class="p-scenic-box">
 						<h2>Overseas Islands</h2>
@@ -211,7 +196,7 @@
 							</p>
 						</div>
 						<p class="p-introduction">Introduction</p>
-						<p class="p-add">+</p>
+						<p class="p-add p-add-2">+</p>
 					</div>
 					<div class="p-scenic-box">
 						<h2>Babeldaob</h2>
@@ -226,7 +211,7 @@
 							</p>
 						</div>
 						<p class="p-introduction">Introduction</p>
-						<p class="p-add">+</p>
+						<p class="p-add p-add-3">+</p>
 					</div>
 					<div class="p-scenic-box">
 						<h2>Koror state</h2>
@@ -239,7 +224,7 @@
 							</p>
 						</div>
 						<p class="p-introduction">Introduction</p>
-						<p class="p-add">+</p>
+						<p class="p-add p-add-4">+</p>
 					</div>
 					<div class="p-scenic-box">
 						<h2>Tuol Sleng Genocide Museum</h2>
@@ -253,7 +238,7 @@
 							</p>
 						</div>
 						<p class="p-introduction">Introduction</p>
-						<p class="p-add">+</p>
+						<p class="p-add p-add-5">+</p>
 					</div>
 				</div>
 			</div>
@@ -271,12 +256,169 @@
 	<!-- 第三方库-->
 	<script type="text/javascript" src="../../libs/jQuery/jquery-1.11.3.js"></script>
 	<script type="text/javascript" src="../../libs/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../../libs/layer/layer.js"></script>
 	<script type="text/javascript" src="../../libs/rangeNum/jquery.range.js"></script>
 	<script type="text/javascript" src="../../libs/jedate/jquery.jedate.js"></script>
 	<!-- 公共JS -->
 	<script type="text/javascript" src="../../common/EN/js/LMTravel-common.js"></script>
 	<!-- 业务代码 -->
 	<script type="text/javascript" src="../../js/EN/LMTravelPlanning.js"></script>
+	<script>
+		var poly;
+		var map;
 
+		function initMap() {
+		  map = new google.maps.Map(document.getElementById('planningMap'), {
+		    zoom: 6,
+		    maxZoom:10,
+		    minZoom:4,
+		    center: {lat: 39.91, lng: 116.39},
+		    mapTypeControl: false,
+		    streetViewControl:false, //街景
+		    styles: [
+		      {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+		      {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+		      {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+		      {
+		        featureType: 'administrative.locality',
+		        elementType: 'labels.text.fill',
+		        stylers: [{color: '#d59563'}]
+		      },
+		      {
+		        featureType: 'poi',
+		        elementType: 'labels.text.fill',
+		        stylers: [{color: '#d59563'}]
+		      },
+		      {
+		        featureType: 'poi.park',
+		        elementType: 'geometry',
+		        stylers: [{color: '#263c3f'}]
+		      },
+		      {
+		        featureType: 'poi.park',
+		        elementType: 'labels.text.fill',
+		        stylers: [{color: '#6b9a76'}]
+		      },
+		      {
+		        featureType: 'road',
+		        elementType: 'geometry',
+		        stylers: [{color: '#38414e'}]
+		      },
+		      {
+		        featureType: 'road',
+		        elementType: 'geometry.stroke',
+		        stylers: [{color: '#212a37'}]
+		      },
+		      {
+		        featureType: 'road',
+		        elementType: 'labels.text.fill',
+		        stylers: [{color: '#9ca5b3'}]
+		      },
+		      {
+		        featureType: 'road.highway',
+		        elementType: 'geometry',
+		        stylers: [{color: '#746855'}]
+		      },
+		      {
+		        featureType: 'road.highway',
+		        elementType: 'geometry.stroke',
+		        stylers: [{color: '#1f2835'}]
+		      },
+		      {
+		        featureType: 'road.highway',
+		        elementType: 'labels.text.fill',
+		        stylers: [{color: '#f3d19c'}]
+		      },
+		      {
+		        featureType: 'transit',
+		        elementType: 'geometry',
+		        stylers: [{color: '#2f3948'}]
+		      },
+		      {
+		        featureType: 'transit.station',
+		        elementType: 'labels.text.fill',
+		        stylers: [{color: '#d59563'}]
+		      },
+		      {
+		        featureType: 'water',
+		        elementType: 'geometry',
+		        stylers: [{color: '#17263c'}]
+		      },
+		      {
+		        featureType: 'water',
+		        elementType: 'labels.text.fill',
+		        stylers: [{color: '#515c6d'}]
+		      },
+		      {
+		        featureType: 'water',
+		        elementType: 'labels.text.stroke',
+		        stylers: [{color: '#17263c'}]
+		      }
+		    ] 
+		  });
+
+		  // 虚线
+		  var lineSymbol = {
+		    path: 'M 0,-1 0,1',
+		    strokeOpacity: 1,
+		    scale: 3
+		  };
+
+		  poly = new google.maps.Polyline({
+		    strokeColor: '#ff0000',
+		    strokeOpacity: 0,
+		    strokeWeight: 3,
+		    icons: [{
+		      icon: lineSymbol,
+		      offset: '0',
+		      repeat: '16px'
+		    }],
+		  });
+		  poly.setMap(map);
+
+		  $('.p-add-1').click(function(){
+		    var latlng = new google.maps.LatLng(39.91, 116.39);
+		    addLatLng(latlng);
+		  });
+
+		  $('.p-add-2').click(function(){
+		    var latlng = new google.maps.LatLng(39.91, 119);
+		    addLatLng(latlng);
+		  });
+
+		  $('.p-add-3').click(function(){
+		    var latlng = new google.maps.LatLng(41, 117);
+		    addLatLng(latlng);
+		  });
+
+		  $('.p-add-4').click(function(){
+		    var latlng = new google.maps.LatLng(40.5, 117);
+		    addLatLng(latlng);
+		  });
+
+		  $('.p-add-5').click(function(){
+		    var latlng = new google.maps.LatLng(41, 116);
+		    addLatLng(latlng);
+		  });
+		}
+
+		// Handles click events on a map, and adds a new point to the Polyline.
+		function addLatLng(latlng) {
+
+		  var path = poly.getPath();
+
+		  // Because path is an MVCArray, we can simply append a new coordinate
+		  // and it will automatically appear.
+		  path.push(latlng);
+
+		  // Add a new marker at the new plotted point on the polyline.
+		  var marker = new google.maps.Marker({
+		    position: latlng,
+		    title: '#' + path.getLength(),
+		    map: map
+		  });
+		}
+	</script>
+	<script async defer src="http://ditu.google.cn/maps/api/js?callback=initMap"></script>
 </body>
 </html>

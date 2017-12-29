@@ -17,6 +17,25 @@
 			color: @purple;
 		}
 	}
+	.catalog{
+		overflow: hidden;
+		border:1px solid #808080;
+		margin-top: 30px;
+		>div{
+			float: left;
+			width: 25%;
+			padding:10px;
+			a{
+				display: block;
+				margin-top: 6px;
+				color:#00908c;
+				font-size: 14px;
+				overflow: hidden;
+			    text-overflow: ellipsis;
+			    white-space: nowrap;
+			}
+		}
+	}
 	.check-steps{
 		margin-top: 30px;
 		margin-bottom: 50px;
@@ -56,6 +75,22 @@
 			h1{
 				font-size: 0.26rem;
 				text-align: center;
+			}
+		}
+		.catalog{
+			margin-top: 0;
+			>div{
+				width: 50%;
+			}
+		}
+	}
+}
+@media screen and (max-width:767px){
+	.lm-section{
+		.catalog{
+			>div{
+				width: 100%;
+				padding:6px 10px;
 			}
 		}
 	}

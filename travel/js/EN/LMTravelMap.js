@@ -146,20 +146,29 @@ var LMTravelList = {
 
 	/* 分享游记和计划旅行 */
 	travelShare:function(){
-		$('.travel-nav .t-share').click(function(){
+		$('.travel-nav .t-share,.travel-nav .t-plan').click(function(){
 			$('#js-shareModal').modal();
 		});
 
 		// 定义DOM
 		var $clear = $('.search-clear');
 		var $input = $('.search-input');
+		var $hot = $('.search-hot');
+		var $title = $('.search-title');
+		var $menu = $('.search-menu');
 
 		// 清除按钮显示或隐藏
 		$input.keyup(function(event) {
 			if($(this).val() != ""){
 				$clear.show();
+				$hot.hide();
+				$title.show();
+				$menu.show();
 			}else{
 				$clear.hide();
+				$hot.show();
+				$title.hide();
+				$menu.hide();
 			}
 		});
 
@@ -167,6 +176,9 @@ var LMTravelList = {
 		$clear.click(function(){
 			$input.val('');
 			$(this).hide();
+			$hot.show();
+			$title.hide();
+			$menu.hide();
 		});
 	},
 

@@ -382,6 +382,8 @@
   display: none;
 }
 .p-section-route .p-section-center .p-path-map {
+  width: 660px;
+  height: 280px;
   margin-top: 30px;
 }
 .p-section-route .p-section-center .p-path-map img {
@@ -456,6 +458,7 @@
 .p-section-route .p-section-right .p-scenic-route .s-route-inner .s-route-box > div > a {
   font-size: 14px;
   color: #1f2c5c;
+  text-decoration: underline;
 }
 .p-section-route .p-section-right .p-scenic-route .s-route-inner .s-route-box > div > a:after {
   content: ">";
