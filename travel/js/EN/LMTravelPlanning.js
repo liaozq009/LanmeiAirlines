@@ -6,7 +6,6 @@ var LMTravelPlanning = {
 		this.addDays();
 		this.addSpots();
 		this.diaryEditor();
-		this.googleMap();
 		this.otherEvent();
 	},
 
@@ -141,76 +140,15 @@ var LMTravelPlanning = {
 
 	/* 添加旅游景点 */
 	addSpots:function(){
-		// 单独景点添加
-		$('.p-scenic-inner').on('click','.p-scenic-box',function(){
-			var title = $(this).children('h2').html();
-			var $child = '<div class="p-path-inner">'+
-							'<span>'+title+'</span><img src="../../images/EN/p-direction.png"><b>×</b>'+
-						'</div>';
-			$('.p-path-wrap').append($child);			
-		});
 
-		// 多个景点添加
-		$('.s-route-inner').on('click','.s-route-add',function(){
-			var that = this;
-			var wrapHtml = $('.p-path-wrap').html();
-			console.log(wrapHtml);
+		
 
-			// 添加路线
-			var layerPath = function(){
-				$('.p-path-wrap').empty();
-
-				var $a = $(that).siblings('div').children('a');
-				
-				$.each($a,function(index, el) {
-					var title = $(el).html();
-					var $child = '<div class="p-path-inner">'+
-									'<span>'+title+'</span><img src="../../images/EN/p-direction.png"><b>×</b>'+
-								'</div>';
-					$('.p-path-wrap').append($child);		
-				});
-			}
-
-			// 如果已经有路线
-			if(wrapHtml !=''){
-				layer.confirm('Are you sure you want to cover the route?', {
-				  title: false, //不显示标题
-				  btn: ['OK','Cancel'] //按钮
-				}, function(){
-			      layerPath();
-				  layer.msg('Covering the success!', {icon: 1});
-				});
-			}else{
-				layerPath();
-			}
-		});
-
-		// 删除
-		$('.p-path-wrap').on('click','.p-path-inner>b',function(){
-			$(this).parent().remove();
-		});
+		
 	},
 
 	/* 游记编辑 */
 	diaryEditor:function(){
 
-	},
-
-	/* google地图 */
-	googleMap:function(){
-		// var uluru = {lat: 39.91, lng: 116.39};
-		// var mapProp = {
-		// 	center: uluru,
-		// 	zoom:8,
-		// 	// mapTypeId:google.maps.MapTypeId.ROADMAP
-		// };
-		// var map=new google.maps.Map(document.getElementById("planningMap"), mapProp);
-
-		// // 添加标记
-		// var marker = new google.maps.Marker({
-		// 	position: uluru,
-		// 	map: map
-		// });
 	},
 
 	/* 其他事件 */

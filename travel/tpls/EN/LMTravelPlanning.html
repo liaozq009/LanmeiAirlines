@@ -143,25 +143,23 @@
 				<div class="s-route-inner">
 					<div class="s-route-box">
 						<div>
-							<a href="javascript:void(0)">Babeldaob</a>
-							<a href="javascript:void(0)">Koror state</a>
-							<a href="javascript:void(0)">Overseas Islands</a>
-							<a href="javascript:void(0)">Tuol Sleng Genocide Museum</a>
-							<a href="javascript:void(0)">Granada</a>
+							<a href="javascript:void(0)" data-lng="113.82" data-lat="22.99" data-val="dongguan">dongguan</a>
+							<a href="javascript:void(0)" data-lng="114.05" data-lat="22.58" data-val="shenzhen">shenzhen</a>
+							<a href="javascript:void(0)" data-lng="114.18" data-lat="22.28" data-val="xiangang">xianggang</a>
+							<a href="javascript:void(0)" data-lng="113.49" data-lat="22.15" data-val="aomen">aomen</a>
+							<a href="javascript:void(0)" data-lng="113.52" data-lat="22.27" data-val="zhuhai">zhuhai</a>
 						</div>
 						<p class="s-route-add">+</p>
 					</div>
 					<div class="s-route-box">
 						<div>
-							<a href="javascript:void(0)">Casablanca</a>
-							<a href="javascript:void(0)">Chefchaouen</a>
-							<a href="javascript:void(0)">Madrid</a>
-							<a href="javascript:void(0)">Overseas Islands</a>
-							<a href="javascript:void(0)">Babeldaob</a>
-							<a href="javascript:void(0)">Koror state</a>
-							<a href="javascript:void(0)">Casablanca</a>
-							<a href="javascript:void(0)">Chefchaouen</a>
-							<a href="javascript:void(0)">Madrid</a>
+							<a href="javascript:void(0)" data-lng="116.07" data-lat="24.30" data-val="meizhou">meizhou</a>
+							<a href="javascript:void(0)" data-lng="116.66" data-lat="23.67" data-val="chaozhou">chaozhou</a>
+							<a href="javascript:void(0)" data-lng="116.32" data-lat="23.54" data-val="jieyang">jieyang</a>
+							<a href="javascript:void(0)" data-lng="115.40" data-lat="22.82" data-val="shanwei">shanwei</a>
+							<a href="javascript:void(0)" data-lng="114.71" data-lat="23.77" data-val="heyuan">heyuan</a>
+							<a href="javascript:void(0)" data-lng="113.82" data-lat="22.99" data-val="dongguan">dongguan</a>
+							<a href="javascript:void(0)" data-lng="113.16" data-lat="23.72" data-val="qianyuan">qingyuan</a>
 						</div>
 						<p class="s-route-add">+</p>
 					</div>
@@ -171,7 +169,7 @@
 				<h3>All scenic spots</h3>
 				<div class="p-scenic-inner">
 					<div class="p-scenic-box">
-						<h2>Overseas Islands</h2>
+						<h2>guangzhou</h2>
 						<div class="p-stars">
 							Ratings : 
 							<p class="p-stars-num">
@@ -182,10 +180,10 @@
 							</p>
 						</div>
 						<p class="p-introduction">Introduction</p>
-						<p class="p-add p-add-1">+</p>
+						<p class="p-add p-add-1" data-lng="113.25" data-lat="23.15" data-val="guangzhou">+</p>
 					</div>
 					<div class="p-scenic-box">
-						<h2>Overseas Islands</h2>
+						<h2>foshan</h2>
 						<div class="p-stars">
 							Ratings : 
 							<p class="p-stars-num">
@@ -196,10 +194,10 @@
 							</p>
 						</div>
 						<p class="p-introduction">Introduction</p>
-						<p class="p-add p-add-2">+</p>
+						<p class="p-add p-add-2" data-lng="113.05" data-lat="23.03" data-val="foshan">+</p>
 					</div>
 					<div class="p-scenic-box">
-						<h2>Babeldaob</h2>
+						<h2>zhongshan</h2>
 						<div class="p-stars">
 							Ratings : 
 							<p class="p-stars-num">
@@ -211,34 +209,7 @@
 							</p>
 						</div>
 						<p class="p-introduction">Introduction</p>
-						<p class="p-add p-add-3">+</p>
-					</div>
-					<div class="p-scenic-box">
-						<h2>Koror state</h2>
-						<div class="p-stars">
-							Ratings : 
-							<p class="p-stars-num">
-								<img src="../../images/EN/diary-star.png" alt="">
-								<img src="../../images/EN/diary-star.png" alt="">
-								<img src="../../images/EN/diary-star.png" alt="">
-							</p>
-						</div>
-						<p class="p-introduction">Introduction</p>
-						<p class="p-add p-add-4">+</p>
-					</div>
-					<div class="p-scenic-box">
-						<h2>Tuol Sleng Genocide Museum</h2>
-						<div class="p-stars">
-							Ratings : 
-							<p class="p-stars-num">
-								<img src="../../images/EN/diary-star.png" alt="">
-								<img src="../../images/EN/diary-star.png" alt="">
-								<img src="../../images/EN/diary-star.png" alt="">
-								<img src="../../images/EN/diary-star.png" alt="">
-							</p>
-						</div>
-						<p class="p-introduction">Introduction</p>
-						<p class="p-add p-add-5">+</p>
+						<p class="p-add p-add-3" data-lng="113.39" data-lat="22.54" data-val="zhongshan">+</p>
 					</div>
 				</div>
 			</div>
@@ -263,162 +234,9 @@
 	<script type="text/javascript" src="../../common/EN/js/LMTravel-common.js"></script>
 	<!-- 业务代码 -->
 	<script type="text/javascript" src="../../js/EN/LMTravelPlanning.js"></script>
-	<script>
-		var poly;
-		var map;
 
-		function initMap() {
-		  map = new google.maps.Map(document.getElementById('planningMap'), {
-		    zoom: 6,
-		    maxZoom:10,
-		    minZoom:4,
-		    center: {lat: 39.91, lng: 116.39},
-		    mapTypeControl: false,
-		    streetViewControl:false, //街景
-		    styles: [
-		      {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
-		      {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
-		      {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
-		      {
-		        featureType: 'administrative.locality',
-		        elementType: 'labels.text.fill',
-		        stylers: [{color: '#d59563'}]
-		      },
-		      {
-		        featureType: 'poi',
-		        elementType: 'labels.text.fill',
-		        stylers: [{color: '#d59563'}]
-		      },
-		      {
-		        featureType: 'poi.park',
-		        elementType: 'geometry',
-		        stylers: [{color: '#263c3f'}]
-		      },
-		      {
-		        featureType: 'poi.park',
-		        elementType: 'labels.text.fill',
-		        stylers: [{color: '#6b9a76'}]
-		      },
-		      {
-		        featureType: 'road',
-		        elementType: 'geometry',
-		        stylers: [{color: '#38414e'}]
-		      },
-		      {
-		        featureType: 'road',
-		        elementType: 'geometry.stroke',
-		        stylers: [{color: '#212a37'}]
-		      },
-		      {
-		        featureType: 'road',
-		        elementType: 'labels.text.fill',
-		        stylers: [{color: '#9ca5b3'}]
-		      },
-		      {
-		        featureType: 'road.highway',
-		        elementType: 'geometry',
-		        stylers: [{color: '#746855'}]
-		      },
-		      {
-		        featureType: 'road.highway',
-		        elementType: 'geometry.stroke',
-		        stylers: [{color: '#1f2835'}]
-		      },
-		      {
-		        featureType: 'road.highway',
-		        elementType: 'labels.text.fill',
-		        stylers: [{color: '#f3d19c'}]
-		      },
-		      {
-		        featureType: 'transit',
-		        elementType: 'geometry',
-		        stylers: [{color: '#2f3948'}]
-		      },
-		      {
-		        featureType: 'transit.station',
-		        elementType: 'labels.text.fill',
-		        stylers: [{color: '#d59563'}]
-		      },
-		      {
-		        featureType: 'water',
-		        elementType: 'geometry',
-		        stylers: [{color: '#17263c'}]
-		      },
-		      {
-		        featureType: 'water',
-		        elementType: 'labels.text.fill',
-		        stylers: [{color: '#515c6d'}]
-		      },
-		      {
-		        featureType: 'water',
-		        elementType: 'labels.text.stroke',
-		        stylers: [{color: '#17263c'}]
-		      }
-		    ] 
-		  });
-
-		  // 虚线
-		  var lineSymbol = {
-		    path: 'M 0,-1 0,1',
-		    strokeOpacity: 1,
-		    scale: 3
-		  };
-
-		  poly = new google.maps.Polyline({
-		    strokeColor: '#ff0000',
-		    strokeOpacity: 0,
-		    strokeWeight: 3,
-		    icons: [{
-		      icon: lineSymbol,
-		      offset: '0',
-		      repeat: '16px'
-		    }],
-		  });
-		  poly.setMap(map);
-
-		  $('.p-add-1').click(function(){
-		    var latlng = new google.maps.LatLng(39.91, 116.39);
-		    addLatLng(latlng);
-		  });
-
-		  $('.p-add-2').click(function(){
-		    var latlng = new google.maps.LatLng(39.91, 119);
-		    addLatLng(latlng);
-		  });
-
-		  $('.p-add-3').click(function(){
-		    var latlng = new google.maps.LatLng(41, 117);
-		    addLatLng(latlng);
-		  });
-
-		  $('.p-add-4').click(function(){
-		    var latlng = new google.maps.LatLng(40.5, 117);
-		    addLatLng(latlng);
-		  });
-
-		  $('.p-add-5').click(function(){
-		    var latlng = new google.maps.LatLng(41, 116);
-		    addLatLng(latlng);
-		  });
-		}
-
-		// Handles click events on a map, and adds a new point to the Polyline.
-		function addLatLng(latlng) {
-
-		  var path = poly.getPath();
-
-		  // Because path is an MVCArray, we can simply append a new coordinate
-		  // and it will automatically appear.
-		  path.push(latlng);
-
-		  // Add a new marker at the new plotted point on the polyline.
-		  var marker = new google.maps.Marker({
-		    position: latlng,
-		    title: '#' + path.getLength(),
-		    map: map
-		  });
-		}
-	</script>
-	<script async defer src="http://ditu.google.cn/maps/api/js?callback=initMap"></script>
+	<!-- google -->
+	<script src="http://ditu.google.cn/maps/api/js"></script>
+	<script type="text/javascript" src="../../js/EN/LMGoogleJS.js"></script>
 </body>
 </html>
