@@ -61,17 +61,12 @@ function initMap() {
 			var latlng = new google.maps.LatLng(locations[i][1], locations[i][2]);
 			latlngbounds.extend(latlng);
 
-			// 序号
-			var num = String(i+1);
-
 			// 添加标签
 			marker = new google.maps.Marker({
 				position: latlng,
 				map: map,
-				label: num,
 			});
 			markers.push(marker);
-
 
 			// 显示内容
 			var iw = '<div style="font-size: 12px;word-wrap:break-word;word-break:break-all;"><strong><font color="#000000">' + locations[i][0] + '<font></strong><div>';
@@ -108,13 +103,11 @@ function initMap() {
 			locations.push([val,lat,lng]);
 		});
 
-  		newRoutes(locations);
+		if(locations.length == 0){
+			locations.push(['guangzhou',23.15,113.25]);
+		}
 
-  		//如果没有添加景点时，居中，暂时默认为广州
-  		if(locations.length == 0){
-  			var getCenter = new google.maps.LatLng(23.15, 113.25);
-  			map.setCenter(getCenter);
-  		}
+  		newRoutes(locations);
 	}
 
 	/* 单独景点添加 */
@@ -182,7 +175,6 @@ function initMap() {
 		// 添加地图
 		latLng();
 	});
-
 }
 
 $(document).ready(function($) {
