@@ -69,13 +69,9 @@ var LMTravelList = {
 		    	if(winW<1300){
 		    		$flipbook.turn("display", "single");
 		    		$flipbook.turn("size", 630, 760); 
-
-		    		$('.flipbook-viewport .even,.flipbook-viewport .odd').addClass('background-none');
 		    	}else{
 		    		$flipbook.turn("display", "double");
 		    		$flipbook.turn("size",1260, 760);
-
-		    		$('.flipbook-viewport .even,.flipbook-viewport .odd').removeClass('background-none');
 		    	}
 
 		    }
@@ -116,10 +112,11 @@ var LMTravelList = {
 		     	}else{
 		     		if(view[0]==0){
 		     			$('.d-page .s1').html(view[1]);
+		     		}else if(view[1]==0){
+		     			$('.d-page .s1').html(view[0]);
 		     		}else{
 		     			$('.d-page .s1').html(view[0]+'-'+view[1]);
 		     		}
-		     		
 		     	}
 		    });
 		}
