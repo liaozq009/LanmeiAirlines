@@ -183,6 +183,35 @@ function initMap() {
 		latLng();
 	});
 
+	/* 添加天数 */
+	function addDays(){
+		$('.p-section-left .add-day').click(function(event) {
+			console.log($('.p-section-left>ul>li:last').attr('data-day'));
+			var dataNum = Number($('.p-section-left>ul>li:last').attr('data-day').slice(3))+1;
+
+			$('.p-section-left>ul').append('<li data-day="day'+dataNum+'"><span>Day '+dataNum+'</span><b>×</b></li>');
+		});
+
+		$('.p-section-left').on('click','ul>li',function(){
+			if(!$(this).hasClass('add-day')){
+				$(this).addClass('active').siblings('li').removeClass('active');
+			}
+		});
+
+		$('.p-section-left').on('click','li>b',function(){
+			$(this).parent().remove();
+		});
+	}
+	addDays();
+
+	/* 预览路线 */
+	var previewRoutes = function(){
+		$('.p-toolbar-right .p-preview').click(function(){
+			$('#js-previewModal').modal();
+		});
+	}
+	previewRoutes();
+
 }
 
 $(document).ready(function($) {

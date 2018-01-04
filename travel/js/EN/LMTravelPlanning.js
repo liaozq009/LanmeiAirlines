@@ -3,8 +3,6 @@ var LMTravelPlanning = {
 	init:function(){
 		this.editor();
 		this.toolbar();
-		this.addDays();
-		this.addSpots();
 		this.diaryEditor();
 		this.otherEvent();
 	},
@@ -121,29 +119,6 @@ var LMTravelPlanning = {
 					break;
 			}
 		});
-	},
-
-	/* 添加天数 */
-	addDays:function(){
-		$('.p-section-left .add-day').click(function(event) {
-			var dataNum = Number($(this).prev().attr('data-day').slice(3))+1;
-
-			$(this).before('<li data-day="day'+dataNum+'">Day '+dataNum+'</li>');
-		});
-
-		$('.p-section-left').on('click','>li',function(){
-			if(!$(this).hasClass('add-day')){
-				$(this).addClass('active').siblings('li').removeClass('active');
-			}
-		});
-	},
-
-	/* 添加旅游景点 */
-	addSpots:function(){
-
-		
-
-		
 	},
 
 	/* 游记编辑 */

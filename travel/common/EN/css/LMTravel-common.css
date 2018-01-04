@@ -58,6 +58,7 @@ input {
 }
 body {
   font-family: "Microsoft YaHei", "Arial", sans-serif;
+  background: #FAFBFF;
 }
 * {
   box-sizing: border-box;

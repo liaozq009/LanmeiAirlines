@@ -124,15 +124,12 @@
 	</div>
 	<!-- 主体内容 -->
 	<section class="p-section-route">
-		<ul class="p-section-left">
-			<!-- <li class="complete" data-day="day1">Day 1</li> -->
-			<li class="active" data-day="day1">Day 1</li>
-			<li class="add-day">+</li>
-		</ul>
-		<div class="p-section-center">
-			<div class="p-path-wrap"></div>
-			<!-- 地图 -->
-			<div class="p-path-map" id="planningMap"></div>
+		<div class="p-section-left">
+			<ul>
+				<!-- <li class="complete" data-day="day1">Day 1</li> -->
+				<li class="active" data-day="day1"><span>Day 1</span><b>×</b></li>
+			</ul>
+			<p class="add-day js-add-day">+</p>
 		</div>
 		<div class="p-section-right">
 			<div class="p-search-scenic">
@@ -214,6 +211,11 @@
 				</div>
 			</div>
 		</div>
+		<div class="p-section-center">
+			<div class="p-path-wrap"></div>
+			<!-- 地图 -->
+			<div class="p-path-map" id="planningMap"></div>
+		</div>
 	</section>
 
 	<!-- 封面 -->
@@ -223,6 +225,54 @@
 			<p>Upload cover ( 630x760 )</p>
 		</div>
 	</section>
+
+	<!-- 路线预览 -->
+	<div class="modal fade previewModal" id="js-previewModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	     	<div class="modal-header">
+ 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+	     	</div>
+	     	<div class="modal-body">
+	     		<div class="preview-routes-wrap">
+	     			<div class="p-day" data-day-index="0">
+	     				<h2>Day01</h2>
+	     				<div class="p-day-inner">
+	     					<a href="javascript:void(0)">dongguan</a>
+	     					<a href="javascript:void(0)">shenzhen</a>
+	     					<a href="javascript:void(0)">xianggang</a>
+	     					<a href="javascript:void(0)">aomen</a>
+	     					<a href="javascript:void(0)">zhuhai</a>
+	     					<a href="javascript:void(0)">zhuhai</a>
+	     					<a href="javascript:void(0)">zhuhai</a>
+	     					<a href="javascript:void(0)">zhuhai</a>
+	     				</div>
+	     			</div>
+	     			<div class="p-day" data-day-index="1">
+	     				<h2>Day02</h2>
+	     				<div class="p-day-inner">
+	     					<a href="javascript:void(0)">dongguan</a>
+	     					<a href="javascript:void(0)">shenzhen</a>
+	     					<a href="javascript:void(0)">xianggang</a>
+	     					<a href="javascript:void(0)">aomen</a>
+	     					<a href="javascript:void(0)">zhuhai</a>
+	     				</div>
+	     			</div>
+	     			<div class="p-day" data-day-index="2">
+	     				<h2>Day03</h2>
+	     				<div class="p-day-inner">
+	     					<a href="javascript:void(0)">dongguan</a>
+	     					<a href="javascript:void(0)">shenzhen</a>
+	     					<a href="javascript:void(0)">xianggang</a>
+	     					<a href="javascript:void(0)">aomen</a>
+	     					<a href="javascript:void(0)">zhuhai</a>
+	     				</div>
+	     			</div>
+	     		</div>
+	     	</div>
+	    </div>
+	  </div>
+	</div>
 
 	<!-- 第三方库-->
 	<script type="text/javascript" src="../../libs/jQuery/jquery-1.11.3.js"></script>
@@ -236,7 +286,7 @@
 	<script type="text/javascript" src="../../js/EN/LMTravelPlanning.js"></script>
 
 	<!-- google -->
-	<script src="http://ditu.google.cn/maps/api/js"></script>
+	<script src="http://ditu.google.cn/maps/api/js?sensor=false&libraries=geometry"></script>
 	<script type="text/javascript" src="../../js/EN/LMGoogleJS.js"></script>
 </body>
 </html>
