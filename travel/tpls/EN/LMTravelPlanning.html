@@ -75,7 +75,7 @@
 					<option value="80000">80000</option>
 				</select>
 				<div class="range-money">
-					<input class="range-slider" type="text" name="" value="0,10000" placeholder="0">
+					<input class="range-slider" type="text" name="" value="0,10000" placeholder="0" onkeyup='this.value=this.value.replace(/\D/gi,"")'>
 				</div>
 				<select class="max-money">
 					<option value="10000">10000</option>
@@ -130,8 +130,10 @@
 				<li class="active" data-day="day1"><span>Day 1</span><b>×</b></li>
 			</ul>
 			<p class="add-day js-add-day">+</p>
+			<p class="add-scenic js-add-scenic">Add Scenic Spots</p>
 		</div>
 		<div class="p-section-right">
+			<p class="m-section-close"></p>
 			<div class="p-search-scenic">
 				<input type="text" class="s-scenic-input" name="" value="" placeholder="Search for scenic spots">
 			</div>

@@ -5,6 +5,15 @@ var LMTravelPlanning = {
 		this.toolbar();
 		this.diaryEditor();
 		this.otherEvent();
+		this.isMobile();
+	},
+
+	/* 移动端下才执行的操作 */
+	isMobile:function(){
+		var winW = $(window).width();
+		if(winW<767){
+			this.mobildAddScenic();
+		}
 	},
 
 	/* 编辑信息框 */
@@ -124,6 +133,28 @@ var LMTravelPlanning = {
 	/* 游记编辑 */
 	diaryEditor:function(){
 
+	},
+
+	/* 移动端添加景点 */
+	mobildAddScenic:function(){
+		var fadeOut = function(){
+			$('.p-section-right').fadeOut();
+		}
+		$('.p-section-right .m-section-close').click(function(event) {
+			fadeOut();
+		});
+
+		$('.js-add-scenic').click(function(event) {
+			$('.p-section-right').fadeIn();
+		});
+
+		/* 选择景点后隐藏整个景点div */
+		$('.p-scenic-inner').on('click','.p-scenic-box .p-add',function(){
+			fadeOut();
+		});
+		$('.s-route-inner').on('click','.s-route-add',function(){
+			fadeOut();
+		});
 	},
 
 	/* 其他事件 */
