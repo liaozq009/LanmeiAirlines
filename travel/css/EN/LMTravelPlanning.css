@@ -19,7 +19,7 @@ body {
   font-size: 20px;
   font-weight: bold;
   margin-left: 70px;
-  background-image: linear-gradient(135deg, #81E5FE 0%, #1639AE 100%);
+  background-image: -webkit-linear-gradient(135deg, #81E5FE 0%, #1639AE 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -27,7 +27,7 @@ body {
   width: 2px;
   height: 20px;
   margin-left: 30px;
-  background-image: linear-gradient(135deg, #81E5FE 0%, #1639AE 100%);
+  background-image: -webkit-linear-gradient(135deg, #81E5FE 0%, #1639AE 100%);
   border-radius: 4px;
   position: relative;
   top: 4px;
@@ -39,7 +39,7 @@ body {
 .p-header .p-header-title .p-time .s2 {
   font-size: 20px;
   font-weight: bold;
-  background-image: linear-gradient(135deg, #81E5FE 0%, #1639AE 100%);
+  background-image: -webkit-linear-gradient(135deg, #81E5FE 0%, #1639AE 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -205,7 +205,7 @@ body {
   border-radius: 4px;
 }
 .p-editor .p-editor-ok .p-ok {
-  background-image: linear-gradient(135deg, #81E5FE 0%, #1639AE 100%);
+  background-image: -webkit-linear-gradient(135deg, #81E5FE 0%, #1639AE 100%);
 }
 .p-editor .p-editor-ok .p-cancel {
   margin-left: 20px;
@@ -265,7 +265,7 @@ body {
   background: #fff;
   box-shadow: 0 0 20px 0 rgba(170, 199, 249, 0.5);
   border-radius: 4px;
-  background-image: linear-gradient(135deg, #81E5FE 0%, #1639AE 100%);
+  background-image: -webkit-linear-gradient(135deg, #81E5FE 0%, #1639AE 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -353,7 +353,7 @@ body {
   position: relative;
   float: left;
   width: 156px;
-  height: 58px;
+  height: 48px;
   padding: 0 10px;
   margin-bottom: 20px;
   margin-right: 56px;
@@ -382,7 +382,7 @@ body {
   font-size: 18px;
   color: #1f2c5c;
   display: block;
-  line-height: 58px;
+  line-height: 48px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -487,10 +487,10 @@ body {
   height: 30px;
   color: #fff;
   font-size: 26px;
-  line-height: 24px;
+  line-height: 26px;
   text-align: center;
   border-radius: 4px;
-  background-image: linear-gradient(135deg, #81E5FE 0%, #1639AE 100%);
+  background-image: -webkit-linear-gradient(135deg, #81E5FE 0%, #1639AE 100%);
   cursor: pointer;
 }
 .p-section-route .p-section-right .p-scenic-wrap {
@@ -539,7 +539,7 @@ body {
   height: 30px;
   font-size: 14px;
   background: #fff;
-  background-image: linear-gradient(135deg, #81E5FE 0%, #1639AE 100%);
+  background-image: -webkit-linear-gradient(135deg, #81E5FE 0%, #1639AE 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   box-shadow: 0 0 30px 0 rgba(170, 199, 249, 0.5);
@@ -554,7 +554,7 @@ body {
   font-size: 26px;
   line-height: 26px;
   color: #fff;
-  background-image: linear-gradient(135deg, #81E5FE 0%, #1639AE 100%);
+  background-image: -webkit-linear-gradient(135deg, #81E5FE 0%, #1639AE 100%);
   border-radius: 4px;
 }
 .p-section-cover {
@@ -879,6 +879,9 @@ body {
     margin-left: 0;
     padding: 0.1rem;
   }
+  .p-editor > div {
+    margin-top: 0.1rem;
+  }
   .p-editor .p-editor-title {
     margin-top: 0.1rem;
   }
@@ -896,9 +899,13 @@ body {
   }
   .p-editor .p-editor-people .p-editor-child {
     margin-left: 0;
+    margin-top: 0.1rem;
   }
   .p-editor .p-editor-money {
     height: auto;
+  }
+  .p-editor .p-editor-money .max-money {
+    margin-left: 0.3rem;
   }
   .p-editor .p-editor-type {
     height: auto;
@@ -906,6 +913,7 @@ body {
   }
   .p-editor .p-editor-type .p-editor-share {
     margin-left: 0;
+    margin-top: 0.1rem;
   }
   .p-editor .p-editor-ok {
     margin-top: 0.1rem;

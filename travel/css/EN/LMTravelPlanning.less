@@ -13,7 +13,7 @@
 @blue:#1639AE;
 @blue2:#3772D5;
 @blue3:#AAC7F9;
-@linear:linear-gradient(135deg, #81E5FE 0%, #1639AE 100%);
+@linear:-webkit-linear-gradient(135deg, #81E5FE 0%, #1639AE 100%);
 
 body {
 	background: #FAFBFF;
@@ -378,7 +378,7 @@ body {
 				position: relative;
 				float: left;
 				width: 156px;
-				height:58px;
+				height:48px;
 				padding:0 10px;
 				margin-bottom: 20px;
 				margin-right: 56px;
@@ -406,7 +406,7 @@ body {
 					font-size:18px;
 					color:#1f2c5c;
 					display: block;
-				    line-height: 58px;
+				    line-height: 48px;
 				    overflow: hidden;
 				    text-overflow: ellipsis;
 				    white-space: nowrap;
@@ -506,7 +506,7 @@ body {
 						height:30px;
 						color: #fff;
 						font-size: 26px;
-					    line-height: 24px;
+					    line-height: 26px;
 					    text-align: center;
 						border-radius:4px;
 						background-image:@linear;
@@ -905,6 +905,9 @@ body {
 		top: 0.36rem;
 		margin-left: 0;
 		padding:0.1rem;
+		>div{
+			margin-top: 0.1rem;
+		}
 		.p-editor-title{
 			margin-top: 0.1rem;
 			>div{
@@ -917,15 +920,22 @@ body {
 		}
 		.p-editor-people{
 			>p{font-size: 12px;}
-			.p-editor-child{margin-left: 0;}
+			.p-editor-child{
+				margin-left: 0;
+				margin-top: 0.1rem;
+			}
 		}
 		.p-editor-money{
 			height: auto;
+			.max-money{margin-left: 0.3rem;}
 		}
 		.p-editor-type{
 			height: auto;
 			overflow: hidden;
-			.p-editor-share{margin-left: 0;}
+			.p-editor-share{
+				margin-left: 0;
+				margin-top: 0.1rem;
+			}
 		}
 		.p-editor-ok{
 			margin-top: 0.1rem;

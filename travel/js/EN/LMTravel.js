@@ -2,10 +2,11 @@
 var LMTravel = {
 	init:function(){
 		// this.animate();
-		this.otherEvent();
 		this.isPc();
 		this.banner();
+		this.recTravel();
 		this.reginSelect();
+		this.otherEvent();
 	},
 
 	/* 判断是PC端还是移动端 */
@@ -27,9 +28,16 @@ var LMTravel = {
 		var flag = IsPC(); //true为PC端，false为手机端
 
 		if(flag){ //PC
-			this.recTravel();
-		}else{ //移动
 			
+		}else{ //移动
+			// 移动端地图滑动 
+			var swiper1 = new Swiper('.js-m-boxMap', {
+				pagination: '.swiper-pagination',
+				slidesPerView: 2,
+				paginationClickable: true,
+				spaceBetween: 10,
+				freeMode: true
+			});
 		}
 	},
 
@@ -60,34 +68,34 @@ var LMTravel = {
 			var step = 0;
 			var auto;
 			function moving(){
-			    auto = setInterval(function(){
-			        step--;
-			        if($oBox[0].offsetLeft<=-oBoxImgW){
-			            step=0;
-			        }
-			        $oBox.css('left',step+"px");
-			    },60);
+				auto = setInterval(function(){
+					step--;
+					if($oBox[0].offsetLeft<=-oBoxImgW){
+						step=0;
+					}
+					$oBox.css('left',step+"px");
+				},60);
 			}
 			
 			moving();
 			
 			$content.mousemove(function(event){
-			    if(!(navigator.appVersion.match(/9./i)=="9.")&&(navigator.appVersion.match(/MSIE/gi)=="MSIE")){
-			        event = event || window.event;
-			        var x = event.offsetX;
-			        var y = event.offsetY;
-			        var tmp =Math.abs(x-150)*Math.abs(x-150)+Math.abs(y-150)*Math.abs(y-150);
-			        if(tmp<150*150){
-			            clearInterval(auto);
-			        }
-			    }
-			    else{
-			        clearInterval(auto);
-			    }
+				if(!(navigator.appVersion.match(/9./i)=="9.")&&(navigator.appVersion.match(/MSIE/gi)=="MSIE")){
+					event = event || window.event;
+					var x = event.offsetX;
+					var y = event.offsetY;
+					var tmp =Math.abs(x-150)*Math.abs(x-150)+Math.abs(y-150)*Math.abs(y-150);
+					if(tmp<150*150){
+						clearInterval(auto);
+					}
+				}
+				else{
+					clearInterval(auto);
+				}
 			});
 			
 			$content.mouseout(function(){
-			    moving();
+				moving();
 			});
 		};
 		rollEarth();
@@ -240,8 +248,7 @@ var LMTravel = {
 			var resize = function(){
 				// 获取窗口宽度
 				winW = $(window).width();
-				wrapW = winW*0.7;
-
+				wrapW = Math.ceil(winW*0.7); /* 2018-01-08增加，解决ie浏览器不兼容问题 */
 				// 小容器宽
 				if(winW>992){
 					$s4Wrap.width(wrapW);
@@ -378,15 +385,6 @@ var LMTravel = {
 					// console.log($(el).html());
 				}
 			});
-		});
-
-		// 移动端地图滑动 
-		var swiper1 = new Swiper('.js-m-boxMap', {
-			pagination: '.swiper-pagination',
-			slidesPerView: 2,
-			paginationClickable: true,
-			spaceBetween: 10,
-			freeMode: true
 		});
 
 	},

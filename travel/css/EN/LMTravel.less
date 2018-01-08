@@ -13,7 +13,7 @@
 @blue:#1639AE;
 @blue2:#3772D5;
 @blue3:#AAC7F9;
-@linear:linear-gradient(135deg, #81E5FE 0%, #1639AE 100%);
+@linear:-webkit-linear-gradient(135deg, #81E5FE 0%, #1639AE 100%);
 
 body{
 	background: #FAFBFF;
@@ -128,35 +128,35 @@ body{
 
 /* roll earth */
 .earth-d2{
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 60%; 
-    height: 300px; 
-    border-radius: 50%; 
-    overflow:hidden; 
-    box-shadow: 0px 0px 200px #fff inset;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 60%; 
+	height: 300px; 
+	border-radius: 50%; 
+	overflow:hidden; 
+	box-shadow: 0px 0px 200px #fff inset;
 }
 .d2-box{
-    position: absolute; 
-    left:0px; 
-    top: 0px;
+	position: absolute; 
+	left:0px; 
+	top: 0px;
 }
 .d2-box img{
-    width:800px; 
-    height: 300px;
+	width:800px; 
+	height: 300px;
 }
 .d2-box .img2-1{
-    position: absolute; 
-    top: 0px; 
-    left: 0px;
-    z-index:-1;
+	position: absolute; 
+	top: 0px; 
+	left: 0px;
+	z-index:-1;
 }
 .d2-box .img2-2{
-    position: absolute;
-    top:0px; 
-    left: 800px;
-    z-index:-1;
+	position: absolute;
+	top:0px; 
+	left: 800px;
+	z-index:-1;
 }
 
 section{
@@ -226,6 +226,13 @@ section{
 				font-size: 20px;
 				margin-top: 20px;
 				text-align: center;
+				display: -webkit-box;
+				-webkit-box-orient: vertical;
+				-webkit-line-clamp:2;
+				overflow: hidden;
+				white-space: normal !important;
+				text-overflow: ellipsis;
+				word-wrap: break-word;
 			}
 			>h2{
 				font-size: 36px;
@@ -321,7 +328,8 @@ section{
 		position: relative;
 		height: 100%;
 		padding-top: 40px;
-		background: linear-gradient(135deg, rgba(129,229,254,0.8) 0%, rgba(22,57,174,0.8) 100%);
+		background: -webkit-linear-gradient(135deg, rgba(129,229,254,0.8) 0%, rgba(22,57,174,0.8) 100%);
+		filter: alpha(opacity=80) progid:DXImageTransform.Microsoft.gradient(startcolorstr=#81E5FE,endcolorstr=#1639AE,gradientType=1);
 		>h2{
 			font-size: 36px;
 			font-weight: bold;
@@ -466,9 +474,9 @@ section{
 			height: 70px;
 			border:1px solid;
 			border-image: linear-gradient(to right, #81E5FE 0%, #1639AE 100%) 30 30;
-			border-top: none;
-			border-left: none;
-			border-right: none;
+			border-top-width: 0;
+			border-left-width: 0;
+			border-right-width: 0;
 			>h2{
 				float: left;
 				font-size: 24px;
@@ -868,9 +876,9 @@ section{
 				.t-country{
 					height: 0.4rem;
 					line-height: 0.4rem;
-					 > span{
+					> span{
 						font-size: 0.12rem;
-					 }
+					}
 					.t-menu{
 						padding:0.06rem;
 						top:0.4rem;

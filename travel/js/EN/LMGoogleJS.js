@@ -186,7 +186,6 @@ function initMap() {
 	/* 添加天数 */
 	function addDays(){
 		$('.p-section-left .add-day').click(function(event) {
-			console.log($('.p-section-left>ul>li:last').attr('data-day'));
 			var dataNum = Number($('.p-section-left>ul>li:last').attr('data-day').slice(3))+1;
 
 			$('.p-section-left>ul').append('<li data-day="day'+dataNum+'"><span>Day '+dataNum+'</span><b>×</b></li>');
