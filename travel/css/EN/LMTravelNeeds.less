@@ -1,0 +1,212 @@
+
+@charset "utf-8";
+
+/* 定义变量 */
+@url:"../../images/EN/";
+@green:#8ec060;
+@purple:#1f2c5c;
+@gray:#808080;
+@red:#d0011b;
+@link:#00908c;
+@green2:#81E5FE;
+@green3:#F7FAFF;
+@blue:#1639AE;
+@blue2:#3772D5;
+@blue3:#AAC7F9;
+// @linear:-webkit-linear-gradient(135deg, #81E5FE 0%, #1639AE 100%);
+@linear:-webkit-linear-gradient(-35deg, #81e5fe 0%, #1639ae 100%);
+
+html,body{
+	width: 100%;
+	height: 100%;
+}
+
+body{
+	background: url('@{url}t-needs-bg.jpg') center no-repeat;
+}
+
+.toolbar-wrap{
+	width: 100%;
+	padding:40px 30px 100px;
+	overflow: hidden;
+	>div{
+		width:200px;
+		height:50px;
+		line-height: 50px;
+		background:#fff;
+		box-shadow:0 0 50px 0 rgba(170,199,249,0.50);
+		border-radius:4px;
+		text-align: center;
+		a{display: block;}
+		img{
+			margin-top: -6px;
+			margin-right: 7px;
+		}
+		span{
+			font-size: 20px;
+			background: @linear;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+	}
+	.toolbar-return{
+		float: left;
+		background:#fff;
+		box-shadow:0 0 50px 0 rgba(170,199,249,0.50);
+		border-radius:4px;
+	}
+	.toolbar-needs{
+		width:600px;
+		margin:0 auto;
+		font-size: 20px;
+		font-weight: bold;
+		color: #fff;
+		text-align: center;
+		background-image:@linear;
+		box-shadow:0 0 50px 0 rgba(170,199,249,0.50);
+		border-radius:4px;
+	}
+	.toolbar-complete{
+		float: right;
+	}
+}
+
+.needs-wrap{
+	overflow: hidden;
+	>div{
+		width: 25%;
+		float: left;
+		margin-bottom: 30px;
+		text-align: center;
+	}
+}
+
+/* 模态框 */
+.modal-backdrop{
+	background: #fff;
+}
+.modal-backdrop.in{
+	opacity: 0.7;
+}
+
+.timeModal{
+	.modal-dialog{
+		width: 100%;
+		margin-top: 160px;
+		.modal-content{
+			box-shadow: none;
+			border: none;
+			background: transparent;
+		}
+		.modal-header{
+			position: absolute;
+			top: -120px;
+			width: 100%;
+			height: 50px;
+			padding:0 30px;
+			>div{
+				width:200px;
+				height:50px;
+				line-height: 50px;
+				background:#fff;
+				box-shadow:0 0 50px 0 rgba(170,199,249,0.50);
+				border-radius:4px;
+				text-align: center;
+				a{display: block;}
+				img{
+					margin-top: -6px;
+					margin-right: 7px;
+				}
+				span{
+					font-size: 20px;
+					background: @linear;
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
+				}
+			}
+			.time-back{
+				float: left;
+				background:#fff;
+				box-shadow:0 0 50px 0 rgba(170,199,249,0.50);
+				border-radius:4px;
+			}
+			.time-needs{
+				width:600px;
+				margin:0 auto;
+				font-size: 20px;
+				font-weight: bold;
+				color: #fff;
+				text-align: center;
+				background-image:@linear;
+				box-shadow:0 0 50px 0 rgba(170,199,249,0.50);
+				border-radius:4px;
+			}
+			.time-next{
+				float: right;
+				img{margin-left: 7px;}
+			}
+		}
+		.modal-body{
+			width: 1320px;
+			height: 600px;
+			margin: 0 auto;
+			padding:0;
+			border-radius:8px;
+			background: #fff;
+			>div{
+				width: 50%;
+				height: 100%;
+				float: left;
+			}
+			.t-content-left{
+				text-align: center;
+			}
+			.t-content-right{
+				background:url('@{url}select-calendar-bg.jpg') center no-repeat;
+				h2{
+					font-size: 64px;
+					font-weight: bold;
+					color:#fff;
+					text-align: center;
+					margin-top: 40px;
+				}
+				>div{
+					text-align: center;
+					>input{
+						width: 480px;
+						height: 50px;
+						background: #fff;
+						margin-top: 20px;
+						padding:0 20px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width:1366px){
+	.needs-wrap{
+		>div{
+			width: 50%;
+		}
+	}
+}
+
+@media screen and (max-width:1100px){
+	.toolbar-wrap{
+		>div{width: 160px;}
+		.toolbar-needs{
+			width: 300px;
+		}
+	}
+}
+
+@media screen and (max-width:767px){
+	.toolbar-wrap .toolbar-needs{display: none;}
+	.needs-wrap{
+		>div{
+			width: 100%;
+		}
+	}
+}

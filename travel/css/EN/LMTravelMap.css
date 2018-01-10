@@ -18,7 +18,7 @@ body {
   padding-bottom: 0;
   margin-bottom: 10px;
   font-size: 14px;
-  background: -webkit-linear-gradient(135deg, #81E5FE 0%, #1639AE 100%);
+  background: -webkit-linear-gradient(0deg, #81E5FE 0%, #1639AE 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -146,7 +146,7 @@ body {
 }
 .travel-nav > p span {
   font-size: 20px;
-  background: -webkit-linear-gradient(135deg, #81E5FE 0%, #1639AE 100%);
+  background: -webkit-linear-gradient(0deg, #81E5FE 0%, #1639AE 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -264,7 +264,7 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  background: -webkit-linear-gradient(135deg, #81E5FE 0%, #1639AE 100%);
+  background: -webkit-linear-gradient(0deg, #81E5FE 0%, #1639AE 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 10px;
@@ -697,7 +697,7 @@ body {
     font-size: 0.2rem;
     margin-bottom: 0;
     text-align: center;
-    background: -webkit-linear-gradient(135deg, #81E5FE 0%, #1639AE 100%);
+    background: -webkit-linear-gradient(0deg, #81E5FE 0%, #1639AE 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }

@@ -19,7 +19,7 @@ body {
   font-size: 20px;
   font-weight: bold;
   margin-left: 70px;
-  background-image: -webkit-linear-gradient(135deg, #81E5FE 0%, #1639AE 100%);
+  background-image: -webkit-linear-gradient(0deg, #81E5FE 0%, #1639AE 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -27,7 +27,7 @@ body {
   width: 2px;
   height: 20px;
   margin-left: 30px;
-  background-image: -webkit-linear-gradient(135deg, #81E5FE 0%, #1639AE 100%);
+  background-image: -webkit-linear-gradient(0deg, #81E5FE 0%, #1639AE 100%);
   border-radius: 4px;
   position: relative;
   top: 4px;
@@ -39,7 +39,7 @@ body {
 .p-header .p-header-title .p-time .s2 {
   font-size: 20px;
   font-weight: bold;
-  background-image: -webkit-linear-gradient(135deg, #81E5FE 0%, #1639AE 100%);
+  background-image: -webkit-linear-gradient(0deg, #81E5FE 0%, #1639AE 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -205,7 +205,7 @@ body {
   border-radius: 4px;
 }
 .p-editor .p-editor-ok .p-ok {
-  background-image: -webkit-linear-gradient(135deg, #81E5FE 0%, #1639AE 100%);
+  background-image: -webkit-linear-gradient(0deg, #81E5FE 0%, #1639AE 100%);
 }
 .p-editor .p-editor-ok .p-cancel {
   margin-left: 20px;
@@ -265,7 +265,7 @@ body {
   background: #fff;
   box-shadow: 0 0 20px 0 rgba(170, 199, 249, 0.5);
   border-radius: 4px;
-  background-image: -webkit-linear-gradient(135deg, #81E5FE 0%, #1639AE 100%);
+  background-image: -webkit-linear-gradient(0deg, #81E5FE 0%, #1639AE 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -490,7 +490,7 @@ body {
   line-height: 26px;
   text-align: center;
   border-radius: 4px;
-  background-image: -webkit-linear-gradient(135deg, #81E5FE 0%, #1639AE 100%);
+  background-image: -webkit-linear-gradient(0deg, #81E5FE 0%, #1639AE 100%);
   cursor: pointer;
 }
 .p-section-route .p-section-right .p-scenic-wrap {
@@ -539,7 +539,7 @@ body {
   height: 30px;
   font-size: 14px;
   background: #fff;
-  background-image: -webkit-linear-gradient(135deg, #81E5FE 0%, #1639AE 100%);
+  background-image: -webkit-linear-gradient(0deg, #81E5FE 0%, #1639AE 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   box-shadow: 0 0 30px 0 rgba(170, 199, 249, 0.5);
@@ -554,7 +554,7 @@ body {
   font-size: 26px;
   line-height: 26px;
   color: #fff;
-  background-image: -webkit-linear-gradient(135deg, #81E5FE 0%, #1639AE 100%);
+  background-image: -webkit-linear-gradient(0deg, #81E5FE 0%, #1639AE 100%);
   border-radius: 4px;
 }
 .p-section-cover {
