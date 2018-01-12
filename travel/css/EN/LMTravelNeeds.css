@@ -71,23 +71,27 @@ body {
 .modal-backdrop.in {
   opacity: 0.7;
 }
-.timeModal .modal-dialog {
+.timeModal .modal-dialog,
+.moneyModal .modal-dialog {
   width: 100%;
   margin-top: 160px;
 }
-.timeModal .modal-dialog .modal-content {
+.timeModal .modal-dialog .modal-content,
+.moneyModal .modal-dialog .modal-content {
   box-shadow: none;
   border: none;
   background: transparent;
 }
-.timeModal .modal-dialog .modal-header {
+.timeModal .modal-dialog .modal-header,
+.moneyModal .modal-dialog .modal-header {
   position: absolute;
   top: -120px;
   width: 100%;
   height: 50px;
   padding: 0 30px;
 }
-.timeModal .modal-dialog .modal-header > div {
+.timeModal .modal-dialog .modal-header > div,
+.moneyModal .modal-dialog .modal-header > div {
   width: 200px;
   height: 50px;
   line-height: 50px;
@@ -96,26 +100,31 @@ body {
   border-radius: 4px;
   text-align: center;
 }
-.timeModal .modal-dialog .modal-header > div a {
+.timeModal .modal-dialog .modal-header > div a,
+.moneyModal .modal-dialog .modal-header > div a {
   display: block;
 }
-.timeModal .modal-dialog .modal-header > div img {
+.timeModal .modal-dialog .modal-header > div img,
+.moneyModal .modal-dialog .modal-header > div img {
   margin-top: -6px;
   margin-right: 7px;
 }
-.timeModal .modal-dialog .modal-header > div span {
+.timeModal .modal-dialog .modal-header > div span,
+.moneyModal .modal-dialog .modal-header > div span {
   font-size: 20px;
   background: -webkit-linear-gradient(-35deg, #81e5fe 0%, #1639ae 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.timeModal .modal-dialog .modal-header .time-back {
+.timeModal .modal-dialog .modal-header .time-back,
+.moneyModal .modal-dialog .modal-header .time-back {
   float: left;
   background: #fff;
   box-shadow: 0 0 50px 0 rgba(170, 199, 249, 0.5);
   border-radius: 4px;
 }
-.timeModal .modal-dialog .modal-header .time-needs {
+.timeModal .modal-dialog .modal-header .time-needs,
+.moneyModal .modal-dialog .modal-header .time-needs {
   width: 600px;
   margin: 0 auto;
   font-size: 20px;
@@ -126,13 +135,16 @@ body {
   box-shadow: 0 0 50px 0 rgba(170, 199, 249, 0.5);
   border-radius: 4px;
 }
-.timeModal .modal-dialog .modal-header .time-next {
+.timeModal .modal-dialog .modal-header .time-next,
+.moneyModal .modal-dialog .modal-header .time-next {
   float: right;
 }
-.timeModal .modal-dialog .modal-header .time-next img {
+.timeModal .modal-dialog .modal-header .time-next img,
+.moneyModal .modal-dialog .modal-header .time-next img {
   margin-left: 7px;
 }
-.timeModal .modal-dialog .modal-body {
+.timeModal .modal-dialog .modal-body,
+.moneyModal .modal-dialog .modal-body {
   width: 1320px;
   height: 600px;
   margin: 0 auto;
@@ -140,33 +152,156 @@ body {
   border-radius: 8px;
   background: #fff;
 }
-.timeModal .modal-dialog .modal-body > div {
+.timeModal .modal-dialog .modal-body > div,
+.moneyModal .modal-dialog .modal-body > div {
   width: 50%;
   height: 100%;
   float: left;
 }
-.timeModal .modal-dialog .modal-body .t-content-left {
+.timeModal .modal-dialog .modal-body .t-content-left,
+.moneyModal .modal-dialog .modal-body .t-content-left {
+  position: relative;
   text-align: center;
 }
-.timeModal .modal-dialog .modal-body .t-content-right {
-  background: url('../../images/EN/select-calendar-bg.jpg') center no-repeat;
+.timeModal .modal-dialog .modal-body .t-content-left .img-calendar,
+.moneyModal .modal-dialog .modal-body .t-content-left .img-calendar {
+  width: 100%;
 }
-.timeModal .modal-dialog .modal-body .t-content-right h2 {
+.timeModal .modal-dialog .modal-body .t-content-left .img-arrow,
+.moneyModal .modal-dialog .modal-body .t-content-left .img-arrow {
+  position: absolute;
+  right: -59px;
+  top: 50%;
+  z-index: 9;
+  margin-top: -59px;
+}
+.timeModal .modal-dialog .modal-body .t-content-right,
+.moneyModal .modal-dialog .modal-body .t-content-right {
+  position: relative;
+}
+.timeModal .modal-dialog .modal-body .t-content-right > .img-calendar-bg,
+.moneyModal .modal-dialog .modal-body .t-content-right > .img-calendar-bg {
+  width: 100%;
+}
+.timeModal .modal-dialog .modal-body .t-content-right .date-wrap,
+.moneyModal .modal-dialog .modal-body .t-content-right .date-wrap {
+  position: absolute;
+  top: 0;
+}
+.timeModal .modal-dialog .modal-body .t-content-right .date-wrap h2,
+.moneyModal .modal-dialog .modal-body .t-content-right .date-wrap h2 {
   font-size: 64px;
   font-weight: bold;
   color: #fff;
-  text-align: center;
   margin-top: 40px;
+  margin-left: 70px;
 }
-.timeModal .modal-dialog .modal-body .t-content-right > div {
-  text-align: center;
-}
-.timeModal .modal-dialog .modal-body .t-content-right > div > input {
+.timeModal .modal-dialog .modal-body .t-content-right .date-wrap > div,
+.moneyModal .modal-dialog .modal-body .t-content-right .date-wrap > div {
   width: 480px;
   height: 50px;
-  background: #fff;
+  line-height: 50px;
+  margin: 0 auto;
   margin-top: 20px;
+  background: #fff;
+}
+.timeModal .modal-dialog .modal-body .t-content-right .date-wrap > div .date-title,
+.moneyModal .modal-dialog .modal-body .t-content-right .date-wrap > div .date-title {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  background: -webkit-linear-gradient(-35deg, #81E5FE 0%, #1639AE 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.moneyModal .modal-dialog .modal-body .t-content-right .date-wrap > div {
+  position: relative;
+  width: 520px;
+  height: 200px;
+  background: #fff;
+  box-shadow: 0 0 50px 0 rgba(16, 81, 162, 0.5);
+  border-radius: 8px;
+  margin-top: 70px;
+  padding-top: 90px;
+}
+.moneyModal .modal-dialog .modal-body .t-content-right .date-wrap > div .momey-symbol {
+  position: absolute;
+  top: 27px;
+  left: 200px;
+  font-size: 14px;
+  color: #3772D5;
+}
+.moneyModal .modal-dialog .modal-body .t-content-right .date-wrap > div .momey-symbol span {
+  margin-left: 66px;
+}
+.moneyModal .modal-dialog .modal-body .t-content-right .date-wrap > div select {
+  width: 100px;
+  height: 40px;
+  text-align: left;
+  font-size: 16px;
+  color: #3772d5;
+  padding-left: 20px;
+  padding-right: 10px;
+  margin-left: 20px;
+  margin-top: 20px;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 30px 0 rgba(170, 199, 249, 0.5);
+  border-radius: 4px;
+  background: url('../../images/EN/p-select.png') 90% 50% no-repeat #fff;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+.moneyModal .modal-dialog .modal-body .t-content-right .date-wrap > div .range-money {
+  margin-left: 20px;
+}
+.moneyModal .modal-dialog .modal-body .t-content-right .date-wrap > div .range-money .range-slider {
+  width: 200px;
+  height: 40px;
+  font-size: 16px;
+  color: #3772D5;
   padding: 0 20px;
+  margin-left: 20px;
+  background: #AAC7F9;
+  border-radius: 4px;
+}
+.moneyModal .modal-dialog .modal-body .t-content-right .date-wrap > div .range-money .s-range-btn {
+  display: none;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+.moneyModal .modal-dialog .modal-body .t-content-right .date-wrap > div .max-money {
+  float: right;
+  margin-right: 20px;
+}
+/* 价钱范围 */
+.theme-green .back-bar {
+  height: 20px;
+  border-radius: 100px;
+}
+.theme-green .back-bar .pointer {
+  width: 6px;
+  height: 30px;
+  background: #fff;
+  box-shadow: 0 0 4px 0 rgba(16, 81, 162, 0.5);
+  border-radius: 100px;
+}
+.slider-container .back-bar .pointer-label {
+  top: -47px;
+  font-size: 18px;
+  color: #3772d5;
+}
+.pointer-label-low {
+  left: 200px !important;
+}
+.pointer-label-high {
+  left: 270px !important;
 }
 @media screen and (max-width: 1366px) {
   .needs-wrap > div {

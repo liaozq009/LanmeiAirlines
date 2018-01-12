@@ -89,7 +89,7 @@ body{
 	opacity: 0.7;
 }
 
-.timeModal{
+.timeModal,.moneyModal{
 	.modal-dialog{
 		width: 100%;
 		margin-top: 160px;
@@ -159,30 +159,138 @@ body{
 				float: left;
 			}
 			.t-content-left{
+				position: relative;
 				text-align: center;
+				.img-calendar{width: 100%;}
+				.img-arrow{
+					position: absolute;
+					right: -59px;
+					top: 50%;
+					z-index: 9;
+					margin-top: -59px;
+				}
 			}
 			.t-content-right{
-				background:url('@{url}select-calendar-bg.jpg') center no-repeat;
-				h2{
-					font-size: 64px;
-					font-weight: bold;
-					color:#fff;
-					text-align: center;
-					margin-top: 40px;
-				}
-				>div{
-					text-align: center;
-					>input{
+				position: relative;
+				>.img-calendar-bg{width: 100%;}
+				.date-wrap{
+					position: absolute;
+					top:0;
+					h2{
+						font-size: 64px;
+						font-weight: bold;
+						color:#fff;
+						margin-top: 40px;
+						margin-left: 70px;
+					}
+					>div{
 						width: 480px;
 						height: 50px;
-						background: #fff;
+						line-height: 50px;
+						margin:0 auto;
 						margin-top: 20px;
-						padding:0 20px;
+						background: #fff; 
+						.date-title{
+							display: block;
+							width: 100%;
+							height: 100%;
+							text-align: center;
+							font-weight: bold;
+							font-size:18px;
+							background:-webkit-linear-gradient(-35deg, #81E5FE 0%, #1639AE 100%);
+							-webkit-background-clip: text;
+							-webkit-text-fill-color: transparent;
+						}
 					}
 				}
 			}
 		}
 	}
+}
+.moneyModal .modal-dialog .modal-body .t-content-right .date-wrap > div{
+	position: relative;
+	width:520px;
+	height:200px;
+	background:#fff;
+	box-shadow:0 0 50px 0 rgba(16,81,162,0.50);
+	border-radius:8px;
+	margin-top: 70px;
+	padding-top: 90px;
+	.momey-symbol{
+		position: absolute;
+	    top: 27px;
+	    left: 200px;
+	    font-size: 14px;
+	    color:@blue2;
+	    span{margin-left: 66px;}
+	}
+	select{
+		width:100px;
+		height:40px;
+		text-align: left;
+		font-size:16px;
+		color:#3772d5;
+		padding-left:20px;
+		padding-right:10px;
+		margin-left: 20px;
+		margin-top: 20px;
+		border:none;
+		outline: none;
+		box-shadow:0 0 30px 0 rgba(170,199,249,0.50);
+		border-radius:4px;
+		background: url('@{url}p-select.png') 90% 50% no-repeat #fff;
+		appearance:none;
+		-moz-appearance:none;
+		-webkit-appearance:none;
+	}
+	.range-money{
+		margin-left: 20px;
+		.range-slider{
+			width: 200px;
+			height: 40px;
+			font-size: 16px;
+			color: #3772D5;
+			padding: 0 20px;
+			margin-left: 20px;
+			background: @blue3;
+			border-radius: 4px;
+		}
+		.s-range-btn{
+			display: none;
+			height: 40px;
+			line-height: 40px;
+			font-size: 14px;
+			border-radius: 4px;
+		}
+	}
+	.max-money{
+		float: right;
+		margin-right: 20px;
+	}
+}
+
+/* 价钱范围 */
+.theme-green .back-bar{
+	height: 20px;
+	border-radius: 100px;
+}
+.theme-green .back-bar .pointer{
+	width: 6px;
+	height: 30px;
+	background: #fff;
+	box-shadow: 0 0 4px 0 rgba(16,81,162,0.50);
+	border-radius: 100px;
+}
+.slider-container .back-bar .pointer-label{
+	top: -47px;
+	font-size:18px;
+	color:#3772d5;
+}
+.pointer-label-low{
+	left: 200px !important;
+}
+.pointer-label-high{
+	left: 270px !important;
 }
 
 @media screen and (max-width:1366px){

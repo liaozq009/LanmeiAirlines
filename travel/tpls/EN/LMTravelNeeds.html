@@ -17,6 +17,8 @@
 	<link rel="icon" href="../../images/EN/lanmeiLogo.ico">
 	<link rel="stylesheet" type="text/css" href="../../common/EN/fonts/lm-iconfont.css">
 	<link rel="stylesheet" type="text/css" href="../../libs/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../../libs/dataRange/dateRange.css">
+	<link rel="stylesheet" type="text/css" href="../../libs/rangeNum/jquery.range.css">
 	<link rel="stylesheet" type="text/css" href="../../common/EN/css/animate.css">
 	<link rel="stylesheet" type="text/css" href="../../common/EN/css/LMTravel-common.css">
 	<link rel="stylesheet" type="text/css" href="../../css/EN/LMTravelNeeds.css">
@@ -51,6 +53,7 @@
 		</div>
 	</div>
 
+	<!-- 日期选择模态框 -->
 	<div class="modal fade timeModal" id="js-timeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
 	  <div class="modal-dialog" role="document">
 	    <div class="modal-content">
@@ -71,12 +74,72 @@
 	     	</div>
 	     	<div class="modal-body">
 	     		<div class="t-content-left">
-	     			<img src="../../images/EN/select-calendar.jpg">
+	     			<img src="../../images/EN/select-calendar.jpg" class="img-calendar">
+	     			<img src="../../images/EN/select-right-arrow.png" class="img-arrow">
 	     		</div>
 	     		<div class="t-content-right">
-	     			<h2>What are your travel dates?</h2>
-	     			<div>
-		     			<input type="text" name="" value="">
+	     			<img src="../../images/EN/select-calendar-bg.jpg" class="img-calendar-bg">
+	     			<div class="date-wrap">
+	     				<h2>WHAT ARE YOUR TRAVEL DATES?</h2>
+	     				<div>
+	     					<span class="date-title" id="select-date"></span>
+	     				</div>
+	     			</div>
+	     		</div>
+	     	</div>
+	    </div>
+	  </div>
+	</div>
+
+	<!-- 价钱选择模态框 -->
+	<div class="modal fade moneyModal" id="js-moneyModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	     	<div class="modal-header">
+ 				<div class="time-back">
+ 					<a href="LMTravelMap.html">
+ 						<img src="../../images/EN/travel-arrow-left.png" alt="">
+ 						<span>Back</span>
+ 					</a>
+ 				</div>
+ 				<div class="time-next">
+ 					<a href="javascript:void(0)">
+ 						<span>Next</span>
+ 						<img src="../../images/EN/travel-arrow-right.png" alt="">
+	 				</a>
+	 			</div>
+ 				<div class="time-needs">Choose your journey conditions</div>
+	     	</div>
+	     	<div class="modal-body">
+	     		<div class="t-content-left">
+	     			<img src="../../images/EN/select-money.jpg" class="img-calendar">
+	     			<img src="../../images/EN/select-right-arrow.png" class="img-arrow">
+	     		</div>
+	     		<div class="t-content-right">
+	     			<img src="../../images/EN/select-calendar-bg.jpg" class="img-calendar-bg">
+	     			<div class="date-wrap">
+	     				<h2>WHAT IS YOUR BUDGET?</h2>
+	     				<div class="p-editor-money">
+	     					<div class="range-money">
+	     						<input class="range-slider" type="text" name="" value="0,10000" placeholder="0" onkeyup='this.value=this.value.replace(/\D/gi,"")'>
+	     						<button class="s-range-btn">Select Range</button>
+	     					</div>
+	     					<div class="momey-symbol">$<span>-</span></div>
+	     					<select class="min-money">
+	     						<option value="0">0</option>
+	     						<option value="10000">10000</option>
+	     						<option value="20000">20000</option>
+	     						<option value="30000">30000</option>
+	     						<option value="40000">40000</option>
+	     						<option value="50000">50000</option>
+	     						<option value="60000">60000</option>
+	     						<option value="70000">70000</option>
+	     						<option value="80000">80000</option>
+	     					</select>
+	     					<select class="max-money">
+	     						<option value="10000">10000</option>
+	     					</select>
+	     				</div>
 	     			</div>
 	     		</div>
 	     	</div>
@@ -87,6 +150,10 @@
 	<!-- 第三方库-->
 	<script type="text/javascript" src="../../libs/jQuery/jquery-1.11.3.js"></script>
 	<script type="text/javascript" src="../../libs/bootstrap/js/bootstrap.min.js"></script>
+	<!-- 日期 -->
+	<script type="text/javascript" src="../../libs/dataRange/dateRange.js"></script>
+	<!-- 价钱范围 -->
+	<script type="text/javascript" src="../../libs/rangeNum/jquery.range.js"></script>
 	<!-- 公共JS -->
 	<script type="text/javascript" src="../../common/EN/js/LMTravel-common.js"></script>
 	<!-- 业务代码 -->
