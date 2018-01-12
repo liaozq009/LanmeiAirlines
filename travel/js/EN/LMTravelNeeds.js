@@ -8,8 +8,28 @@ var LMTravelNeeds = {
 
 	/* 时间选择 */
 	timeSelect:function(){
-		// $('#js-timeModal').modal();
-		$('#js-moneyModal').modal();
+		$('#js-timeModal').modal();
+		
+		// 跳到金额模态框
+		$('.js-time-next').click(function(){
+			$('#js-timeModal').modal('hide');
+			$('#js-moneyModal').modal();
+		});
+		$('.js-money-back').click(function(){
+			$('#js-timeModal').modal('show');
+			$('#js-moneyModal').modal('hide');
+		});
+		$('.js-money-next').click(function(){
+			$('#js-hotelModal').modal();
+			$('#js-moneyModal').modal('hide');
+		});
+		$('.js-hotel-back').click(function(){
+			$('#js-hotelModal').modal('hide');
+			$('#js-moneyModal').modal('show');
+		});
+		$('.js-hotel-next').click(function(){
+			$('#js-hotelModal').modal('hide');
+		});
 
 		// 日期选择
 		var formatDate = function(ymd) { //日期格式化

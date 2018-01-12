@@ -35,7 +35,7 @@
 				<span>Return</span>
 			</a>
 		</div>
-		<div class="toolbar-complete"><a href="javascript:void(0)"><span>Complete</span></a></div>
+		<div class="toolbar-complete"><a href="LMTravelPlanning.html" target="_blank"><span>Complete</span></a></div>
 		<div class="toolbar-needs">Choose your travel needs</div>
 	</div>
 	<div class="needs-wrap">
@@ -58,19 +58,19 @@
 	  <div class="modal-dialog" role="document">
 	    <div class="modal-content">
 	     	<div class="modal-header">
- 				<div class="time-back">
+ 				<div class="modal-back js-time-back">
  					<a href="LMTravelMap.html">
  						<img src="../../images/EN/travel-arrow-left.png" alt="">
  						<span>Back</span>
  					</a>
  				</div>
- 				<div class="time-next">
+ 				<div class="modal-next js-time-next">
  					<a href="javascript:void(0)">
  						<span>Next</span>
  						<img src="../../images/EN/travel-arrow-right.png" alt="">
 	 				</a>
 	 			</div>
- 				<div class="time-needs">Choose your journey conditions</div>
+ 				<div class="modal-needs">Choose your journey conditions</div>
 	     	</div>
 	     	<div class="modal-body">
 	     		<div class="t-content-left">
@@ -96,19 +96,19 @@
 	  <div class="modal-dialog" role="document">
 	    <div class="modal-content">
 	     	<div class="modal-header">
- 				<div class="time-back">
- 					<a href="LMTravelMap.html">
+ 				<div class="modal-back js-money-back">
+ 					<a href="javascript:void(0)">
  						<img src="../../images/EN/travel-arrow-left.png" alt="">
  						<span>Back</span>
  					</a>
  				</div>
- 				<div class="time-next">
+ 				<div class="modal-next js-money-next">
  					<a href="javascript:void(0)">
  						<span>Next</span>
  						<img src="../../images/EN/travel-arrow-right.png" alt="">
 	 				</a>
 	 			</div>
- 				<div class="time-needs">Choose your journey conditions</div>
+ 				<div class="modal-needs">Choose your journey conditions</div>
 	     	</div>
 	     	<div class="modal-body">
 	     		<div class="t-content-left">
@@ -139,6 +139,72 @@
 	     					<select class="max-money">
 	     						<option value="10000">10000</option>
 	     					</select>
+	     				</div>
+	     			</div>
+	     		</div>
+	     	</div>
+	    </div>
+	  </div>
+	</div>
+
+	<!-- 酒店选择模态框 -->
+	<div class="modal fade hotelModal" id="js-hotelModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	     	<div class="modal-header">
+ 				<div class="modal-back js-hotel-back">
+ 					<a href="javascript:void(0)">
+ 						<img src="../../images/EN/travel-arrow-left.png" alt="">
+ 						<span>Back</span>
+ 					</a>
+ 				</div>
+ 				<div class="modal-next js-hotel-next">
+ 					<a href="javascript:void(0)">
+ 						<span>Next</span>
+ 						<img src="../../images/EN/travel-arrow-right.png" alt="">
+	 				</a>
+	 			</div>
+ 				<div class="modal-needs">Choose your journey conditions</div>
+	     	</div>
+	     	<div class="modal-body">
+	     		<div class="t-content-left">
+	     			<img src="../../images/EN/select-hotel.jpg" class="img-calendar">
+	     			<img src="../../images/EN/select-right-arrow.png" class="img-arrow">
+	     		</div>
+	     		<div class="t-content-right">
+	     			<img src="../../images/EN/select-calendar-bg.jpg" class="img-calendar-bg">
+	     			<div class="date-wrap">
+	     				<h2>WHAT KIND OF HOTEL?</h2>
+	     				<div class="p-hotel-wrap">
+	     					<div class="h-star-rating">
+	     						<h3>Star rating</h3>
+	     						<ul>
+	     							<li class="n1">
+	     								<a href="javascript:void(0)">
+	     									<img src="../../images/EN/select-start-3.png" class="img-01">
+	     									<img src="../../images/EN/select-start-3g.png" class="img-02">
+	     									<p>3 stars and below</p>
+	     								</a>
+	     							</li>
+	     							<li class="n2">
+	     								<a href="javascript:void(0)">
+	     									<img src="../../images/EN/select-start-4.png" class="img-01">
+	     									<img src="../../images/EN/select-start-4g.png" class="img-02">
+	     									<p class="p-active">4 stars</p>
+	     								</a>
+	     							</li>
+	     							<li class="n3">
+	     								<a href="javascript:void(0)">
+	     									<img src="../../images/EN/select-start-5.png" class="img-01">
+	     									<img src="../../images/EN/select-start-5g.png" class="img-02">
+	     									<p>5 stars</p>
+	     								</a>
+	     							</li>
+	     						</ul>
+	     					</div>
+	     					<div class="h-num-people">
+	     						<h3>Number of people</h3>
+	     					</div>
 	     				</div>
 	     			</div>
 	     		</div>

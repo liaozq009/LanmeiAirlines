@@ -72,18 +72,21 @@ body {
   opacity: 0.7;
 }
 .timeModal .modal-dialog,
-.moneyModal .modal-dialog {
+.moneyModal .modal-dialog,
+.hotelModal .modal-dialog {
   width: 100%;
   margin-top: 160px;
 }
 .timeModal .modal-dialog .modal-content,
-.moneyModal .modal-dialog .modal-content {
+.moneyModal .modal-dialog .modal-content,
+.hotelModal .modal-dialog .modal-content {
   box-shadow: none;
   border: none;
   background: transparent;
 }
 .timeModal .modal-dialog .modal-header,
-.moneyModal .modal-dialog .modal-header {
+.moneyModal .modal-dialog .modal-header,
+.hotelModal .modal-dialog .modal-header {
   position: absolute;
   top: -120px;
   width: 100%;
@@ -91,7 +94,8 @@ body {
   padding: 0 30px;
 }
 .timeModal .modal-dialog .modal-header > div,
-.moneyModal .modal-dialog .modal-header > div {
+.moneyModal .modal-dialog .modal-header > div,
+.hotelModal .modal-dialog .modal-header > div {
   width: 200px;
   height: 50px;
   line-height: 50px;
@@ -101,30 +105,35 @@ body {
   text-align: center;
 }
 .timeModal .modal-dialog .modal-header > div a,
-.moneyModal .modal-dialog .modal-header > div a {
+.moneyModal .modal-dialog .modal-header > div a,
+.hotelModal .modal-dialog .modal-header > div a {
   display: block;
 }
 .timeModal .modal-dialog .modal-header > div img,
-.moneyModal .modal-dialog .modal-header > div img {
+.moneyModal .modal-dialog .modal-header > div img,
+.hotelModal .modal-dialog .modal-header > div img {
   margin-top: -6px;
   margin-right: 7px;
 }
 .timeModal .modal-dialog .modal-header > div span,
-.moneyModal .modal-dialog .modal-header > div span {
+.moneyModal .modal-dialog .modal-header > div span,
+.hotelModal .modal-dialog .modal-header > div span {
   font-size: 20px;
   background: -webkit-linear-gradient(-35deg, #81e5fe 0%, #1639ae 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.timeModal .modal-dialog .modal-header .time-back,
-.moneyModal .modal-dialog .modal-header .time-back {
+.timeModal .modal-dialog .modal-header .modal-back,
+.moneyModal .modal-dialog .modal-header .modal-back,
+.hotelModal .modal-dialog .modal-header .modal-back {
   float: left;
   background: #fff;
   box-shadow: 0 0 50px 0 rgba(170, 199, 249, 0.5);
   border-radius: 4px;
 }
-.timeModal .modal-dialog .modal-header .time-needs,
-.moneyModal .modal-dialog .modal-header .time-needs {
+.timeModal .modal-dialog .modal-header .modal-needs,
+.moneyModal .modal-dialog .modal-header .modal-needs,
+.hotelModal .modal-dialog .modal-header .modal-needs {
   width: 600px;
   margin: 0 auto;
   font-size: 20px;
@@ -135,16 +144,19 @@ body {
   box-shadow: 0 0 50px 0 rgba(170, 199, 249, 0.5);
   border-radius: 4px;
 }
-.timeModal .modal-dialog .modal-header .time-next,
-.moneyModal .modal-dialog .modal-header .time-next {
+.timeModal .modal-dialog .modal-header .modal-next,
+.moneyModal .modal-dialog .modal-header .modal-next,
+.hotelModal .modal-dialog .modal-header .modal-next {
   float: right;
 }
-.timeModal .modal-dialog .modal-header .time-next img,
-.moneyModal .modal-dialog .modal-header .time-next img {
+.timeModal .modal-dialog .modal-header .modal-next img,
+.moneyModal .modal-dialog .modal-header .modal-next img,
+.hotelModal .modal-dialog .modal-header .modal-next img {
   margin-left: 7px;
 }
 .timeModal .modal-dialog .modal-body,
-.moneyModal .modal-dialog .modal-body {
+.moneyModal .modal-dialog .modal-body,
+.hotelModal .modal-dialog .modal-body {
   width: 1320px;
   height: 600px;
   margin: 0 auto;
@@ -153,22 +165,26 @@ body {
   background: #fff;
 }
 .timeModal .modal-dialog .modal-body > div,
-.moneyModal .modal-dialog .modal-body > div {
+.moneyModal .modal-dialog .modal-body > div,
+.hotelModal .modal-dialog .modal-body > div {
   width: 50%;
   height: 100%;
   float: left;
 }
 .timeModal .modal-dialog .modal-body .t-content-left,
-.moneyModal .modal-dialog .modal-body .t-content-left {
+.moneyModal .modal-dialog .modal-body .t-content-left,
+.hotelModal .modal-dialog .modal-body .t-content-left {
   position: relative;
   text-align: center;
 }
 .timeModal .modal-dialog .modal-body .t-content-left .img-calendar,
-.moneyModal .modal-dialog .modal-body .t-content-left .img-calendar {
+.moneyModal .modal-dialog .modal-body .t-content-left .img-calendar,
+.hotelModal .modal-dialog .modal-body .t-content-left .img-calendar {
   width: 100%;
 }
 .timeModal .modal-dialog .modal-body .t-content-left .img-arrow,
-.moneyModal .modal-dialog .modal-body .t-content-left .img-arrow {
+.moneyModal .modal-dialog .modal-body .t-content-left .img-arrow,
+.hotelModal .modal-dialog .modal-body .t-content-left .img-arrow {
   position: absolute;
   right: -59px;
   top: 50%;
@@ -176,20 +192,24 @@ body {
   margin-top: -59px;
 }
 .timeModal .modal-dialog .modal-body .t-content-right,
-.moneyModal .modal-dialog .modal-body .t-content-right {
+.moneyModal .modal-dialog .modal-body .t-content-right,
+.hotelModal .modal-dialog .modal-body .t-content-right {
   position: relative;
 }
 .timeModal .modal-dialog .modal-body .t-content-right > .img-calendar-bg,
-.moneyModal .modal-dialog .modal-body .t-content-right > .img-calendar-bg {
+.moneyModal .modal-dialog .modal-body .t-content-right > .img-calendar-bg,
+.hotelModal .modal-dialog .modal-body .t-content-right > .img-calendar-bg {
   width: 100%;
 }
 .timeModal .modal-dialog .modal-body .t-content-right .date-wrap,
-.moneyModal .modal-dialog .modal-body .t-content-right .date-wrap {
+.moneyModal .modal-dialog .modal-body .t-content-right .date-wrap,
+.hotelModal .modal-dialog .modal-body .t-content-right .date-wrap {
   position: absolute;
   top: 0;
 }
-.timeModal .modal-dialog .modal-body .t-content-right .date-wrap h2,
-.moneyModal .modal-dialog .modal-body .t-content-right .date-wrap h2 {
+.timeModal .modal-dialog .modal-body .t-content-right .date-wrap > h2,
+.moneyModal .modal-dialog .modal-body .t-content-right .date-wrap > h2,
+.hotelModal .modal-dialog .modal-body .t-content-right .date-wrap > h2 {
   font-size: 64px;
   font-weight: bold;
   color: #fff;
@@ -197,7 +217,8 @@ body {
   margin-left: 70px;
 }
 .timeModal .modal-dialog .modal-body .t-content-right .date-wrap > div,
-.moneyModal .modal-dialog .modal-body .t-content-right .date-wrap > div {
+.moneyModal .modal-dialog .modal-body .t-content-right .date-wrap > div,
+.hotelModal .modal-dialog .modal-body .t-content-right .date-wrap > div {
   width: 480px;
   height: 50px;
   line-height: 50px;
@@ -206,7 +227,8 @@ body {
   background: #fff;
 }
 .timeModal .modal-dialog .modal-body .t-content-right .date-wrap > div .date-title,
-.moneyModal .modal-dialog .modal-body .t-content-right .date-wrap > div .date-title {
+.moneyModal .modal-dialog .modal-body .t-content-right .date-wrap > div .date-title,
+.hotelModal .modal-dialog .modal-body .t-content-right .date-wrap > div .date-title {
   display: block;
   width: 100%;
   height: 100%;
@@ -214,6 +236,90 @@ body {
   font-weight: bold;
   font-size: 18px;
   background: -webkit-linear-gradient(-35deg, #81E5FE 0%, #1639AE 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.timeModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap,
+.moneyModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap,
+.hotelModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap {
+  width: 520px;
+  height: 286px;
+  margin-top: 50px;
+  padding-top: 40px;
+  background: #fff;
+  box-shadow: 0 0 50px 0 rgba(16, 81, 162, 0.5);
+  border-radius: 4px;
+}
+.timeModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap .h-star-rating h3,
+.moneyModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap .h-star-rating h3,
+.hotelModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap .h-star-rating h3 {
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+  background: -webkit-linear-gradient(-35deg, #81e5fe 0%, #1639ae 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.timeModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap .h-star-rating > ul,
+.moneyModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap .h-star-rating > ul,
+.hotelModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap .h-star-rating > ul {
+  margin-top: 20px;
+  padding: 0 50px;
+  overflow: hidden;
+}
+.timeModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap .h-star-rating > ul > li,
+.moneyModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap .h-star-rating > ul > li,
+.hotelModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap .h-star-rating > ul > li {
+  float: left;
+  width: 33.33%;
+}
+.timeModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap .h-star-rating > ul > li a,
+.moneyModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap .h-star-rating > ul > li a,
+.hotelModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap .h-star-rating > ul > li a {
+  display: block;
+  text-align: center;
+}
+.timeModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap .h-star-rating > ul > li a p,
+.moneyModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap .h-star-rating > ul > li a p,
+.hotelModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap .h-star-rating > ul > li a p {
+  font-size: 14px;
+  color: #AAC7F9;
+  text-align: center;
+  line-height: normal;
+  margin-top: 10px;
+}
+.timeModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap .h-star-rating > ul > li a .p-active,
+.moneyModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap .h-star-rating > ul > li a .p-active,
+.hotelModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap .h-star-rating > ul > li a .p-active {
+  color: #3772D5;
+}
+.timeModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap .h-star-rating > ul > li a .img-01,
+.moneyModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap .h-star-rating > ul > li a .img-01,
+.hotelModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap .h-star-rating > ul > li a .img-01 {
+  display: none;
+}
+.timeModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap .h-star-rating > ul .n2 .img-01,
+.moneyModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap .h-star-rating > ul .n2 .img-01,
+.hotelModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap .h-star-rating > ul .n2 .img-01 {
+  display: inline-block;
+}
+.timeModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap .h-star-rating > ul .n2 .img-02,
+.moneyModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap .h-star-rating > ul .n2 .img-02,
+.hotelModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap .h-star-rating > ul .n2 .img-02 {
+  display: none;
+}
+.timeModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap .h-num-people,
+.moneyModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap .h-num-people,
+.hotelModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap .h-num-people {
+  margin-top: 20px;
+}
+.timeModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap .h-num-people h3,
+.moneyModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap .h-num-people h3,
+.hotelModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap .h-num-people h3 {
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+  background: -webkit-linear-gradient(-35deg, #81e5fe 0%, #1639ae 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

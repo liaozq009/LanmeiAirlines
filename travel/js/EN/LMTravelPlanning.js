@@ -85,6 +85,12 @@ var LMTravelPlanning = {
 				$(this).val($(this).val().replace(/[^\d]/ig,''));
 			});
 
+			// $('.range-money').on('input[number]:not(:hidden)', 'input', function() {
+   //              var $this = $(this), 
+   //                  val = $this.val();
+   //              if (val) $this.val(val.replace(/[^0-9]/g, ''));
+   //          });
+
 			if(optionVal=='0'){
 				$range.show();
 				 $select.hide();
