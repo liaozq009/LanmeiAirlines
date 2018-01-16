@@ -387,12 +387,17 @@
         if( window.getSelection && containerNode.compareDocumentPosition )
         {
             var sel = window.getSelection();
+ 			if(sel.anchorNode==null||sel.focusNode){
+				sel.removeAllRanges();
+    			sel.addRange(selFocus);
+ 			}
             var left_node = sel.anchorNode,
                 left_offset = sel.anchorOffset,
                 right_node = sel.focusNode,
                 right_offset = sel.focusOffset;
             // http://stackoverflow.com/questions/10710733/dom-determine-if-the-anchornode-or-focusnode-is-on-the-left-side
-            if( (left_node == right_node && left_offset > right_offset) ||
+            try{
+            	if( (left_node == right_node && left_offset > right_offset) ||
                 (left_node.compareDocumentPosition(right_node) & Node.DOCUMENT_POSITION_PRECEDING) )
             {
                 // Right-to-left selection
@@ -401,6 +406,10 @@
                 right_node = sel.anchorNode,
                 right_offset = sel.anchorOffset;
             }
+            }catch(e){
+            	//TODO handle the exception
+            }
+            
             // Speed up: selection inside editor
             var left_inside = isOrContainsNode(containerNode,left_node),
                 right_inside = isOrContainsNode(containerNode,right_node);

@@ -1,24 +1,5 @@
-/*jshint multistr:true, curly: false */
-/*global jQuery:false, define: false */
-/**
- * jRange - Awesome range control
- *
- * Written by
- * ----------
- * Nitin Hayaran (nitinhayaran@gmail.com)
- *
- * Licensed under the MIT (MIT-LICENSE.txt).
- *
- * @author Nitin Hayaran
- * @version 0.1-RELEASE
- *
- * Dependencies
- * ------------
- * jQuery (http://jquery.com)
- *
- **/
-;
-(function($, window, document, undefined) {
+
+;(function($, window, document, undefined) {
 	'use strict';
 
 	var jRange = function() {
@@ -75,7 +56,7 @@
 			// 金额选择
 			$('.p-editor-money .min-money').change(function(){
 				var optionVal = Number($('.p-editor-money .min-money  option:selected').val());  
-				var optionVal1 = Number(optionVal)+10000;
+				var optionVal1 = Number(optionVal)+1000;
 
 				var children = '<option value="'+optionVal1+'">'+optionVal1+'</option><option value="0">Other</option>';
 
@@ -95,11 +76,11 @@
 			});
 
 			$('#g1').click(function(){
-				var optionVal = 10000;
-				var optionVal1 = 20000;
+				var optionVal = 1000;
+				var optionVal1 = 2000;
 
-				arg2.from=10000;
-				arg2.to=20000;
+				arg2.from=1000;
+				arg2.to=2000;
 				var rangeOption = optionVal+','+optionVal1;
 				$('.range-slider').val(rangeOption);
 

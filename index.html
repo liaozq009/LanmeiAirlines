@@ -562,1089 +562,1089 @@
 			<img src="images/EN/video-bg.png" class="video-img">
 			<video width="100%" height="auto" id="videoSource" autoplay="autoplay" loop="loop" poster="/">
 				<source src="video/LMVideo.mp4" type="video/mp4">
-					<!-- <source src="https://static.jianshukeji.com/highcharts/images/images-videoo.mp4" type="video/mp4"> -->
-					</video>
-				</li>
+				<!-- <source src="https://static.jianshukeji.com/highcharts/images/images-videoo.mp4" type="video/mp4"> -->
+			</video>
+		</li>
+	</ul>
+
+	<!-- 左边固定菜单 -->
+	<div class="leftAside">
+		<div class="listSelect">
+			<ul>
+				<li class="li-child1"><a href="ticket-content" class="nth-child1"><span>Ticket</span></a></li>
+				<li class="li-child2"><a href="hotel-content" class="nth-child2"><span>Hotel</span></a></li>
+				<li class="li-child3"><a href="car-content" class="nth-child3"><span>Car</span></a></li>
+				<li class="li-child4"><a href="flight-content" class="nth-child4"><span>Flight Status</span></a></li>
+				<li class="li-slide"></li>
 			</ul>
+		</div>
+		<div class="listSelectBox">
+			<!-- 关闭箭头 -->
+			<div class="closeArrow"><a href="#"><img src="images/EN/close-icon.png"></a></div>
+			<!-- Tickit内容 -->
+			<div class="ticket-content listSelectContent">
+				<form id="airTicketForm" action="http://b2c.lanmeiairlines.com/lqWeb/reservation/AVQuery.do" method="POST" target="_blank">
+					<input type="hidden" name="orgcity" id ="orgcity">
+					<input type="hidden" name="dstcity" id ="dstcity">
+					<input type="hidden" name="language"  value="US">
+					<input type="hidden" name="CURRENCY"  value="USD">
 
-			<!-- 左边固定菜单 -->
-			<div class="leftAside">
-				<div class="listSelect">
-					<ul>
-						<li class="li-child1"><a href="ticket-content" class="nth-child1"><span>Ticket</span></a></li>
-						<li class="li-child2"><a href="hotel-content" class="nth-child2"><span>Hotel</span></a></li>
-						<li class="li-child3"><a href="car-content" class="nth-child3"><span>Car</span></a></li>
-						<li class="li-child4"><a href="flight-content" class="nth-child4"><span>Flight Status</span></a></li>
-						<li class="li-slide"></li>
-					</ul>
-				</div>
-				<div class="listSelectBox">
-					<!-- 关闭箭头 -->
-					<div class="closeArrow"><a href="#"><img src="images/EN/close-icon.png"></a></div>
-					<!-- Tickit内容 -->
-					<div class="ticket-content listSelectContent">
-						<form id="airTicketForm" action="http://b2c.lanmeiairlines.com/lqWeb/reservation/AVQuery.do" method="GET" target="_blank">
-							<input type="hidden" name="orgcity" id ="orgcity">
-							<input type="hidden" name="dstcity" id ="dstcity">
-							<input type="hidden" name="language"  value="US">
-							<input type="hidden" name="CURRENCY"  value="USD">
-
-							<div class="radioSelect js-ticket-radio">
-								<label><input type="radio" name="tripType" value="OW" checked><i class="active"></i><b></b><span data-way="oneWay">One way</span></label>
-								<label><input type="radio" name="tripType" value="RT"><i></i><b></b><span data-way="roundTrip">Round Trip</span></label>
-								<label><input type="radio" name="tripType" value="MT"><i></i><b></b><span data-way="multi">Stopover / Multi-city</span></label>
-								<label class="resetBtn"><img src="images/EN/reset-icon2.png"><span>Reset</span></label>
-							</div>
-							<div class="selectAirTime selectAirCommon">
-								<div class="local_timeSelect">
-									<div class="localSelectStart autoClick">
-										<p><img src="images/EN/originStart.png"><span>From</span></p>
-										<input type="text" class="fromcityinput inputDown Autocomplete" id="fromcity" value="" placeholder="" autocomplete="off">
-										<img src="images/EN/downArrow.png">
-										<span class="clear">X</span>
-										<i class="img01" id="localChangeImg"></i>
-										<b class="bottomLine"></b>
-										<ul class="fromcityMenu menu-com">
-
-										</ul>
-									</div>
-									<div class="localSelectEnd autoClick autoFocus">
-										<p><img src="images/EN/originEnd.png"><span>To</span></p>
-										<input type="text" class="tocityinput inputDown Autocomplete" id="tocity" value="" placeholder="" autocomplete="off">
-										<img src="images/EN/downArrow.png">
-										<span class="clear">X</span>
-										<b class="bottomLine"></b>
-										<ul class="tocityMenu menu-com">
-
-										</ul>
-									</div>
-									<div class="timeSelectStart js-ticket-timeStart">
-										<p><img src="images/EN/departureDate.png"><span>Departure Date</span></p>
-										<input type="text" id="timeFrom" name="takeoffDate" value="" placeholder="" readonly>
-										<img src="images/EN/downArrow.png">
-									</div>
-									<div class="CabinSelect">
-										<p><img src="images/EN/cabin-icon.png"><span>Class</span></p>
-										<input type="text" class="cityinput inputDown" id="Cabin" name="cabinType" value="ECONOMY" placeholder="" readonly>
-										<img src="images/EN/downArrow.png">
-										<b class="bottomLine"></b>
-										<ul class="CabinMenu menu-com">
-											<li><a href="#">ECONOMY</a></li>
-										</ul>
-									</div>
-									<div class="AdultSelect">
-										<p><img src="images/EN/adult-icon.png"><span>Adult</span></p>
-										<div>
-											<input type="text" class="cityinput" id="Adult" name="adultCount" value="1" readonly>
-											<i class="addArrow"><img src="images/EN/addArrow.png"></i>
-											<i class="downArrow"><img src="images/EN/downArrow.png" ></i>
-										</div>
-									</div>
-									<div class="ChildSelect">
-										<p><img src="images/EN/child-icon.png"><span>Child</span></p>
-										<div>
-											<input type="text" readonly="readonly" id="Child" name="childCount" value="0" class=""/>
-											<i class="addArrow"><img src="images/EN/addArrow.png"></i>
-											<i class="downArrow"><img src="images/EN/downArrow.png" ></i>
-											<span class="ageTip">2-12 year-old</span>
-										</div>
-									</div>
-									<div class="timeSelectEnd js-ticket-timeEnd">
-										<p><img src="images/EN/departureDate.png"><span>Return Date</span></p>
-										<input type="text" id="timeTo" name="returnDate" value="" placeholder="" readonly>
-										<img src="images/EN/downArrow.png">
-									</div>
-								</div>
-								<div class="viewSchedules js-ticket-search">
-									<a href="javascript:void(0)">SEARCH<img src="images/EN/schedulesArrow.png"></a>
-								</div>
-							</div>
-						</form>
+					<div class="radioSelect js-ticket-radio">
+						<label><input type="radio" name="tripType" value="OW" checked><i class="active"></i><b></b><span data-way="oneWay">One way</span></label>
+						<label><input type="radio" name="tripType" value="RT"><i></i><b></b><span data-way="roundTrip">Round Trip</span></label>
+						<label><input type="radio" name="tripType" value="MT"><i></i><b></b><span data-way="multi">Stopover / Multi-city</span></label>
+						<label class="resetBtn"><img src="images/EN/reset-icon2.png"><span>Reset</span></label>
 					</div>
-					<!-- Hotel内容 -->
-					<div class="hotel-content listSelectContent">
-						<div class="hotel-title">
-							Hotel Search
+					<div class="selectAirTime selectAirCommon">
+						<div class="local_timeSelect">
+							<div class="localSelectStart autoClick">
+								<p><img src="images/EN/originStart.png"><span>From</span></p>
+								<input type="text" class="fromcityinput inputDown Autocomplete" id="fromcity" value="" placeholder="" autocomplete="off">
+								<img src="images/EN/downArrow.png">
+								<span class="clear">X</span>
+								<i class="img01" id="localChangeImg"></i>
+								<b class="bottomLine"></b>
+								<ul class="fromcityMenu menu-com">
+
+								</ul>
+							</div>
+							<div class="localSelectEnd autoClick autoFocus">
+								<p><img src="images/EN/originEnd.png"><span>To</span></p>
+								<input type="text" class="tocityinput inputDown Autocomplete" id="tocity" value="" placeholder="" autocomplete="off">
+								<img src="images/EN/downArrow.png">
+								<span class="clear">X</span>
+								<b class="bottomLine"></b>
+								<ul class="tocityMenu menu-com">
+
+								</ul>
+							</div>
+							<div class="timeSelectStart js-ticket-timeStart">
+								<p><img src="images/EN/departureDate.png"><span>Departure Date</span></p>
+								<input type="text" id="timeFrom" name="takeoffDate" value="" placeholder="" readonly>
+								<img src="images/EN/downArrow.png">
+							</div>
+							<div class="CabinSelect">
+								<p><img src="images/EN/cabin-icon.png"><span>Class</span></p>
+								<input type="text" class="cityinput inputDown" id="Cabin" name="cabinType" value="ECONOMY" placeholder="" readonly>
+								<img src="images/EN/downArrow.png">
+								<b class="bottomLine"></b>
+								<ul class="CabinMenu menu-com">
+									<li><a href="#">ECONOMY</a></li>
+								</ul>
+							</div>
+							<div class="AdultSelect">
+								<p><img src="images/EN/adult-icon.png"><span>Adult</span></p>
+								<div>
+									<input type="text" class="cityinput" id="Adult" name="adultCount" value="1" readonly>
+									<i class="addArrow"><img src="images/EN/addArrow.png"></i>
+									<i class="downArrow"><img src="images/EN/downArrow.png" ></i>
+								</div>
+							</div>
+							<div class="ChildSelect">
+								<p><img src="images/EN/child-icon.png"><span>Child</span></p>
+								<div>
+									<input type="text" readonly="readonly" id="Child" name="childCount" value="0" class=""/>
+									<i class="addArrow"><img src="images/EN/addArrow.png"></i>
+									<i class="downArrow"><img src="images/EN/downArrow.png" ></i>
+									<span class="ageTip">2-12 year-old</span>
+								</div>
+							</div>
+							<div class="timeSelectEnd js-ticket-timeEnd">
+								<p><img src="images/EN/departureDate.png"><span>Return Date</span></p>
+								<input type="text" id="timeTo" name="returnDate" value="" placeholder="" readonly>
+								<img src="images/EN/downArrow.png">
+							</div>
 						</div>
-		                <form id="h-content-form" action="http://hotels.lanmeiairlines.com/index/search?" target="_blank" method="get">
-		                    <div class="selectAirTime selectAirCommon">
-		                        <div class="local_timeSelect">
-		                            <div class="localSelectStart autoClick autoFocus">
-		                                <p>
-		                                    <img src="images/EN/location.png">
-		                                    <span>Where are you going ?</span>
-		                                </p>
-		                                <input id="txtHotelID" name="txtHotelID" class="form-control bs-autocomplete" placeholder="Enter destination, hotel name or landmark" type="text" value="" />
-		                                <input type="hidden" id="data-cate" name="data-cate" value="">
-		                                <input type="hidden" id="data-id" name="data-id" value="">
-		                                <input type="hidden" id="tempName" value="">
-		                                <img src="images/EN/hotels-loading.gif" class="hotels-loading">
-		                                <span class="clear">X</span>
-		                                <b class="bottomLine"></b>
-		                                <!-- <ul class="hotelMenu menu-com">
-											<li><a href="javascript:void(0)">GuangZhou</a></li>
-											<li><a href="javascript:void(0)">ShenZhen</a></li>
-										</ul> -->
-		                            </div>
-		                            <div class="timeSelectEnd">
-		                                <p>
-		                                    <img src="images/EN/departureDate.png">
-		                                    <span>Check - in</span>
-		                                </p>
-		                                <input type="text" id="h-timeTo" name="datefrom" value="" placeholder="" readonly>
-		                                <img src="images/EN/downArrow.png">
-		                            </div>
-		                            <div class="timeSelectStart">
-		                                <p>
-		                                    <img src="images/EN/departureDate.png">
-		                                    <span>Check - out</span>
-		                                </p>
-		                                <input type="text" id="h-timeFrom" name="dateto" value="" placeholder="" readonly>
-		                                <img src="images/EN/downArrow.png">
-		                            </div>
-		                            
+						<div class="viewSchedules js-ticket-search">
+							<a href="javascript:void(0)">SEARCH<img src="images/EN/schedulesArrow.png"></a>
+						</div>
+					</div>
+				</form>
+			</div>
+			<!-- Hotel内容 -->
+			<div class="hotel-content listSelectContent">
+				<div class="hotel-title">
+					Hotel Search
+				</div>
+                <form id="h-content-form" action="http://hotels.lanmeiairlines.com/index/search?" target="_blank" method="get">
+                    <div class="selectAirTime selectAirCommon">
+                        <div class="local_timeSelect">
+                            <div class="localSelectStart autoClick autoFocus">
+                                <p>
+                                    <img src="images/EN/location.png">
+                                    <span>Where are you going ?</span>
+                                </p>
+                                <input id="txtHotelID" name="txtHotelID" class="form-control bs-autocomplete" placeholder="Enter destination, hotel name or landmark" type="text" value="" />
+                                <input type="hidden" id="data-cate" name="data-cate" value="">
+                                <input type="hidden" id="data-id" name="data-id" value="">
+                                <input type="hidden" id="tempName" value="">
+                                <img src="images/EN/hotels-loading.gif" class="hotels-loading">
+                                <span class="clear">X</span>
+                                <b class="bottomLine"></b>
+                                <!-- <ul class="hotelMenu menu-com">
+									<li><a href="javascript:void(0)">GuangZhou</a></li>
+									<li><a href="javascript:void(0)">ShenZhen</a></li>
+								</ul> -->
+                            </div>
+                            <div class="timeSelectEnd">
+                                <p>
+                                    <img src="images/EN/departureDate.png">
+                                    <span>Check - in</span>
+                                </p>
+                                <input type="text" id="h-timeTo" name="datefrom" value="" placeholder="" readonly>
+                                <img src="images/EN/downArrow.png">
+                            </div>
+                            <div class="timeSelectStart">
+                                <p>
+                                    <img src="images/EN/departureDate.png">
+                                    <span>Check - out</span>
+                                </p>
+                                <input type="text" id="h-timeFrom" name="dateto" value="" placeholder="" readonly>
+                                <img src="images/EN/downArrow.png">
+                            </div>
+                            
 
 
 
-		                           <div class="rooms-select">
-										<p>Room(s)</p>
-										<input type="text" class="inputDown" id="h-rooms" name="cboRoom" value="1 Room, 1 Adults" placeholder="" readonly>
+                           <div class="rooms-select">
+								<p>Room(s)</p>
+								<input type="text" class="inputDown" id="h-rooms" name="cboRoom" value="1 Room, 1 Adults" placeholder="" readonly>
+								<img src="images/EN/downArrow.png">
+								<b class="bottomLine"></b>
+								<ul class="roomMenu menu-com">
+									<li><a href="javascript:void(0)" data-num="0">1 Room, 1 Adults</a></li>
+									<li><a href="javascript:void(0)" data-num="rooms-1">1</a></li>
+									<li><a href="javascript:void(0)" data-num="rooms-2">2</a></li>
+									<li><a href="javascript:void(0)" data-num="rooms-3">3</a></li>
+								</ul>
+							</div>
+							<div class="rooms-select-menu">
+								<div class="rooms-1">
+									<h2>Room1</h2>
+									<div>
+										<p>Adults</p>
+										<input type="text" class="inputDown" name="number_of_adults[]" value="1" placeholder="" readonly>
 										<img src="images/EN/downArrow.png">
 										<b class="bottomLine"></b>
 										<ul class="roomMenu menu-com">
-											<li><a href="javascript:void(0)" data-num="0">1 Room, 1 Adults</a></li>
-											<li><a href="javascript:void(0)" data-num="rooms-1">1</a></li>
-											<li><a href="javascript:void(0)" data-num="rooms-2">2</a></li>
-											<li><a href="javascript:void(0)" data-num="rooms-3">3</a></li>
+											<li><a href="javascript:void(0)">1</a></li>
+											<li><a href="javascript:void(0)">2</a></li>
+											<li><a href="javascript:void(0)">3</a></li>
 										</ul>
 									</div>
-									<div class="rooms-select-menu">
-										<div class="rooms-1">
-											<h2>Room1</h2>
-											<div>
-												<p>Adults</p>
-												<input type="text" class="inputDown" name="number_of_adults[]" value="1" placeholder="" readonly>
-												<img src="images/EN/downArrow.png">
-												<b class="bottomLine"></b>
-												<ul class="roomMenu menu-com">
-													<li><a href="javascript:void(0)">1</a></li>
-													<li><a href="javascript:void(0)">2</a></li>
-													<li><a href="javascript:void(0)">3</a></li>
-												</ul>
-											</div>
-											<div class="child-parent">
-												<p>Children</p>
-												<input type="text" class="inputDown" name="number_of_children[]" value="0" placeholder="" readonly>
-												<img src="images/EN/downArrow.png">
-												<b class="bottomLine"></b>
-												<ul class="roomMenu menu-com child-num-menu">
-													<li><a href="javascript:void(0)" data-child="child-0">0</a></li>
-													<li><a href="javascript:void(0)" data-child="child-1">1</a></li>
-													<li><a href="javascript:void(0)" data-child="child-2">2</a></li>
-													<li><a href="javascript:void(0)" data-child="child-3">3</a></li>
-												</ul>
-											</div>
-											<div class="child-1 child-com">
-												<p>Age</p>
-												<input type="text" class="inputDown" name="child_age_1[]" value="2" placeholder="" readonly>
-												<img src="images/EN/downArrow.png">
-												<b class="bottomLine"></b>
-												<ul class="roomMenu menu-com">
-													<li><a href="javascript:void(0)" title="Age < 1 year old">Age < 1 year old</a></li>
-													<li><a href="javascript:void(0)">2</a></li>
-													<li><a href="javascript:void(0)">3</a></li>
-													<li><a href="javascript:void(0)">4</a></li>
-													<li><a href="javascript:void(0)">5</a></li>
-													<li><a href="javascript:void(0)">6</a></li>
-													<li><a href="javascript:void(0)">7</a></li>
-													<li><a href="javascript:void(0)">8</a></li>
-													<li><a href="javascript:void(0)">9</a></li>
-													<li><a href="javascript:void(0)">10</a></li>
-													<li><a href="javascript:void(0)">11</a></li>
-													<li><a href="javascript:void(0)">12</a></li>
-												</ul>
-											</div>
-											<div class="child-2 child-com">
-												<p>Age</p>
-												<input type="text" class="inputDown" name="child_age_1[]" value="2" placeholder="" readonly>
-												<img src="images/EN/downArrow.png">
-												<b class="bottomLine"></b>
-												<ul class="roomMenu menu-com">
-													<li><a href="javascript:void(0)" title="Age < 1 year old">Age < 1 year old</a></li>
-													<li><a href="javascript:void(0)">2</a></li>
-													<li><a href="javascript:void(0)">3</a></li>
-													<li><a href="javascript:void(0)">4</a></li>
-													<li><a href="javascript:void(0)">5</a></li>
-													<li><a href="javascript:void(0)">6</a></li>
-													<li><a href="javascript:void(0)">7</a></li>
-													<li><a href="javascript:void(0)">8</a></li>
-													<li><a href="javascript:void(0)">9</a></li>
-													<li><a href="javascript:void(0)">10</a></li>
-													<li><a href="javascript:void(0)">11</a></li>
-													<li><a href="javascript:void(0)">12</a></li>
-												</ul>
-											</div>
-											<div class="child-3 child-com">
-												<p>Age</p>
-												<input type="text" class="inputDown" name="child_age_1[]" value="2" placeholder="" readonly>
-												<img src="images/EN/downArrow.png">
-												<b class="bottomLine"></b>
-												<ul class="roomMenu menu-com">
-													<li><a href="javascript:void(0)" title="Age < 1 year old">Age < 1 year old</a></li>
-													<li><a href="javascript:void(0)">2</a></li>
-													<li><a href="javascript:void(0)">3</a></li>
-													<li><a href="javascript:void(0)">4</a></li>
-													<li><a href="javascript:void(0)">5</a></li>
-													<li><a href="javascript:void(0)">6</a></li>
-													<li><a href="javascript:void(0)">7</a></li>
-													<li><a href="javascript:void(0)">8</a></li>
-													<li><a href="javascript:void(0)">9</a></li>
-													<li><a href="javascript:void(0)">10</a></li>
-													<li><a href="javascript:void(0)">11</a></li>
-													<li><a href="javascript:void(0)">12</a></li>
-												</ul>
-											</div>
-										</div>
-										
-										
-										<div class="rooms-2">
-											<h2>Room2</h2>
-											<div>
-												<p>Adults</p>
-												<input type="text" class="inputDown" name="number_of_adults[]" value="1" placeholder="" readonly>
-												<img src="images/EN/downArrow.png">
-												<b class="bottomLine"></b>
-												<ul class="roomMenu menu-com">
-													<li><a href="javascript:void(0)">1</a></li>
-													<li><a href="javascript:void(0)">2</a></li>
-													<li><a href="javascript:void(0)">3</a></li>
-												</ul>
-											</div>
-											<div class="child-parent">
-												<p>Children</p>
-												<input type="text" class="inputDown" name="number_of_children[]" value="0" placeholder="" readonly>
-												<img src="images/EN/downArrow.png">
-												<b class="bottomLine"></b>
-												<ul class="roomMenu menu-com child-num-menu">
-													<li><a href="javascript:void(0)" data-child="child-0">0</a></li>
-													<li><a href="javascript:void(0)" data-child="child-1">1</a></li>
-													<li><a href="javascript:void(0)" data-child="child-2">2</a></li>
-													<li><a href="javascript:void(0)" data-child="child-3">3</a></li>
-												</ul>
-											</div>
-											<div class="child-1 child-com">
-												<p>Age</p>
-												<input type="text" class="inputDown" name="child_age_2[]" value="2" placeholder="" readonly>
-												<img src="images/EN/downArrow.png">
-												<b class="bottomLine"></b>
-												<ul class="roomMenu menu-com">
-													<li><a href="javascript:void(0)" title="Age < 1 year old">Age < 1 year old</a></li>
-													<li><a href="javascript:void(0)">2</a></li>
-													<li><a href="javascript:void(0)">3</a></li>
-													<li><a href="javascript:void(0)">4</a></li>
-													<li><a href="javascript:void(0)">5</a></li>
-													<li><a href="javascript:void(0)">6</a></li>
-													<li><a href="javascript:void(0)">7</a></li>
-													<li><a href="javascript:void(0)">8</a></li>
-													<li><a href="javascript:void(0)">9</a></li>
-													<li><a href="javascript:void(0)">10</a></li>
-													<li><a href="javascript:void(0)">11</a></li>
-													<li><a href="javascript:void(0)">12</a></li>
-												</ul>
-											</div>
-											<div class="child-2 child-com">
-												<p>Age</p>
-												<input type="text" class="inputDown" name="child_age_2[]" value="2" placeholder="" readonly>
-												<img src="images/EN/downArrow.png">
-												<b class="bottomLine"></b>
-												<ul class="roomMenu menu-com">
-													<li><a href="javascript:void(0)" title="Age < 1 year old">Age < 1 year old</a></li>
-													<li><a href="javascript:void(0)">2</a></li>
-													<li><a href="javascript:void(0)">3</a></li>
-													<li><a href="javascript:void(0)">4</a></li>
-													<li><a href="javascript:void(0)">5</a></li>
-													<li><a href="javascript:void(0)">6</a></li>
-													<li><a href="javascript:void(0)">7</a></li>
-													<li><a href="javascript:void(0)">8</a></li>
-													<li><a href="javascript:void(0)">9</a></li>
-													<li><a href="javascript:void(0)">10</a></li>
-													<li><a href="javascript:void(0)">11</a></li>
-													<li><a href="javascript:void(0)">12</a></li>
-												</ul>
-											</div>
-											<div class="child-3 child-com">
-												<p>Age</p>
-												<input type="text" class="inputDown" name="child_age_2[]" value="2" placeholder="" readonly>
-												<img src="images/EN/downArrow.png">
-												<b class="bottomLine"></b>
-												<ul class="roomMenu menu-com">
-													<li><a href="javascript:void(0)" title="Age < 1 year old">Age < 1 year old</a></li>
-													<li><a href="javascript:void(0)">2</a></li>
-													<li><a href="javascript:void(0)">3</a></li>
-													<li><a href="javascript:void(0)">4</a></li>
-													<li><a href="javascript:void(0)">5</a></li>
-													<li><a href="javascript:void(0)">6</a></li>
-													<li><a href="javascript:void(0)">7</a></li>
-													<li><a href="javascript:void(0)">8</a></li>
-													<li><a href="javascript:void(0)">9</a></li>
-													<li><a href="javascript:void(0)">10</a></li>
-													<li><a href="javascript:void(0)">11</a></li>
-													<li><a href="javascript:void(0)">12</a></li>
-												</ul>
-											</div>
-										</div>
-										
-										
-										
-										<div class="rooms-3">
-											<h2>Room3</h2>
-											<div>
-												<p>Adults</p>
-												<input type="text" class="inputDown" name="number_of_adults[]" value="1" placeholder="" readonly>
-												<img src="images/EN/downArrow.png">
-												<b class="bottomLine"></b>
-												<ul class="roomMenu menu-com">
-													<li><a href="javascript:void(0)">1</a></li>
-													<li><a href="javascript:void(0)">2</a></li>
-													<li><a href="javascript:void(0)">3</a></li>
-												</ul>
-											</div>
-											<div class="child-parent">
-												<p>Children</p>
-												<input type="text" class="inputDown" name="number_of_children[]" value="0" placeholder="" readonly>
-												<img src="images/EN/downArrow.png">
-												<b class="bottomLine"></b>
-												<ul class="roomMenu menu-com child-num-menu">
-													<li><a href="javascript:void(0)" data-child="child-0">0</a></li>
-													<li><a href="javascript:void(0)" data-child="child-1">1</a></li>
-													<li><a href="javascript:void(0)" data-child="child-2">2</a></li>
-													<li><a href="javascript:void(0)" data-child="child-3">3</a></li>
-												</ul>
-											</div>
-											<div class="child-1 child-com">
-												<p>Age</p>
-												<input type="text" class="inputDown" name="child_age_3[]" value="2" placeholder="" readonly>
-												<img src="images/EN/downArrow.png">
-												<b class="bottomLine"></b>
-												<ul class="roomMenu menu-com">
-													<li><a href="javascript:void(0)" title="Age < 1 year old">Age < 1 year old</a></li>
-													<li><a href="javascript:void(0)">2</a></li>
-													<li><a href="javascript:void(0)">3</a></li>
-													<li><a href="javascript:void(0)">4</a></li>
-													<li><a href="javascript:void(0)">5</a></li>
-													<li><a href="javascript:void(0)">6</a></li>
-													<li><a href="javascript:void(0)">7</a></li>
-													<li><a href="javascript:void(0)">8</a></li>
-													<li><a href="javascript:void(0)">9</a></li>
-													<li><a href="javascript:void(0)">10</a></li>
-													<li><a href="javascript:void(0)">11</a></li>
-													<li><a href="javascript:void(0)">12</a></li>
-												</ul>
-											</div>
-											<div class="child-2 child-com">
-												<p>Age</p>
-												<input type="text" class="inputDown" name="child_age_3[]" value="2" placeholder="" readonly>
-												<img src="images/EN/downArrow.png">
-												<b class="bottomLine"></b>
-												<ul class="roomMenu menu-com">
-													<li><a href="javascript:void(0)" title="Age < 1 year old">Age < 1 year old</a></li>
-													<li><a href="javascript:void(0)">2</a></li>
-													<li><a href="javascript:void(0)">3</a></li>
-													<li><a href="javascript:void(0)">4</a></li>
-													<li><a href="javascript:void(0)">5</a></li>
-													<li><a href="javascript:void(0)">6</a></li>
-													<li><a href="javascript:void(0)">7</a></li>
-													<li><a href="javascript:void(0)">8</a></li>
-													<li><a href="javascript:void(0)">9</a></li>
-													<li><a href="javascript:void(0)">10</a></li>
-													<li><a href="javascript:void(0)">11</a></li>
-													<li><a href="javascript:void(0)">12</a></li>
-												</ul>
-											</div>
-											<div class="child-3 child-com">
-												<p>Age</p>
-												<input type="text" class="inputDown" name="child_age_3[]" value="2" placeholder="" readonly>
-												<img src="images/EN/downArrow.png">
-												<b class="bottomLine"></b>
-												<ul class="roomMenu menu-com">
-													<li><a href="javascript:void(0)" title="Age < 1 year old">Age < 1 year old</a></li>
-													<li><a href="javascript:void(0)">2</a></li>
-													<li><a href="javascript:void(0)">3</a></li>
-													<li><a href="javascript:void(0)">4</a></li>
-													<li><a href="javascript:void(0)">5</a></li>
-													<li><a href="javascript:void(0)">6</a></li>
-													<li><a href="javascript:void(0)">7</a></li>
-													<li><a href="javascript:void(0)">8</a></li>
-													<li><a href="javascript:void(0)">9</a></li>
-													<li><a href="javascript:void(0)">10</a></li>
-													<li><a href="javascript:void(0)">11</a></li>
-													<li><a href="javascript:void(0)">12</a></li>
-												</ul>
-											</div>
-										</div>	
-										
-									</div>
-									
-		                            <div class="viewSchedules js-hotel-search">
-		                                <a href="javascript:void(0)" target="_blank" id="hotel-search">SEARCH
-		                                    <img src="images/EN/schedulesArrow.png">
-		                                </a>
-		                            </div>
-
-		                        </div>
-		                    </div>
-		                </form>
-					</div>
-					<!-- Car内容 -->
-					<div class="car-content listSelectContent">
-						<form id="c-content-form" action="" target="_blank">
-							<div class="car-title" style="font-size: 18px;color:#fff;font-weight: bold;">
-								please look forward to...
-							</div>
-							<div class="selectAirTime selectAirCommon">
-
-							</div>
-						</form>
-					</div>
-					<!-- flightStatus内容 -->
-					<div class="flight-content listSelectContent">
-						<form id="f-content-form" action="tpls/EN/LMFlightDetail.html" target="_blank">
-							<div class="radioSelect js-flight-radio">
-								<label><input type="radio" value="0" name="routeType" checked><i class="active"></i><b></b><span data-way="b-route">By route</span></label>
-								<label><input type="radio" value="1" name="routeType"><i></i><b></b><span data-way="f-num">By flight number</span></label>
-							</div>
-							<div class="selectAirTime selectAirCommon">
-								<div class="local_timeSelect js-route-select">
-									<div class="localSelectStart autoClick">
-										<p><img src="images/EN/originStart.png"><span>From</span></p>
-										<input type="text" class="fromcityinput inputDown Autocomplete" id="f-fromCity" name="fromCity" value="" placeholder="" autocomplete="off">
+									<div class="child-parent">
+										<p>Children</p>
+										<input type="text" class="inputDown" name="number_of_children[]" value="0" placeholder="" readonly>
 										<img src="images/EN/downArrow.png">
-										<span class="clear">X</span>
 										<b class="bottomLine"></b>
-										<ul class="fromcityMenu menu-com js-route-menu">
-											<li><a href="#">1</a></li>
-											<li><a href="#">1</a></li>
-											<li><a href="#">1</a></li>
+										<ul class="roomMenu menu-com child-num-menu">
+											<li><a href="javascript:void(0)" data-child="child-0">0</a></li>
+											<li><a href="javascript:void(0)" data-child="child-1">1</a></li>
+											<li><a href="javascript:void(0)" data-child="child-2">2</a></li>
+											<li><a href="javascript:void(0)" data-child="child-3">3</a></li>
 										</ul>
 									</div>
-									<div class="localSelectEnd autoClick autoFocus">
-										<p><img src="images/EN/originEnd.png"><span>To</span></p>
-										<input type="text" class="tocityinput inputDown Autocomplete" id="f-toCity" name="toCity" value="" placeholder="" autocomplete="off">
+									<div class="child-1 child-com">
+										<p>Age</p>
+										<input type="text" class="inputDown" name="child_age_1[]" value="2" placeholder="" readonly>
 										<img src="images/EN/downArrow.png">
-										<span class="clear">X</span>
 										<b class="bottomLine"></b>
-										<ul class="tocityMenu menu-com">
-											<li><a href="#">1</a></li>
-											<li><a href="#">1</a></li>
-											<li><a href="#">1</a></li>
+										<ul class="roomMenu menu-com">
+											<li><a href="javascript:void(0)" title="Age < 1 year old">Age < 1 year old</a></li>
+											<li><a href="javascript:void(0)">2</a></li>
+											<li><a href="javascript:void(0)">3</a></li>
+											<li><a href="javascript:void(0)">4</a></li>
+											<li><a href="javascript:void(0)">5</a></li>
+											<li><a href="javascript:void(0)">6</a></li>
+											<li><a href="javascript:void(0)">7</a></li>
+											<li><a href="javascript:void(0)">8</a></li>
+											<li><a href="javascript:void(0)">9</a></li>
+											<li><a href="javascript:void(0)">10</a></li>
+											<li><a href="javascript:void(0)">11</a></li>
+											<li><a href="javascript:void(0)">12</a></li>
 										</ul>
 									</div>
-									<div class="f-num-Select js-flight-num autoClick autoFocus">
-										<p><img src="images/EN/f-num-select.png"><span>Flight Number</span></p>
-										<input type="text" class="fromcityinput inputDown" id="f-num-select" name="flightNum" value="XU-738" placeholder="" autocomplete="off">
+									<div class="child-2 child-com">
+										<p>Age</p>
+										<input type="text" class="inputDown" name="child_age_1[]" value="2" placeholder="" readonly>
 										<img src="images/EN/downArrow.png">
-										<span class="clear">X</span>
 										<b class="bottomLine"></b>
-										<ul class="flightMenu menu-com js-f-menu">
-											<li><a href="javascript:void(0)">XU-738</a></li>
-											<li><a href="javascript:void(0)">XU-739</a></li>
+										<ul class="roomMenu menu-com">
+											<li><a href="javascript:void(0)" title="Age < 1 year old">Age < 1 year old</a></li>
+											<li><a href="javascript:void(0)">2</a></li>
+											<li><a href="javascript:void(0)">3</a></li>
+											<li><a href="javascript:void(0)">4</a></li>
+											<li><a href="javascript:void(0)">5</a></li>
+											<li><a href="javascript:void(0)">6</a></li>
+											<li><a href="javascript:void(0)">7</a></li>
+											<li><a href="javascript:void(0)">8</a></li>
+											<li><a href="javascript:void(0)">9</a></li>
+											<li><a href="javascript:void(0)">10</a></li>
+											<li><a href="javascript:void(0)">11</a></li>
+											<li><a href="javascript:void(0)">12</a></li>
 										</ul>
 									</div>
-									<div class="timeSelectStart">
-										<p><img src="images/EN/departureDate.png"><span>Departure Date</span></p>
-										<input type="text" id="f-timeFrom" name="timeFrom" value="" placeholder="" readonly>
+									<div class="child-3 child-com">
+										<p>Age</p>
+										<input type="text" class="inputDown" name="child_age_1[]" value="2" placeholder="" readonly>
 										<img src="images/EN/downArrow.png">
+										<b class="bottomLine"></b>
+										<ul class="roomMenu menu-com">
+											<li><a href="javascript:void(0)" title="Age < 1 year old">Age < 1 year old</a></li>
+											<li><a href="javascript:void(0)">2</a></li>
+											<li><a href="javascript:void(0)">3</a></li>
+											<li><a href="javascript:void(0)">4</a></li>
+											<li><a href="javascript:void(0)">5</a></li>
+											<li><a href="javascript:void(0)">6</a></li>
+											<li><a href="javascript:void(0)">7</a></li>
+											<li><a href="javascript:void(0)">8</a></li>
+											<li><a href="javascript:void(0)">9</a></li>
+											<li><a href="javascript:void(0)">10</a></li>
+											<li><a href="javascript:void(0)">11</a></li>
+											<li><a href="javascript:void(0)">12</a></li>
+										</ul>
 									</div>
 								</div>
-								<div class="viewSchedules js-flight-search">
-									<a href="javascript:void(0)">SEARCH<img src="images/EN/schedulesArrow.png"></a>
-								</div>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-
-			<!-- 移动端导航栏 -->
-			<div class="m-nav-menu">
-				<div class="m-nav-menu-close"><i class="iconfont icon-left-arrow"></i><h2 class="m-nav-title" data-title="f-nav-title">MENU</h2></div>
-				<div class="m-nav-wrap">
-					<ul class="m-nav-1 m-nav-list">
-						<li><a href="#f-list-1">PLAN TRAVEL</a></li>
-						<li><a href="#f-list-2">EXPERIENCE</a></li>
-						<li><a href="#f-list-3">COMMUNITY</a></li>
-						<li><a href="#f-list-4">TRAVEL</a></li>
-						<li><a href="#f-list-5">SHOPPING</a></li>
-						<li><a href="#f-list-6">ABOUT US</a></li>
-					</ul>
-					<div class="m-nav-2">
-						<ul class="m-nav-list" id="f-list-1">
-							<li><a href="#one-s-list-1">Special Offers</a></li>
-							<li><a href="#one-s-list-2">Destinations</a></li>
-							<li><a href="#one-s-list-3">Flight Subscription</a></li>
-							<li><a href="#one-s-list-4">Hotel Booking</a></li>
-						</ul>
-						<ul class="m-nav-list" id="f-list-2">
-							<li><a href="#two-s-list-1">Travel Preparation</a></li>
-							<li><a href="#two-s-list-2">Flight Status</a></li>
-							<li><a href="#two-s-list-3">Airport Services</a></li>
-							<li><a href="#two-s-list-4">Check In</a></li>
-							<li><a href="#two-s-list-5">Your Baggage</a></li>
-							<li><a href="#two-s-list-6">Invoice Tracking</a></li>
-							<li><a href="#two-s-list-7">Enjoy Services</a></li>
-						</ul>
-						<ul class="m-nav-list" id="f-list-3">
-							<li><a href="#three-s-list-1">Lanmei Member</a></li>
-							<li><a href="#three-s-list-2">Lanmei Forum</a></li>
-							<li><a href="#three-s-list-3">Lanmei Live</a></li>
-						</ul>
-						<ul class="m-nav-list" id="f-list-4">
-							<li><a href="#four-s-list-1">Phnom Penh</a></li>
-							<li><a href="travel/LMTravel.html">Sihanoukville</a></li>
-							<li><a href="#four-s-list-3">Siem Reap</a></li>
-							<li><a href="#four-s-list-3">Macau</a></li>
-							<li><a href="#four-s-list-4">Palau</a></li>
-						</ul>
-						<ul class="m-nav-list" id="f-list-5">
-							<!-- <li><a href="menus/EN/shopping/LMDFC20170907.html" data-href="true">吴哥免税店</a></li> -->
-						</ul>
-						<ul class="m-nav-list" id="f-list-6">
-							<li><a href="menus/EN/aboutUs/LMSiteMap.html" data-href="true">Sitemap</a></li>
-							<li><a href="menus/EN/aboutUs/LMHistory.html" data-href="true">Lanmei History</a></li>
-							<li><a href="menus/EN/aboutUs/LMContact.html" data-href="true">Contact Us</a></li>
-							<li><a href="menus/EN/aboutUs/LMHire.html" data-href="true">Join Us</a></li>
-							<li><a href="#six-s-list-4">Social Responsibility</a></li>
-							<li><a href="#six-s-list-5">E-magazine</a></li>
-							<li><a href="#six-s-list-6">Cooperative Partners</a></li>
-							<li><a href="#six-s-list-7">Copyright</a></li>
-							<li><a href="#six-s-list-8">FQA</a></li>
-							<li><a href="menus/EN/aboutUs/LMPrivacy.html">Privacy Policy</a></li>
-							<li><a href="#six-s-list-10">Legal Statement</a></li>
-						</ul>
-					</div>
-					<div class="m-nav-3">
-						<!-- 计划旅行 -->
-						<ul class="m-nav-list" id="one-s-list-1">
-							<li><a href="javascript:void(0)">Special tickets</a></li>
-							<li><a href="javascript:void(0)">Special hotels</a></li>
-							<li><a href="javascript:void(0)">Special rental cars</a></li>
-							<li><a href="javascript:void(0)">Special sales</a></li>
-							<li><a href="javascript:void(0)">Special travel</a></li>
-						</ul>
-						<ul class="m-nav-list" id="one-s-list-2">
-							<li><a href="javascript:void(0)">Phnom Penh</a></li>
-							<li><a href="javascript:void(0)">Siem Reap</a></li>
-							<li><a href="travel/LMTravel.html">Sihanoukville</a></li>
-							<li><a href="javascript:void(0)">Macau</a></li>
-							<li><a href="javascript:void(0)">Palau</a></li>
-						</ul>
-						<ul class="m-nav-list" id="one-s-list-3">
-							<li><a href="javascript:void(0)" class="a-search-flight">Flight search</a></li>
-							<li><a href="javascript:void(0)">Check in</a></li>
-							<li><a href="javascript:void(0)">My trip</a></li>
-							<li><a href="javascript:void(0)">Change or cancel flights</a></li>
-						</ul>
-						<ul class="m-nav-list" id="one-s-list-4">
-							<li><a href="javascript:void(0)">Hotel search</a></li>
-							<li><a href="javascript:void(0)">My hotel</a></li>
-							<li><a href="javascript:void(0)">Car rental</a></li>
-						</ul>
-						<!-- 体验澜湄 -->
-						<ul class="m-nav-list" id="two-s-list-1">
-							<li><a href="menus/EN/experience/LMVisa.html">Passport and visa</a></li>
-							<li><a href="menus/EN/experience/LMTransport.html">General conditions of carriage</a></li>
-							<li><a href="javascript:void(0)">Special services</a></li>
-							<li><a href="javascript:void(0)">Notice to passengers</a></li>
-							<li><a href="javascript:void(0)">Commitment to customer service</a></li>
-						</ul>
-						<ul class="m-nav-list" id="two-s-list-2">
-							<li><a href="javascript:void(0)">Dynamic information</a></li>
-							<li><a href="javascript:void(0)">Flight Subscription</a></li>
-							<li><a href="javascript:void(0)">Real-time notification for Flight Info</a></li>
-						</ul>
-						<ul class="m-nav-list" id="two-s-list-3">
-							<li><a href="menus/EN/experience/LMPNHAirportService.html" title="Phnom Penh International Airport ">Phnom Penh International Airport </a></li>
-							<li><a href="menus/EN/experience/LMREPAirportService.html" title="Siem Reap International Airport">Siem Reap International Airport</a></li>
-							<li><a href="menus/EN/experience/LMMFMAirportService.html" title="Macau International Airport">Macau International Airport</a></li>
-						</ul>
-						<ul class="m-nav-list" id="two-s-list-4">
-							<li><a href="menus/EN/experience/LMCheckOnline.html">Check in online</a></li>
-							<li><a href="menus/EN/experience/LMCheckAirport.html">Check in at airport</a></li>
-							<li><a href="menus/EN/experience/LMCheckTime.html">Check-in and baggage drop-off times</a></li>
-						</ul>
-						<ul class="m-nav-list" id="two-s-list-5">
-							<li><a href="menus/EN/experience/LMBaggage.html">About baggage</a></li>
-							<li><a href="menus/EN/experience/LMMisBaggage.html">Mishandled baggage</a></li>
-							<li><a href="javascript:void(0)">Dangerous goods</a></li>
-						</ul>
-						<ul class="m-nav-list" id="two-s-list-6">
-							<li><a href="javascript:void(0)">Invoice Inquiry</a></li>
-						</ul>
-						<ul class="m-nav-list" id="two-s-list-7">
-							<li><a href="menus/EN/experience/LMCate.html">Catering service</a></li>
-							<li><a href="javascript:void(0)">Excess baggage service</a></li>
-							<li><a href="javascript:void(0)">Extended seats service</a></li>
-							<li><a href="javascript:void(0)">Seat selection in advance</a></li>
-							<li><a href="javascript:void(0)">Special service application</a></li>
-						</ul>
-						<!-- 澜湄社区 -->
-						<ul class="m-nav-list" id="three-s-list-1">
-							<li><a href="javascript:void(0)">Member registration</a></li>
-							<li><a href="javascript:void(0)">Lanmei travel companion</a></li>
-							<li><a href="javascript:void(0)">Lanmei members FAQ</a></li>
-							<li><a href="javascript:void(0)">Member information</a></li>
-							<li><a href="javascript:void(0)">Flight chart</a></li>
-							<li><a href="javascript:void(0)">Coupon</a></li>
-							<li><a href="javascript:void(0)">Order</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="m-nav-mask"></div>
-
-			<!-- 移动端机票选择 -->
-			<div class="m-flight-select">
-				<div class="m-ticket-wrap">
-					<div class="m-ticket-title m-title-com" data="ticket">
-						<div class="m-ticket-left">
-							<img src="images/EN/m-tickit-icon.png" class="img01"><img src="images/EN/m-tickit-icon-active.png" class="img02">Ticket
-						</div>
-						<div class="m-ticket-right">
-							<img src="images/EN/m-upAdrrow.png" alt="" class="img01">
-							<img src="images/EN/m-downArrow.png" alt="" class="img02">
-						</div>
-					</div>
-					<div class="m-ticket-menu m-menu-com">
-						<form id="m-airTicketForm" action="http://b2c.lanmeiairlines.com/lqWeb/reservation/AVQuery.do" method="GET" target="_blank">
-							<input type="hidden" name="orgcity" id ="m-orgcity">
-							<input type="hidden" name="dstcity" id ="m-dstcity">
-							<input type="hidden" name="takeoffDate" id ="m-takeoffDate">
-							<input type="hidden" name="returnDate" id ="m-returnDate">
-							<input type="hidden" name="tripType" value="RT" id="m-tripType">
-							<input type="hidden" name="language"  value="US">
-							<input type="hidden" name="CURRENCY"  value="USD">
-
-							<div class="m-ticket-tab">
-								<a href="#one" class="m-ticket-one active" data-way="oneWay">One Way</a>
-								<a href="#round" class="m-ticket-round" data-way="roundTrip">Round Trip</a>
-								<a href="#multi" class="m-ticket-multi" data-way="multi">Multi-city</a>
-							</div>
-							<div class="m-ticket-con">
-								<div class="m-ticket-local">
-									<div class="m-ticket-local-start">
-										<img src="images/EN/m-local-start.png">
-										<input type="text" class="m-local-start" value="Phnom Penh/PNH/Cambodia" placeholder="From" readonly>
+								
+								
+								<div class="rooms-2">
+									<h2>Room2</h2>
+									<div>
+										<p>Adults</p>
+										<input type="text" class="inputDown" name="number_of_adults[]" value="1" placeholder="" readonly>
+										<img src="images/EN/downArrow.png">
+										<b class="bottomLine"></b>
+										<ul class="roomMenu menu-com">
+											<li><a href="javascript:void(0)">1</a></li>
+											<li><a href="javascript:void(0)">2</a></li>
+											<li><a href="javascript:void(0)">3</a></li>
+										</ul>
 									</div>
-									<div class="m-ticket-local-end">
-										<img src="images/EN/m-local-end.png">
-										<input type="text" class="m-local-end" value="" placeholder="To" readonly>
+									<div class="child-parent">
+										<p>Children</p>
+										<input type="text" class="inputDown" name="number_of_children[]" value="0" placeholder="" readonly>
+										<img src="images/EN/downArrow.png">
+										<b class="bottomLine"></b>
+										<ul class="roomMenu menu-com child-num-menu">
+											<li><a href="javascript:void(0)" data-child="child-0">0</a></li>
+											<li><a href="javascript:void(0)" data-child="child-1">1</a></li>
+											<li><a href="javascript:void(0)" data-child="child-2">2</a></li>
+											<li><a href="javascript:void(0)" data-child="child-3">3</a></li>
+										</ul>
 									</div>
-									<img src="images/EN/m-local-change.png" class="m-localChange">
-								</div>
-								<div class="m-ticket-num">
-									<div class="m-ticket-cabin">
-										<img src="images/EN/m-cabin.png">
-										<input type="text" class="ticket-cabin-select" name="cabinType" value="ECONOMY" readonly>
+									<div class="child-1 child-com">
+										<p>Age</p>
+										<input type="text" class="inputDown" name="child_age_2[]" value="2" placeholder="" readonly>
+										<img src="images/EN/downArrow.png">
+										<b class="bottomLine"></b>
+										<ul class="roomMenu menu-com">
+											<li><a href="javascript:void(0)" title="Age < 1 year old">Age < 1 year old</a></li>
+											<li><a href="javascript:void(0)">2</a></li>
+											<li><a href="javascript:void(0)">3</a></li>
+											<li><a href="javascript:void(0)">4</a></li>
+											<li><a href="javascript:void(0)">5</a></li>
+											<li><a href="javascript:void(0)">6</a></li>
+											<li><a href="javascript:void(0)">7</a></li>
+											<li><a href="javascript:void(0)">8</a></li>
+											<li><a href="javascript:void(0)">9</a></li>
+											<li><a href="javascript:void(0)">10</a></li>
+											<li><a href="javascript:void(0)">11</a></li>
+											<li><a href="javascript:void(0)">12</a></li>
+										</ul>
 									</div>
-									<div class="m-ticket-box">
-										<div class="m-ticket-adult">
-											<img src="images/EN/m-adult.png">
-											<input type="text" name="adultCount" class="ticket-adult-select js-t-select" value="1" readonly>
-										</div>
-										<div class="m-ticket-child">
-											<img src="images/EN/m-child.png">
-											<input type="text" name="childCount" class="ticket-child-select js-t-select" value="0" readonly>
-										</div>
+									<div class="child-2 child-com">
+										<p>Age</p>
+										<input type="text" class="inputDown" name="child_age_2[]" value="2" placeholder="" readonly>
+										<img src="images/EN/downArrow.png">
+										<b class="bottomLine"></b>
+										<ul class="roomMenu menu-com">
+											<li><a href="javascript:void(0)" title="Age < 1 year old">Age < 1 year old</a></li>
+											<li><a href="javascript:void(0)">2</a></li>
+											<li><a href="javascript:void(0)">3</a></li>
+											<li><a href="javascript:void(0)">4</a></li>
+											<li><a href="javascript:void(0)">5</a></li>
+											<li><a href="javascript:void(0)">6</a></li>
+											<li><a href="javascript:void(0)">7</a></li>
+											<li><a href="javascript:void(0)">8</a></li>
+											<li><a href="javascript:void(0)">9</a></li>
+											<li><a href="javascript:void(0)">10</a></li>
+											<li><a href="javascript:void(0)">11</a></li>
+											<li><a href="javascript:void(0)">12</a></li>
+										</ul>
+									</div>
+									<div class="child-3 child-com">
+										<p>Age</p>
+										<input type="text" class="inputDown" name="child_age_2[]" value="2" placeholder="" readonly>
+										<img src="images/EN/downArrow.png">
+										<b class="bottomLine"></b>
+										<ul class="roomMenu menu-com">
+											<li><a href="javascript:void(0)" title="Age < 1 year old">Age < 1 year old</a></li>
+											<li><a href="javascript:void(0)">2</a></li>
+											<li><a href="javascript:void(0)">3</a></li>
+											<li><a href="javascript:void(0)">4</a></li>
+											<li><a href="javascript:void(0)">5</a></li>
+											<li><a href="javascript:void(0)">6</a></li>
+											<li><a href="javascript:void(0)">7</a></li>
+											<li><a href="javascript:void(0)">8</a></li>
+											<li><a href="javascript:void(0)">9</a></li>
+											<li><a href="javascript:void(0)">10</a></li>
+											<li><a href="javascript:void(0)">11</a></li>
+											<li><a href="javascript:void(0)">12</a></li>
+										</ul>
 									</div>
 								</div>
-								<div class="m-ticket-date">
-									<img src="images/EN/m-date.png">
-									<input type="text" class="ticket-selectTime" id="m-ticket-selectTime" value="" readonly>
-								</div>
-								<div class="m-ticket-search-wrap">
-									<div class="m-ticket-reset js-ticket-reset">
-										<img src="images/EN/m-ticket-search.png">Reset
+								
+								
+								
+								<div class="rooms-3">
+									<h2>Room3</h2>
+									<div>
+										<p>Adults</p>
+										<input type="text" class="inputDown" name="number_of_adults[]" value="1" placeholder="" readonly>
+										<img src="images/EN/downArrow.png">
+										<b class="bottomLine"></b>
+										<ul class="roomMenu menu-com">
+											<li><a href="javascript:void(0)">1</a></li>
+											<li><a href="javascript:void(0)">2</a></li>
+											<li><a href="javascript:void(0)">3</a></li>
+										</ul>
 									</div>
-									<div class="m-ticket-search js-mTicket-search">
-										SEARCH<img src="images/EN/schedulesArrow.png">
+									<div class="child-parent">
+										<p>Children</p>
+										<input type="text" class="inputDown" name="number_of_children[]" value="0" placeholder="" readonly>
+										<img src="images/EN/downArrow.png">
+										<b class="bottomLine"></b>
+										<ul class="roomMenu menu-com child-num-menu">
+											<li><a href="javascript:void(0)" data-child="child-0">0</a></li>
+											<li><a href="javascript:void(0)" data-child="child-1">1</a></li>
+											<li><a href="javascript:void(0)" data-child="child-2">2</a></li>
+											<li><a href="javascript:void(0)" data-child="child-3">3</a></li>
+										</ul>
 									</div>
-								</div>
-							</div>
-						</form>
-					</div>
-				</div>
-				<div class="m-hotel-wrap">
-					<div class="m-hotel-title m-title-com" data="hotel">
-						<div class="m-ticket-left">
-							<img src="images/EN/m-hotel-icon.png" class="img01"><img src="images/EN/m-hotel-active.png" class="img02">Hotel
-						</div>
-						<div class="m-ticket-right">
-							<img src="images/EN/m-upAdrrow.png" alt="" class="img01">
-							<img src="images/EN/m-downArrow.png" alt="" class="img02">
-						</div>
-					</div>
-					<div class="m-ticket-menu m-menu-com">
-						<div class="m-ticket-con">
-							<div class="m-ticket-local">
-								<div class="m-ticket-local-start m-h-local-start">
-									<img src="images/EN/m-location.png">
-									<input type="text" name="txtHotelID" class="h-local-start" value="" placeholder="From" readonly>
-								</div>
-							</div>
-							<div class="m-ticket-date">
-								<img src="images/EN/m-date.png">
-								<input type="text" name="datefrom" class="ticket-selectTime" id="m-hotel-selectTime" value="" readonly>
-							</div>
-							<input type="text" class="m-rooms-input js-rooms-input" name="cboRoom" value="1 Room, 2 Adults" placeholder="" readonly>
-							<div class="m-rooms-title">
-								<p>Adults</p>
-								<p>Child</p>
-								<p>Age/1</p>
-								<p>Age/2</p>
-								<p>Age/3</p>
-							</div>
-							<div class="m-rooms-1 m-rooms-wrap">
-								<h2>Room1</h2>
-								<input type="text" class="m-rooms-com rooms1-adult" name="number_of_adults[]" value="1" placeholder="" readonly>
-								<input type="text" class="m-rooms-com rooms1-child" name="number_of_children[]" value="0" placeholder="" readonly>
-								<input type="text" class="m-rooms-com rooms1-age1 rooms1-age-com" name="child_age_1[]" value="1" placeholder="" readonly>
-								<input type="text" class="m-rooms-com rooms1-age2 rooms1-age-com" name="child_age_1[]" value="1" placeholder="" readonly>
-								<input type="text" class="m-rooms-com rooms1-age3 rooms1-age-com" name="child_age_1[]" value="1" placeholder="" readonly>
-							</div>
-							<div class="m-rooms-2 m-rooms-wrap">
-								<h2>Room2</h2>
-								<input type="text" class="m-rooms-com rooms2-adult" name="number_of_adults[]" value="1" placeholder="" readonly>
-								<input type="text" class="m-rooms-com rooms2-child" name="number_of_children[]" value="0" placeholder="" readonly>
-								<input type="text" class="m-rooms-com rooms2-age1 rooms2-age-com" name="child_age_1[]" value="1" placeholder="" readonly>
-								<input type="text" class="m-rooms-com rooms2-age2 rooms2-age-com" name="child_age_1[]" value="1" placeholder="" readonly>
-								<input type="text" class="m-rooms-com rooms2-age3 rooms2-age-com" name="child_age_1[]" value="1" placeholder="" readonly>
-							</div>
-							<div class="m-rooms-3 m-rooms-wrap">
-								<h2>Room3</h2>
-								<input type="text" class="m-rooms-com rooms3-adult" name="number_of_adults[]" value="1" placeholder="" readonly>
-								<input type="text" class="m-rooms-com rooms3-child" name="number_of_children[]" value="0" placeholder="" readonly>
-								<input type="text" class="m-rooms-com rooms3-age1 rooms3-age-com" name="child_age_1[]" value="1" placeholder="" readonly>
-								<input type="text" class="m-rooms-com rooms3-age2 rooms3-age-com" name="child_age_1[]" value="1" placeholder="" readonly>
-								<input type="text" class="m-rooms-com rooms3-age3 rooms3-age-com" name="child_age_1[]" value="1" placeholder="" readonly>
+									<div class="child-1 child-com">
+										<p>Age</p>
+										<input type="text" class="inputDown" name="child_age_3[]" value="2" placeholder="" readonly>
+										<img src="images/EN/downArrow.png">
+										<b class="bottomLine"></b>
+										<ul class="roomMenu menu-com">
+											<li><a href="javascript:void(0)" title="Age < 1 year old">Age < 1 year old</a></li>
+											<li><a href="javascript:void(0)">2</a></li>
+											<li><a href="javascript:void(0)">3</a></li>
+											<li><a href="javascript:void(0)">4</a></li>
+											<li><a href="javascript:void(0)">5</a></li>
+											<li><a href="javascript:void(0)">6</a></li>
+											<li><a href="javascript:void(0)">7</a></li>
+											<li><a href="javascript:void(0)">8</a></li>
+											<li><a href="javascript:void(0)">9</a></li>
+											<li><a href="javascript:void(0)">10</a></li>
+											<li><a href="javascript:void(0)">11</a></li>
+											<li><a href="javascript:void(0)">12</a></li>
+										</ul>
+									</div>
+									<div class="child-2 child-com">
+										<p>Age</p>
+										<input type="text" class="inputDown" name="child_age_3[]" value="2" placeholder="" readonly>
+										<img src="images/EN/downArrow.png">
+										<b class="bottomLine"></b>
+										<ul class="roomMenu menu-com">
+											<li><a href="javascript:void(0)" title="Age < 1 year old">Age < 1 year old</a></li>
+											<li><a href="javascript:void(0)">2</a></li>
+											<li><a href="javascript:void(0)">3</a></li>
+											<li><a href="javascript:void(0)">4</a></li>
+											<li><a href="javascript:void(0)">5</a></li>
+											<li><a href="javascript:void(0)">6</a></li>
+											<li><a href="javascript:void(0)">7</a></li>
+											<li><a href="javascript:void(0)">8</a></li>
+											<li><a href="javascript:void(0)">9</a></li>
+											<li><a href="javascript:void(0)">10</a></li>
+											<li><a href="javascript:void(0)">11</a></li>
+											<li><a href="javascript:void(0)">12</a></li>
+										</ul>
+									</div>
+									<div class="child-3 child-com">
+										<p>Age</p>
+										<input type="text" class="inputDown" name="child_age_3[]" value="2" placeholder="" readonly>
+										<img src="images/EN/downArrow.png">
+										<b class="bottomLine"></b>
+										<ul class="roomMenu menu-com">
+											<li><a href="javascript:void(0)" title="Age < 1 year old">Age < 1 year old</a></li>
+											<li><a href="javascript:void(0)">2</a></li>
+											<li><a href="javascript:void(0)">3</a></li>
+											<li><a href="javascript:void(0)">4</a></li>
+											<li><a href="javascript:void(0)">5</a></li>
+											<li><a href="javascript:void(0)">6</a></li>
+											<li><a href="javascript:void(0)">7</a></li>
+											<li><a href="javascript:void(0)">8</a></li>
+											<li><a href="javascript:void(0)">9</a></li>
+											<li><a href="javascript:void(0)">10</a></li>
+											<li><a href="javascript:void(0)">11</a></li>
+											<li><a href="javascript:void(0)">12</a></li>
+										</ul>
+									</div>
+								</div>	
+								
 							</div>
 							
-							<div class="m-ticket-search-wrap">
-								<div class="m-ticket-reset js-hotel-reset">
-									<img src="images/EN/m-ticket-search.png">Reset
-								</div>
-								<div class="m-ticket-search">
-									SEARCH<img src="images/EN/schedulesArrow.png">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="m-car-wrap">
-					<div class="m-car-title m-title-com" data="car">
-						<div class="m-ticket-left">
-							<img src="images/EN/m-car-icon.png" class="img01"><img src="images/EN/m-car-active.png" class="img02">Car
-						</div>
-						<div class="m-ticket-right">
-							<img src="images/EN/m-upAdrrow.png" alt="" class="img01">
-							<img src="images/EN/m-downArrow.png" alt="" class="img02">
-						</div>
-					</div>
-					<div class="m-car-menu m-menu-com">please look forward to...</div>
-				</div>
-				<div class="m-flight-wrap">
-					<div class="m-flight-title m-title-com" data="flight">
-						<div class="m-ticket-left">
-							<img src="images/EN/m-flight-icon.png" class="img01"><img src="images/EN/m-flight-active.png" class="img02">Flight Status
-						</div>
-						<div class="m-ticket-right">
-							<img src="images/EN/m-upAdrrow.png" alt="" class="img01">
-							<img src="images/EN/m-downArrow.png" alt="" class="img02">
-						</div>
-					</div>
-					<div class="m-flight-menu m-menu-com">
-						<div class="m-flight-tab">
-							<a href="route" class="js-ticket-route active" data-way="b-route">By route</a>
-							<a href="num" class="js-ticket-num" data-way="f-num">By flight number</a>
-						</div>
-						<div class="m-ticket-con">
-							<div class="m-ticket-local js-f-local">
-								<div class="m-ticket-local-start">
-									<img src="images/EN/m-local-start.png">
-									<input type="text" class="f-local-start" name="localStart" value="广州" placeholder="From" readonly>
-								</div>
-								<div class="m-ticket-local-end">
-									<img src="images/EN/m-local-end.png">
-									<input type="text" class="f-local-end" name="localEnd" value="" placeholder="To" readonly>
-								</div>
-								<img src="images/EN/m-local-change.png" class="m-localChange">
-							</div>
-							<div class="m-ticket-num js-f-num">
-								<div class="m-ticket-cabin">
-									<img src="images/EN/m-flight-select.png">
-									<input type="text" name="" class="js-flight-select" value="XU-738" readonly="">
-								</div>
-							</div>
-							<div class="m-ticket-date">
-								<img src="images/EN/m-date.png">
-								<input type="text" class="ticket-selectTime" name="time" id="m-flight-selectTime" value="" readonly>
-							</div>
-							<div class="m-ticket-search-wrap">
-								<div class="m-ticket-reset js-flight-reset">
-									<img src="images/EN/m-ticket-search.png">Reset
-								</div>
-								<div class="m-ticket-search js-f-search">
-									SEARCH<img src="images/EN/schedulesArrow.png">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+                            <div class="viewSchedules js-hotel-search">
+                                <a href="javascript:void(0)" target="_blank" id="hotel-search">SEARCH
+                                    <img src="images/EN/schedulesArrow.png">
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </form>
 			</div>
-
-			<!-- pad端机票选择 -->
-			<div class="p-flight-select">
-				<div class="p-flight-title">
-					<a href="p-ticket-wrap" class="active">
-						<img src="images/EN/m-tickit-icon.png" class="img01"><img src="images/EN/m-tickit-icon-active.png" class="img02">Ticket
-					</a>
-					<a href="p-hotel-wrap">
-						<img src="images/EN/hotel-icon.png" class="img01"><img src="images/EN/m-hotel-active.png" class="img02">Hotel
-					</a>
-					<a href="p-car-wrap">
-						<img src="images/EN/car-icon.png" class="img01"><img src="images/EN/m-car-active.png" class="img02">Car
-					</a>
-					<a href="p-flight-wrap">
-						<img src="images/EN/flight-icon.png" class="img01"><img src="images/EN/m-flight-active.png" class="img02">Flight Status
-					</a>
-				</div>
-				<div class="p-flight-wrap">
-					<div class="p-ticket-wrap p-com-memu">
-						<form id="p-airTicketForm" action="http://b2c.lanmeiairlines.com/lqWeb/reservation/AVQuery.do" method="GET" target="_blank">
-							<input type="hidden" name="orgcity" id ="p-orgcity">
-							<input type="hidden" name="dstcity" id ="p-dstcity">
-							<input type="hidden" name="takeoffDate" id ="p-takeoffDate">
-							<input type="hidden" name="returnDate" id ="p-returnDate">
-							<input type="hidden" name="tripType" value="RT" id="p-tripType">
-							<input type="hidden" name="language"  value="US">
-							<input type="hidden" name="CURRENCY"  value="USD">
-
-							<div class="p-radioSelect">
-								<label><i class="active"></i><span data-way="oneWay">One Way</span></label>
-								<label><i></i><span data-way="roundTrip">Round Trip</span></label>
-								<label><i></i><span data-way="multi">Stopover / Multi-city</span></label>
-							</div>
-							<div class="p-localSelect">
-								<div class="p-localSelect-start">
-									<p><img src="images/EN/originStart2.png">From</p>
-									<input type="text" value="Phnom Penh/PNH/Cambodia" class="p-local-start" readonly>
-								</div>
-								<div class="p-changeLocal-wrap"><img src="images/EN/localChange2-active.png" class="p-changeLocal"></div>
-								<div class="p-localSelect-end">
-									<p><img src="images/EN/originEnd2.png">To</p>
-									<input type="text" value="" class="p-local-end" readonly>
-								</div>
-							</div>
-							<div class="p-cabin-wrap">
-								<div class="p-cabin">
-									<p><img src="images/EN/cabin-icon2.png">Class</p>
-									<input type="text" name="cabinType" value="ECONOMY" class="p-cabin-input js-ticket-cabin" readonly>
-								</div>
-								<div class="p-ticket-box">
-									<div class="p-adult">
-										<p><img src="images/EN/adult-icon2.png">Adult</p>
-										<input type="text" name="adultCount" value="1" class="p-adult-input" readonly>
-									</div>
-									<div class="p-child">
-										<p><img src="images/EN/child-icon2.png">Child</p>
-										<input type="text" name="childCount" value="0" class="p-child-input" readonly>
-									</div>
-								</div>
-							</div>
-							<div class="p-dateSelect">
-								<div class="p-dataSelect-inner">
-									<p><img src="images/EN/departureDate2.png">Departure Date</p>
-									<input type="text" value="" id="p-ticket-selectTime" readonly>
-								</div>
-								<div class="p-reset js-pTicket-reset">
-									<img src="images/EN/p-ticket-search.png">Reset
-								</div>
-							</div>
-							<div class="p-search">
-								<a href="javascript:void(0)" class="p-search-btn js-pTicket-search">SEARCH<img src="images/EN/schedulesArrow.png"></a>
-							</div>
-						</form>
-					</div>
-					<div class="p-hotel-wrap p-com-memu">
-						<div class="p-localSelect">
-							<div class="p-localSelect-start">
-								<p><img src="images/EN/m-location.png">Where are you going ?</p>
-								<input type="text" name="" value="广州" class="p-local-start" readonly>
-							</div>
-						</div>
-						<div class="p-dateSelect">
-							<div class="p-dataSelect-inner">
-								<p><img src="images/EN/departureDate2.png">Date</p>
-								<input type="text" name="" value="" id="p-hotel-selectTime" readonly>
-							</div>
-						</div>
-						<input type="text" class="p-rooms-input js-Prooms-input" name="cboRoom" value="1 Room, 2 Adults" placeholder="" readonly>
-						<div class="p-rooms-title">
-							<p>Adults</p>
-							<p>Child</p>
-							<p>Age/1</p>
-							<p>Age/2</p>
-							<p>Age/3</p>
-						</div>
-						<div class="p-rooms-1 p-rooms-wrap">
-							<h2>Room1</h2>
-							<input type="text" class="p-rooms-com Prooms1-adult" name="number_of_adults[]" value="1" placeholder="" readonly>
-							<input type="text" class="p-rooms-com Prooms1-child" name="number_of_children[]" value="0" placeholder="" readonly>
-							<input type="text" class="p-rooms-com Prooms1-age1 Prooms1-age-com" name="child_age_1[]" value="1" placeholder="" readonly>
-							<input type="text" class="p-rooms-com Prooms1-age2 Prooms1-age-com" name="child_age_1[]" value="1" placeholder="" readonly>
-							<input type="text" class="p-rooms-com Prooms1-age3 Prooms1-age-com" name="child_age_1[]" value="1" placeholder="" readonly>
-						</div>
-						<div class="p-rooms-2 p-rooms-wrap">
-							<h2>Room2</h2>
-							<input type="text" class="p-rooms-com Prooms2-adult" name="number_of_adults[]" value="1" placeholder="" readonly>
-							<input type="text" class="p-rooms-com Prooms2-child" name="number_of_children[]" value="0" placeholder="" readonly>
-							<input type="text" class="p-rooms-com Prooms2-age1 Prooms2-age-com" name="child_age_1[]" value="1" placeholder="" readonly>
-							<input type="text" class="p-rooms-com Prooms2-age2 Prooms2-age-com" name="child_age_1[]" value="1" placeholder="" readonly>
-							<input type="text" class="p-rooms-com Prooms2-age3 Prooms2-age-com" name="child_age_1[]" value="1" placeholder="" readonly>
-						</div>
-						<div class="p-rooms-3 p-rooms-wrap">
-							<h2>Room3</h2>
-							<input type="text" class="p-rooms-com Prooms3-adult" name="number_of_adults[]" value="1" placeholder="" readonly>
-							<input type="text" class="p-rooms-com Prooms3-child" name="number_of_children[]" value="0" placeholder="" readonly>
-							<input type="text" class="p-rooms-com Prooms3-age1 Prooms3-age-com" name="child_age_1[]" value="1" placeholder="" readonly>
-							<input type="text" class="p-rooms-com Prooms3-age2 Prooms3-age-com" name="child_age_1[]" value="1" placeholder="" readonly>
-							<input type="text" class="p-rooms-com Prooms3-age3 Prooms3-age-com" name="child_age_1[]" value="1" placeholder="" readonly>
-						</div>
-						<div class="p-search">
-							<a href="javascript:void(0)" class="p-search-btn">SEARCH<img src="images/EN/schedulesArrow.png"></a>
-						</div>
-					</div>
-					<div class="p-car-wrap p-com-memu">
+			<!-- Car内容 -->
+			<div class="car-content listSelectContent">
+				<form id="c-content-form" action="" target="_blank">
+					<div class="car-title" style="font-size: 18px;color:#fff;font-weight: bold;">
 						please look forward to...
 					</div>
-					<div class="p-flight-wrap p-com-memu">
-						<div class="p-radioSelect">
-							<label><i class="active"></i><span data-way="b-route">By route</span></label>
-							<label><i></i><span data-way="f-num">By flight number</span></label>
-						</div>
-						<div class="p-localSelect">
-							<div class="p-localSelect-start">
-								<p><img src="images/EN/originStart2.png">From</p>
-								<input type="text" name="" value="广州" class="p-local-start" readonly>
-							</div>
-							<div class="p-changeLocal-wrap"><img src="images/EN/localChange2-active.png" class="p-changeLocal"></div>
-							<div class="p-localSelect-end">
-								<p><img src="images/EN/originEnd2.png">To</p>
-								<input type="text" name="" value="" class="p-local-end" readonly>
-							</div>
-						</div>
-						<div class="p-flightSelect">
-							<div class="p-localSelect-start">
-								<p><img src="images/EN/m-flight-select.png">By flight number</p>
-								<input type="text" name="" value="XU-738" class="js-pFlight-select" readonly>
-							</div>
-						</div>
-						<div class="p-dateSelect">
-							<div class="p-dataSelect-inner">
-								<p><img src="images/EN/departureDate2.png">Departure Date</p>
-								<input type="text" name="" value="" id="p-flight-selectTime" readonly>
-							</div>
-							<div class="p-reset js-pFlight-reset">
-								<img src="images/EN/p-ticket-search.png">Reset
-							</div>
-						</div>
-						<div class="p-search">
-							<a href="javascript:void(0)" class="p-search-btn">SEARCH<img src="images/EN/schedulesArrow.png"></a>
-						</div>
-					</div>
-				</div>
-			</div>
+					<div class="selectAirTime selectAirCommon">
 
-			<!-- 折扣券 -->
-			<div class="ticketCoupon">
-				<div class="ticketCouponTitle lanmeiCommonTitle">
-					<h2>AIR TICKET COUPON</h2>
-					<p><i class="i1"></i><i class="i2"></i><i class="i3"></i><i class="i4"></i><i class="i5"></i><i class="i6"></i></p>
-				</div>
-				<!-- PC端 -->
-				<div class="coupon-wrap">
-					<div class='poster-main carousel' data-setting='{
-					"width":940,
-					"height":160,
-					"posterWidth":450,
-					"posterHeight":160,
-					"verticalAlign":"middle",
-					"autoPlay":false,
-					"speed":1000,
-					"delay":1000,
-					"scale":0.9
-				}'>
-				<div class='poster-btn poster-prev-btn'></div>
-				<ul class='poster-list'>
-					<li class="list-item">
-						<div class="coupon-con">
-							<h2><span class="s1">$</span><span class="s2">200</span></h2>
-							<p class="p1">Air Ticket Coupon</p>
-							<p class="p2">Receive Immediately</p>
+					</div>
+				</form>
+			</div>
+			<!-- flightStatus内容 -->
+			<div class="flight-content listSelectContent">
+				<form id="f-content-form" action="tpls/EN/LMFlightDetail.html" target="_blank">
+					<div class="radioSelect js-flight-radio">
+						<label><input type="radio" value="0" name="routeType" checked><i class="active"></i><b></b><span data-way="b-route">By route</span></label>
+						<label><input type="radio" value="1" name="routeType"><i></i><b></b><span data-way="f-num">By flight number</span></label>
+					</div>
+					<div class="selectAirTime selectAirCommon">
+						<div class="local_timeSelect js-route-select">
+							<div class="localSelectStart autoClick">
+								<p><img src="images/EN/originStart.png"><span>From</span></p>
+								<input type="text" class="fromcityinput inputDown Autocomplete" id="f-fromCity" name="fromCity" value="" placeholder="" autocomplete="off">
+								<img src="images/EN/downArrow.png">
+								<span class="clear">X</span>
+								<b class="bottomLine"></b>
+								<ul class="fromcityMenu menu-com js-route-menu">
+									<li><a href="#">1</a></li>
+									<li><a href="#">1</a></li>
+									<li><a href="#">1</a></li>
+								</ul>
+							</div>
+							<div class="localSelectEnd autoClick autoFocus">
+								<p><img src="images/EN/originEnd.png"><span>To</span></p>
+								<input type="text" class="tocityinput inputDown Autocomplete" id="f-toCity" name="toCity" value="" placeholder="" autocomplete="off">
+								<img src="images/EN/downArrow.png">
+								<span class="clear">X</span>
+								<b class="bottomLine"></b>
+								<ul class="tocityMenu menu-com">
+									<li><a href="#">1</a></li>
+									<li><a href="#">1</a></li>
+									<li><a href="#">1</a></li>
+								</ul>
+							</div>
+							<div class="f-num-Select js-flight-num autoClick autoFocus">
+								<p><img src="images/EN/f-num-select.png"><span>Flight Number</span></p>
+								<input type="text" class="fromcityinput inputDown" id="f-num-select" name="flightNum" value="XU-738" placeholder="" autocomplete="off">
+								<img src="images/EN/downArrow.png">
+								<span class="clear">X</span>
+								<b class="bottomLine"></b>
+								<ul class="flightMenu menu-com js-f-menu">
+									<li><a href="javascript:void(0)">XU-738</a></li>
+									<li><a href="javascript:void(0)">XU-739</a></li>
+								</ul>
+							</div>
+							<div class="timeSelectStart">
+								<p><img src="images/EN/departureDate.png"><span>Departure Date</span></p>
+								<input type="text" id="f-timeFrom" name="timeFrom" value="" placeholder="" readonly>
+								<img src="images/EN/downArrow.png">
+							</div>
 						</div>
-						<a href="#"><img src="images/EN/coupon1.png" alt=""></a>
-					</li>
-					<li class="list-item">
-						<div class="coupon-con">
-							<h2><span class="s1">$</span><span class="s2">200</span></h2>
-							<p class="p1">Air Ticket Coupon</p>
-							<p class="p2">Receive Immediately</p>
+						<div class="viewSchedules js-flight-search">
+							<a href="javascript:void(0)">SEARCH<img src="images/EN/schedulesArrow.png"></a>
 						</div>
-						<a href="#"><img src="./images/EN/coupon2.png" alt=""></a>
-					</li>
-					<li class="list-item">
-						<div class="coupon-con">
-							<h2><span class="s1">$</span><span class="s2">200</span></h2>
-							<p class="p1">Air Ticket Coupon</p>
-							<p class="p2">Receive Immediately</p>
-						</div>
-						<a href="#"><img src="images/EN/coupon1.png" alt=""></a>
-					</li>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- 移动端导航栏 -->
+	<div class="m-nav-menu">
+		<div class="m-nav-menu-close"><i class="iconfont icon-left-arrow"></i><h2 class="m-nav-title" data-title="f-nav-title">MENU</h2></div>
+		<div class="m-nav-wrap">
+			<ul class="m-nav-1 m-nav-list">
+				<li><a href="#f-list-1">PLAN TRAVEL</a></li>
+				<li><a href="#f-list-2">EXPERIENCE</a></li>
+				<li><a href="#f-list-3">COMMUNITY</a></li>
+				<li><a href="#f-list-4">TRAVEL</a></li>
+				<li><a href="#f-list-5">SHOPPING</a></li>
+				<li><a href="#f-list-6">ABOUT US</a></li>
+			</ul>
+			<div class="m-nav-2">
+				<ul class="m-nav-list" id="f-list-1">
+					<li><a href="#one-s-list-1">Special Offers</a></li>
+					<li><a href="#one-s-list-2">Destinations</a></li>
+					<li><a href="#one-s-list-3">Flight Subscription</a></li>
+					<li><a href="#one-s-list-4">Hotel Booking</a></li>
 				</ul>
-				<div class='poster-btn poster-next-btn'></div>
+				<ul class="m-nav-list" id="f-list-2">
+					<li><a href="#two-s-list-1">Travel Preparation</a></li>
+					<li><a href="#two-s-list-2">Flight Status</a></li>
+					<li><a href="#two-s-list-3">Airport Services</a></li>
+					<li><a href="#two-s-list-4">Check In</a></li>
+					<li><a href="#two-s-list-5">Your Baggage</a></li>
+					<li><a href="#two-s-list-6">Invoice Tracking</a></li>
+					<li><a href="#two-s-list-7">Enjoy Services</a></li>
+				</ul>
+				<ul class="m-nav-list" id="f-list-3">
+					<li><a href="#three-s-list-1">Lanmei Member</a></li>
+					<li><a href="#three-s-list-2">Lanmei Forum</a></li>
+					<li><a href="#three-s-list-3">Lanmei Live</a></li>
+				</ul>
+				<ul class="m-nav-list" id="f-list-4">
+					<li><a href="#four-s-list-1">Phnom Penh</a></li>
+					<li><a href="travel/LMTravel.html">Sihanoukville</a></li>
+					<li><a href="#four-s-list-3">Siem Reap</a></li>
+					<li><a href="#four-s-list-3">Macau</a></li>
+					<li><a href="#four-s-list-4">Palau</a></li>
+				</ul>
+				<ul class="m-nav-list" id="f-list-5">
+					<!-- <li><a href="menus/EN/shopping/LMDFC20170907.html" data-href="true">吴哥免税店</a></li> -->
+				</ul>
+				<ul class="m-nav-list" id="f-list-6">
+					<li><a href="menus/EN/aboutUs/LMSiteMap.html" data-href="true">Sitemap</a></li>
+					<li><a href="menus/EN/aboutUs/LMHistory.html" data-href="true">Lanmei History</a></li>
+					<li><a href="menus/EN/aboutUs/LMContact.html" data-href="true">Contact Us</a></li>
+					<li><a href="menus/EN/aboutUs/LMHire.html" data-href="true">Join Us</a></li>
+					<li><a href="#six-s-list-4">Social Responsibility</a></li>
+					<li><a href="#six-s-list-5">E-magazine</a></li>
+					<li><a href="#six-s-list-6">Cooperative Partners</a></li>
+					<li><a href="#six-s-list-7">Copyright</a></li>
+					<li><a href="#six-s-list-8">FQA</a></li>
+					<li><a href="menus/EN/aboutUs/LMPrivacy.html">Privacy Policy</a></li>
+					<li><a href="#six-s-list-10">Legal Statement</a></li>
+				</ul>
+			</div>
+			<div class="m-nav-3">
+				<!-- 计划旅行 -->
+				<ul class="m-nav-list" id="one-s-list-1">
+					<li><a href="javascript:void(0)">Special tickets</a></li>
+					<li><a href="javascript:void(0)">Special hotels</a></li>
+					<li><a href="javascript:void(0)">Special rental cars</a></li>
+					<li><a href="javascript:void(0)">Special sales</a></li>
+					<li><a href="javascript:void(0)">Special travel</a></li>
+				</ul>
+				<ul class="m-nav-list" id="one-s-list-2">
+					<li><a href="javascript:void(0)">Phnom Penh</a></li>
+					<li><a href="javascript:void(0)">Siem Reap</a></li>
+					<li><a href="travel/LMTravel.html">Sihanoukville</a></li>
+					<li><a href="javascript:void(0)">Macau</a></li>
+					<li><a href="javascript:void(0)">Palau</a></li>
+				</ul>
+				<ul class="m-nav-list" id="one-s-list-3">
+					<li><a href="javascript:void(0)" class="a-search-flight">Flight search</a></li>
+					<li><a href="javascript:void(0)">Check in</a></li>
+					<li><a href="javascript:void(0)">My trip</a></li>
+					<li><a href="javascript:void(0)">Change or cancel flights</a></li>
+				</ul>
+				<ul class="m-nav-list" id="one-s-list-4">
+					<li><a href="javascript:void(0)">Hotel search</a></li>
+					<li><a href="javascript:void(0)">My hotel</a></li>
+					<li><a href="javascript:void(0)">Car rental</a></li>
+				</ul>
+				<!-- 体验澜湄 -->
+				<ul class="m-nav-list" id="two-s-list-1">
+					<li><a href="menus/EN/experience/LMVisa.html">Passport and visa</a></li>
+					<li><a href="menus/EN/experience/LMTransport.html">General conditions of carriage</a></li>
+					<li><a href="javascript:void(0)">Special services</a></li>
+					<li><a href="javascript:void(0)">Notice to passengers</a></li>
+					<li><a href="javascript:void(0)">Commitment to customer service</a></li>
+				</ul>
+				<ul class="m-nav-list" id="two-s-list-2">
+					<li><a href="javascript:void(0)">Dynamic information</a></li>
+					<li><a href="javascript:void(0)">Flight Subscription</a></li>
+					<li><a href="javascript:void(0)">Real-time notification for Flight Info</a></li>
+				</ul>
+				<ul class="m-nav-list" id="two-s-list-3">
+					<li><a href="menus/EN/experience/LMPNHAirportService.html" title="Phnom Penh International Airport ">Phnom Penh International Airport </a></li>
+					<li><a href="menus/EN/experience/LMREPAirportService.html" title="Siem Reap International Airport">Siem Reap International Airport</a></li>
+					<li><a href="menus/EN/experience/LMMFMAirportService.html" title="Macau International Airport">Macau International Airport</a></li>
+				</ul>
+				<ul class="m-nav-list" id="two-s-list-4">
+					<li><a href="menus/EN/experience/LMCheckOnline.html">Check in online</a></li>
+					<li><a href="menus/EN/experience/LMCheckAirport.html">Check in at airport</a></li>
+					<li><a href="menus/EN/experience/LMCheckTime.html">Check-in and baggage drop-off times</a></li>
+				</ul>
+				<ul class="m-nav-list" id="two-s-list-5">
+					<li><a href="menus/EN/experience/LMBaggage.html">About baggage</a></li>
+					<li><a href="menus/EN/experience/LMMisBaggage.html">Mishandled baggage</a></li>
+					<li><a href="javascript:void(0)">Dangerous goods</a></li>
+				</ul>
+				<ul class="m-nav-list" id="two-s-list-6">
+					<li><a href="javascript:void(0)">Invoice Inquiry</a></li>
+				</ul>
+				<ul class="m-nav-list" id="two-s-list-7">
+					<li><a href="menus/EN/experience/LMCate.html">Catering service</a></li>
+					<li><a href="javascript:void(0)">Excess baggage service</a></li>
+					<li><a href="javascript:void(0)">Extended seats service</a></li>
+					<li><a href="javascript:void(0)">Seat selection in advance</a></li>
+					<li><a href="javascript:void(0)">Special service application</a></li>
+				</ul>
+				<!-- 澜湄社区 -->
+				<ul class="m-nav-list" id="three-s-list-1">
+					<li><a href="javascript:void(0)">Member registration</a></li>
+					<li><a href="javascript:void(0)">Lanmei travel companion</a></li>
+					<li><a href="javascript:void(0)">Lanmei members FAQ</a></li>
+					<li><a href="javascript:void(0)">Member information</a></li>
+					<li><a href="javascript:void(0)">Flight chart</a></li>
+					<li><a href="javascript:void(0)">Coupon</a></li>
+					<li><a href="javascript:void(0)">Order</a></li>
+				</ul>
 			</div>
 		</div>
-		<!-- 移动端 -->
-		<div class="mobile-coupon-container">
-			<div class="swiper-container c-swiper-container">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide">
-						<div class="coupon-con">
-							<h2><span class="s1">$</span><span class="s2">200</span></h2>
-							<p class="p1">Air Ticket Coupon</p>
-							<p class="p2">Receive Immediately</p>
-						</div>
-						<a href="#"><img src="images/EN/coupon1.png" alt=""></a>
+	</div>
+	<div class="m-nav-mask"></div>
+
+	<!-- 移动端机票选择 -->
+	<div class="m-flight-select">
+		<div class="m-ticket-wrap">
+			<div class="m-ticket-title m-title-com" data="ticket">
+				<div class="m-ticket-left">
+					<img src="images/EN/m-tickit-icon.png" class="img01"><img src="images/EN/m-tickit-icon-active.png" class="img02">Ticket
+				</div>
+				<div class="m-ticket-right">
+					<img src="images/EN/m-upAdrrow.png" alt="" class="img01">
+					<img src="images/EN/m-downArrow.png" alt="" class="img02">
+				</div>
+			</div>
+			<div class="m-ticket-menu m-menu-com">
+				<form id="m-airTicketForm" action="http://b2c.lanmeiairlines.com/lqWeb/reservation/AVQuery.do" method="GET" target="_blank">
+					<input type="hidden" name="orgcity" id ="m-orgcity">
+					<input type="hidden" name="dstcity" id ="m-dstcity">
+					<input type="hidden" name="takeoffDate" id ="m-takeoffDate">
+					<input type="hidden" name="returnDate" id ="m-returnDate">
+					<input type="hidden" name="tripType" value="RT" id="m-tripType">
+					<input type="hidden" name="language"  value="US">
+					<input type="hidden" name="CURRENCY"  value="USD">
+
+					<div class="m-ticket-tab">
+						<a href="#one" class="m-ticket-one active" data-way="oneWay">One Way</a>
+						<a href="#round" class="m-ticket-round" data-way="roundTrip">Round Trip</a>
+						<a href="#multi" class="m-ticket-multi" data-way="multi">Multi-city</a>
 					</div>
-					<div class="swiper-slide">
-						<div class="coupon-con">
-							<h2><span class="s1">$</span><span class="s2">200</span></h2>
-							<p class="p1">Air Ticket Coupon</p>
-							<p class="p2">Receive Immediately</p>
+					<div class="m-ticket-con">
+						<div class="m-ticket-local">
+							<div class="m-ticket-local-start">
+								<img src="images/EN/m-local-start.png">
+								<input type="text" class="m-local-start" value="Phnom Penh/PNH/Cambodia" placeholder="From" readonly>
+							</div>
+							<div class="m-ticket-local-end">
+								<img src="images/EN/m-local-end.png">
+								<input type="text" class="m-local-end" value="" placeholder="To" readonly>
+							</div>
+							<img src="images/EN/m-local-change.png" class="m-localChange">
 						</div>
-						<a href="#"><img src="images/EN/coupon1.png" alt=""></a>
+						<div class="m-ticket-num">
+							<div class="m-ticket-cabin">
+								<img src="images/EN/m-cabin.png">
+								<input type="text" class="ticket-cabin-select" name="cabinType" value="ECONOMY" readonly>
+							</div>
+							<div class="m-ticket-box">
+								<div class="m-ticket-adult">
+									<img src="images/EN/m-adult.png">
+									<input type="text" name="adultCount" class="ticket-adult-select js-t-select" value="1" readonly>
+								</div>
+								<div class="m-ticket-child">
+									<img src="images/EN/m-child.png">
+									<input type="text" name="childCount" class="ticket-child-select js-t-select" value="0" readonly>
+								</div>
+							</div>
+						</div>
+						<div class="m-ticket-date">
+							<img src="images/EN/m-date.png">
+							<input type="text" class="ticket-selectTime" id="m-ticket-selectTime" value="" readonly>
+						</div>
+						<div class="m-ticket-search-wrap">
+							<div class="m-ticket-reset js-ticket-reset">
+								<img src="images/EN/m-ticket-search.png">Reset
+							</div>
+							<div class="m-ticket-search js-mTicket-search">
+								SEARCH<img src="images/EN/schedulesArrow.png">
+							</div>
+						</div>
 					</div>
-					<div class="swiper-slide">
-						<div class="coupon-con">
-							<h2><span class="s1">$</span><span class="s2">200</span></h2>
-							<p class="p1">Air Ticket Coupon</p>
-							<p class="p2">Receive Immediately</p>
+				</form>
+			</div>
+		</div>
+		<div class="m-hotel-wrap">
+			<div class="m-hotel-title m-title-com" data="hotel">
+				<div class="m-ticket-left">
+					<img src="images/EN/m-hotel-icon.png" class="img01"><img src="images/EN/m-hotel-active.png" class="img02">Hotel
+				</div>
+				<div class="m-ticket-right">
+					<img src="images/EN/m-upAdrrow.png" alt="" class="img01">
+					<img src="images/EN/m-downArrow.png" alt="" class="img02">
+				</div>
+			</div>
+			<div class="m-ticket-menu m-menu-com">
+				<div class="m-ticket-con">
+					<div class="m-ticket-local">
+						<div class="m-ticket-local-start m-h-local-start">
+							<img src="images/EN/m-location.png">
+							<input type="text" name="txtHotelID" class="h-local-start" value="" placeholder="From" readonly>
 						</div>
-						<a href="#"><img src="images/EN/coupon1.png" alt=""></a>
+					</div>
+					<div class="m-ticket-date">
+						<img src="images/EN/m-date.png">
+						<input type="text" name="datefrom" class="ticket-selectTime" id="m-hotel-selectTime" value="" readonly>
+					</div>
+					<input type="text" class="m-rooms-input js-rooms-input" name="cboRoom" value="1 Room, 2 Adults" placeholder="" readonly>
+					<div class="m-rooms-title">
+						<p>Adults</p>
+						<p>Child</p>
+						<p>Age/1</p>
+						<p>Age/2</p>
+						<p>Age/3</p>
+					</div>
+					<div class="m-rooms-1 m-rooms-wrap">
+						<h2>Room1</h2>
+						<input type="text" class="m-rooms-com rooms1-adult" name="number_of_adults[]" value="1" placeholder="" readonly>
+						<input type="text" class="m-rooms-com rooms1-child" name="number_of_children[]" value="0" placeholder="" readonly>
+						<input type="text" class="m-rooms-com rooms1-age1 rooms1-age-com" name="child_age_1[]" value="1" placeholder="" readonly>
+						<input type="text" class="m-rooms-com rooms1-age2 rooms1-age-com" name="child_age_1[]" value="1" placeholder="" readonly>
+						<input type="text" class="m-rooms-com rooms1-age3 rooms1-age-com" name="child_age_1[]" value="1" placeholder="" readonly>
+					</div>
+					<div class="m-rooms-2 m-rooms-wrap">
+						<h2>Room2</h2>
+						<input type="text" class="m-rooms-com rooms2-adult" name="number_of_adults[]" value="1" placeholder="" readonly>
+						<input type="text" class="m-rooms-com rooms2-child" name="number_of_children[]" value="0" placeholder="" readonly>
+						<input type="text" class="m-rooms-com rooms2-age1 rooms2-age-com" name="child_age_1[]" value="1" placeholder="" readonly>
+						<input type="text" class="m-rooms-com rooms2-age2 rooms2-age-com" name="child_age_1[]" value="1" placeholder="" readonly>
+						<input type="text" class="m-rooms-com rooms2-age3 rooms2-age-com" name="child_age_1[]" value="1" placeholder="" readonly>
+					</div>
+					<div class="m-rooms-3 m-rooms-wrap">
+						<h2>Room3</h2>
+						<input type="text" class="m-rooms-com rooms3-adult" name="number_of_adults[]" value="1" placeholder="" readonly>
+						<input type="text" class="m-rooms-com rooms3-child" name="number_of_children[]" value="0" placeholder="" readonly>
+						<input type="text" class="m-rooms-com rooms3-age1 rooms3-age-com" name="child_age_1[]" value="1" placeholder="" readonly>
+						<input type="text" class="m-rooms-com rooms3-age2 rooms3-age-com" name="child_age_1[]" value="1" placeholder="" readonly>
+						<input type="text" class="m-rooms-com rooms3-age3 rooms3-age-com" name="child_age_1[]" value="1" placeholder="" readonly>
+					</div>
+					
+					<div class="m-ticket-search-wrap">
+						<div class="m-ticket-reset js-hotel-reset">
+							<img src="images/EN/m-ticket-search.png">Reset
+						</div>
+						<div class="m-ticket-search">
+							SEARCH<img src="images/EN/schedulesArrow.png">
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="pagination c-pagination"></div>
+		<div class="m-car-wrap">
+			<div class="m-car-title m-title-com" data="car">
+				<div class="m-ticket-left">
+					<img src="images/EN/m-car-icon.png" class="img01"><img src="images/EN/m-car-active.png" class="img02">Car
+				</div>
+				<div class="m-ticket-right">
+					<img src="images/EN/m-upAdrrow.png" alt="" class="img01">
+					<img src="images/EN/m-downArrow.png" alt="" class="img02">
+				</div>
+			</div>
+			<div class="m-car-menu m-menu-com">please look forward to...</div>
+		</div>
+		<div class="m-flight-wrap">
+			<div class="m-flight-title m-title-com" data="flight">
+				<div class="m-ticket-left">
+					<img src="images/EN/m-flight-icon.png" class="img01"><img src="images/EN/m-flight-active.png" class="img02">Flight Status
+				</div>
+				<div class="m-ticket-right">
+					<img src="images/EN/m-upAdrrow.png" alt="" class="img01">
+					<img src="images/EN/m-downArrow.png" alt="" class="img02">
+				</div>
+			</div>
+			<div class="m-flight-menu m-menu-com">
+				<div class="m-flight-tab">
+					<a href="route" class="js-ticket-route active" data-way="b-route">By route</a>
+					<a href="num" class="js-ticket-num" data-way="f-num">By flight number</a>
+				</div>
+				<div class="m-ticket-con">
+					<div class="m-ticket-local js-f-local">
+						<div class="m-ticket-local-start">
+							<img src="images/EN/m-local-start.png">
+							<input type="text" class="f-local-start" name="localStart" value="广州" placeholder="From" readonly>
+						</div>
+						<div class="m-ticket-local-end">
+							<img src="images/EN/m-local-end.png">
+							<input type="text" class="f-local-end" name="localEnd" value="" placeholder="To" readonly>
+						</div>
+						<img src="images/EN/m-local-change.png" class="m-localChange">
+					</div>
+					<div class="m-ticket-num js-f-num">
+						<div class="m-ticket-cabin">
+							<img src="images/EN/m-flight-select.png">
+							<input type="text" name="" class="js-flight-select" value="XU-738" readonly="">
+						</div>
+					</div>
+					<div class="m-ticket-date">
+						<img src="images/EN/m-date.png">
+						<input type="text" class="ticket-selectTime" name="time" id="m-flight-selectTime" value="" readonly>
+					</div>
+					<div class="m-ticket-search-wrap">
+						<div class="m-ticket-reset js-flight-reset">
+							<img src="images/EN/m-ticket-search.png">Reset
+						</div>
+						<div class="m-ticket-search js-f-search">
+							SEARCH<img src="images/EN/schedulesArrow.png">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- pad端机票选择 -->
+	<div class="p-flight-select">
+		<div class="p-flight-title">
+			<a href="p-ticket-wrap" class="active">
+				<img src="images/EN/m-tickit-icon.png" class="img01"><img src="images/EN/m-tickit-icon-active.png" class="img02">Ticket
+			</a>
+			<a href="p-hotel-wrap">
+				<img src="images/EN/hotel-icon.png" class="img01"><img src="images/EN/m-hotel-active.png" class="img02">Hotel
+			</a>
+			<a href="p-car-wrap">
+				<img src="images/EN/car-icon.png" class="img01"><img src="images/EN/m-car-active.png" class="img02">Car
+			</a>
+			<a href="p-flight-wrap">
+				<img src="images/EN/flight-icon.png" class="img01"><img src="images/EN/m-flight-active.png" class="img02">Flight Status
+			</a>
+		</div>
+		<div class="p-flight-wrap">
+			<div class="p-ticket-wrap p-com-memu">
+				<form id="p-airTicketForm" action="http://b2c.lanmeiairlines.com/lqWeb/reservation/AVQuery.do" method="GET" target="_blank">
+					<input type="hidden" name="orgcity" id ="p-orgcity">
+					<input type="hidden" name="dstcity" id ="p-dstcity">
+					<input type="hidden" name="takeoffDate" id ="p-takeoffDate">
+					<input type="hidden" name="returnDate" id ="p-returnDate">
+					<input type="hidden" name="tripType" value="RT" id="p-tripType">
+					<input type="hidden" name="language"  value="US">
+					<input type="hidden" name="CURRENCY"  value="USD">
+
+					<div class="p-radioSelect">
+						<label><i class="active"></i><span data-way="oneWay">One Way</span></label>
+						<label><i></i><span data-way="roundTrip">Round Trip</span></label>
+						<label><i></i><span data-way="multi">Stopover / Multi-city</span></label>
+					</div>
+					<div class="p-localSelect">
+						<div class="p-localSelect-start">
+							<p><img src="images/EN/originStart2.png">From</p>
+							<input type="text" value="Phnom Penh/PNH/Cambodia" class="p-local-start" readonly>
+						</div>
+						<div class="p-changeLocal-wrap"><img src="images/EN/localChange2-active.png" class="p-changeLocal"></div>
+						<div class="p-localSelect-end">
+							<p><img src="images/EN/originEnd2.png">To</p>
+							<input type="text" value="" class="p-local-end" readonly>
+						</div>
+					</div>
+					<div class="p-cabin-wrap">
+						<div class="p-cabin">
+							<p><img src="images/EN/cabin-icon2.png">Class</p>
+							<input type="text" name="cabinType" value="ECONOMY" class="p-cabin-input js-ticket-cabin" readonly>
+						</div>
+						<div class="p-ticket-box">
+							<div class="p-adult">
+								<p><img src="images/EN/adult-icon2.png">Adult</p>
+								<input type="text" name="adultCount" value="1" class="p-adult-input" readonly>
+							</div>
+							<div class="p-child">
+								<p><img src="images/EN/child-icon2.png">Child</p>
+								<input type="text" name="childCount" value="0" class="p-child-input" readonly>
+							</div>
+						</div>
+					</div>
+					<div class="p-dateSelect">
+						<div class="p-dataSelect-inner">
+							<p><img src="images/EN/departureDate2.png">Departure Date</p>
+							<input type="text" value="" id="p-ticket-selectTime" readonly>
+						</div>
+						<div class="p-reset js-pTicket-reset">
+							<img src="images/EN/p-ticket-search.png">Reset
+						</div>
+					</div>
+					<div class="p-search">
+						<a href="javascript:void(0)" class="p-search-btn js-pTicket-search">SEARCH<img src="images/EN/schedulesArrow.png"></a>
+					</div>
+				</form>
+			</div>
+			<div class="p-hotel-wrap p-com-memu">
+				<div class="p-localSelect">
+					<div class="p-localSelect-start">
+						<p><img src="images/EN/m-location.png">Where are you going ?</p>
+						<input type="text" name="" value="广州" class="p-local-start" readonly>
+					</div>
+				</div>
+				<div class="p-dateSelect">
+					<div class="p-dataSelect-inner">
+						<p><img src="images/EN/departureDate2.png">Date</p>
+						<input type="text" name="" value="" id="p-hotel-selectTime" readonly>
+					</div>
+				</div>
+				<input type="text" class="p-rooms-input js-Prooms-input" name="cboRoom" value="1 Room, 2 Adults" placeholder="" readonly>
+				<div class="p-rooms-title">
+					<p>Adults</p>
+					<p>Child</p>
+					<p>Age/1</p>
+					<p>Age/2</p>
+					<p>Age/3</p>
+				</div>
+				<div class="p-rooms-1 p-rooms-wrap">
+					<h2>Room1</h2>
+					<input type="text" class="p-rooms-com Prooms1-adult" name="number_of_adults[]" value="1" placeholder="" readonly>
+					<input type="text" class="p-rooms-com Prooms1-child" name="number_of_children[]" value="0" placeholder="" readonly>
+					<input type="text" class="p-rooms-com Prooms1-age1 Prooms1-age-com" name="child_age_1[]" value="1" placeholder="" readonly>
+					<input type="text" class="p-rooms-com Prooms1-age2 Prooms1-age-com" name="child_age_1[]" value="1" placeholder="" readonly>
+					<input type="text" class="p-rooms-com Prooms1-age3 Prooms1-age-com" name="child_age_1[]" value="1" placeholder="" readonly>
+				</div>
+				<div class="p-rooms-2 p-rooms-wrap">
+					<h2>Room2</h2>
+					<input type="text" class="p-rooms-com Prooms2-adult" name="number_of_adults[]" value="1" placeholder="" readonly>
+					<input type="text" class="p-rooms-com Prooms2-child" name="number_of_children[]" value="0" placeholder="" readonly>
+					<input type="text" class="p-rooms-com Prooms2-age1 Prooms2-age-com" name="child_age_1[]" value="1" placeholder="" readonly>
+					<input type="text" class="p-rooms-com Prooms2-age2 Prooms2-age-com" name="child_age_1[]" value="1" placeholder="" readonly>
+					<input type="text" class="p-rooms-com Prooms2-age3 Prooms2-age-com" name="child_age_1[]" value="1" placeholder="" readonly>
+				</div>
+				<div class="p-rooms-3 p-rooms-wrap">
+					<h2>Room3</h2>
+					<input type="text" class="p-rooms-com Prooms3-adult" name="number_of_adults[]" value="1" placeholder="" readonly>
+					<input type="text" class="p-rooms-com Prooms3-child" name="number_of_children[]" value="0" placeholder="" readonly>
+					<input type="text" class="p-rooms-com Prooms3-age1 Prooms3-age-com" name="child_age_1[]" value="1" placeholder="" readonly>
+					<input type="text" class="p-rooms-com Prooms3-age2 Prooms3-age-com" name="child_age_1[]" value="1" placeholder="" readonly>
+					<input type="text" class="p-rooms-com Prooms3-age3 Prooms3-age-com" name="child_age_1[]" value="1" placeholder="" readonly>
+				</div>
+				<div class="p-search">
+					<a href="javascript:void(0)" class="p-search-btn">SEARCH<img src="images/EN/schedulesArrow.png"></a>
+				</div>
+			</div>
+			<div class="p-car-wrap p-com-memu">
+				please look forward to...
+			</div>
+			<div class="p-flight-wrap p-com-memu">
+				<div class="p-radioSelect">
+					<label><i class="active"></i><span data-way="b-route">By route</span></label>
+					<label><i></i><span data-way="f-num">By flight number</span></label>
+				</div>
+				<div class="p-localSelect">
+					<div class="p-localSelect-start">
+						<p><img src="images/EN/originStart2.png">From</p>
+						<input type="text" name="" value="广州" class="p-local-start" readonly>
+					</div>
+					<div class="p-changeLocal-wrap"><img src="images/EN/localChange2-active.png" class="p-changeLocal"></div>
+					<div class="p-localSelect-end">
+						<p><img src="images/EN/originEnd2.png">To</p>
+						<input type="text" name="" value="" class="p-local-end" readonly>
+					</div>
+				</div>
+				<div class="p-flightSelect">
+					<div class="p-localSelect-start">
+						<p><img src="images/EN/m-flight-select.png">By flight number</p>
+						<input type="text" name="" value="XU-738" class="js-pFlight-select" readonly>
+					</div>
+				</div>
+				<div class="p-dateSelect">
+					<div class="p-dataSelect-inner">
+						<p><img src="images/EN/departureDate2.png">Departure Date</p>
+						<input type="text" name="" value="" id="p-flight-selectTime" readonly>
+					</div>
+					<div class="p-reset js-pFlight-reset">
+						<img src="images/EN/p-ticket-search.png">Reset
+					</div>
+				</div>
+				<div class="p-search">
+					<a href="javascript:void(0)" class="p-search-btn">SEARCH<img src="images/EN/schedulesArrow.png"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 折扣券 -->
+	<div class="ticketCoupon">
+		<div class="ticketCouponTitle lanmeiCommonTitle">
+			<h2>AIR TICKET COUPON</h2>
+			<p><i class="i1"></i><i class="i2"></i><i class="i3"></i><i class="i4"></i><i class="i5"></i><i class="i6"></i></p>
+		</div>
+		<!-- PC端 -->
+		<div class="coupon-wrap">
+			<div class='poster-main carousel' data-setting='{
+			"width":940,
+			"height":160,
+			"posterWidth":450,
+			"posterHeight":160,
+			"verticalAlign":"middle",
+			"autoPlay":false,
+			"speed":1000,
+			"delay":1000,
+			"scale":0.9
+		}'>
+		<div class='poster-btn poster-prev-btn'></div>
+		<ul class='poster-list'>
+			<li class="list-item">
+				<div class="coupon-con">
+					<h2><span class="s1">$</span><span class="s2">200</span></h2>
+					<p class="p1">Air Ticket Coupon</p>
+					<p class="p2">Receive Immediately</p>
+				</div>
+				<a href="#"><img src="images/EN/coupon1.png" alt=""></a>
+			</li>
+			<li class="list-item">
+				<div class="coupon-con">
+					<h2><span class="s1">$</span><span class="s2">200</span></h2>
+					<p class="p1">Air Ticket Coupon</p>
+					<p class="p2">Receive Immediately</p>
+				</div>
+				<a href="#"><img src="./images/EN/coupon2.png" alt=""></a>
+			</li>
+			<li class="list-item">
+				<div class="coupon-con">
+					<h2><span class="s1">$</span><span class="s2">200</span></h2>
+					<p class="p1">Air Ticket Coupon</p>
+					<p class="p2">Receive Immediately</p>
+				</div>
+				<a href="#"><img src="images/EN/coupon1.png" alt=""></a>
+			</li>
+		</ul>
+		<div class='poster-btn poster-next-btn'></div>
+	</div>
+	</div>
+	<!-- 移动端 -->
+	<div class="mobile-coupon-container">
+		<div class="swiper-container c-swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<div class="coupon-con">
+						<h2><span class="s1">$</span><span class="s2">200</span></h2>
+						<p class="p1">Air Ticket Coupon</p>
+						<p class="p2">Receive Immediately</p>
+					</div>
+					<a href="#"><img src="images/EN/coupon1.png" alt=""></a>
+				</div>
+				<div class="swiper-slide">
+					<div class="coupon-con">
+						<h2><span class="s1">$</span><span class="s2">200</span></h2>
+						<p class="p1">Air Ticket Coupon</p>
+						<p class="p2">Receive Immediately</p>
+					</div>
+					<a href="#"><img src="images/EN/coupon1.png" alt=""></a>
+				</div>
+				<div class="swiper-slide">
+					<div class="coupon-con">
+						<h2><span class="s1">$</span><span class="s2">200</span></h2>
+						<p class="p1">Air Ticket Coupon</p>
+						<p class="p2">Receive Immediately</p>
+					</div>
+					<a href="#"><img src="images/EN/coupon1.png" alt=""></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="pagination c-pagination"></div>
 	</div>
 
 	<!-- Discounted Ticket -->

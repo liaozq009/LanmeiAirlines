@@ -11,10 +11,22 @@
 .wysiwyg-container {
     overflow: visible;
     /*border: 1px solid #aaaaaa;*/
+    width:560px;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     -o-border-radius: 3px;
     border-radius: 3px;
+    float:left;
+}
+.lanmei-tollbar-left{
+	margin-top:-60px;
+	border:solid red 1px;
+	display: none;
+}
+.lanmei-tollbar-right{
+	margin-top:-60px;
+	border:solid blue 1px;
+	display: none;
 }
 .wysiwyg-textarea {
     display: block;

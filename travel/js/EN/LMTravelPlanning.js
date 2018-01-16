@@ -3,7 +3,6 @@ var LMTravelPlanning = {
 	init:function(){
 		this.editor();
 		this.toolbar();
-		this.diaryEditor();
 		this.otherEvent();
 		this.isMobile();
 	},
@@ -23,7 +22,7 @@ var LMTravelPlanning = {
 			$('.range-slider').jRange({
 				from: min,
 				to: max,
-				step: 1000,
+				step: 50,
 				showScale:false,
 				format: '%s',
 				width: 180,
@@ -31,7 +30,7 @@ var LMTravelPlanning = {
 				isRange : true
 			});
 		}
-		rangeSlider(0,10000);
+		rangeSlider(0,1000);
 
 		// 编辑框显示或隐藏
 		$('.p-header-title .p-edit').click(function(){
@@ -85,12 +84,6 @@ var LMTravelPlanning = {
 				$(this).val($(this).val().replace(/[^\d]/ig,''));
 			});
 
-			// $('.range-money').on('input[number]:not(:hidden)', 'input', function() {
-   //              var $this = $(this), 
-   //                  val = $this.val();
-   //              if (val) $this.val(val.replace(/[^0-9]/g, ''));
-   //          });
-
 			if(optionVal=='0'){
 				$range.show();
 				 $select.hide();
@@ -108,6 +101,7 @@ var LMTravelPlanning = {
 			var $bottomLine = $parent.siblings('.bottom-line');
 			var $route = $('.p-section-route');
 			var $diary = $('.p-section-diary');
+			var $page = $('.t-comment-page');
 			var $cover = $('.p-section-cover');
 
 			$parent.addClass('active').siblings('li').removeClass('active');
@@ -118,27 +112,25 @@ var LMTravelPlanning = {
 					$bottomLine.animate({'left':'10px'}, 300);
 					$route.show();
 					$diary.hide();
+					$page.hide();
 					$cover.hide();
 					break;
 				case '#diary':
 					$bottomLine.animate({'left':'114px'}, 300);
 					$route.hide();
 					$diary.show();
+					$page.show();
 					$cover.hide();
 					break;
 				case '#cover':
 					$bottomLine.animate({'left':'218px'}, 300);
 					$route.hide();
 					$diary.hide();
+					$page.hide();
 					$cover.show();
 					break;
 			}
 		});
-	},
-
-	/* 游记编辑 */
-	diaryEditor:function(){
-
 	},
 
 	/* 移动端添加景点 */

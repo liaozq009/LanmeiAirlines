@@ -6,12 +6,90 @@ var markers = [];
 function initMap() {
 	/* 初始化map */
 	map = new google.maps.Map(document.getElementById('planningMap'), {
-		zoom: 8,
-		maxZoom:10,
-		minZoom:4,
+		zoom:7,
 		center: {lat: 23.15, lng: 113.25},
 		mapTypeControl: false,
     	streetViewControl:false, //街景
+    	styles: [
+    	  {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+    	  {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+    	  {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+    	  {
+    	    featureType: 'administrative.locality',
+    	    elementType: 'labels.text.fill',
+    	    stylers: [{color: '#d59563'}]
+    	  },
+    	  {
+    	    featureType: 'poi',
+    	    elementType: 'labels.text.fill',
+    	    stylers: [{color: '#d59563'}]
+    	  },
+    	  {
+    	    featureType: 'poi.park',
+    	    elementType: 'geometry',
+    	    stylers: [{color: '#263c3f'}]
+    	  },
+    	  {
+    	    featureType: 'poi.park',
+    	    elementType: 'labels.text.fill',
+    	    stylers: [{color: '#6b9a76'}]
+    	  },
+    	  {
+    	    featureType: 'road',
+    	    elementType: 'geometry',
+    	    stylers: [{color: '#38414e'}]
+    	  },
+    	  {
+    	    featureType: 'road',
+    	    elementType: 'geometry.stroke',
+    	    stylers: [{color: '#212a37'}]
+    	  },
+    	  {
+    	    featureType: 'road',
+    	    elementType: 'labels.text.fill',
+    	    stylers: [{color: '#9ca5b3'}]
+    	  },
+    	  {
+    	    featureType: 'road.highway',
+    	    elementType: 'geometry',
+    	    stylers: [{color: '#746855'}]
+    	  },
+    	  {
+    	    featureType: 'road.highway',
+    	    elementType: 'geometry.stroke',
+    	    stylers: [{color: '#1f2835'}]
+    	  },
+    	  {
+    	    featureType: 'road.highway',
+    	    elementType: 'labels.text.fill',
+    	    stylers: [{color: '#f3d19c'}]
+    	  },
+    	  {
+    	    featureType: 'transit',
+    	    elementType: 'geometry',
+    	    stylers: [{color: '#2f3948'}]
+    	  },
+    	  {
+    	    featureType: 'transit.station',
+    	    elementType: 'labels.text.fill',
+    	    stylers: [{color: '#d59563'}]
+    	  },
+    	  {
+    	    featureType: 'water',
+    	    elementType: 'geometry',
+    	    stylers: [{color: '#17263c'}]
+    	  },
+    	  {
+    	    featureType: 'water',
+    	    elementType: 'labels.text.fill',
+    	    stylers: [{color: '#515c6d'}]
+    	  },
+    	  {
+    	    featureType: 'water',
+    	    elementType: 'labels.text.stroke',
+    	    stylers: [{color: '#17263c'}]
+    	  }
+    	]
 	});
 
 	/* 清空标签和路线 */
@@ -29,20 +107,20 @@ function initMap() {
 		deleteMarkers();//清空所有标签连线
 
 		/* 虚线 */
-		var lineSymbol = {
-		  	path: 'M 0,-1 0,1',
-		  	strokeOpacity: 1,
-		  	scale: 3
-		};
+		// var lineSymbol = {
+		//   	path: 'M 0,-1 0,1',
+		//   	strokeOpacity: 1,
+		//   	scale: 3
+		// };
 		poly = new google.maps.Polyline({
-		  	strokeColor: '#ff0000',
-		  	strokeOpacity: 0,
+		  	strokeColor: '#81E5FE',
+		  	strokeOpacity: 1,
 		  	strokeWeight: 3,
-		  	icons: [{
-		  		icon: lineSymbol,
-		  		offset: '0',
-		  		repeat: '16px'
-		  	}],
+		  	// icons: [{
+		  	// 	icon: lineSymbol,
+		  	// 	offset: '0',
+		  	// 	repeat: '16px'
+		  	// }],
 		});
 		poly.setMap(map);
 
@@ -65,10 +143,20 @@ function initMap() {
 			var num = String(i+1);
 
 			// 添加标签
+			// var image = '../../images/EN/google-marker.png';
+			var image = {
+			  url: '../../images/EN/google-marker.png',
+			  size: new google.maps.Size(50, 50),
+			  origin: new google.maps.Point(0, 0),
+			  anchor: new google.maps.Point(25, 25),
+			  scaledSize: new google.maps.Size(50, 50),
+			  cornercolor:'red',
+			};
 			marker = new google.maps.Marker({
 				position: latlng,
 				map: map,
 				label: num,
+				icon: image,
 			});
 			markers.push(marker);
 

@@ -29,7 +29,7 @@
 
     // Create the Editor
     var create_editor = function( $textarea, classes, placeholder, toolbar_position, toolbar_buttons, toolbar_submit, label_dropfileclick,
-                                  placeholder_url, max_imagesize, onImageUpload, onKeyEnter )
+                                  placeholder_url, max_imagesize, onImageUpload, onKeyEnter ,booktype)
     {
         // Content: Insert link
         var wysiwygeditor_insertLink = function( wysiwygeditor, url )
@@ -122,6 +122,7 @@
 	                                        image_width = parseInt(image_width / image_height * max_imagesize[1]);
 	                                        image_height = max_imagesize[1];
 	                                    }
+	                                    if(image_width>530)image_width=530;
 	                                    $image.attr('width',image_width)
 	                                          .attr('height',image_height);
 	                                }
@@ -215,7 +216,8 @@
                                     event.preventDefault();
                                     return false;
                                 });
-            $content.append( $('<div/>').append($inputurl).append($okaybutton) );
+            //$content.append( $('<div/>').append($inputurl).append($okaybutton) );
+            $content.append( $('<div/>') );
             return $content;
         };
 
@@ -359,11 +361,29 @@
 
         // Create the toolbar
         var toolbar_button = function( button ) {
-            return $('<a/>').addClass( 'wysiwyg-toolbar-icon' )
+        	if(button.title=='Insert image'){
+        		if(booktype=='left')
+        		return $('<a/>').addClass( 'wysiwyg-toolbar-icon lanmei-image-left' )
+                            .attr('href','#')
+                            .attr('title', button.title)
+                            .attr('id','lanmei-image-left')
+                            .attr('unselectable','on')
+                            .append(button.image);
+                if(booktype=='right')
+                return $('<a/>').addClass( 'wysiwyg-toolbar-icon lanmei-image-right' )
+                            .attr('href','#')
+                            .attr('title', button.title)
+                            .attr('id','lanmei-image-right')
+                            .attr('unselectable','on')
+                            .append(button.image);
+        	}else{
+        		return $('<a/>').addClass( 'wysiwyg-toolbar-icon' )
                             .attr('href','#')
                             .attr('title', button.title)
                             .attr('unselectable','on')
                             .append(button.image);
+        	}
+            
         };
         var add_buttons_to_toolbar = function( $toolbar, selection, popup_open_callback, popup_position_callback )
         {
@@ -383,7 +403,20 @@
                         value.click( $(target) );
                     };
                 else if( 'popup' in value )
-                	if(key!='fontsize'){
+                	/*	toolbar_handler = function( target ) {
+	                        var $popup = popup_open_callback();
+	                        var apply_position = value.popup( $popup, $(target), $container );
+	                        if( apply_position !== false )
+	                            popup_position_callback( $popup, target );
+	                    };
+                else
+                    toolbar_handler = get_toolbar_handler( key, function( $content, target ) {
+                        var $popup = popup_open_callback();
+                        $popup.append( $content );
+                        popup_position_callback( $popup, target );
+                        $popup.find('input[type=text]:first').focus();
+                    });*/
+                    if(key!='fontsize'){
                 		toolbar_handler = function( target ) {
 	                        var $popup = popup_open_callback();
 	                        var apply_position = value.popup( $popup, $(target), $container );
@@ -392,8 +425,50 @@
 	                    };
                 	}else{
                 		toolbar_handler = function( target ) {
-	                        //value.click( function(){alert(1)} );
-	                        alert("111");
+		                    var curObj;
+		                    if(focusCur=='left')curObj=bookLeft.getElement();
+		                    if(focusCur=='right')curObj=bookRight.getElement();
+			            	var curLast = curObj.lastChild;
+			            	var curHeight = 0;
+			            	var curWidth=0;
+			            	try {
+			            		var num= curLast.innerText.split(' ');
+			            		curWidth = (num.length*2+curLast.innerText.replace(/[^\x00-\xff]/g,"01").length)* 7;
+			            	} catch(e) {
+			            		//TODO handle the exception
+			            	}
+			            	if(curLast!=null){
+			            		if(curLast.offsetTop!=null){
+			            			curHeight=curLast.offsetTop;
+			            			if(curLast.clientHeight!=null){
+			            				curHeight=curHeight+curLast.offsetHeight;
+			            			}
+			            		}else{
+			            			if(curLast.previousSibling!=null)
+			            			curHeight=curLast.previousSibling.offsetTop;
+			            			if(curLast.previousSibling!=null&&curLast.previousSibling.clientHeight!=null){
+			            				curHeight=curHeight+curLast.previousSibling.offsetHeight;
+			            			}
+			            		}
+			            	}
+			            	var size = 1;
+			            	if($('#booksize').val()=='14px'){
+			            		size=1.8;
+			            	}else if($('#booksize').val()=='18px'){
+			            		size=4;
+			            	}else if($('#booksize').val()=='24px'){
+			            		size=5;
+			            	}
+			            	curHeight+=size*10;
+			            	if(curHeight<=760){
+			            		if($('#bookclick').val()=='true'){
+			            			if(focusCur=='left')bookLeft.fontSize(size);
+		                    		if(focusCur=='right')bookRight.fontSize(size);
+		                    		$('#bookclick').val('false');
+			            		}
+			            		
+			            	}
+		                    //return true;
 	                    };
                 	}
                     
@@ -607,8 +682,17 @@
         // Toolbar on top or bottom
         if( toolbar_position != 'selection' )
         {
+        	
             var toolbar_top = toolbar_position == 'top' || toolbar_position == 'top-selection';
-            var $toolbar = $('<div/>').addClass( 'wysiwyg-toolbar' ).addClass( toolbar_top ? 'wysiwyg-toolbar-top' : 'wysiwyg-toolbar-bottom' );
+            var $toolbar = "";
+            if(booktype=='left'){
+            	$toolbar = $('<div/>').addClass( 'wysiwyg-toolbar lanmei-tollbar-left' ).addClass( toolbar_top ? 'wysiwyg-toolbar-top' : 'wysiwyg-toolbar-bottom' );
+            }else if(booktype=='right'){
+            	$toolbar = $('<div/>').addClass( 'wysiwyg-toolbar lanmei-tollbar-right' ).addClass( toolbar_top ? 'wysiwyg-toolbar-top' : 'wysiwyg-toolbar-bottom' );
+            }else{
+            	$toolbar = $('<div/>').addClass( 'wysiwyg-toolbar' ).addClass( toolbar_top ? 'wysiwyg-toolbar-top' : 'wysiwyg-toolbar-bottom' );
+            }
+            
             add_buttons_to_toolbar( $toolbar, false,
                 function() {
                     // Open a popup from the toolbar
@@ -643,6 +727,15 @@
                     var scroll_left = fixed_parent() ? 0 : $(window).scrollLeft();
                     if( left < scroll_left + 1 )
                         left = scroll_left + 1;
+                        
+                    if($button.context.title=='Insert image'&&$button.context.className.indexOf('left')>0){
+                    	left=460;
+                    	top=150;
+                    }
+                    if($button.context.title=='Insert image'&&$button.context.className.indexOf('right')>0){
+                    	left=1100;
+                    	top=150;
+                    }
                     $popup.css({ left: left + 'px',
                                  top: top + 'px',
                                  overflow: 'visible'
@@ -683,11 +776,11 @@
                     placeholder_url = option.placeholderUrl || null,
                     max_imagesize = option.maxImageSize || null,
                     onImageUpload = option.onImageUpload,
+                    booktype=option.booktype,
                     onKeyEnter = option.onKeyEnter;
-
                 // Create the WYSIWYG Editor
                 var data = create_editor( $that, classes, placeholder, toolbar_position, toolbar_buttons, toolbar_submit, label_dropfileclick,
-                                          placeholder_url, max_imagesize, onImageUpload, onKeyEnter );
+                                          placeholder_url, max_imagesize, onImageUpload, onKeyEnter,booktype );
                 $that.data( 'wysiwyg', data );
             });
         }
