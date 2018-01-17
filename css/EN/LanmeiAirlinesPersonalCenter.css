@@ -251,4 +251,26 @@
   transition: all 0.6s;
   -webkit-transition: all 0.6s;
 }
+.rightInfo {
+  width: 720px;
+  min-height: 100px;
+  padding: 10px;
+  padding-left: 20px;
+  float: right;
+}
+.rightInfo .ticket-title {
+  overflow: hidden;
+}
+.rightInfo .ticket-title > li {
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+.rightInfo .ticket-title > li > a {
+  font-size: 18px;
+  color: #131c3e;
+}
+.rightInfo .ticket-title > li > img {
+  margin-top: 10px;
+}
 /* 配置屏幕 针对小屏幕*/

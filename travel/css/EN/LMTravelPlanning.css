@@ -19,7 +19,7 @@ body {
   font-size: 20px;
   font-weight: bold;
   margin-left: 70px;
-  background-image: -webkit-linear-gradient(0deg, #81E5FE 0%, #1639AE 100%);
+  background-image: -webkit-linear-gradient(-35deg, #81E5FE 0%, #1639AE 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -27,7 +27,7 @@ body {
   width: 2px;
   height: 20px;
   margin-left: 30px;
-  background-image: -webkit-linear-gradient(0deg, #81E5FE 0%, #1639AE 100%);
+  background-image: -webkit-linear-gradient(-35deg, #81E5FE 0%, #1639AE 100%);
   border-radius: 4px;
   position: relative;
   top: 4px;
@@ -39,7 +39,7 @@ body {
 .p-header .p-header-title .p-time .s2 {
   font-size: 20px;
   font-weight: bold;
-  background-image: -webkit-linear-gradient(0deg, #81E5FE 0%, #1639AE 100%);
+  background-image: -webkit-linear-gradient(-35deg, #81E5FE 0%, #1639AE 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -205,7 +205,7 @@ body {
   border-radius: 4px;
 }
 .p-editor .p-editor-ok .p-ok {
-  background-image: -webkit-linear-gradient(0deg, #81E5FE 0%, #1639AE 100%);
+  background-image: -webkit-linear-gradient(-35deg, #81E5FE 0%, #1639AE 100%);
 }
 .p-editor .p-editor-ok .p-cancel {
   margin-left: 20px;
@@ -265,17 +265,23 @@ body {
   background: #fff;
   box-shadow: 0 0 20px 0 rgba(170, 199, 249, 0.5);
   border-radius: 4px;
-  background-image: -webkit-linear-gradient(0deg, #81E5FE 0%, #1639AE 100%);
+  background-image: -webkit-linear-gradient(-35deg, #81E5FE 0%, #1639AE 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .p-toolbar .p-toolbar-right .p-save {
-  background-image: linear-gradient(135deg, #81e5fe 0%, #1639ae 100%);
+  background-image: -webkit-linear-gradient(-35deg, #81E5FE 0%, #1639AE 100%);
   box-shadow: 0 0 20px 0 rgba(170, 199, 249, 0.5);
   border-radius: 4px;
 }
 .p-toolbar .p-toolbar-right .p-next {
-  background-image: linear-gradient(135deg, #c1e199 0%, #8ec060 100%);
+  display: none;
+  background-image: -webkit-linear-gradient(-35deg, #c1e199 0%, #8ec060 100%);
+  box-shadow: 0 0 20px 0 rgba(170, 199, 249, 0.5);
+  border-radius: 4px;
+}
+.p-toolbar .p-toolbar-right .p-pdf {
+  background-image: -webkit-linear-gradient(-35deg, #c1e199 0%, #8ec060 100%);
   box-shadow: 0 0 20px 0 rgba(170, 199, 249, 0.5);
   border-radius: 4px;
 }
@@ -490,7 +496,7 @@ body {
   line-height: 26px;
   text-align: center;
   border-radius: 4px;
-  background-image: -webkit-linear-gradient(0deg, #81E5FE 0%, #1639AE 100%);
+  background-image: -webkit-linear-gradient(-35deg, #81E5FE 0%, #1639AE 100%);
   cursor: pointer;
 }
 .p-section-route .p-section-right .p-scenic-wrap {
@@ -539,7 +545,7 @@ body {
   height: 30px;
   font-size: 14px;
   background: #fff;
-  background-image: -webkit-linear-gradient(0deg, #81E5FE 0%, #1639AE 100%);
+  background-image: -webkit-linear-gradient(-35deg, #81E5FE 0%, #1639AE 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   box-shadow: 0 0 30px 0 rgba(170, 199, 249, 0.5);
@@ -554,7 +560,7 @@ body {
   font-size: 26px;
   line-height: 26px;
   color: #fff;
-  background-image: -webkit-linear-gradient(0deg, #81E5FE 0%, #1639AE 100%);
+  background-image: -webkit-linear-gradient(-35deg, #81E5FE 0%, #1639AE 100%);
   border-radius: 4px;
 }
 .p-section-cover {
@@ -648,9 +654,9 @@ body {
   line-height: 28px;
   display: inline-block;
   margin: 0 5px;
-  background-color: #3897cd;
+  background-color: #3772D5;
   color: #fff;
-  border-color: #3897cd;
+  border-color: #3772D5;
 }
 .p-toolbar .t-comment-page > a {
   padding: 0 10px;
@@ -661,8 +667,8 @@ body {
   color: #8a8a8a;
 }
 .p-toolbar .t-comment-page > a:hover {
-  color: #3897cd;
-  border-color: #3897cd;
+  color: #3772D5;
+  border-color: #3772D5;
 }
 .p-toolbar .t-comment-page .disabled {
   color: #ccc;
@@ -686,7 +692,6 @@ body {
   border-color: #fff;
 }
 .p-section-diary .p-diary-secyion-left {
-  background: #ffffff;
   width: 30px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -742,7 +747,6 @@ body {
 .p-section-diary .p-diary-secyion-left .p-bg-ul .add-bg {
   text-align: center;
   font-weight: bold;
-  font-family: Comfortaa;
   font-size: 14px;
   letter-spacing: 0;
   line-height: 16px;
@@ -767,7 +771,6 @@ body {
   box-shadow: 0 0 20px 0 rgba(55, 114, 213, 0.5);
   border-radius: 4px;
   width: 216px;
-  font-family: Comfortaa;
   font-size: 14px;
   color: #1f2c5c;
   text-align: left;
@@ -829,7 +832,6 @@ body {
   background-repeat: no-repeat;
 }
 .p-section-diary .p-diary-secyion-right {
-  background: #ffffff;
   width: 30px;
   margin-top: 35px;
   float: left;
@@ -866,7 +868,6 @@ body {
 }
 .p-section-diary .p-diary-secyion-right .p-diary-tag .p-tag-ul .add-content {
   transform: rotate(-270deg);
-  font-family: Comfortaa;
   font-size: 16px;
   padding-left: 0;
   color: #ffffff;
@@ -876,7 +877,6 @@ body {
 }
 .p-section-diary .p-diary-secyion-right .p-diary-tag .p-tag-ul .tag-content {
   transform: rotate(-270deg);
-  font-family: Comfortaa;
   font-size: 16px;
   margin-top: 30px;
   padding-left: 0;
@@ -929,7 +929,6 @@ body {
 .p-section-diary .p-diary-secyion-right .p-diary-upload .p-tag-ul .add-content,
 .p-section-diary .p-diary-secyion-right .p-diary-remove .p-tag-ul .add-content {
   transform: rotate(-270deg);
-  font-family: Comfortaa;
   font-size: 16px;
   padding-left: 0;
   color: #ffffff;
@@ -940,7 +939,6 @@ body {
 .p-section-diary .p-diary-secyion-right .p-diary-upload .p-tag-ul .tag-content,
 .p-section-diary .p-diary-secyion-right .p-diary-remove .p-tag-ul .tag-content {
   transform: rotate(-270deg);
-  font-family: Comfortaa;
   font-size: 16px;
   margin-top: 50px;
   padding-left: 0;
@@ -954,7 +952,7 @@ body {
   width: 260px;
   padding: 10px;
   position: absolute;
-  top: 180px;
+  top: 66px;
   right: 45px;
   font-size: 15px;
   background: #fff;
@@ -984,7 +982,7 @@ body {
   color: #3772d5;
 }
 .p-section-diary .p-diary-secyion-right .uploadbg-tip .btn-r {
-  background-image: linear-gradient(-135deg, #81e5fe 0%, #1639ae 100%);
+  background-image: -webkit-linear-gradient(-35deg, #81e5fe 0%, #1639ae 100%);
   color: #fff;
 }
 .p-section-diary .p-diary-secyion-right .removebg-tip {
@@ -1022,7 +1020,7 @@ body {
   color: #3772d5;
 }
 .p-section-diary .p-diary-secyion-right .removebg-tip .btn-r {
-  background-image: linear-gradient(-135deg, #81e5fe 0%, #1639ae 100%);
+  background-image: -webkit-linear-gradient(-35deg, #81e5fe 0%, #1639ae 100%);
   color: #fff;
   margin-right: 0;
 }
@@ -1069,7 +1067,6 @@ body {
 }
 .p-section-diary .p-diary-secyion-bottom .p-diary-next .p-tag-ul .add-content {
   width: 60px;
-  font-family: Comfortaa;
   font-size: 16px;
   padding-left: 20px;
   color: #ffffff;
@@ -1077,7 +1074,6 @@ body {
 }
 .p-section-diary .p-diary-secyion-bottom .p-diary-next .p-tag-ul .tag-content {
   width: 50px;
-  font-family: Comfortaa;
   font-size: 16px;
   padding-left: 12px;
   color: #ffffff;

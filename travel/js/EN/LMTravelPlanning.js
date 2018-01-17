@@ -96,14 +96,28 @@ var LMTravelPlanning = {
 
 	/* 操作栏，包括路线、游记、保存、预览 */
 	toolbar:function(){
+		var $route = $('.p-section-route');
+		var $diary = $('.p-section-diary');
+		var $page = $('.t-comment-page');
+		var $cover = $('.p-section-cover');
+		var $bottomLine = $('.p-toolbar-left .bottom-line');
+		var $preview = $('.p-toolbar-right .p-preview');
+		var $next = $('.p-toolbar-right .p-next');
+		var $pdf = $('.p-toolbar-right .p-pdf');
+
+		var coverClick = function(){
+			$bottomLine.animate({'left':'218px'}, 300);
+			$route.hide();
+			$diary.hide();
+			$page.hide();
+			$cover.show();
+			$next.css('display','inline-block');
+			$pdf.css('display','none');
+			$preview.css('display','none');
+		}
+
 		$('.p-toolbar-left>li>a').click(function(){
 			var $parent =  $(this).parent('li');
-			var $bottomLine = $parent.siblings('.bottom-line');
-			var $route = $('.p-section-route');
-			var $diary = $('.p-section-diary');
-			var $page = $('.t-comment-page');
-			var $cover = $('.p-section-cover');
-
 			$parent.addClass('active').siblings('li').removeClass('active');
 
 			var href = $(this).attr('href');
@@ -114,6 +128,9 @@ var LMTravelPlanning = {
 					$diary.hide();
 					$page.hide();
 					$cover.hide();
+					$next.css('display','none');
+					$pdf.css('display','inline-block');
+					$preview.css('display','inline-block');
 					break;
 				case '#diary':
 					$bottomLine.animate({'left':'114px'}, 300);
@@ -121,15 +138,20 @@ var LMTravelPlanning = {
 					$diary.show();
 					$page.show();
 					$cover.hide();
+					$next.css('display','inline-block');
+					$pdf.css('display','none');
+					$preview.css('display','none');
 					break;
 				case '#cover':
-					$bottomLine.animate({'left':'218px'}, 300);
-					$route.hide();
-					$diary.hide();
-					$page.hide();
-					$cover.show();
+					coverClick();
 					break;
 			}
+		});
+
+		// 点击next
+		$next.click(function(){
+			$('.p-toolbar-left>li.n3').addClass('active').siblings('li').removeClass('active');
+			coverClick();
 		});
 	},
 
