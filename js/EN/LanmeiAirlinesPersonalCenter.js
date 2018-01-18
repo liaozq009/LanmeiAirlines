@@ -1,9 +1,20 @@
 
 var LanmeiAirlinesPersonalCenter = {
 	init:function(){
+		this.ticketSearch();
 		this.addEvend();
 	},
 
+	/* 机票订单查询 */
+	ticketSearch:function(){
+		$('.ticket-title li a').click(function(e){
+			e.preventDefault();
+			$('.ticket-title li img').hide();
+			$(this).siblings('img').show();
+			var id = $(this).attr('href');
+			$(id).show().siblings('.ticket-menu').hide();
+		});
+	},
 
 	/* 其他事件 */
 	addEvend:function(){
