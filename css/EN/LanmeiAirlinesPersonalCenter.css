@@ -154,10 +154,7 @@
   font-size: 16px;
   color: #1f2c5c;
 }
-.personalInfo-wrapper .asideInfo .infoContent li a:hover {
-  color: #8ec060;
-}
-.personalInfo-wrapper .asideInfo .infoContent li .active {
+.personalInfo-wrapper .asideInfo .infoContent .active a {
   background: #8ec060;
   color: #fff;
 }
@@ -257,44 +254,44 @@
   padding-left: 20px;
   float: right;
 }
-.rightInfo .ticket-title {
+.rightInfo .ticket-wrapper .ticket-title {
   overflow: hidden;
 }
-.rightInfo .ticket-title > li {
+.rightInfo .ticket-wrapper .ticket-title > li {
   float: left;
   width: 50%;
   text-align: center;
 }
-.rightInfo .ticket-title > li > a {
+.rightInfo .ticket-wrapper .ticket-title > li > a {
   font-size: 18px;
   color: #131c3e;
 }
-.rightInfo .ticket-title > li > img {
+.rightInfo .ticket-wrapper .ticket-title > li > img {
   margin-top: 10px;
 }
-.rightInfo .ticket-title .ticket-order img {
+.rightInfo .ticket-wrapper .ticket-title .ticket-order img {
   display: none;
 }
-.rightInfo #ticketOrder {
+.rightInfo .ticket-wrapper #ticketOrder {
   display: none;
 }
-.rightInfo .ticket-search {
+.rightInfo .ticket-wrapper .ticket-search {
   margin-top: 30px;
   overflow: hidden;
 }
-.rightInfo .ticket-search > li {
+.rightInfo .ticket-wrapper .ticket-search > li {
   float: left;
   width: 260px;
 }
-.rightInfo .ticket-search > li p {
+.rightInfo .ticket-wrapper .ticket-search > li p {
   font-size: 14px;
   font-weight: bold;
   color: #8ec060;
 }
-.rightInfo .ticket-search > li p img {
+.rightInfo .ticket-wrapper .ticket-search > li p img {
   margin-right: 10px;
 }
-.rightInfo .ticket-search > li input {
+.rightInfo .ticket-wrapper .ticket-search > li input {
   width: 100%;
   height: 40px;
   margin-top: 10px;
@@ -304,15 +301,15 @@
   border: 1px solid #cccccc;
   border-radius: 2px;
 }
-.rightInfo .ticket-search .n2 {
+.rightInfo .ticket-wrapper .ticket-search .n2 {
   margin-left: 40px;
 }
-.rightInfo .ticket-search .n3 {
+.rightInfo .ticket-wrapper .ticket-search .n3 {
   width: 90px;
   margin-left: 40px;
   padding-top: 32px;
 }
-.rightInfo .ticket-search .n3 button {
+.rightInfo .ticket-wrapper .ticket-search .n3 button {
   width: 90px;
   height: 40px;
   color: #fff;
@@ -322,86 +319,86 @@
   background: #8ec060;
   border-radius: 2px;
 }
-.rightInfo .ticket-content-wrap {
+.rightInfo .ticket-wrapper .ticket-content-wrap {
   margin-top: 30px;
 }
-.rightInfo .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-title {
+.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-title {
   width: 100%;
   height: 30px;
   line-height: 30px;
   padding: 0 20px;
   background: #f2f2f2;
 }
-.rightInfo .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-title .orderNum {
+.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-title .orderNum {
   float: left;
 }
-.rightInfo .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-title .orderDate {
+.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-title .orderDate {
   float: right;
 }
-.rightInfo .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-content {
+.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-content {
   overflow: hidden;
   text-align: center;
   margin-top: 20px;
   padding-bottom: 20px;
   border-bottom: 1px dashed #ccc;
 }
-.rightInfo .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-content > div {
+.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-content > div {
   float: left;
 }
-.rightInfo .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-content .b-content-left {
+.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-content .b-content-left {
   width: 32%;
 }
-.rightInfo .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-content .b-content-left .from-time {
+.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-content .b-content-left .from-time {
   font-size: 18px;
   font-weight: bold;
 }
-.rightInfo .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-content .b-content-left .from-code {
+.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-content .b-content-left .from-code {
   font-size: 36px;
   font-weight: bold;
 }
-.rightInfo .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-content .b-content-left .from-local {
+.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-content .b-content-left .from-local {
   font-size: 13px;
 }
-.rightInfo .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-content .b-content-middle {
+.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-content .b-content-middle {
   width: 34%;
   margin-top: 14px;
 }
-.rightInfo .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-content .b-content-right {
+.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-content .b-content-right {
   width: 32%;
 }
-.rightInfo .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-content .b-content-right .to-time {
+.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-content .b-content-right .to-time {
   font-size: 18px;
   font-weight: bold;
 }
-.rightInfo .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-content .b-content-right .to-code {
+.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-content .b-content-right .to-code {
   font-size: 36px;
   font-weight: bold;
 }
-.rightInfo .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-content .b-content-right .to-local {
+.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-content .b-content-right .to-local {
   font-size: 13px;
 }
-.rightInfo .ticket-content-wrap .ticket-content-inner .ticket-flight {
+.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-flight {
   padding: 20px;
   border-bottom: 1px dashed #ccc;
 }
-.rightInfo .ticket-content-wrap .ticket-content-inner .ticket-flight > div {
+.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-flight > div {
   overflow: hidden;
 }
-.rightInfo .ticket-content-wrap .ticket-content-inner .ticket-flight > div .p1 {
+.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-flight > div .p1 {
   float: left;
 }
-.rightInfo .ticket-content-wrap .ticket-content-inner .ticket-flight > div .p2 {
+.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-flight > div .p2 {
   float: right;
 }
-.rightInfo .ticket-content-wrap .ticket-content-inner .ticket-flight .t-number {
+.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-flight .t-number {
   margin-top: 10px;
 }
-.rightInfo .ticket-content-wrap .ticket-content-inner .ticket-price {
+.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-price {
   padding: 20px;
   overflow: hidden;
 }
-.rightInfo .ticket-content-wrap .ticket-content-inner .ticket-price .t-changes,
-.rightInfo .ticket-content-wrap .ticket-content-inner .ticket-price .t-details {
+.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-price .t-changes,
+.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-price .t-details {
   float: left;
   font-size: 14px;
   padding: 8px  20px;
@@ -409,60 +406,60 @@
   border: none;
   outline: none;
 }
-.rightInfo .ticket-content-wrap .ticket-content-inner .ticket-price .t-details {
+.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-price .t-details {
   margin-left: 10px;
 }
-.rightInfo .ticket-content-wrap .ticket-content-inner .ticket-price .total-price {
+.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-price .total-price {
   float: right;
   font-size: 20px;
   font-weight: bold;
 }
-.rightInfo .ticket-content-wrap .t-inner-gray {
+.rightInfo .ticket-wrapper .ticket-content-wrap .t-inner-gray {
   color: #ccc;
 }
-.rightInfo .ticket-content-wrap .t-inner-gray .b-content-middle .iconImg {
+.rightInfo .ticket-wrapper .ticket-content-wrap .t-inner-gray .b-content-middle .iconImg {
   display: none;
 }
-.rightInfo .ticket-content-wrap .t-inner-gray .t-changes,
-.rightInfo .ticket-content-wrap .t-inner-gray .t-details {
+.rightInfo .ticket-wrapper .ticket-content-wrap .t-inner-gray .t-changes,
+.rightInfo .ticket-wrapper .ticket-content-wrap .t-inner-gray .t-details {
   background: #f2f2f2;
 }
-.rightInfo .ticket-content-wrap .t-inner-valid {
+.rightInfo .ticket-wrapper .ticket-content-wrap .t-inner-valid {
   color: #808080;
 }
-.rightInfo .ticket-content-wrap .t-inner-valid .orderNum span {
+.rightInfo .ticket-wrapper .ticket-content-wrap .t-inner-valid .orderNum span {
   color: #1f2c5c;
 }
-.rightInfo .ticket-content-wrap .t-inner-valid .from-time,
-.rightInfo .ticket-content-wrap .t-inner-valid .to-time {
+.rightInfo .ticket-wrapper .ticket-content-wrap .t-inner-valid .from-time,
+.rightInfo .ticket-wrapper .ticket-content-wrap .t-inner-valid .to-time {
   color: #8ec060;
 }
-.rightInfo .ticket-content-wrap .t-inner-valid .from-code,
-.rightInfo .ticket-content-wrap .t-inner-valid .to-code,
-.rightInfo .ticket-content-wrap .t-inner-valid .from-local,
-.rightInfo .ticket-content-wrap .t-inner-valid .to-local {
+.rightInfo .ticket-wrapper .ticket-content-wrap .t-inner-valid .from-code,
+.rightInfo .ticket-wrapper .ticket-content-wrap .t-inner-valid .to-code,
+.rightInfo .ticket-wrapper .ticket-content-wrap .t-inner-valid .from-local,
+.rightInfo .ticket-wrapper .ticket-content-wrap .t-inner-valid .to-local {
   color: #1f2c5c;
 }
-.rightInfo .ticket-content-wrap .t-inner-valid .ticket-flight > div {
+.rightInfo .ticket-wrapper .ticket-content-wrap .t-inner-valid .ticket-flight > div {
   color: #1a1a1a;
   font-weight: bold;
 }
-.rightInfo .ticket-content-wrap .t-inner-valid .ticket-flight > div p span {
+.rightInfo .ticket-wrapper .ticket-content-wrap .t-inner-valid .ticket-flight > div p span {
   color: #808080;
   font-weight: normal;
 }
-.rightInfo .ticket-content-wrap .t-inner-valid .b-content-middle .iconImg-gray {
+.rightInfo .ticket-wrapper .ticket-content-wrap .t-inner-valid .b-content-middle .iconImg-gray {
   display: none;
 }
-.rightInfo .ticket-content-wrap .t-inner-valid .t-changes {
+.rightInfo .ticket-wrapper .ticket-content-wrap .t-inner-valid .t-changes {
   background: #8ec060;
   color: #fff;
 }
-.rightInfo .ticket-content-wrap .t-inner-valid .t-details {
+.rightInfo .ticket-wrapper .ticket-content-wrap .t-inner-valid .t-details {
   background: #1f2c5c;
   color: #fff;
 }
-.rightInfo .ticket-content-wrap .t-inner-valid .total-price {
+.rightInfo .ticket-wrapper .ticket-content-wrap .t-inner-valid .total-price {
   color: #d0011b;
 }
 /* 配置屏幕 针对小屏幕*/
@@ -528,25 +525,25 @@
     margin-top: 20px;
     padding: 10px;
   }
-  .personalInfo-wrapper .rightInfo .ticket-title > li > a {
+  .personalInfo-wrapper .rightInfo .ticket-wrapper .ticket-title > li > a {
     display: block;
   }
-  .personalInfo-wrapper .rightInfo .ticket-search {
+  .personalInfo-wrapper .rightInfo .ticket-wrapper .ticket-search {
     margin-top: 20px;
   }
-  .personalInfo-wrapper .rightInfo .ticket-content-wrap {
+  .personalInfo-wrapper .rightInfo .ticket-wrapper .ticket-content-wrap {
     margin-top: 20px;
   }
 }
 @media screen and (max-width: 767px) {
-  .rightInfo .ticket-search > li {
+  .rightInfo .ticket-wrapper .ticket-search > li {
     width: 100%;
   }
-  .rightInfo .ticket-search > .n2 {
+  .rightInfo .ticket-wrapper .ticket-search > .n2 {
     margin-left: 0;
     margin-top: 10px;
   }
-  .rightInfo .ticket-search > .n3 {
+  .rightInfo .ticket-wrapper .ticket-search > .n3 {
     margin-left: 0;
     padding-top: 10px;
   }
@@ -579,27 +576,27 @@
     height: 0.3rem;
     line-height: 0.3rem;
   }
-  .personalInfo-wrapper .rightInfo .ticket-title > li > a {
+  .personalInfo-wrapper .rightInfo .ticket-wrapper .ticket-title > li > a {
     font-size: 0.12rem;
   }
-  .personalInfo-wrapper .rightInfo .ticket-search {
+  .personalInfo-wrapper .rightInfo .ticket-wrapper .ticket-search {
     margin-top: 0.1rem;
   }
-  .rightInfo .ticket-search > li p {
+  .rightInfo .ticket-wrapper .ticket-search > li p {
     font-size: 0.12rem;
   }
-  .rightInfo .ticket-search > li p img {
+  .rightInfo .ticket-wrapper .ticket-search > li p img {
     width: 0.2rem;
   }
-  .personalInfo-wrapper .rightInfo .ticket-content-wrap {
+  .personalInfo-wrapper .rightInfo .ticket-wrapper .ticket-content-wrap {
     margin-top: 0.1rem;
   }
-  .rightInfo .ticket-content-wrap .ticket-content-inner .ticket-price .t-changes,
-  .rightInfo .ticket-content-wrap .ticket-content-inner .ticket-price .t-details,
-  .rightInfo .ticket-content-wrap .ticket-content-inner .ticket-price .total-price {
+  .rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-price .t-changes,
+  .rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-price .t-details,
+  .rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-price .total-price {
     float: none;
   }
-  .rightInfo .ticket-content-wrap .ticket-content-inner .ticket-price .total-price {
+  .rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-price .total-price {
     margin-top: 0.1rem;
   }
   .b-content-middle img {
@@ -632,38 +629,38 @@
   .ticket-content-inner {
     margin-bottom: 0.2rem;
   }
-  .rightInfo .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-title {
+  .rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-title {
     height: auto;
     padding: 0 0.1rem;
   }
-  .rightInfo .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-title .orderNum,
-  .rightInfo .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-title .orderDate {
+  .rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-title .orderNum,
+  .rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-title .orderDate {
     float: none;
   }
-  .rightInfo .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-content {
+  .rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-content {
     margin-top: 0.1rem;
     padding-bottom: 0.1rem;
   }
-  .rightInfo .ticket-content-wrap .ticket-content-inner .ticket-flight {
+  .rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-flight {
     padding: 0.1rem;
   }
-  .rightInfo .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-content .b-content-left .from-time {
+  .rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-content .b-content-left .from-time {
     font-size: 0.14rem;
   }
-  .rightInfo .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-content .b-content-right .to-time {
+  .rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-content .b-content-right .to-time {
     font-size: 0.14rem;
   }
-  .rightInfo .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-content .b-content-left .from-code {
+  .rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-content .b-content-left .from-code {
     font-size: 0.26rem;
   }
-  .rightInfo .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-content .b-content-right .to-code {
+  .rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-content .b-content-right .to-code {
     font-size: 0.26rem;
   }
-  .rightInfo .ticket-content-wrap .ticket-content-inner .ticket-price {
+  .rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-price {
     padding: 0.1rem;
     padding-left: 0;
   }
-  .rightInfo .ticket-content-wrap .ticket-content-inner .ticket-price .t-details {
+  .rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-price .t-details {
     margin-left: 0;
   }
 }

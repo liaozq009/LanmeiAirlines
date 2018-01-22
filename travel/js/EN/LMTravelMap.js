@@ -128,17 +128,6 @@ var LMTravelList = {
 		    both: ['../../libs/diary/turn/basic.css'],
 		    complete: loadApp
 		});
-
-		//长文本分页
-		$('.longText').textify({
-		    numberOfColumn: 1,
-		    margin: 20,
-		    padding: 0,
-		    width: "630",
-		    height: "760",
-		    showNavigation: true,
-		    textAlign: 'justify'
-		});
 	},
 
 	/* 分享游记和计划旅行 */

@@ -85,7 +85,6 @@
 				$('.range-slider').val(rangeOption);
 
 				$(arg1).val(rangeOption);
-				console.log();
 				$('.demo>div').remove();
 				that.init(arg1,arg2);
 			});
@@ -186,6 +185,7 @@
 				lowPos = this.lowPointer.position().left,
 				highPos = this.highPointer.position().left,
 				circleWidth = this.highPointer.width() / 2;
+
 			if (!isPx) {
 				position = this.prcToPx(position);
 			}

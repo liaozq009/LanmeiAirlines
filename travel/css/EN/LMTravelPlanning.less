@@ -300,11 +300,12 @@ body {
 			-webkit-background-clip: text;
 		    -webkit-text-fill-color: transparent;
 		}
-		.p-save{
+		.p-save,.p-publish{
 			background-image:@linear;
 			box-shadow:0 0 20px 0 rgba(170,199,249,0.50);
 			border-radius:4px;
 		}
+		.p-publish{display: none;}
 		.p-next{
 			display: none;
 			background-image:@linear-green;
@@ -365,6 +366,8 @@ body {
 			color: #fff;
 		}
 		.active{
+			font-size: 16px;
+			font-weight: bold;
 			background:#aac7f9;
 			color: #fff;
 		}
@@ -1177,6 +1180,7 @@ body {
 			.preview-title{
 				font-size: 36px;
 			}
+			.lm-logo{margin-bottom: 20px;}
 			>p{
 				font-size: 20px;
 				margin-top: 10px;

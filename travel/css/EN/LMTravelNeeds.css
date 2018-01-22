@@ -347,9 +347,9 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.timeModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap .h-num-people .h-num-range .h-scale-panel,
-.moneyModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap .h-num-people .h-num-range .h-scale-panel,
-.hotelModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap .h-num-people .h-num-range .h-scale-panel {
+.timeModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap .h-num-people .h-num-range .slider-container,
+.moneyModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap .h-num-people .h-num-range .slider-container,
+.hotelModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap .h-num-people .h-num-range .slider-container {
   position: absolute;
   left: 120px;
   top: 20px;
@@ -358,36 +358,6 @@ body {
   font-size: 12px;
   color: #999;
   background: #aac7f9;
-  border-radius: 100px;
-}
-.timeModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap .h-num-people .h-num-range .h-scale,
-.moneyModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap .h-num-people .h-num-range .h-scale,
-.hotelModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap .h-num-people .h-num-range .h-scale {
-  position: relative;
-}
-.timeModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap .h-num-people .h-num-range .h-scale span,
-.moneyModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap .h-num-people .h-num-range .h-scale span,
-.hotelModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap .h-num-people .h-num-range .h-scale span {
-  position: absolute;
-  left: -2px;
-  top: -4px;
-  width: 18px;
-  height: 18px;
-  border-radius: 100%;
-  cursor: pointer;
-  background-image: linear-gradient(-135deg, #81e5fe 0%, #1639ae 100%);
-  border: 2px solid #ffffff;
-  box-shadow: 0 0 10px 0 rgba(111, 162, 246, 0.5);
-}
-.timeModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap .h-num-people .h-num-range .h-scale div,
-.moneyModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap .h-num-people .h-num-range .h-scale div,
-.hotelModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap .h-num-people .h-num-range .h-scale div {
-  position: absolute;
-  left: 0;
-  bottom: -12px;
-  height: 12px;
-  width: 0px;
-  background: #3772d5;
   border-radius: 100px;
 }
 .moneyModal .modal-dialog .modal-body .t-content-right .date-wrap > div {
@@ -476,9 +446,51 @@ body {
 .pointer-label-high {
   left: 270px !important;
 }
-@media screen and (max-width: 1366px) {
+/* single range */
+.h-num-range .theme-green .back-bar {
+  height: 12px;
+  border-radius: 100px;
+}
+.h-num-range .theme-green .back-bar .selected-bar {
+  border-radius: 100px;
+}
+.h-num-range .theme-green .back-bar .pointer {
+  top: -4px;
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+  cursor: pointer;
+  background-image: linear-gradient(-135deg, #81e5fe 0%, #1639ae 100%);
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 10px 0 rgba(111, 162, 246, 0.5);
+}
+.h-num-range .slider-container .back-bar .pointer-label {
+  top: 0;
+  left: -26px !important;
+  font-size: 14px;
+  font-weight: bold;
+}
+@media screen and (max-width: 1360px) {
   .needs-wrap > div {
     width: 50%;
+  }
+  .timeModal .modal-dialog .modal-body,
+  .moneyModal .modal-dialog .modal-body,
+  .hotelModal .modal-dialog .modal-body {
+    width: 100%;
+    background: transparent;
+  }
+  .timeModal .modal-dialog .modal-body .t-content-left,
+  .moneyModal .modal-dialog .modal-body .t-content-left,
+  .hotelModal .modal-dialog .modal-body .t-content-left {
+    display: none;
+  }
+  .timeModal .modal-dialog .modal-body .t-content-right,
+  .moneyModal .modal-dialog .modal-body .t-content-right,
+  .hotelModal .modal-dialog .modal-body .t-content-right {
+    float: none;
+    width: 660px;
+    margin: 0 auto;
   }
 }
 @media screen and (max-width: 1100px) {
@@ -488,12 +500,118 @@ body {
   .toolbar-wrap .toolbar-needs {
     width: 300px;
   }
+  .timeModal .modal-dialog .modal-header .modal-needs,
+  .moneyModal .modal-dialog .modal-header .modal-needs,
+  .hotelModal .modal-dialog .modal-header .modal-needs {
+    width: 300px;
+  }
 }
 @media screen and (max-width: 767px) {
   .toolbar-wrap .toolbar-needs {
     display: none;
   }
+  .timeModal .modal-dialog,
+  .moneyModal .modal-dialog,
+  .hotelModal .modal-dialog {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .timeModal .modal-dialog .modal-header,
+  .moneyModal .modal-dialog .modal-header,
+  .hotelModal .modal-dialog .modal-header {
+    padding: 10px 10px 30px;
+  }
+  .timeModal .modal-dialog .modal-header .modal-needs,
+  .moneyModal .modal-dialog .modal-header .modal-needs,
+  .hotelModal .modal-dialog .modal-header .modal-needs {
+    display: none;
+  }
+  .timeModal .modal-dialog .modal-header > div,
+  .moneyModal .modal-dialog .modal-header > div,
+  .hotelModal .modal-dialog .modal-header > div {
+    width: 140px;
+  }
+  .timeModal .modal-dialog .modal-body .t-content-right,
+  .moneyModal .modal-dialog .modal-body .t-content-right,
+  .hotelModal .modal-dialog .modal-body .t-content-right {
+    width: 100%;
+  }
+  .timeModal .modal-dialog .modal-body .t-content-right .date-wrap,
+  .moneyModal .modal-dialog .modal-body .t-content-right .date-wrap,
+  .hotelModal .modal-dialog .modal-body .t-content-right .date-wrap {
+    width: 100%;
+    padding: 0.1rem;
+  }
+  .timeModal .modal-dialog .modal-body .t-content-right .date-wrap > h2,
+  .moneyModal .modal-dialog .modal-body .t-content-right .date-wrap > h2,
+  .hotelModal .modal-dialog .modal-body .t-content-right .date-wrap > h2 {
+    font-size: 0.26rem;
+    margin-top: 0;
+    margin-left: 0;
+  }
+  .timeModal .modal-dialog .modal-body .t-content-right .date-wrap > div,
+  .moneyModal .modal-dialog .modal-body .t-content-right .date-wrap > div,
+  .hotelModal .modal-dialog .modal-body .t-content-right .date-wrap > div {
+    width: 100%;
+  }
+  .timeModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap,
+  .moneyModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap,
+  .hotelModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap {
+    width: 100%;
+    margin-top: 30px;
+    padding-top: 20px;
+  }
+  .timeModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap .h-num-people .h-num-range .slider-container,
+  .moneyModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap .h-num-people .h-num-range .slider-container,
+  .hotelModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap .h-num-people .h-num-range .slider-container {
+    width: 70% !important;
+  }
   .needs-wrap > div {
     width: 100%;
+  }
+}
+@media screen and (max-width: 560px) {
+  .range-money .slider-container {
+    width: 90% !important;
+  }
+  .moneyModal .modal-dialog .modal-body .t-content-right .date-wrap > div {
+    margin-top: 50px;
+  }
+  .pointer-label-low {
+    left: 20px !important;
+  }
+  .moneyModal .modal-dialog .modal-body .t-content-right .date-wrap > div .momey-symbol {
+    left: 20px !important;
+  }
+  .pointer-label-high {
+    left: 90px !important;
+  }
+}
+@media screen and (max-width: 460px) {
+  .hotelModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap .h-num-people .h-num-range .slider-container {
+    width: 50% !important;
+  }
+  .hotelModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap .h-star-rating > ul {
+    padding: 0 10px;
+  }
+  .hotelModal .modal-dialog .modal-body .t-content-right .date-wrap .p-hotel-wrap .h-star-rating > ul > li a img {
+    width: 50px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .toolbar-wrap {
+    padding: 10px 10px 30px;
+  }
+  .toolbar-wrap > div {
+    width: 140px;
+  }
+  .timeModal .modal-dialog,
+  .moneyModal .modal-dialog,
+  .hotelModal .modal-dialog {
+    margin-top: 120px;
+  }
+  .moneyModal .modal-dialog .modal-body .t-content-right .date-wrap > div {
+    height: 180px;
+    margin-top: 20px;
   }
 }

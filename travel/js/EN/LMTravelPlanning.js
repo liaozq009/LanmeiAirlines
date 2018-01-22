@@ -40,12 +40,49 @@ var LMTravelPlanning = {
 			$('.p-editor').hide();
 		});
 
-		// 日期
-		$("#travel-edit-time").jeDate({
-			format:"YYYY-MM-DD",
-			isTime:true, 
-			minDate:"2017-09-09"
-		});
+		// 日期选择
+		var formatDate = function(ymd) { //日期格式化
+			return ymd.replace(/(\d{4})\-(\d{1,2})\-(\d{1,2})/g, function(ymdFormatDate, y, m, d){
+				m < 10 && (m = '0' + m);
+				d < 10 && (d = '0' + d);
+				return y + '-' + m + '-' + d;
+			});
+		};
+		var today  = new Date();
+		var startTimeStr = new Date(today.getTime()+86400000*1); 
+		var startTime = formatDate(startTimeStr.getFullYear()+'-'+(startTimeStr.getMonth()+1)+'-'+startTimeStr.getDate());  
+		var endTimeStr = new Date(today.getTime()+86400000*3); 
+		var endTime = formatDate(endTimeStr.getFullYear()+'-'+(endTimeStr.getMonth()+1)+'-'+(endTimeStr.getDate()));
+		var minTime = parseInt((today.getTime()-86400000*1)/1000); 
+		
+		// 判断屏幕大小展示不同的日期格式
+		var winW = $(window).width();
+		var dateRange = function(calNum){
+			new pickerDateRange('travel-edit-time', {
+				isTodayValid : true,
+				startDate : startTime,
+				endDate : endTime,
+				minValidDate: minTime,
+				// maxValidDate:
+				stopToday : false, //和maxValidDate配合使用
+				isTodayValid:true,//判断今天是否可选
+				maxValidDate: 'maxTime',
+				needCompare : false,
+				defaultText : ' - ',
+				autoSubmit : true,
+				inputTrigger : 'input_trigger1',
+				theme : 'ta',
+				calendars:calNum,
+				success : function(obj) {
+					// console.log('开始时间 : ' + obj.startDate + '<br/>结束时间 : ' + obj.endDate);
+				}
+			});
+		}
+		if(winW>767){
+			dateRange(2);
+		}else{
+			dateRange(1);
+		}
 
 		// 人数选择
 		var adultNum = 1;
@@ -104,6 +141,7 @@ var LMTravelPlanning = {
 		var $preview = $('.p-toolbar-right .p-preview');
 		var $next = $('.p-toolbar-right .p-next');
 		var $pdf = $('.p-toolbar-right .p-pdf');
+		var $publish = $('.p-toolbar-right .p-publish');
 
 		var coverClick = function(){
 			$bottomLine.animate({'left':'218px'}, 300);
@@ -114,6 +152,7 @@ var LMTravelPlanning = {
 			$next.css('display','inline-block');
 			$pdf.css('display','none');
 			$preview.css('display','none');
+			$publish.css('display','inline-block');
 		}
 
 		$('.p-toolbar-left>li>a').click(function(){
@@ -131,6 +170,7 @@ var LMTravelPlanning = {
 					$next.css('display','none');
 					$pdf.css('display','inline-block');
 					$preview.css('display','inline-block');
+					$publish.css('display','none');
 					break;
 				case '#diary':
 					$bottomLine.animate({'left':'114px'}, 300);
@@ -141,6 +181,7 @@ var LMTravelPlanning = {
 					$next.css('display','inline-block');
 					$pdf.css('display','none');
 					$preview.css('display','none');
+					$publish.css('display','inline-block');
 					break;
 				case '#cover':
 					coverClick();

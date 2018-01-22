@@ -98,6 +98,11 @@ var LanmeiAirlinesPersonalCenter = {
 		$('html').click(function(){
 			$('.form-nation .menu-com').hide();
 		});
+
+		//菜单切换
+		$('.infoContent>li').click(function(){
+			$(this).addClass('active').siblings('li').removeClass('active');
+		});
 	},
 };
 

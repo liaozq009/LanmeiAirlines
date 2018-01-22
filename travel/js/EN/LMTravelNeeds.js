@@ -47,24 +47,48 @@ var LMTravelNeeds = {
 		var endTime = formatDate(endTimeStr.getFullYear()+'-'+(endTimeStr.getMonth()+1)+'-'+(endTimeStr.getDate()));
 		var minTime = parseInt((today.getTime()-86400000*1)/1000); 
 		
-		var dateRange1 = new pickerDateRange('select-date', {
-			isTodayValid : true,
-			startDate : startTime,
-			endDate : endTime,
-			minValidDate: minTime,
-			// maxValidDate:
-			stopToday : false, //和maxValidDate配合使用
-			isTodayValid:true,//判断今天是否可选
-			maxValidDate: 'maxTime',
-			needCompare : false,
-			defaultText : ' - ',
-			autoSubmit : true,
-			inputTrigger : 'input_trigger1',
-			theme : 'ta',
-			success : function(obj) {
-				// console.log('开始时间 : ' + obj.startDate + '<br/>结束时间 : ' + obj.endDate);
-			}
-		});
+		// 判断屏幕大小展示不同的日期格式
+		var winW = $(window).width();
+		if(winW>767){
+			var dateRange1 = new pickerDateRange('select-date', {
+				isTodayValid : true,
+				startDate : startTime,
+				endDate : endTime,
+				minValidDate: minTime,
+				// maxValidDate:
+				stopToday : false, //和maxValidDate配合使用
+				isTodayValid:true,//判断今天是否可选
+				maxValidDate: 'maxTime',
+				needCompare : false,
+				defaultText : ' - ',
+				autoSubmit : true,
+				inputTrigger : 'input_trigger1',
+				theme : 'ta',
+				success : function(obj) {
+					// console.log('开始时间 : ' + obj.startDate + '<br/>结束时间 : ' + obj.endDate);
+				}
+			});	
+		}else{
+			var dateRange2 = new pickerDateRange('select-date', {
+				isTodayValid : true,
+				startDate : startTime,
+				endDate : endTime,
+				minValidDate: minTime,
+				// maxValidDate:
+				stopToday : false, //和maxValidDate配合使用
+				isTodayValid:true,//判断今天是否可选
+				maxValidDate: 'maxTime',
+				needCompare : false,
+				defaultText : ' - ',
+				autoSubmit : true,
+				inputTrigger : 'input_trigger1',
+				theme : 'ta',
+				calendars:1,
+				success : function(obj) {
+					// console.log('开始时间 : ' + obj.startDate + '<br/>结束时间 : ' + obj.endDate);
+				}
+			});
+		}
 	},
 
 	/* 价钱选择 */
@@ -121,41 +145,20 @@ var LMTravelNeeds = {
 
 	/* 酒店选择 */
 	hotelSelect:function(){
-
+		$('.h-scale-panel').jRange({
+			from: 0,
+			to: 20,
+			step: 1,
+			format: '%s',
+			showScale:false,
+			width: 356,
+			showLabels: true,
+		});
 	},
 
 	/* 其他事件 */
 	otherEvent:function(){
-		var scale=function (btn,bar,title){
-			this.btn=document.getElementById(btn);
-			this.bar=document.getElementById(bar);
-			this.title=document.getElementById(title);
-			this.step=this.bar.getElementsByTagName("DIV")[0];
-			this.init();
-		};
-		scale.prototype={
-			init:function (){
-				var f=this,g=document,b=window,m=Math;
-				f.btn.onmousedown=function (e){
-					var x=(e||b.event).clientX;
-					var l=this.offsetLeft;
-					var max=f.bar.offsetWidth-this.offsetWidth;
-					g.onmousemove=function (e){
-						var thisX=(e||b.event).clientX;
-						var to=m.min(max,m.max(-2,l+(thisX-x)));
-						f.btn.style.left=to+'px';
-						f.ondrag(m.round(m.max(0,to/max)*20),to);
-						b.getSelection ? b.getSelection().removeAllRanges() : g.selection.empty();
-					};
-					g.onmouseup=new Function('this.onmousemove=null');
-				};
-			},
-			ondrag:function (pos,x){
-				this.step.style.width=Math.max(0,x+9)+'px';
-				this.title.innerHTML='×'+pos;
-			}
-		}
-		new scale('h-num-btn','h-num-bar','h-num-title');
+		
 	},
 };
 
