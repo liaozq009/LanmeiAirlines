@@ -145,7 +145,7 @@ var LMTravelNeeds = {
 
 	/* 酒店选择 */
 	hotelSelect:function(){
-		$('.h-scale-panel').jRange({
+		$('.h-scale-panel').jSingle({
 			from: 0,
 			to: 20,
 			step: 1,

@@ -128,6 +128,11 @@ var LMTravelList = {
 		    both: ['../../libs/diary/turn/basic.css'],
 		    complete: loadApp
 		});
+
+		// 游记声音播放和暂停
+		$('.d-voice img').click(function(){
+			$(this).hide().siblings('img').show();
+		});
 	},
 
 	/* 分享游记和计划旅行 */

@@ -333,11 +333,25 @@ body {
 }
 .travel-diary .diaryModal .page-toolbar > li {
   float: left;
-  margin-left: 20px;
+  margin-left: 23px;
 }
-.travel-diary .diaryModal .page-toolbar > li a {
+.travel-diary .diaryModal .page-toolbar > li p {
   font-size: 14px;
   color: #AAC7F9;
+}
+.travel-diary .diaryModal .page-toolbar > li a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 27px;
+  text-align: center;
+  border-radius: 2px;
+}
+.travel-diary .diaryModal .page-toolbar > li a:hover {
+  background: #f7faff;
+}
+.travel-diary .diaryModal .page-toolbar > li a .voice-pause {
+  display: none;
 }
 .travel-diary .diaryModal .modal-dialog {
   width: 1260px;

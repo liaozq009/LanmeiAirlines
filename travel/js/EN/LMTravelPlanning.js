@@ -149,7 +149,7 @@ var LMTravelPlanning = {
 			$diary.hide();
 			$page.hide();
 			$cover.show();
-			$next.css('display','inline-block');
+			$next.css('display','none');
 			$pdf.css('display','none');
 			$preview.css('display','none');
 			$publish.css('display','inline-block');
@@ -181,7 +181,7 @@ var LMTravelPlanning = {
 					$next.css('display','inline-block');
 					$pdf.css('display','none');
 					$preview.css('display','none');
-					$publish.css('display','inline-block');
+					$publish.css('display','none');
 					break;
 				case '#cover':
 					coverClick();

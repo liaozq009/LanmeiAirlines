@@ -21,8 +21,8 @@ var flightInfo = {
 		$('html').click(function(){
 			hideMenu();
 		});
-		var fromcityData = ['Sihanoukville/KOS/ Cambodia','Macao/MFM/Macao','Phnom Penh/PNH/Cambodia','Siem Reap/REP/Cambodia','Palau/ROR/The Republic of Palau'];
-		var tocityData =   ['Sihanoukville/KOS/ Cambodia','Macao/MFM/Macao','Phnom Penh/PNH/Cambodia','Siem Reap/REP/Cambodia','Palau/ROR/The Republic of Palau'];
+		var fromcityData = ['Sihanoukville/KOS/ Cambodia','Macao/MFM/Macao,China','Phnom Penh/PNH/Cambodia','Siem Reap/REP/Cambodia','Palau/ROR/The Republic of Palau'];
+		var tocityData =   ['Sihanoukville/KOS/ Cambodia','Macao/MFM/Macao,China','Phnom Penh/PNH/Cambodia','Siem Reap/REP/Cambodia','Palau/ROR/The Republic of Palau'];
 
 
 		var indexLi = 0; //定义键盘移动index 
