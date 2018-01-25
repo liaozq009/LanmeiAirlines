@@ -2,6 +2,7 @@
 var LanmeiAirlinesPersonalCenter = {
 	init:function(){
 		this.ticketSearch();
+		this.myTravel();
 		this.addEvend();
 	},
 
@@ -13,6 +14,22 @@ var LanmeiAirlinesPersonalCenter = {
 			$(this).siblings('img').show();
 			var id = $(this).attr('href');
 			$(id).show().siblings('.ticket-menu').hide();
+		});
+	},
+
+	/* 我的旅游 */
+	myTravel:function(){
+		$('.js-myTravel>a').click(function(e){
+			e.preventDefault();
+			$(this).siblings('.travle-menu').slideToggle();
+		});
+		var $travelMenuA = $('.js-myTravel>.travle-menu a');
+		$travelMenuA.click(function(e){
+			e.preventDefault();
+			$travelMenuA.removeClass('active');
+			$(this).addClass('active');
+			var id = $(this).attr('href');
+			$(id).show().siblings('.myTravel').hide();
 		});
 	},
 

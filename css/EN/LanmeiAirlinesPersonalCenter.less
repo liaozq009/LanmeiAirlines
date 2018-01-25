@@ -149,7 +149,8 @@
 		height:462px;
 		text-align: center;
 		.infoContent{
-			li{
+			>li{
+				position: relative;
 				width: 220px;
 				height: 50px;
 				text-align: left;
@@ -162,8 +163,21 @@
 					font-size:16px;
 					color:#1f2c5c;
 				}
+				.travle-menu{
+					display: none;
+					position: absolute;
+					top: 50px;
+					width: 100%;
+					>li{
+						a{
+							font-size: 14px;
+							&:hover{color:@green;}
+						}
+						.active{color:@green;}
+					}
+				}
 			}
-			.active a{
+			>.active>a{
 				background: @green;
 				color:#fff;
 			}
@@ -333,7 +347,7 @@
 					color:#fff;
 					font-size: 14px;
 					border: none;
-				    outline: none;
+					outline: none;
 					background:#8ec060;
 					border-radius:2px;
 				}
@@ -360,7 +374,7 @@
 						overflow: hidden;
 						text-align: center;
 						margin-top: 20px;
-					    padding-bottom: 20px;
+						padding-bottom: 20px;
 						border-bottom: 1px dashed #ccc;
 						>div{
 							float: left;
@@ -452,6 +466,50 @@
 				.t-changes{background: @green;color: #fff;}
 				.t-details{background: @purple;color: #fff;}
 				.total-price{color: @red;}
+			}
+		}
+	}
+	.myTravel-wrapper{
+		.myTravel{
+			display: none;
+			min-height: 230px;
+			>li{
+				float: left;
+				width: 25%;
+				margin-top: 20px;
+				padding-left: 1%;
+				padding-right: 1%;
+				border-radius: 4px;
+				padding: 10px;
+				cursor: pointer;
+				>h2{
+					width: 100%;
+					height: 20px;
+					font-size: 16px;
+					font-weight: bold;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+					background: -webkit-linear-gradient(0deg, #81E5FE 0%, #1639AE 100%);
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
+					margin-bottom: 10px;
+				}
+				>img{width: 100%;}
+				>p{
+					color: #3772D5;
+					margin-top: 10px;
+					overflow: hidden;
+					.m-s5-local,.s1{float: left;}
+					.m-s5-see,.s2{float: right;}
+					.m-s5-local{margin-top: 3px;margin-right: 6px;}
+					.m-s5-see{margin-top: 5px;margin-left: 6px;}
+				}
+				&:hover{
+					box-shadow:0 0 30px 0 #aac7f9;
+					transition:all .6s;
+					-webkit-transition:all .6s;
+				}
 			}
 		}
 	}

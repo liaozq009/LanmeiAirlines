@@ -52,9 +52,10 @@
 		noCalendar : false, //日期输入框是否展示
 		theme : 'gri', //日期选择器的主题，目前支持 'gri' / 'ta'
 		magicSelect : false, //用户自定义选择年、月，与{theme:ta}配合使用。
-		autoCommit : false, //加载后立马自动提交
+		autoCommit : true, //加载后立马自动提交
 		autoSubmit : false, //没有确定，取消按钮，直接提交 
-		replaceBtn : 'btn_compare'
+		replaceBtn : 'btn_compare',
+        alwaysShow:false
     };
     //将对象赋给__method变量
     var __method = this;
@@ -64,6 +65,8 @@
 	this.compareInputDiv = 'div_compare_'+inputId;
     // 配置参数
     this.mOpts = $.extend({}, defaults, options);
+    // 日期是否一致展示
+    this.alwaysShow = this.mOpts.alwaysShow;
 	//默认日历参数最大是3
 	this.mOpts.calendars = Math.min(this.mOpts.calendars, 3);
 	//根据不同主题需要初始化的变量
@@ -1110,7 +1113,9 @@ pickerDateRange.prototype.close = function(btnSubmit) {
 		}
 	}
 	// 隐藏日期选择框 延迟200ms 关闭日期选择框
-	$("#" + __method.calendarId).css('display', 'none');
+    if(!this.alwaysShow){
+        $("#" + __method.calendarId).css('display', 'none');
+    }
     return false;
 };
 

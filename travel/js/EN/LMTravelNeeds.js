@@ -48,9 +48,10 @@ var LMTravelNeeds = {
 		var minTime = parseInt((today.getTime()-86400000*1)/1000); 
 		
 		// 判断屏幕大小展示不同的日期格式
+		// 判断屏幕大小展示不同的日期格式
 		var winW = $(window).width();
-		if(winW>767){
-			var dateRange1 = new pickerDateRange('select-date', {
+		var dateRange = function(calNum){
+			new pickerDateRange('select-date', {
 				isTodayValid : true,
 				startDate : startTime,
 				endDate : endTime,
@@ -62,32 +63,20 @@ var LMTravelNeeds = {
 				needCompare : false,
 				defaultText : ' - ',
 				autoSubmit : true,
+				alwaysShow:false, //日期是否一直展示
 				inputTrigger : 'input_trigger1',
 				theme : 'ta',
-				success : function(obj) {
-					// console.log('开始时间 : ' + obj.startDate + '<br/>结束时间 : ' + obj.endDate);
-				}
-			});	
-		}else{
-			var dateRange2 = new pickerDateRange('select-date', {
-				isTodayValid : true,
-				startDate : startTime,
-				endDate : endTime,
-				minValidDate: minTime,
-				// maxValidDate:
-				stopToday : false, //和maxValidDate配合使用
-				isTodayValid:true,//判断今天是否可选
-				maxValidDate: 'maxTime',
-				needCompare : false,
-				defaultText : ' - ',
-				autoSubmit : true,
-				inputTrigger : 'input_trigger1',
-				theme : 'ta',
-				calendars:1,
+				calendars:calNum,
 				success : function(obj) {
 					// console.log('开始时间 : ' + obj.startDate + '<br/>结束时间 : ' + obj.endDate);
 				}
 			});
+		}
+
+		if(winW>767){
+			dateRange(2);
+		}else{
+			dateRange(1);
 		}
 	},
 

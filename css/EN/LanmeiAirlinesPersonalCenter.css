@@ -140,12 +140,13 @@
   height: 462px;
   text-align: center;
 }
-.personalInfo-wrapper .asideInfo .infoContent li {
+.personalInfo-wrapper .asideInfo .infoContent > li {
+  position: relative;
   width: 220px;
   height: 50px;
   text-align: left;
 }
-.personalInfo-wrapper .asideInfo .infoContent li a {
+.personalInfo-wrapper .asideInfo .infoContent > li a {
   display: inline-block;
   width: 100%;
   height: 50px;
@@ -154,7 +155,22 @@
   font-size: 16px;
   color: #1f2c5c;
 }
-.personalInfo-wrapper .asideInfo .infoContent .active a {
+.personalInfo-wrapper .asideInfo .infoContent > li .travle-menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  width: 100%;
+}
+.personalInfo-wrapper .asideInfo .infoContent > li .travle-menu > li a {
+  font-size: 14px;
+}
+.personalInfo-wrapper .asideInfo .infoContent > li .travle-menu > li a:hover {
+  color: #8ec060;
+}
+.personalInfo-wrapper .asideInfo .infoContent > li .travle-menu > li .active {
+  color: #8ec060;
+}
+.personalInfo-wrapper .asideInfo .infoContent > .active > a {
   background: #8ec060;
   color: #fff;
 }
@@ -461,6 +477,62 @@
 }
 .rightInfo .ticket-wrapper .ticket-content-wrap .t-inner-valid .total-price {
   color: #d0011b;
+}
+.rightInfo .myTravel-wrapper .myTravel {
+  display: none;
+  min-height: 230px;
+}
+.rightInfo .myTravel-wrapper .myTravel > li {
+  float: left;
+  width: 25%;
+  margin-top: 20px;
+  padding-left: 1%;
+  padding-right: 1%;
+  border-radius: 4px;
+  padding: 10px;
+  cursor: pointer;
+}
+.rightInfo .myTravel-wrapper .myTravel > li > h2 {
+  width: 100%;
+  height: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  background: -webkit-linear-gradient(0deg, #81E5FE 0%, #1639AE 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+}
+.rightInfo .myTravel-wrapper .myTravel > li > img {
+  width: 100%;
+}
+.rightInfo .myTravel-wrapper .myTravel > li > p {
+  color: #3772D5;
+  margin-top: 10px;
+  overflow: hidden;
+}
+.rightInfo .myTravel-wrapper .myTravel > li > p .m-s5-local,
+.rightInfo .myTravel-wrapper .myTravel > li > p .s1 {
+  float: left;
+}
+.rightInfo .myTravel-wrapper .myTravel > li > p .m-s5-see,
+.rightInfo .myTravel-wrapper .myTravel > li > p .s2 {
+  float: right;
+}
+.rightInfo .myTravel-wrapper .myTravel > li > p .m-s5-local {
+  margin-top: 3px;
+  margin-right: 6px;
+}
+.rightInfo .myTravel-wrapper .myTravel > li > p .m-s5-see {
+  margin-top: 5px;
+  margin-left: 6px;
+}
+.rightInfo .myTravel-wrapper .myTravel > li:hover {
+  box-shadow: 0 0 30px 0 #aac7f9;
+  transition: all .6s;
+  -webkit-transition: all .6s;
 }
 /* 配置屏幕 针对小屏幕*/
 @media screen and (max-width: 992px) {
