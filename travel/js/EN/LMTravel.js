@@ -387,6 +387,25 @@ var LMTravel = {
 			});
 		});
 
+		// 登录
+		$('.loginBtn').click(function(){
+			$('#travel-logonModal').modal();
+		});
+		// 注册
+		$('.registerBtn').click(function(){
+			$('#travel-registerModal').modal();
+		});
+		// 忘记密码
+		$('.forgetBtn').click(function(){
+			$('#travel-forgetModal').modal();
+			$('#travel-logonModal').modal('hide');
+		});
+		// 登录界面里面点击注册
+		$('.regBtn').click(function(){
+			$('#travel-logonModal').modal('hide');
+			$('#travel-registerModal').modal();
+		});
+
 	},
 };
 

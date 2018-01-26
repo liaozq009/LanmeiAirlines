@@ -4,14 +4,14 @@ body {
   background: #FAFBFF;
 }
 .lanmeiHeader {
+  width: 100%;
   position: absolute;
   top: 0;
   z-index: 9;
-  padding-left: 90px;
-  padding-top: 30px;
+  padding: 30px 90px 0;
 }
 .lanmeiHeader .lanmeiNav {
-  overflow: hidden;
+  line-height: 52px;
 }
 .lanmeiHeader .lanmeiNav .lanmeiLogo {
   float: left;
@@ -20,7 +20,34 @@ body {
   float: right;
 }
 .lanmeiHeader .lanmeiNav .lanmeiHeadInfo > li {
+  position: relative;
   float: left;
+}
+.lanmeiHeader .lanmeiNav .lanmeiHeadInfo > li > a {
+  font-weight: bold;
+  color: #1a41b2;
+}
+.lanmeiHeader .lanmeiNav .lanmeiHeadInfo > li > a > img {
+  margin-right: 6px;
+}
+.lanmeiHeader .lanmeiNav .lanmeiHeadInfo .li-login .user-menu {
+  display: none;
+  position: absolute;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+}
+.lanmeiHeader .lanmeiNav .lanmeiHeadInfo .li-login .user-menu > li {
+  line-height: 30px;
+}
+.lanmeiHeader .lanmeiNav .lanmeiHeadInfo .li-login .user-menu > li > a:hover {
+  color: #1639AE;
+}
+.lanmeiHeader .lanmeiNav .lanmeiHeadInfo .li-login:hover .user-menu {
+  display: block;
+}
+.lanmeiHeader .lanmeiNav .lanmeiHeadInfo .li-register {
+  margin-left: 26px;
 }
 .lm-banner {
   position: relative;

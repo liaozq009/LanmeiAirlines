@@ -16,9 +16,11 @@
 	<!-- 引入图标 -->
 	<link rel="icon" href="images/EN/lanmeiLogo.ico">
 	<link rel="stylesheet" type="text/css" href="common/EN/fonts/lm-iconfont.css">
+	<link rel="stylesheet" type="text/css" href="libs/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="libs/slider/LM-carousel.css">
 	<link rel="stylesheet" type="text/css" href="libs/travelMap/travel-map.css">
 	<link rel="stylesheet" type="text/css" href="libs/swiper/lm-swiper.css">
+	<link rel="stylesheet" type="text/css" href="libsEdit/css/LMTravel-libs-edit.css">
 	<link rel="stylesheet" type="text/css" href="common/EN/css/animate.css">
 	<link rel="stylesheet" type="text/css" href="common/EN/css/LMTravel-common.css">
 	<link rel="stylesheet" type="text/css" href="css/EN/LMTravel.css">
@@ -33,9 +35,17 @@
 	<header class="lanmeiHeader">
 		<nav class="lanmeiNav">
 			<a class="lanmeiLogo" href="../index.html""><img src="images/EN/lanmeiLogo.png"></a>
-			<ul class="lanmeiHeadInfo" style="display: none;">
-				<li><a href="#" class="btn loginBtn"><img src="images/EN/login.png">Login</a></li>
-				<li class="nth-child3"><a href="javascript:void(0)" class="btn REGISTEREDBtn"><img src="images/EN/registered.png">Sign up</a></li>
+			<ul class="lanmeiHeadInfo">
+				<li class="li-login">
+					<a href="javascript:void(0)" class="btn loginBtn"><img src="images/EN/login.png">Login</a>
+					<ul class="user-menu">
+						<li><a href="javascript:void(0)">My Tracks</a></li>
+						<li><a href="javascript:void(0)">My Journey</a></li>
+						<li><a href="javascript:void(0)">My Drafts</a></li>
+						<li><a href="javascript:void(0)">My Favorite</a></li>
+					</ul>
+				</li>
+				<li class="li-register"><a href="javascript:void(0)" class="btn registerBtn"><img src="images/EN/registered.png">Sign up</a></li>
 				<li class="languageSelectBox">
 					<div class="languageBox">
 						<a href="javascript:void(0)" class="languageSelect"></a>
@@ -53,6 +63,144 @@
 		<a href="../index.html"><i class="iconfont icon-left-arrow"></i></a>
 		<h2 class="m-nav-title" data-title="f-nav-title">Travel</h2>
 	</header> -->
+
+	<!-- 登录模态框 -->
+	<div class="modal fade" id="travel-logonModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">Close<span aria-hidden="true">&times;</span></button>
+				</div>
+				<div class="modal-body">
+					<h2 class="loginTitle">Login</h2>
+					<span class="verifyInfo">Account or password error !</span>
+					<form id="travel-loginForm" method="POST" action="">
+						<div class="form-group">
+							<input type="text" class="form-control" id="LanmeiUserName" placeholder="Email">
+							<ul class="login_on_changes on_changes">
+								<li email="@gmail.com"></li>
+								<li email="@qq.com"></li>
+								<li email="@sina.com"></li>
+								<li email="@163.com"></li>
+								<li email="@hotmail.com"></li>
+								<li email="@126.com"></li>
+								<li email="@yahoo.com"></li>
+							</ul>
+						</div>
+						<div class="form-group">
+							<input type="password" class="form-control" id="LanmeiPassword" placeholder="Password">
+						</div>
+						<div class="agree form-group">
+							<a href="#" class="forgetBtn">Forget ?</a>
+						</div>
+						<div class="form-group">
+							<button type="button" class="btn userLoginBtn">Login</button>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					Still no account ? Immediately <a href="javascript:void(0)" class="regBtn">registered</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 注册模态框 -->
+	<div class="modal fade" id="travel-registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">Close<span aria-hidden="true">&times;</span></button>
+				</div>
+				<div class="modal-body">
+						<form class="registerWrapper" method="POST" action="">
+							<h2>Registered</h2>
+							<div class="registerContent">
+								<div class="registerInfo">
+									<input type="text" name="" value="" id="registerUserName" placeholder="Please enter email address">
+									<img src="images/EN/register-email.png">
+									<p>This email is already in use !</p>
+									<ul class="register_on_changes on_changes">
+										<li email="@gmail.com"></li>
+										<li email="@qq.com"></li>
+										<li email="@sina.com"></li>
+										<li email="@163.com"></li>
+										<li email="@hotmail.com"></li>
+										<li email="@126.com"></li>
+										<li email="@yahoo.com"></li>
+									</ul>
+								</div>
+								<div class="registerPassword">
+									<input type="password" name="" value="" id="registerPassword" placeholder="Password with 8-16 characters">
+									<img src="images/EN/register-password.png">
+									<p>Password strength : <span><i class="i1"></i><i class="i2"></i><i class="i3"></i><i class="i4"></i><i class="i5"></i><i class="i6"></i></span></p>
+								</div>
+								<div class="repeatPassword">
+									<input type="password" name="" value="" id="repeatPassword" placeholder="Please repeat password">
+									<img src="images/EN/register-password.png">
+									<p>Passwords don’t match !</p>
+									<span>
+										Password must be with 3 or 4 combination with 
+										number (0-9), lowercase letter (a-z), uppercase 
+										letter (A-Z) or special characters.
+									</span>
+								</div>
+								<div class="agree">
+									<span></span>
+									<p>I hereby agree to    <a href="#">Lanmeiairlines’ terms and conditions</a></p>
+								</div>
+								<div class="registerBtn">
+									<button id="registerBtn">Register</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 忘记密码模态框 -->
+	<div class="modal fade" id="travel-forgetModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">Close<span aria-hidden="true">&times;</span></button>
+				</div>
+				<div class="modal-body">
+					<h2 class="loginTitle">Forget Password</h2>
+					<span class="verifyInfo">Account or password error !</span>
+					<form id="f-loginForm" method="POST" action="">
+						<div class="form-group">
+							<input type="text" class="form-control" id="f-LanmeiUserName" placeholder="Email">
+							<ul class="forget_on_changes on_changes">
+								<li email="@gmail.com"></li>
+								<li email="@qq.com"></li>
+								<li email="@sina.com"></li>
+								<li email="@163.com"></li>
+								<li email="@hotmail.com"></li>
+								<li email="@126.com"></li>
+								<li email="@yahoo.com"></li>
+							</ul>
+						</div>
+						<div class="form-group">
+							<input type="password" class="form-control" id="f-LanmeiPassword" placeholder="Password">
+							<button type="button" id="f-getPasswordBtn">Get Password</button>
+						</div>
+						<div class="agree form-group">
+							<p>Please pay attention to the E-mail information</p>
+						</div>
+						<div class="form-group">
+							<button type="button" class="btn f-userLoginBtn">Login</button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<a href="#" class="a_login">Login</a><a href="tpls/EN/LanmeiAirlinesRegister.html" class="a_registered">Registered</a>
+			</div>
+		</div>
+	</div>
 
 	<div class="lm-banner">
 		<div class="lm-banner-left">
@@ -418,6 +566,7 @@
 
 	<!-- 第三方库-->
 	<script type="text/javascript" src="libs/jQuery/jquery-1.11.3.js"></script>
+	<script type="text/javascript" src="libs/bootstrap/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="libs/layer/layer.js"></script>
 	<script type="text/javascript" src="libs/jqueryPage.js"></script>
 	<script type="text/javascript" src="libs/mobile-libs/fastclick/fastclick.js"></script>
