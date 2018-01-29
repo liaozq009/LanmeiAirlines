@@ -845,6 +845,9 @@ section {
     padding-left: 0.3rem;
     padding-top: 0.1rem;
   }
+  .lanmeiHeader .lanmeiHeadInfo {
+    display: none;
+  }
   .lanmeiLogo > img {
     width: 0.8rem;
   }
