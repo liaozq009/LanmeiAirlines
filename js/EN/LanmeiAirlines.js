@@ -2171,7 +2171,7 @@ $(function() {
 	$('.lm-loading').fadeOut('slow');
 
 	setTimeout(function(){
-		$('#activeModal').modal();
+		// $('#activeModal').modal();
 	},1000);
 
 	setTimeout(function(){

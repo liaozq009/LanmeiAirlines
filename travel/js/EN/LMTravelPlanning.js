@@ -141,6 +141,7 @@ var LMTravelPlanning = {
 		var $preview = $('.p-toolbar-right .p-preview');
 		var $next = $('.p-toolbar-right .p-next');
 		var $pdf = $('.p-toolbar-right .p-pdf');
+		var $save = $('.p-toolbar-right .p-save');
 		var $publish = $('.p-toolbar-right .p-publish');
 
 		var coverClick = function(){
@@ -152,7 +153,21 @@ var LMTravelPlanning = {
 			$next.css('display','none');
 			$pdf.css('display','none');
 			$preview.css('display','none');
+			$save.css('display','inline-block');
 			$publish.css('display','inline-block');
+		}
+
+		var diaryClick = function(){
+			$bottomLine.animate({'left':'114px'}, 300);
+			$route.hide();
+			$diary.show();
+			$page.show();
+			$cover.hide();
+			$next.css('display','inline-block');
+			$pdf.css('display','none');
+			$save.css('display','none');
+			$preview.css('display','none');
+			$publish.css('display','none');
 		}
 
 		$('.p-toolbar-left>li>a').click(function(){
@@ -167,21 +182,15 @@ var LMTravelPlanning = {
 					$diary.hide();
 					$page.hide();
 					$cover.hide();
-					$next.css('display','none');
+					$next.css('display','inline-block');
 					$pdf.css('display','inline-block');
 					$preview.css('display','inline-block');
 					$publish.css('display','none');
+					$next.attr('data-id','route');
 					break;
 				case '#diary':
-					$bottomLine.animate({'left':'114px'}, 300);
-					$route.hide();
-					$diary.show();
-					$page.show();
-					$cover.hide();
-					$next.css('display','inline-block');
-					$pdf.css('display','none');
-					$preview.css('display','none');
-					$publish.css('display','none');
+					diaryClick();
+					$next.attr('data-id','diary');
 					break;
 				case '#cover':
 					coverClick();
@@ -191,8 +200,18 @@ var LMTravelPlanning = {
 
 		// 点击next
 		$next.click(function(){
-			$('.p-toolbar-left>li.n3').addClass('active').siblings('li').removeClass('active');
-			coverClick();
+			var data = $(this).attr('data-id');
+			switch (data) {
+				case 'route':
+					$('.p-toolbar-left>li.n2').addClass('active').siblings('li').removeClass('active');
+					diaryClick();
+					$(this).attr('data-id','diary');
+					break;
+				case 'diary':
+					$('.p-toolbar-left>li.n3').addClass('active').siblings('li').removeClass('active');
+					coverClick();
+					break;
+			}
 		});
 	},
 
