@@ -15,13 +15,13 @@
   font-size: 18px;
   font-weight: bold;
   color: #1f2c5c;
-  margin: 20px 0 10px;
+  margin-bottom: 10px;
   line-height: 28px;
 }
 .lm-section .lm-content p {
   font-size: 14px;
   color: #808080;
-  margin-top: 20px;
+  margin-bottom: 20px;
   line-height: 26px;
 }
 .lm-section .lm-content a {
@@ -56,5 +56,8 @@
   }
   .lm-section .lm-content {
     margin-top: 0;
+  }
+  body {
+    background: url(images/mobile-bg.jpg);
   }
 }
