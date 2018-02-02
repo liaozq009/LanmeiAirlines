@@ -16,13 +16,7 @@
 	<link rel="stylesheet" type="text/css" href="../../../common/CN/fonts/lm-iconfont.css">
 	<link rel="stylesheet" type="text/css" href="../../../common/CN/css/Lanmei-common.css">
 	<link rel="stylesheet" type="text/css" href="../common/menu-common.css">
-	<style type="text/css">
-		@media screen and (max-width:992px){
-			body{
-				background: url(../common/images/mobile-bg.jpg);
-			}
-		}
-	</style>
+	<link rel="stylesheet" type="text/css" href="../../../libsEdit/css/lanmeiLibsEdit.css">
 	<!--[if lt IE 9]>
 	<script src="../../../libs/bootstrap/js/html5shiv.min.js"></script>
 	<script src="../../../libs/bootstrap/js/respond.min.js"></script>
@@ -46,26 +40,83 @@
 							<span>+855 23881865</span>
 						</div>
 					</li>
-				</ul>
+				</tr>
 			</div>
 		</nav>
 	</header>
 	<header class="m-header">
 		<a href="../../../index-zh.html"><i class="iconfont icon-left-arrow"></i></a>
-		<h2 class="m-nav-title" data-title="f-nav-title">版权</h2>
+		<h2 class="m-nav-title" data-title="f-nav-title">西哈努克港国际机场</h2>
 	</header>
 
 	<!-- 页面主体 -->
-	<section class="lm-section">
-		<div class="lm-title">
-			<h1>版权</h1>
+	<section class="airport-section">
+		<!-- 机场平面图 -->
+		<div class="airport-planeGraph">
+			<div class="planGraph-title airport-title">
+				<img src="./images/leftTitleLine.png">
+				机场平面图
+			</div>
+			<div class="airport-content">
+				<img src="images/airport-sihanoukville.jpg">
+			</div>
 		</div>
-		<div class="lm-content">
-		   <p>本网站所有资料受《版权法》《商标法》及其他《知识产权法》的保护。</p>
-		   <p>本网站所载的，以及经移动及无线设备所提供的材料（包括但不限于：商标、版权、数据库和其他知识产权，如文本、图形、标志、按键图标、图像、音频片段、数字下载、数据汇编（包括应用程序的架构和布局），以及软件）的版权，均属澜湄航空所有。上述材料所包括的任何部分均不可重制、传输或下载及存储，其衍生品或内容都受到国际商标版权和数据库方面法律法规的保护。澜湄航空保留上述所有权利。</p>
-		   <p>你从本网站上打印和下载的任何内容，都只能用于个人非商业用途。对于从本网站取得的任何信息、软件、产品或服务，你不得进行修改、复制、传播、传输、展示、演出、翻印、出版、许可、建立衍生品、转让或销售。未经我们书面许可声明，你建立或出版的自己的数据库不得含有本网站的任何内容。我们在全球范围内保留所有权。</p>
-		   <p>如果你在违反本协议的情况下打印、复制或下载了本网站的任何部分，你对本网站的使用权将会立刻自动终止，并且你必须按照我们的要求归还或毁坏之前复制的所有资料。由此澜湄航空保留追究一切违法者法律责任的权利。</p>
-		   <p>在未经澜湄航空书面批准的情况下，您不得使用该等商标。</p>
+		<!-- 机场交通 -->
+		<div class="airport-traffic">
+			<div class="airport-title">
+				<img src="./images/leftTitleLine.png">
+				机场交通
+			</div>
+			<div class="airport-content">
+				<div class="airport-content-title">
+					<img src="images/airport-bus.png" alt="">
+					运输服务
+				</div>
+				<table class="airport-content-inner airport-stop-inner">
+					<thead class="content-inner-title">
+						<tr>
+							<th class="n1">运输服务</th>
+							<th class="n2">价格</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="n1">出租车：从KOS到西哈努克市的旅客目的地</td>
+							<td class="n2">20美元/出租车</td>
+						</tr>
+						<tr>
+							<td class="n1">面包车：从KOS到西哈努克市的旅客目的地</td>
+							<td class="n2">30美元/面包车</td>
+						</tr>
+						<tr>
+							<td class="n1">巴士：从KOS到西哈努克市区</td>
+							<td class="n2">6美元/人</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 紧急电话 -->
+		<div class="airport-call">
+			<div class="airport-title">
+				<img src="./images/leftTitleLine.png">
+				紧急电话
+			</div>
+			<div class="airport-content airport-call-content">
+				<h2>机场热线：</h2>
+				<p>金边： +855（0）23 862 800</p>
+				<p>暹粒： +855（0）63 962 400</p>
+				<p>西哈努克港： +855（0）12 333 524</p>
+				<p>柬埔寨国家代码：+855</p>
+
+				<h2>公共紧急情况：</h2>
+				<p>警察：117</p>
+				<p>旅游警察：012 942 484</p>
+				<p>交警：012 896 628</p>
+				<p>火灾：118或012 786 693</p>
+				<p>救护车：119</p>
+				<p>卡介苗救护车（SAMU）：023 426 948/023 724 891 / 012 912 947/016 585 108/092 858 434</p>
+			</div>
 		</div>
 	</section>
 
@@ -129,6 +180,7 @@
 	<!-- 第三方库-->
 	<script type="text/javascript" src="../../../libs/jQuery/jquery-1.11.3.js"></script>
 	<!-- <script type="text/javascript" src="../../../libs/jQuery/jquery.cookie.js"></script> -->
+	<script type="text/javascript" src="../../../libs/layer/layer.js"></script>
 	<script type="text/javascript" src="../../../libs/mobile-libs/fastclick/fastclick.js"></script>
 	<script type="text/javascript" src="../../../libs/bootstrap/js/bootstrap.min.js"></script>
 	<!-- 公共JS -->
