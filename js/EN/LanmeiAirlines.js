@@ -143,6 +143,29 @@ var LanmeiAirlines = {
 			$('.li-slide').fadeOut(1000);
 		});
 
+		// 设置酒店入店和离店时间 2018-02-05 可以直接修改日期
+		function getNowFormatDate() {
+		    var date = new Date();
+		    var seperator1 = "-";
+		    var year = date.getFullYear();
+		    var month = date.getMonth() + 1;
+		    var strDate = date.getDate()+1;
+		    var strDate_end = date.getDate()+2;
+		    if (month >= 1 && month <= 9) {
+		        month = "0" + month;
+		    }
+		    if (strDate >= 0 && strDate <= 9) {
+		        strDate = "0" + strDate;
+		    }
+		    if (strDate_end >= 0 && strDate_end <= 9) {
+		        strDate_end = "0" + strDate_end;
+		    }
+		    var currentdate = year + seperator1 + month + seperator1 + strDate;
+		    var enddate = year + seperator1 + month + seperator1 + strDate_end;
+		    $("#h-timeFrom").val(currentdate);
+		    $("#h-timeTo").val(enddate);
+		};
+
 		// 显示侧边栏
 		$('.listSelect ul li a').click(function(e){
 			e.preventDefault();
@@ -183,6 +206,7 @@ var LanmeiAirlines = {
 					timeFrom: 'h-timeFrom',
 					timeTo: 'h-timeTo',
 				});
+				getNowFormatDate();//修改默认日期
 				break;
 				case "car-content":
 

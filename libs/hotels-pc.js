@@ -379,7 +379,7 @@ $("#hotel-search").click(function () {
         var seperator1 = "-";
         var year = date.getFullYear();
         var month = date.getMonth() + 1;
-        var strDate = date.getDate();
+        var strDate = date.getDate()+1;
         if (month >= 1 && month <= 9) {
             month = "0" + month;
         }
@@ -387,6 +387,7 @@ $("#hotel-search").click(function () {
             strDate = "0" + strDate;
         }
         var currentdate = year + seperator1 + month + seperator1 + strDate;
+        $("#h-timeFrom").val(currentdate);
         $("#h-timeTo").val(currentdate);
     };
-getNowFormatDate();
+// getNowFormatDate(); //放到LanmeiAirlines.js2018-02-05
