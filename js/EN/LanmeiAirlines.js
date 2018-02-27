@@ -1079,7 +1079,7 @@ var LanmeiAirlines = {
 				autoSubmit : false,
 				stopToday : true,
 				theme : 'ta',
-				calendars : 13, // 展示的月份数
+				calendars : 14, // 展示的月份数
 				isSingleDay : true,
 				shortOpr : true,
 				nextShow:false,
@@ -1499,7 +1499,6 @@ var LanmeiAirlines = {
 		 		return y + '-' + m + '-' + d;
 		 	});
 		 };
-
 		 var today  = new Date();
 		 var startTimeStr = new Date(today.getTime()+86400000*1); 
 		 var startTime = formatDate(startTimeStr.getFullYear()+'-'+(startTimeStr.getMonth()+1)+'-'+startTimeStr.getDate());  //新增代码2017-09-30
@@ -1518,7 +1517,7 @@ var LanmeiAirlines = {
 			 	autoSubmit : false,
 			 	stopToday : true,
 			 	theme : 'ta',
-			 	calendars : 13, // 展示的月份数
+			 	calendars : 14, // 展示的月份数
 			 	isSingleDay : true,
 			 	shortOpr : true,
 			 	nextShow:false,

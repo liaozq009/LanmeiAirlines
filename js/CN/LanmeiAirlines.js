@@ -1056,7 +1056,7 @@ var LanmeiAirlines = {
 				autoSubmit : false,
 				stopToday : true,
 				theme : 'ta',
-				calendars : 13, // 展示的月份数
+				calendars : 14, // 展示的月份数
 				isSingleDay : true,
 				shortOpr : true,
 				nextShow:false,
@@ -1377,7 +1377,7 @@ var LanmeiAirlines = {
 				autoSubmit : false,
 				stopToday : true,
 				theme : 'ta',
-			 	calendars : 13, // 展示的月份数
+			 	calendars : 14, // 展示的月份数
 			 	isSingleDay : true,
 			 	shortOpr : true,
 			 	nextShow:false,
