@@ -560,7 +560,7 @@
 		<li class="videoLi hiSlider-item">
 			<a href="tpls/EN/LMVideo.html" class="video-master" target="_blank"></a>
 			<img src="images/EN/video-bg.png" class="video-img">
-			<video width="100%" height="auto" id="videoSource" autoplay="autoplay" loop="loop" poster="/">
+			<video width="100%" height="auto" id="videoSource" autoplay="autoplay" loop="loop" muted="true" poster="/">
 				<source src="video/LMVideo.mp4" type="video/mp4">
 				<!-- <source src="https://static.jianshukeji.com/highcharts/images/images-videoo.mp4" type="video/mp4"> -->
 			</video>
@@ -686,25 +686,22 @@
 									<li><a href="javascript:void(0)">ShenZhen</a></li>
 								</ul> -->
                             </div>
-                            <div class="timeSelectEnd">
+                            <div class="timeSelectStart">
                                 <p>
                                     <img src="images/EN/departureDate.png">
                                     <span>Check - in</span>
                                 </p>
-                                <input type="text" id="h-timeTo" name="datefrom" value="" placeholder="" readonly>
+                                <input type="text" id="h-timeFrom" name="dateto" value="" placeholder="" readonly>
                                 <img src="images/EN/downArrow.png">
                             </div>
-                            <div class="timeSelectStart">
+                            <div class="timeSelectEnd">
                                 <p>
                                     <img src="images/EN/departureDate.png">
                                     <span>Check - out</span>
                                 </p>
-                                <input type="text" id="h-timeFrom" name="dateto" value="" placeholder="" readonly>
+                                <input type="text" id="h-timeTo" name="datefrom" value="" placeholder="" readonly>
                                 <img src="images/EN/downArrow.png">
                             </div>
-                            
-
-
 
                            <div class="rooms-select">
 								<p>Room(s)</p>

@@ -88,7 +88,7 @@
     this.doubleDate = this.mOpts.doubleDate;
 
     //默认日历参数最大是13
-    this.mOpts.calendars = Math.min(this.mOpts.calendars, 13);
+    this.mOpts.calendars = Math.min(this.mOpts.calendars, 14);
     //根据不同主题需要初始化的变量
     this.mOpts.compareCss = this.mOpts.theme == 'ta' ? this.mOpts.selectCss :this.mOpts.compareCss;
     //昨天,今天,最近7天,最近14天,最近30天    

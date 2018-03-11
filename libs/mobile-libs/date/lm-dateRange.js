@@ -88,7 +88,7 @@
     this.doubleDate = this.mOpts.doubleDate;
 
     //默认日历参数最大是13
-    this.mOpts.calendars = Math.min(this.mOpts.calendars, 13);
+    this.mOpts.calendars = Math.min(this.mOpts.calendars, 14);
     //根据不同主题需要初始化的变量
     this.mOpts.compareCss = this.mOpts.theme == 'ta' ? this.mOpts.selectCss :this.mOpts.compareCss;
     //昨天,今天,最近7天,最近14天,最近30天    
@@ -1452,7 +1452,7 @@ pickerDateRange.prototype.fillDate = function(year, month, index) {
         $(table).append(cap);
         thead = document.createElement('thead');
         tr = document.createElement('tr');
-        var days = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
+        var days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
         for(var i = 0; i < 7; i ++) {
             th = document.createElement('th');
             $(th).append(days[i]);
@@ -1504,7 +1504,7 @@ pickerDateRange.prototype.fillDate = function(year, month, index) {
         $(tr).append(td);
         $(table).append(tr);
 
-        var days = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
+        var days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
         tr = document.createElement('tr');
         for(var i = 0; i < 7; i ++) {
             td = document.createElement('td');
