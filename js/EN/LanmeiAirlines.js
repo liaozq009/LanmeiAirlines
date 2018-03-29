@@ -145,25 +145,23 @@ var LanmeiAirlines = {
 
 		// 设置酒店入店和离店时间 2018-02-05 可以直接修改日期
 		function getNowFormatDate() {
-		    var date = new Date();
-		    var seperator1 = "-";
-		    var year = date.getFullYear();
-		    var month = date.getMonth() + 1;
-		    var strDate = date.getDate()+1;
-		    var strDate_end = date.getDate()+2;
-		    if (month >= 1 && month <= 9) {
-		        month = "0" + month;
-		    }
-		    if (strDate >= 0 && strDate <= 9) {
-		        strDate = "0" + strDate;
-		    }
-		    if (strDate_end >= 0 && strDate_end <= 9) {
-		        strDate_end = "0" + strDate_end;
-		    }
-		    var currentdate = year + seperator1 + month + seperator1 + strDate;
-		    var enddate = year + seperator1 + month + seperator1 + strDate_end;
-		    $("#h-timeFrom").val(currentdate);
-		    $("#h-timeTo").val(enddate);
+			// 日期选择--动态加载
+			var formatDate = function(ymd) { //日期格式化
+				return ymd.replace(/(\d{4})\-(\d{1,2})\-(\d{1,2})/g, function(ymdFormatDate, y, m, d){
+					m < 10 && (m = '0' + m);
+					d < 10 && (d = '0' + d);
+					return y + '-' + m + '-' + d;
+				});
+			};
+
+			var today  = new Date();
+			var startTimeStr = new Date(today.getTime()+86400000*1); 
+			var startTime = formatDate(startTimeStr.getFullYear()+'-'+(startTimeStr.getMonth()+1)+'-'+startTimeStr.getDate());  
+			var endTimeStr = new Date(today.getTime()+86400000*2); 
+			var endTime = formatDate(endTimeStr.getFullYear()+'-'+(endTimeStr.getMonth()+1)+'-'+(endTimeStr.getDate()));
+
+	    $("#h-timeFrom").val(startTime);
+	    $("#h-timeTo").val(endTime);
 		};
 
 		// 显示侧边栏
