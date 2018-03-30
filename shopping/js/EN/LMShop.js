@@ -7,6 +7,8 @@ var LMShop = {
 		this.cartInfoEdit();
 		this.addressSel();
 		this.pdPay();
+		this.pcEvent();
+		this.mEvent();
 		this.addEvend();
 
 		// 判断手机端或者PC端
@@ -26,9 +28,9 @@ var LMShop = {
 		var flag = IsPC(); //true为PC端，false为手机端
 
 		if(flag){
-			this.pcEvent();
+			// this.pcEvent();
 		}else{
-			this.mEvent();
+			// this.mEvent();
 		}
 	},
 

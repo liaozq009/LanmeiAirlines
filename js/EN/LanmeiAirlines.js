@@ -1068,13 +1068,13 @@ var LanmeiAirlines = {
 		var endTime = formatDate(endTimeStr.getFullYear()+'-'+(endTimeStr.getMonth()+1)+'-'+(endTimeStr.getDate()));
 		var maxTime = formatDate(today.getFullYear()+'-'+(today.getMonth()+13)+'-'+(today.getDate()+2)); 
 		
-		var dataRange = function(id,num,doubleDate){
+		var dataRange = function(id,num,doubleDate,isTodayValid){
 			new pickerDateRange(id, {
 				canID:'data'+num,
 				startDate: startTime,
 				endDate: endTime,
 				maxTime: maxTime,
-				isTodayValid:false,//判断今天是否可选
+				isTodayValid:isTodayValid,//判断今天是否可选
 				defaultText : ' ~ ',
 				autoSubmit : false,
 				stopToday : true,
@@ -1325,17 +1325,17 @@ var LanmeiAirlines = {
 
 			switch (data) {
 				case "ticket":
-				dataRange('m-ticket-selectTime','1',false);
+				dataRange('m-ticket-selectTime','1',false,true);
 				mTickt();
 				break;
 				case "hotel":
-				dataRange('m-hotel-selectTime','2',true);
+				dataRange('m-hotel-selectTime','2',true,false);
 				mHotel();
 				break;
 				case "car":
 				break;
 				case "flight":
-				dataRange('m-flight-selectTime','3',false);
+				dataRange('m-flight-selectTime','3',false,true);
 				mFlight();
 				break;
 				default:
@@ -1506,14 +1506,14 @@ var LanmeiAirlines = {
 		 var endTime = formatDate(endTimeStr.getFullYear()+'-'+(endTimeStr.getMonth()+1)+'-'+(endTimeStr.getDate()));
 		 var maxTime = formatDate(today.getFullYear()+'-'+(today.getMonth()+13)+'-'+(today.getDate()+2)); 
 		 
-		 var dataRange = function(id,num,doubleDate){
+		 var dataRange = function(id,num,doubleDate,isTodayValid){
 		 	new pickerDateRange(id, {
 		 		canID:'data'+num,
 		 		startDate: startTime,
 		 		endDate: endTime,
 		 		maxTime: maxTime,
 		 		defaultText : ' ~ ',
-			 	isTodayValid:false,//判断今天是否可选
+			 	isTodayValid:isTodayValid,//判断今天是否可选
 			 	autoSubmit : false,
 			 	stopToday : true,
 			 	theme : 'ta',
@@ -1527,7 +1527,7 @@ var LanmeiAirlines = {
 			 	doubleDate:doubleDate,
 			 });
 		 };
-		 dataRange('p-ticket-selectTime','5',false);
+		 dataRange('p-ticket-selectTime','5',false,true);
 
 		// 舱位选择和乘客人数选择--动态加载
 		var pTicket = function(){
@@ -1757,11 +1757,11 @@ var LanmeiAirlines = {
 			var href = $(this).attr('href');
 			switch (href) {
 				case "p-hotel-wrap":
-				dataRange('p-hotel-selectTime','6',true);
+				dataRange('p-hotel-selectTime','6',true,false);
 				pHotel();
 				break;
 				case "p-flight-wrap":
-				dataRange('p-flight-selectTime','7',false);
+				dataRange('p-flight-selectTime','7',false,true);
 				pFlight();
 				break;
 			}

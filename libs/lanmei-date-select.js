@@ -13,6 +13,7 @@ if(!window.jQuery){
                 timeTo:'',
                 isSingleDay:false,
                 count:2,
+                hotelMinDate:true,
             };
 
             //定义变量
@@ -22,11 +23,18 @@ if(!window.jQuery){
             var timeTo = options.timeTo;
             var isSingleDay= options.isSingleDay;
             var count = options.count;
+            var hotelMinDate = options.hotelMinDate;
             
             return this.each(function (){
                var oDepDate  = new Date();
                var curDate  = new Date(oDepDate.getFullYear(), oDepDate.getMonth(), oDepDate.getDate());
                var oBackDate = new Date(oDepDate.getFullYear(), oDepDate.getMonth(), oDepDate.getDate() + 2);
+               
+               var hotelMinTime = new Date(oDepDate.getFullYear(), oDepDate.getMonth(), oDepDate.getDate()+1);
+               var minTime = new Date(curDate);
+               if(hotelMinDate){
+                  minTime = hotelMinTime;
+               }
                //出发时间实例 
                var oDepCal = new Calendar({
                     id:            '#'+timeFrom,         //触发显示日历元素ID
@@ -40,7 +48,7 @@ if(!window.jQuery){
                     isMessage:     !0,                  //有日历提示信息
                     isCalStart:    !0,                  //标记为开始时间
                     // dateInfoClass: "date-info-start",   //开始时间icon样式
-                    range:         {mindate: new Date(curDate), maxdate: "2030-12-31"},    //限制范围（当天——2030-12-31）
+                    range:         {mindate: minTime, maxdate: "2030-12-31"},    //限制范围（当天——2030-12-31）
                     count:         count,                   //日历个数
                     monthStep:     1,                   //切换上下月日历步长
                });
@@ -59,7 +67,7 @@ if(!window.jQuery){
                        isMessage:     !0,                  //有日历提示信息
                        isCalEnd:      !0,                  //标记为结束时间
                        // dateInfoClass: "date-info-end",     //结束时间icon样式
-                       range:         {mindate: new Date(curDate)},   //限制范围（当天——2020-12-31）
+                       range:         {mindate: minTime},   //限制范围（当天——2020-12-31）
                        count:         count,                   //日历个数
                        monthStep:     1                    //切换上下月日历步长
                   });
