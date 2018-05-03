@@ -560,8 +560,8 @@
 		<li class="videoLi hiSlider-item">
 			<a href="tpls/EN/LMVideo.html" class="video-master" target="_blank"></a>
 			<img src="images/EN/video-bg.png" class="video-img">
-			<video width="100%" height="auto" id="videoSource" autoplay="autoplay" loop="loop" muted="true" poster="/">
-				<source src="video/LMVideo.mp4" type="video/mp4">
+			<video width="100%" height="auto" id="videoSource" autoplay="autoplay" loop="loop" muted="true" poster="/" style="margin-top: -14%;">
+				<source src="video/mfmbanner.mp4" type="video/mp4">
 				<!-- <source src="https://static.jianshukeji.com/highcharts/images/images-videoo.mp4" type="video/mp4"> -->
 			</video>
 		</li>
@@ -995,13 +995,65 @@
 			<!-- Car内容 -->
 			<div class="car-content listSelectContent">
 				<form id="c-content-form" action="" target="_blank">
-					<div class="car-title" style="font-size: 18px;color:#fff;font-weight: bold;">
-						please look forward to...
+					<div class="car-title">
+						Car Search
 					</div>
 					<div class="selectAirTime selectAirCommon">
-
+						<div class="local_timeSelect car_local_timeSelect">
+							<div class="localSelectStart autoClick">
+								<p><img src="images/EN/location.png"><span>Route id</span></p>
+								<input type="text" class="fromcityinput inputDown Autocomplete js-routeId-input" value="" placeholder="" autocomplete="off">
+								<img src="images/EN/downArrow.png">
+								<span class="clear">X</span>
+								<b class="bottomLine"></b>
+								<ul class="js-routeId-menu menu-com routeId-menu">
+									<li><a href="javascript:;" title="Airport --> Toyoko Inn">Airport -- Toyoko Inn</a> <p class="js-route-details" data="route-id-0" title="Route details"></p> </li>
+									<li><a href="javascript:;" title="Airport --> Sofitel">Airport -- Sofitel</a> <p class="js-route-details" data="route-id-1" title="Route details"></p> </li>
+								</ul>
+							</div>
+							<div class="localSelectEnd autoClick autoFocus">
+								<p><img src="images/EN/ticket-type.png"><span>Ticket type</span></p>
+								<input type="text" class="tocityinput inputDown Autocomplete js-ticketType-input" value="" placeholder="" autocomplete="off">
+								<img src="images/EN/downArrow.png">
+								<span class="clear">X</span>
+								<b class="bottomLine"></b>
+								<ul class="js-ticketType-menu menu-com">
+									<li title="One-way"><a href="javascript:;">One-way</a></li>
+									<li title="Return"><a href="javascript:;">Return</a></li>
+								</ul>
+							</div>
+							<div class="timeSelectStart">
+								<p><img src="images/EN/adult-icon.png"><span>People number</span></p>
+								<input type="number" class="people-num-input js-peopleNum-input" name="" value="" pattern="[0-9]*" placeholder="" autocomplete="off">
+							</div>
+						</div>
+						<div class="viewSchedules js-car-search">
+							<a href="javascript:void(0)">SEARCH<img src="images/EN/schedulesArrow.png"></a>
+						</div>
 					</div>
 				</form>
+				<!-- 租车路线弹出框 -->
+				<div class="modal fade route-id-modal" id="js-routeIdModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">Close<span aria-hidden="true">&times;</span></button>
+							</div>
+							<div class="modal-body">
+								<h2>Schedule:</h2>
+								<div class="route-id-title">
+									<p>Off-Peak: 60 minutes /bus</p>
+									<p>Peak hour: 30 minutes /bus</p>
+									<p>Operation Time：09:00~17:50</p>
+								</div>
+								<h2>Route details:</h2>
+								<div class="route-id-content js-routeId-content">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 			<!-- flightStatus内容 -->
 			<div class="flight-content listSelectContent">
@@ -1728,7 +1780,7 @@
 												</p>
 											</div>
 										</div>
-										<input type="submit" value="提交">
+										<input type="submit" value="提交" style="display: none;">
 									</form>
 								</li>
 								<li class="nth-child3" data-modal="modalLi2">

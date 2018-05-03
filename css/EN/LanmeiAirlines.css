@@ -522,6 +522,51 @@ input {
 .leftAside .listSelectBox .car-content {
   display: none;
 }
+.leftAside .listSelectBox .car-content .car-title {
+  font-size: 18px;
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.leftAside .listSelectBox .car-content .selectAirCommon .car_local_timeSelect {
+  height: auto;
+}
+.leftAside .listSelectBox .car-content .selectAirCommon .menu-com > li {
+  font-size: 14px;
+  padding-left: 0;
+  padding-right: 0;
+}
+.leftAside .listSelectBox .car-content .selectAirCommon .menu-com > li > a {
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.leftAside .listSelectBox .car-content .selectAirCommon .menu-com > li > p {
+  width: 36px;
+  height: 40px;
+  float: right;
+  background: url(../../images/EN/prompt-icon.png) center no-repeat;
+  cursor: pointer;
+}
+.leftAside .listSelectBox .car-content .selectAirCommon .routeId-menu > li > a {
+  width: 220px;
+}
+.leftAside .listSelectBox .car-content .selectAirCommon input::-webkit-outer-spin-button,
+.leftAside .listSelectBox .car-content .selectAirCommon input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.leftAside .listSelectBox .car-content .selectAirCommon input[type="number"] {
+  -moz-appearance: textfield;
+}
+.leftAside .listSelectBox .car-content .selectAirCommon .viewSchedules {
+  margin-top: 80px;
+}
+.leftAside .listSelectBox .car-content .selectAirCommon .viewSchedules a {
+  width: 260px;
+  margin-left: 300px;
+}
 .leftAside .listSelectBox .flight-content {
   display: none;
 }
@@ -592,6 +637,37 @@ input {
 }
 .leftAside .listSelectBox .viewSchedules .active {
   background: #1f2c5c;
+}
+.route-id-modal .modal-dialog {
+  width: 700px;
+}
+.route-id-modal .modal-body .route-id-title {
+  padding: 20px;
+}
+.route-id-modal .modal-body .route-id-title p {
+  color: #808080;
+  font-size: 18px;
+  line-height: 28px;
+}
+.route-id-modal .modal-body > h2 {
+  font-weight: bold;
+  font-size: 24px;
+  color: #1f2c5c;
+  padding-left: 20px;
+}
+.route-id-modal .modal-body .route-id-content {
+  padding: 20px;
+  padding-top: 0;
+}
+.route-id-modal .modal-body .route-id-content > img {
+  width: 100%;
+  cursor: zoom-in;
+}
+.route-id-modal .modal-body .route-id-content li {
+  list-style: disc;
+  font-size: 16px;
+  color: #808080;
+  line-height: 28px;
 }
 /* 特价机票*/
 .lowestFares {
@@ -1437,6 +1513,9 @@ input {
   .leftAside .listSelectBox .flight-content .selectAirCommon .viewSchedules a {
     width: 200px;
     margin-left: 240px;
+  }
+  .leftAside .listSelectBox .car-content .selectAirCommon .routeId-menu > li > a {
+    width: 160px;
   }
   .lowestPrice {
     width: 235px !important;
@@ -3166,6 +3245,26 @@ body .layui-layer-btn .layui-layer-btn0 {
     font-size: 12px;
     padding: 0;
     padding-top: 6px;
+  }
+  .route-id-modal .modal-dialog {
+    width: 90%;
+  }
+  .route-id-modal .modal-body .route-id-title {
+    padding: 0.15rem;
+  }
+  .route-id-modal .modal-body .route-id-title p {
+    font-size: 0.12rem;
+    line-height: 0.26rem;
+  }
+  .route-id-modal .modal-body > h2 {
+    font-size: 0.18rem;
+  }
+  .route-id-modal .modal-body .route-id-content {
+    padding: 0.1rem 0.15rem 0.15rem 0.3rem;
+  }
+  .route-id-modal .modal-body .route-id-content li {
+    font-size: 0.12rem;
+    line-height: 0.26rem;
   }
   /* layer */
   body .layui-layer-page .layui-layer-btn {

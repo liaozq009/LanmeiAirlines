@@ -487,6 +487,55 @@ input{
 		}
 		.car-content{
 			display: none;
+			.car-title{
+				font-size: 18px;
+				color:#fff;
+				font-weight: bold;
+				margin-bottom: 30px;
+			}
+			.selectAirCommon {
+				.car_local_timeSelect{
+					height: auto;
+				}
+				.menu-com{
+					>li{
+						font-size: 14px;
+					    padding-left: 0;
+					    padding-right: 0;
+				        >a{
+				        	display: inline-block;
+				        	overflow: hidden;
+				        	text-overflow: ellipsis;
+				        	white-space: nowrap;
+				        	cursor: pointer;
+				        }
+				        >p{
+				        	width: 36px;
+				        	height: 40px;
+				        	float: right;
+				        	background: url(../../images/EN/prompt-icon.png) center no-repeat;
+			        	    cursor: pointer;
+				        }
+					}
+				}
+				.routeId-menu{
+					>li>a{width: 220px;}
+				}
+				input::-webkit-outer-spin-button,
+			    input::-webkit-inner-spin-button {
+			        -webkit-appearance: none;
+			    }
+			    input[type="number"]{
+			        -moz-appearance: textfield;
+			    }
+				.viewSchedules{
+					margin-top: 80px;
+					a{
+						width: 260px;
+						margin-left: 300px;
+					}
+				}
+			}
 		}
 		.flight-content{
 			display: none;
@@ -552,6 +601,40 @@ input{
 				}
 			}
 			.active{background:#1f2c5c}
+		}
+	}
+}
+
+.route-id-modal{
+	.modal-dialog{width: 700px;}
+	.modal-body{
+		.route-id-title{
+			padding: 20px;
+			p{
+				color: #808080;
+				font-size: 18px;
+				line-height: 28px;
+			}
+		}
+		>h2{
+			font-weight: bold;
+			font-size: 24px;
+			color: @purple;
+			padding-left: 20px;
+		}
+		.route-id-content{
+			padding: 20px;
+			padding-top: 0;
+			>img{
+				width: 100%;
+				cursor: zoom-in;
+			}
+			li{
+				list-style: disc;
+				font-size: 16px;
+				color: #808080;
+				line-height: 28px;
+			}
 		}
 	}
 }
@@ -1340,6 +1423,7 @@ input{
 					}
 				}
 			}
+			.car-content .selectAirCommon .routeId-menu > li > a{width: 160px;}
 		}
 	}
 
@@ -2811,6 +2895,23 @@ body .layui-layer-btn .layui-layer-btn0{border-radius: 10px;}
 						padding-top: 6px;
 					}
 				}
+			}
+		}
+	}
+
+	.route-id-modal {
+		.modal-dialog{width: 90%;}
+		.modal-body{
+			.route-id-title {
+				padding: 0.15rem;
+				p {font-size: 0.12rem;line-height: 0.26rem;}
+			}
+			>h2{
+				font-size: 0.18rem;
+			}
+			.route-id-content{
+				padding: 0.1rem 0.15rem 0.15rem 0.3rem;
+				li{font-size: 0.12rem;line-height: 0.26rem;}
 			}
 		}
 	}
