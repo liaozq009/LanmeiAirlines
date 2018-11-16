@@ -124,7 +124,7 @@ $(document).ready(function(){
     };
 
 	// var target_date = new Date('2017/11/11 11:11:00').getTime();
-	var target_date = new Date('2017/11/2 15:35:00').getTime();
+	var target_date = new Date('2018/08/30 15:35:00').getTime();
 	var current_date = currentDate().getTime();
 
 	 var difference =  Math.floor((target_date - current_date)/1000);

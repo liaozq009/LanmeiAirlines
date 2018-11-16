@@ -86,7 +86,6 @@ input::-ms-clear {
 body {
   min-width: 320px;
   font-size: 12px;
-  font-family: "Microsoft YaHei", sans-serif;
 }
 /* 图片懒加载loading */
 .lazy {
