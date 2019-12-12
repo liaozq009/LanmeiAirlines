@@ -74,7 +74,7 @@ var flightInfo = {
 			}
 
 			// 初始化第一个li增加active
-			// $fUl.children('li').eq(0).addClass("active");	
+			// $fUl.children('li').eq(0).addClass("active");
 
 			if($(this).val()!==''){
 				$(this).siblings('.clear').show();
@@ -91,6 +91,26 @@ var flightInfo = {
 			}else{
 				$(this).siblings('.clear').hide();
 			}
+
+			// if($(this).val()!==''){
+			// 	$(this).siblings('.clear').show();
+			// 	var browser=navigator.appName; 
+			// 	var b_version=navigator.appVersion; 
+			// 	var version=b_version.split(";"); 
+			// 	var trim_Version=version[1].replace(/[ ]/g,""); 
+			// 	if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE8.0") { 
+			// 		// alert("IE 8.0"); 
+			// 		$(this).siblings('.clear').hide();
+			// 	} else if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE9.0") { 
+			// 		// alert("IE 9.0"); 
+			// 		$(this).siblings('.clear').hide();
+			// 	} else if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE10.0") { 
+			// 		// alert("IE 9.0"); 
+			// 		$(this).siblings('.clear').show();
+			// 	} 
+			// }else{
+			// 	$(this).siblings('.clear').hide();
+			// }
 
 			$('.selectAirCommon .inputDown').removeClass('active').siblings('.bottomLine').hide();
 			$(this).addClass('active').siblings('.bottomLine').show();
