@@ -53,6 +53,9 @@ input {
   padding: 0;
   font-size: 12px;
 }
+body {
+  font-family: "微软雅黑";
+}
 ul,
 li {
   list-style: none;
@@ -523,12 +526,12 @@ input.active {
 .lanmeiHeader .sliderInfo .view-all a {
   font-size: 16px;
   color: #fff;
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .lanmeiHeader .sliderInfo .view-all a:hover {
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   color: #8ec060;
 }
 /* 子页面头部样式 */
@@ -693,16 +696,16 @@ input.active {
 }
 .footerInfo .contactUs .nth-child2 a {
   color: #fff;
-  -webkit-transition-duration: .5s;
-  transition-duration: .5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
 .footerInfo .contactUs .nth-child2 a i {
   font-size: 26px;
   margin-left: 18px;
 }
 .footerInfo .contactUs .nth-child2 a:hover {
-  -webkit-transition-duration: .5s;
-  transition-duration: .5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
   color: #8ec060;
 }
 .footerInfo .location {

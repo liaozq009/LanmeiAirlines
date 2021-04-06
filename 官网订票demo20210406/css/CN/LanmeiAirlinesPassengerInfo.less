@@ -355,6 +355,75 @@
 	}
 }
 
+/* 行李 */
+.baggage-box {
+	font-size: 14px;
+	margin-bottom: 20px;
+	.content {
+		display: inline-block;
+		.baggage-wrap {
+			width: 100%;
+			font-size: 14px;
+		}
+		.baggage-wrap .baggage-calc-sub {
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			color: #fff;
+			border-radius: 2px;
+			background: url(../../images/EN/sub-people.png) center no-repeat rgba(31, 44, 92, 0.1);
+			background-size: 12px;
+			vertical-align: bottom;
+			transition: all .3s;
+			-webkit-transition: all .3s;
+		}
+		.baggage-wrap .baggage-calc-sub:hover {
+			background: url(../../images/EN/sub-people.png) center no-repeat rgba(31, 44, 92, 0.2);
+			background-size: 12px;
+			transition: all .3s;
+			-webkit-transition: all .3s;
+		}
+		.baggage-wrap .baggage-calc-add {
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			color: #fff;
+			border-radius: 2px;
+			background: url(../../images/EN/add-people.png) center no-repeat rgba(31, 44, 92, 0.1);
+			background-size: 12px;
+			vertical-align: bottom;
+		}
+		.baggage-wrap .baggage-calc-add:hover {
+			background: url(../../images/EN/add-people.png) center no-repeat rgba(31, 44, 92, 0.2);
+			background-size: 12px;
+			transition: all .3s;
+			-webkit-transition: all .3s;
+		}
+		.baggage-wrap input::-webkit-outer-spin-button,
+		.baggage-wrap input::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+		}
+		.baggage-wrap input[type="number"] {
+			-moz-appearance: textfield;
+			width: 50px;
+			height: 20px;
+			text-align: center;
+			color: #1f2c5c;
+			font-weight: bold;
+			background: rgba(31, 44, 92, 0.1);
+			padding-left: 10px;
+			padding-right: 10px;
+			margin-left: 10px;
+			margin-right: 10px;
+			border-radius: 2px;
+		}
+		.baggage-wrap-tips {
+			top: 100px;
+			font-size: 16px;
+		}
+	}
+}
+
 /* 联系 */
 .contactUsWrapper{
 	width: 960px;
