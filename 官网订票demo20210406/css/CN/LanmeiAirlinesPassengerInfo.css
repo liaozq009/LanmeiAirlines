@@ -610,7 +610,7 @@
   position: absolute;
   left: 28px;
   top: -14px;
-  width: 500px;
+  width: 300px;
 }
 .insurance-box .detail .tooltip-box .tooltip-content {
   background-color: #ffffff;
@@ -619,6 +619,10 @@
   z-index: 9;
   border-radius: 3px;
   padding: 10px;
+  padding-bottom: 0;
+}
+.insurance-box .detail .tooltip-box .tooltip-content p {
+  margin-bottom: 10px;
 }
 .insurance-box .detail .tooltip-box table {
   width: 100%;
