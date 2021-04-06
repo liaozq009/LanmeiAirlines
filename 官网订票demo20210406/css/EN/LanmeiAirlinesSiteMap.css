@@ -1,0 +1,126 @@
+@charset "utf-8";
+/* 定义变量 */
+/* 定义颜色变量 */
+body {
+  background: #f2f2f2;
+}
+.siteMapBanner {
+  width: 100%;
+  height: 200px;
+  background: url('../../images/EN/site-map-bg.png') center no-repeat;
+}
+.siteMapBanner h2 {
+  width: 100%;
+  height: 200px;
+  text-align: center;
+  line-height: 200px;
+  background-image: linear-gradient(-45deg, rgba(142, 192, 96, 0.7) 0%, rgba(31, 44, 92, 0.7) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#B2212C5C, 5C, endColorstr=#B2212C5C, 5C);
+  font-weight: bold;
+  font-size: 72px;
+  color: #ffffff;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+}
+.siteMapWrapper {
+  width: 960px;
+  min-height: 300px;
+  margin: 50px auto 56px;
+  padding: 0 10px;
+}
+.siteMapWrapper .site-map-box {
+  background: #fff;
+  border-radius: 10px;
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+.siteMapWrapper .site-map-box .site-map-title {
+  height: 50px;
+  padding: 0 10px;
+  cursor: pointer;
+}
+.siteMapWrapper .site-map-box .site-map-title h2 {
+  float: left;
+  height: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  color: #1f2c5c;
+}
+.siteMapWrapper .site-map-box .site-map-title img {
+  float: right;
+  margin-top: 23px;
+}
+.siteMapWrapper .site-map-box .site-map-title .img01 {
+  display: none;
+  margin-top: 15px;
+}
+.siteMapWrapper .site-map-box .site-map-content {
+  overflow: hidden;
+  padding-bottom: 30px;
+  border-top: 1px solid #ccc;
+}
+.siteMapWrapper .site-map-box .site-map-content > li {
+  float: left;
+  width: 20%;
+  height: 160px;
+  margin-top: 20px;
+  padding-left: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.siteMapWrapper .site-map-box .site-map-content > li > a {
+  display: inline-block;
+  width: 160px;
+  font-size: 14px;
+  color: #1f2c5c;
+  margin-bottom: 6px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.siteMapWrapper .site-map-box .site-map-content > li > ul li {
+  height: 26px;
+}
+.siteMapWrapper .site-map-box .site-map-content > li > ul li a {
+  display: inline-block;
+  width: 160px;
+  color: #808080;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.siteMapWrapper .site-map-box .site-map-content > li > ul li a:hover {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  color: #8ec060;
+}
+.siteMapWrapper .site-map-box .site-about-us li {
+  height: 30px;
+}
+/* 配置屏幕 针对小屏幕*/
+html {
+  font-size: 100px;
+}
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 50px;
+  }
+}
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 64px;
+  }
+}
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 82px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 100px;
+  }
+}

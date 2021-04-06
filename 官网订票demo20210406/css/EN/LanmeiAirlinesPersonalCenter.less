@@ -1,0 +1,715 @@
+
+/* 定义变量 */
+@green:#8ec060;
+@purple:#1f2c5c;
+@gray:#808080;
+@red:#d0011b;
+@link:#4aa374;
+
+.blur {    
+	-webkit-filter: blur(10px); /* Chrome, Opera */
+	-moz-filter: blur(10px);
+	-ms-filter: blur(10px);    
+	filter: blur(10px);   
+	filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10, MakeShadow=false); /* IE6~IE9 */ 
+}
+
+.personalCenter-wrapper{
+	position: relative;
+	width: 940px;
+	height: 200px;
+	margin:0 auto;
+	>.blur-box{
+		position: absolute;
+		width: 940px;
+		height: 200px;
+		text-align: center;
+		background: rgba(0, 0, 0, 0.2);
+		overflow: hidden;
+		>img{
+			
+		}
+	}
+	.personalCenter-content{
+		position: relative;
+		width: 100%;
+		height: 200px;
+		overflow: hidden;
+		background:rgba(0,0,0,0.09);
+		.headPortrait{
+			float: left;
+			padding-left: 75px;
+			padding-top: 28px;
+			.headPortraitTitle{
+				position: relative;
+				width: 110px;
+				height: 110px;
+				margin-bottom: 10px;
+				.headSelect{
+					width: 110px;
+					height: 110px;
+					border-radius: 50%;
+				}
+				.sexSelect{
+					position: absolute;
+					bottom: 8px;
+					right: 14px;
+				}
+			}
+			>h2{
+				width: 110px;
+				font-size:20px;
+				color:#fff;
+				text-align: center;
+				text-shadow:0 0 10px rgba(0,0,0,0.16);
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+		}
+		.personalInfo{
+			float: left;
+			padding-left: 76px;
+			padding-top: 42px;
+			.DataIntegrity{
+				width: 240px;
+				margin-bottom: 10px;
+				font-size:14px;
+				color:#ffffff;
+				text-shadow:0 0 10px rgba(0,0,0,0.16);
+				.progressBar{
+					display: inline-block;
+					position: relative;
+					top:-8px;
+					left: 6px;
+					.progress_back{
+						position: absolute;
+						left: 0;
+						background:#f2f2f2;
+						border-radius:100px;
+						width:102px;
+						height:8px;
+					}
+					.progress{
+						position: absolute;
+						left: 0;
+						top:1px;
+						background:#8ec060;
+						border-radius:100px;
+						width:50px;
+						height:6px;
+					}
+				}
+				.personalEdit{
+					position: relative;
+					left: 106px;
+					top: -2px;
+					cursor: pointer;
+				}
+			}
+			>p{
+				margin-bottom: 10px;
+				font-size:14px;
+				color:#ffffff;
+				text-shadow:0 0 10px rgba(0,0,0,0.16);
+			}
+		}
+		.partingLine{
+			float: left;
+			background:#ffffff;
+			box-shadow:0 0 10px 0 rgba(0,0,0,0.16);
+			border-radius:4px;
+			width:2px;
+			height:100px;
+			margin:50px 35px 50px 60px;
+		}
+		.cartSelect{
+			margin-top: 18px;
+		}
+		.personalSetting{
+			position: absolute;
+			right: 0;
+			top:0px;
+			cursor: pointer;
+		}
+	}
+}
+
+.personalInfo-wrapper{
+	width: 960px;
+	margin:30px auto 30px;
+	padding:0 10px;
+	overflow: hidden;
+	.asideInfo{
+		float: left;
+		background:#ffffff;
+		box-shadow:0 4px 20px 0 rgba(0,0,0,0.16);
+		border-radius:2px;
+		width:220px;
+		height:462px;
+		text-align: center;
+		.infoContent{
+			>li{
+				position: relative;
+				width: 220px;
+				height: 50px;
+				text-align: left;
+				a{
+					display: inline-block;
+					width: 100%;
+					height: 50px;
+					line-height: 50px;
+					padding-left: 30px;
+					font-size:16px;
+					color:#1f2c5c;
+				}
+				.travle-menu{
+					display: none;
+					position: absolute;
+					top: 50px;
+					width: 100%;
+					>li{
+						a{
+							font-size: 14px;
+							&:hover{color:@green;}
+						}
+						.active{color:@green;}
+					}
+				}
+			}
+			>.active>a{
+				background: @green;
+				color:#fff;
+			}
+		}
+	}
+}
+
+.modal{
+	.modal-dialog{
+		.modal-content{
+			.modal-body{
+				form{
+					.form-group{
+						font-size: 14px;
+						color:@gray;
+						font-weight: bold;
+						margin-left: 28px;
+						margin-bottom: 20px;
+						>label{
+							width: 76px;
+							margin-right:4px;
+							text-align: left;
+						}
+						input{width: 262px;}
+						.radio-inline{
+							margin-left: 20px;
+							font-size:14px;
+							color:@gray;
+							input{
+								width: 20px;
+								height: 20px;
+								margin-left: -26px;
+							}
+						}
+						.menu-com{
+							display: none; 
+							position: absolute;
+							top: 49px;
+							left: 84px;
+							width: 262px;
+							background: #fff;
+							border: 1px solid @green;
+							z-index: 999;
+							border-top: none;
+							height: 220px;
+							overflow-y: scroll;
+							li{
+								width: 100%;
+								height: 40px;
+								line-height: 40px;
+								overflow: hidden;
+								a{
+									display: block;
+									&:hover{
+										color:#fff;
+										background: @green;
+									}
+								}
+							}
+						}
+					}
+					.form-birth{
+						>div{
+							width: 398px !important;
+							height: 50px !important;
+							input{left: 29px;}
+						}
+					}
+					.form-head{
+						button{
+							width: 342px;
+							background: #f2f2f2;
+							color:@gray;
+							outline: none;
+							opacity: 0.8;
+							transition:all 0.6s;
+							-webkit-transition:all 0.6s;
+							&:hover{
+								transition:all 0.6s;
+								-webkit-transition:all 0.6s;
+								background: #ddd;
+							}
+						}
+					}
+					.form-sex{
+						width: 342px;
+						text-align: center;
+					}
+					.form-submit{
+						button{
+							width: 342px;
+							background:@green;
+							color:#fff;
+							font-size:16px;
+							transition:all 0.6s;
+							-webkit-transition:all 0.6s;
+							&:hover{
+								background: @purple;
+								transition:all 0.6s;
+								-webkit-transition:all 0.6s;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.rightInfo{
+	width: 720px;
+	min-height: 100px;
+	padding:10px;
+	padding-left: 20px;
+	float: right;
+	.ticket-wrapper{
+		.ticket-title{
+			overflow: hidden;
+			>li{
+				float: left;
+				width: 50%;
+				text-align: center;
+				>a{
+					font-size:18px;
+					color:#131c3e;
+				}
+				>img{
+					margin-top: 10px;
+				}
+			}
+			.ticket-order img{display: none;}
+		}
+		#ticketOrder{display: none;}
+		.ticket-search{
+			margin-top: 30px;
+			overflow: hidden;
+			>li{
+				float: left;
+				width: 260px;
+				p{
+					font-size:14px;
+					font-weight: bold;
+					color:#8ec060;
+					img{margin-right: 10px;}
+				}
+				input{
+					width: 100%;
+					height: 40px;
+					margin-top: 10px;
+					padding:0 20px;
+					font-size:14px;
+					color:#131c3e;
+					border:1px solid #cccccc;
+					border-radius:2px;
+				}
+			}
+			.n2{
+				margin-left: 40px;
+			}
+			.n3{
+				width: 90px;
+				margin-left: 40px;
+				padding-top: 32px;
+				button{
+					width:90px;
+					height:40px;
+					color:#fff;
+					font-size: 14px;
+					border: none;
+					outline: none;
+					background:#8ec060;
+					border-radius:2px;
+				}
+			}
+		}
+		.ticket-content-wrap{
+			margin-top: 30px;
+			.ticket-content-inner{
+				.ticket-content-box{
+					.c-box-title{
+						width:100%;
+						height:30px;
+						line-height: 30px;
+						padding:0 20px;
+						background:#f2f2f2;
+						.orderNum{
+							float: left;
+						}
+						.orderDate{
+							float: right;
+						}
+					}
+					.c-box-content{
+						overflow: hidden;
+						text-align: center;
+						margin-top: 20px;
+						padding-bottom: 20px;
+						border-bottom: 1px dashed #ccc;
+						>div{
+							float: left;
+						}
+						.b-content-left{
+							width: 32%;
+							.from-time{
+								font-size: 18px;
+								font-weight: bold;
+							}
+							.from-code{
+								font-size: 36px;
+								font-weight: bold;
+							}
+							.from-local{
+								font-size: 13px;
+							}
+						}
+						.b-content-middle{
+							width: 34%;
+							margin-top: 14px;
+						}
+						.b-content-right{
+							width: 32%;
+							.to-time{
+								font-size: 18px;
+								font-weight: bold;
+							}
+							.to-code{
+								font-size: 36px;
+								font-weight: bold;
+							}
+							.to-local{
+								font-size: 13px;
+							}
+						}
+					}
+				}
+				.ticket-flight{
+					padding:20px;
+					border-bottom: 1px dashed #ccc;
+					>div{
+						overflow: hidden;
+						.p1{float: left;}
+						.p2{float: right;}
+					}
+					.t-number{
+						margin-top: 10px;
+					}
+				}
+				.ticket-price{
+					padding:20px;
+					overflow: hidden;
+					.t-changes,.t-details{
+						float: left;
+						font-size: 14px;
+						padding:8px  20px;
+						border-radius:4px;
+						border:none;
+						outline: none;
+					}
+					.t-details{margin-left: 10px;}
+					.total-price{
+						float: right;
+						font-size: 20px;
+						font-weight: bold;
+					}
+				}
+			}
+			.t-inner-gray{
+				color: #ccc;
+				.b-content-middle{
+					.iconImg{display: none;}
+				}
+				.t-changes,.t-details{
+					background: #f2f2f2;
+				}
+			}
+			.t-inner-valid{
+				color: @gray;
+				.orderNum span{color:@purple;}
+				.from-time,.to-time{color: @green;}
+				.from-code,.to-code,.from-local,.to-local{color: @purple;}
+				.ticket-flight>div{color:#1a1a1a;font-weight: bold;}
+				.ticket-flight>div p span{color:@gray;font-weight: normal;}
+				.b-content-middle{
+					.iconImg-gray{display: none;}
+				}
+				.t-changes{background: @green;color: #fff;}
+				.t-details{background: @purple;color: #fff;}
+				.total-price{color: @red;}
+			}
+		}
+	}
+	.myTravel-wrapper{
+		.myTravel{
+			display: none;
+			min-height: 230px;
+			>li{
+				float: left;
+				width: 25%;
+				margin-top: 20px;
+				padding-left: 1%;
+				padding-right: 1%;
+				border-radius: 4px;
+				padding: 10px;
+				cursor: pointer;
+				>h2{
+					width: 100%;
+					height: 20px;
+					font-size: 16px;
+					font-weight: bold;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+					background: -webkit-linear-gradient(0deg, #81E5FE 0%, #1639AE 100%);
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
+					margin-bottom: 10px;
+				}
+				>img{width: 100%;}
+				>p{
+					color: #3772D5;
+					margin-top: 10px;
+					overflow: hidden;
+					.m-s5-local,.s1{float: left;}
+					.m-s5-see,.s2{float: right;}
+					.m-s5-local{margin-top: 3px;margin-right: 6px;}
+					.m-s5-see{margin-top: 5px;margin-left: 6px;}
+				}
+				&:hover{
+					box-shadow:0 0 30px 0 #aac7f9;
+					transition:all .6s;
+					-webkit-transition:all .6s;
+				}
+			}
+		}
+	}
+}
+
+/* 配置屏幕 针对小屏幕*/
+@media screen and (max-width: 992px) {
+	.personalCenter-wrapper{
+		width: 100%;
+		margin-top: 0.4rem;
+		.blur-box{
+			width: 100%;
+		}
+		.personalCenter-content{
+			.cartSelect,.partingLine{display: none;}
+			.headPortrait{
+				position: relative;
+				width: 50%;
+				height: 162px;
+				padding-left: 0;
+				.headPortraitTitle{
+					position: absolute;
+					right: 20px;
+				}
+				>h2{
+					position: absolute;
+					right: 20px;
+					bottom:0;
+				}	
+			}
+			.personalInfo{
+				width: 50%;
+				padding-left: 20px;	
+			}
+		}
+	}
+	.personalInfo-wrapper{
+		width: 100%;
+		margin:20px auto 20px;
+		.asideInfo{
+			float: none;
+			width: 100%;
+			height: auto;
+			padding: 10px;
+			padding-top: 0;
+			border-radius: 6px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.3);
+			.infoContent{
+				overflow: hidden;
+				>li{
+					width: 25%;
+					float: left;
+					text-align: center;
+					margin-top:10px;
+					a{padding-left: 0;}
+				}
+			}
+		}
+		.rightInfo{
+			float: none;
+			width: 100%;
+			margin-top: 20px;
+			padding:10px;
+			.ticket-wrapper{
+				.ticket-title > li > a{
+					display: block;
+				}
+				.ticket-search{margin-top: 20px;}
+				.ticket-content-wrap{margin-top: 20px;}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.rightInfo .ticket-wrapper .ticket-search{
+		>li{
+			width: 100%;
+		}
+		>.n2{
+			margin-left: 0;
+			margin-top: 10px;
+		}
+		>.n3{
+			margin-left: 0;
+			padding-top: 10px;
+		}
+	}
+	.personalInfo-wrapper .asideInfo .infoContent li{
+		width: 33.33%;
+	}
+	.personalCenter-wrapper{
+		.personalCenter-content{
+			.headPortrait{
+				position: static;
+				width: auto;
+				padding-left: 0.2rem;
+				.headPortraitTitle{
+					position: relative;
+				}
+				>h2{
+					position: static;
+					left: 0.2rem;
+				}	
+			}
+			.personalInfo{
+				width: auto;
+				padding-left: 0.2rem;	
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 560px) {
+	.personalInfo-wrapper .asideInfo .infoContent li{
+		height: 0.3rem;
+		a{
+			font-size: 0.14rem;
+			height: 0.3rem;
+			line-height: 0.3rem;
+		}
+	}
+	.personalInfo-wrapper .rightInfo .ticket-wrapper .ticket-title > li > a{
+		font-size: 0.12rem;
+	}
+	.personalInfo-wrapper .rightInfo .ticket-wrapper .ticket-search{
+		margin-top: 0.1rem;
+	}
+	.rightInfo .ticket-wrapper .ticket-search > li p{
+		font-size: 0.12rem;
+		img{
+			width: 0.2rem;
+		}
+	}
+	.personalInfo-wrapper .rightInfo .ticket-wrapper .ticket-content-wrap{
+		margin-top: 0.1rem;
+	}
+	.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-price{
+		.t-changes,.t-details,.total-price{
+			float: none;
+		}
+		.total-price{margin-top: 0.1rem;}
+	}
+	.b-content-middle img{width: 100%;}
+	.personal-ticket,.ticket-order{
+		img{width: 100%;}
+	}
+}
+
+@media screen and (max-width: 460px) {
+	.personalCenter-wrapper .personalCenter-content .personalInfo{
+		display: none;
+	}
+	.personalCenter-wrapper .personalCenter-content .headPortrait{
+		width: 100%;
+		padding-left: 0;
+		.headPortraitTitle{
+			position: absolute;
+			left: 50%;
+			margin-left: -55px;
+		}
+		>h2{
+			position: absolute;
+			left: 50%;
+			bottom:36px;
+			margin-left: -55px;
+		}
+	}
+	.ticket-content-inner{
+		margin-bottom: 0.2rem;
+	}
+	.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-title{
+		height: auto;
+		padding:0 0.1rem;
+		.orderNum,.orderDate{float: none;}
+	}
+	.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-content{
+		margin-top: 0.1rem;
+		padding-bottom: 0.1rem;
+	}
+	.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-flight{
+		padding:0.1rem;
+	}
+	.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-content .b-content-left .from-time{
+		font-size: 0.14rem;
+	}
+	.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-content .b-content-right .to-time{
+		font-size: 0.14rem;
+	}
+	.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-content .b-content-left .from-code{
+		font-size: 0.26rem;
+	}
+	.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-content .b-content-right .to-code{
+		font-size: 0.26rem;
+	}
+	.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-price{
+		padding:0.1rem;
+		padding-left: 0;
+	}
+	.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-price .t-details{
+		margin-left: 0;
+	}
+}

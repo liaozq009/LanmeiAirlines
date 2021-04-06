@@ -1,0 +1,200 @@
+/* 定义变量 */
+.registerWrapper {
+  width: 340px;
+  margin: 50px auto;
+  text-align: center;
+}
+.registerWrapper > h2 {
+  font-weight: bold;
+  font-size: 24px;
+  color: #1f2c5c;
+}
+.registerWrapper > p {
+  font-size: 14px;
+  color: #808080;
+  margin-top: 10px;
+}
+.registerWrapper > p a {
+  color: #8ec060;
+}
+.registerWrapper > p a:hover {
+  color: #1f2c5c;
+}
+.registerWrapper .registerContent {
+  margin-top: 40px;
+}
+.registerWrapper .registerContent .registerInfo,
+.registerWrapper .registerContent .registerPassword,
+.registerWrapper .registerContent .repeatPassword {
+  position: relative;
+}
+.registerWrapper .registerContent .registerInfo img,
+.registerWrapper .registerContent .registerPassword img,
+.registerWrapper .registerContent .repeatPassword img {
+  position: absolute;
+  left: 20px;
+  top: 18px;
+}
+.registerWrapper .registerContent .registerInfo input,
+.registerWrapper .registerContent .registerPassword input,
+.registerWrapper .registerContent .repeatPassword input {
+  font-size: 14px;
+  color: #808080;
+  border: 1px solid #cccccc;
+  border-radius: 2px;
+  width: 338px;
+  height: 48px;
+  line-height: 48px;
+  padding-left: 60px;
+  padding-right: 10px;
+}
+.registerWrapper .registerContent .registerInfo input:focus,
+.registerWrapper .registerContent .registerPassword input:focus,
+.registerWrapper .registerContent .repeatPassword input:focus {
+  border-color: #8ec060;
+}
+.registerWrapper .registerContent .registerInfo p,
+.registerWrapper .registerContent .registerPassword p,
+.registerWrapper .registerContent .repeatPassword p {
+  color: #d0011b;
+  text-align: left;
+  padding: 8px 8px 10px 10px;
+  visibility: hidden;
+}
+.registerWrapper .registerContent .registerInfo .visible,
+.registerWrapper .registerContent .registerPassword .visible,
+.registerWrapper .registerContent .repeatPassword .visible {
+  visibility: visible;
+}
+.registerWrapper .registerContent .registerInfo .on_changes {
+  width: 338px;
+  position: absolute;
+  top: 40px;
+  left: 1px;
+  z-index: 99;
+  list-style: none;
+  background: #FFF;
+  border: 1px solid #8ec060;
+  display: none;
+  padding: 10px 0;
+}
+.registerWrapper .registerContent .registerInfo .on_changes li {
+  margin: 4px 0;
+  padding: 2px 0;
+  cursor: pointer;
+  color: #808080;
+}
+.registerWrapper .registerContent .registerInfo .on_changes li.active {
+  background: #1f2c5c;
+  color: #fff;
+}
+.registerWrapper .registerContent .registerPassword p {
+  color: #ccc;
+}
+.registerWrapper .registerContent .registerPassword p span {
+  margin-left: 5px;
+}
+.registerWrapper .registerContent .registerPassword p i {
+  display: inline-block;
+  width: 30px;
+  height: 4px;
+  margin-right: 4px;
+}
+.registerWrapper .registerContent .registerPassword p .i1 {
+  background: #1f2c5c;
+}
+.registerWrapper .registerContent .registerPassword p .i2 {
+  background: #004190;
+}
+.registerWrapper .registerContent .registerPassword p .i3 {
+  background: #006d94;
+}
+.registerWrapper .registerContent .registerPassword p .i4 {
+  background: #00908c;
+}
+.registerWrapper .registerContent .registerPassword p .i5 {
+  background: #4aa374;
+}
+.registerWrapper .registerContent .registerPassword p .i6 {
+  background: #8ec060;
+}
+.registerWrapper .registerContent .repeatPassword span {
+  display: inline-block;
+  font-size: 14px;
+  color: #808080;
+  padding: 0;
+  text-align: left;
+}
+.registerWrapper .registerContent .agree {
+  margin-top: 30px;
+  margin-bottom: 40px;
+  overflow: hidden;
+}
+.registerWrapper .registerContent .agree span {
+  float: left;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #cccccc;
+  border-radius: 2px;
+  margin-right: 10px;
+  margin-top: 4px;
+  cursor: pointer;
+}
+.registerWrapper .registerContent .agree .agreeConditions {
+  background: #8ec060;
+}
+.registerWrapper .registerContent .agree p {
+  float: left;
+  width: 314px;
+  display: inline-block;
+  font-size: 14px;
+  text-align: left;
+  color: #808080;
+  line-height: 25px;
+}
+.registerWrapper .registerContent .agree p a {
+  font-size: 14px;
+  color: #4aa374;
+}
+.registerWrapper .registerContent .agree p a:hover {
+  color: #1f2c5c;
+}
+.registerWrapper .registerContent .registerBtn button {
+  border: none;
+  outline: none;
+  background: #8ec060;
+  border-radius: 2px;
+  width: 340px;
+  height: 40px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+}
+.registerWrapper .registerContent .registerBtn button:hover {
+  background: #1f2c5c;
+}
+/* 配置屏幕 针对小屏幕*/
+html {
+  font-size: 100px;
+}
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 50px;
+  }
+}
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 64px;
+  }
+}
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 82px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 100px;
+  }
+}

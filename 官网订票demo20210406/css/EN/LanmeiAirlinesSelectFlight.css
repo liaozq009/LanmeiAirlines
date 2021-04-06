@@ -1,0 +1,542 @@
+/* 订票流程 */
+.buyTicketList .SelectFlight {
+  color: #1f2c5c;
+}
+/* 特价机票 */
+.flightPriceWrapper {
+  width: 960px;
+  padding: 0 10px;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+.flightPriceWrapper > div {
+  position: relative;
+  display: inline-block;
+  width: 300px;
+  height: 140px;
+  margin-bottom: 20px;
+  border: 1px solid #cccccc;
+  border-left: 6px solid #00908c;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.flightPriceWrapper > div > h2 {
+  position: relative;
+  height: 70px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #1f2c5c;
+  padding-top: 22px;
+  padding-left: 14px;
+}
+.flightPriceWrapper > div > h2 img {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+.flightPriceWrapper > div > h2 .img1 {
+  display: none;
+}
+.flightPriceWrapper > div .economyLine {
+  position: absolute;
+  top: 70px;
+  left: 20px;
+  background: #f2f2f2;
+  width: 260px;
+  height: 1px;
+}
+.flightPriceWrapper > div .economyPriceFooter {
+  height: 68px;
+  background: url(../../images/EN/flightPriceBg.png) no-repeat center bottom;
+}
+.flightPriceWrapper > div .economyPriceFooter .leftInfo {
+  float: left;
+  height: 100%;
+  padding-left: 14px;
+  padding-top: 16px;
+}
+.flightPriceWrapper > div .economyPriceFooter .leftInfo p {
+  display: inline-block;
+  opacity: 0.5;
+  color: #1f2c5c;
+}
+.flightPriceWrapper > div .economyPriceFooter .leftInfo h2 {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 36px;
+  color: #8ec060;
+}
+.flightPriceWrapper > div .economyPriceFooter .rightInfo {
+  float: right;
+  opacity: 0.5;
+  color: #1f2c5c;
+  padding-top: 20px;
+  padding-right: 20px;
+}
+.flightPriceWrapper .economyPrice2 {
+  margin: 0 16px;
+  border-left-color: #1f2c5c;
+}
+.flightPriceWrapper .economyPrice3 {
+  border-left-color: #8ec060;
+}
+.flightPriceWrapper .economyPrice5 {
+  margin: 0 16px;
+}
+.flightPriceWrapper .economyPriceActive {
+  border-top-color: #8ec060;
+  border-right-color: #8ec060;
+  border-bottom-color: #8ec060;
+  border-radius: 2px;
+}
+.flightPriceWrapper .priceTipInfo {
+  display: none;
+  position: absolute;
+  right: -350px;
+  top: 0px;
+  z-index: 999;
+  background: #ffffff;
+  border: 1px solid #cccccc;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  width: 350px;
+  height: 482px;
+  cursor: default;
+}
+.flightPriceWrapper .priceTipInfo .priceTipInfoTitle {
+  background: #00908c;
+  width: 350px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  font-size: 14px;
+  color: #ffffff;
+}
+.flightPriceWrapper .priceTipInfo .priceTipInfoContent {
+  padding: 20px;
+}
+.flightPriceWrapper .priceTipInfo .priceTipInfoContent > div {
+  padding-bottom: 20px;
+}
+.flightPriceWrapper .priceTipInfo .priceTipInfoContent > div h2 {
+  font-weight: bold;
+  font-size: 14px;
+  color: #8ec060;
+  margin-bottom: 10px;
+}
+.flightPriceWrapper .priceTipInfo .priceTipInfoContent > div p {
+  color: #808080;
+}
+.flightPriceWrapper .priceTipInfo .priceTipInfoContent .priceTipInfoContent2,
+.flightPriceWrapper .priceTipInfo .priceTipInfoContent .priceTipInfoContent3,
+.flightPriceWrapper .priceTipInfo .priceTipInfoContent .priceTipInfoContent4 {
+  border-top: 1px dashed #ccc;
+  padding-top: 20px;
+}
+.flightPriceWrapper .priceTipInfo2 .priceTipInfoTitle {
+  background: #1f2c5c;
+}
+.flightPriceWrapper .priceTipInfo3 .priceTipInfoTitle {
+  background: #8ec060;
+}
+/* 机票详情 */
+.flightPriceDetailWrapper {
+  width: 960px;
+  overflow: hidden;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+.flightPriceDetailWrapper .flightPriceTitle {
+  height: 36px;
+  line-height: 36px;
+  margin-bottom: 30px;
+}
+.flightPriceDetailWrapper .flightPriceTitle > h2 {
+  float: left;
+  font-weight: bold;
+  font-size: 20px;
+  color: #121c3e;
+  text-align: left;
+}
+.flightPriceDetailWrapper .flightPriceTitle > h2 img {
+  margin-right: 20px;
+}
+.flightPriceDetailWrapper .flightPriceTitle > h2 p {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 18px;
+  color: #00908c;
+}
+.flightPriceDetailWrapper .flightPriceTitle > h2 > span {
+  display: inline-block;
+  width: 124px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #121c3e;
+}
+.flightPriceDetailWrapper .flightPriceMain .flightSelectCommon {
+  border: 1px solid #ccc;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+.flightPriceDetailWrapper .flightPriceMain .flightSelectCommon .flightBg {
+  background: url(../../images/EN/travelTimeBg.png) no-repeat;
+}
+.flightPriceDetailWrapper .flightPriceMain .flightSelectCommon .flightBg .flightSelectTitle {
+  height: 30px;
+  line-height: 30px;
+  padding: 0 30px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #8ec060;
+  background: rgba(31, 44, 92, 0.8);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#C81F2C5C, 5C, endColorstr=#C81F2C5C, 5C);
+}
+.flightPriceDetailWrapper .flightPriceMain .flightSelectCommon .flightBg .flightSelectTitle span {
+  color: #ffffff;
+}
+.flightPriceDetailWrapper .flightPriceMain .flightSelectCommon .flightListCommon {
+  height: 182px;
+  padding: 10px 30px 20px 30px;
+}
+.flightPriceDetailWrapper .flightPriceMain .flightSelectCommon .flightListCommon .flightListCommonLeft,
+.flightPriceDetailWrapper .flightPriceMain .flightSelectCommon .flightListCommon .flightListCommonRight {
+  width: 50%;
+  position: relative;
+  float: left;
+}
+.flightPriceDetailWrapper .flightPriceMain .flightSelectCommon .flightListCommon .flightListCommonLeft > .nth-child1,
+.flightPriceDetailWrapper .flightPriceMain .flightSelectCommon .flightListCommon .flightListCommonRight > .nth-child1 {
+  color: #8ec060;
+}
+.flightPriceDetailWrapper .flightPriceMain .flightSelectCommon .flightListCommon .flightListCommonLeft > .nth-child2,
+.flightPriceDetailWrapper .flightPriceMain .flightSelectCommon .flightListCommon .flightListCommonRight > .nth-child2 {
+  width: 100%;
+  height: 90px;
+  padding-top: 20px;
+  text-align: center;
+}
+.flightPriceDetailWrapper .flightPriceMain .flightSelectCommon .flightListCommon .flightListCommonLeft > .nth-child2 > h2,
+.flightPriceDetailWrapper .flightPriceMain .flightSelectCommon .flightListCommon .flightListCommonRight > .nth-child2 > h2 {
+  font-weight: bold;
+  font-size: 18px;
+  color: #1f2c5c;
+}
+.flightPriceDetailWrapper .flightPriceMain .flightSelectCommon .flightListCommon .flightListCommonLeft > .nth-child2 .p1,
+.flightPriceDetailWrapper .flightPriceMain .flightSelectCommon .flightListCommon .flightListCommonRight > .nth-child2 .p1 {
+  font-size: 14px;
+  color: #1f2c5c;
+}
+.flightPriceDetailWrapper .flightPriceMain .flightSelectCommon .flightListCommon .flightListCommonLeft > .nth-child2 .p2,
+.flightPriceDetailWrapper .flightPriceMain .flightSelectCommon .flightListCommon .flightListCommonRight > .nth-child2 .p2 {
+  font-size: 14px;
+  color: #808080;
+  margin-top: 3px;
+}
+.flightPriceDetailWrapper .flightPriceMain .flightSelectCommon .flightListCommon .flightListCommonLeft > .nth-child3 .p1,
+.flightPriceDetailWrapper .flightPriceMain .flightSelectCommon .flightListCommon .flightListCommonRight > .nth-child3 .p1,
+.flightPriceDetailWrapper .flightPriceMain .flightSelectCommon .flightListCommon .flightListCommonLeft > .nth-child3 .p2,
+.flightPriceDetailWrapper .flightPriceMain .flightSelectCommon .flightListCommon .flightListCommonRight > .nth-child3 .p2 {
+  font-family: Comfortaa-Bold;
+  font-size: 14px;
+  color: #1f2c5c;
+  margin-bottom: 10px;
+}
+.flightPriceDetailWrapper .flightPriceMain .flightSelectCommon .flightListCommon .flightListCommonLeft > .nth-child3 .p1 span,
+.flightPriceDetailWrapper .flightPriceMain .flightSelectCommon .flightListCommon .flightListCommonRight > .nth-child3 .p1 span,
+.flightPriceDetailWrapper .flightPriceMain .flightSelectCommon .flightListCommon .flightListCommonLeft > .nth-child3 .p2 span,
+.flightPriceDetailWrapper .flightPriceMain .flightSelectCommon .flightListCommon .flightListCommonRight > .nth-child3 .p2 span {
+  font-family: Comfortaa;
+  color: #808080;
+}
+.flightPriceDetailWrapper .flightPriceMain .flightSelectCommon .flightListCommon .flightListCommonLeft > .nth-child4,
+.flightPriceDetailWrapper .flightPriceMain .flightSelectCommon .flightListCommon .flightListCommonRight > .nth-child4 {
+  position: absolute;
+  top: 55px;
+  right: 0px;
+}
+.flightPriceDetailWrapper .flightPriceMain .flightSelectCommon .flightListCommon .flightListCommonLeft > .nth-child4 p,
+.flightPriceDetailWrapper .flightPriceMain .flightSelectCommon .flightListCommon .flightListCommonRight > .nth-child4 p {
+  font-size: 14px;
+  color: #cccccc;
+}
+.flightPriceDetailWrapper .flightPriceMain .flightSelectCommon .flightListCommon .flightListCommonRight > .nth-child1 {
+  height: 20px;
+  text-align: right;
+  font-size: 14px;
+  color: #808080;
+}
+.flightPriceDetailWrapper .flightPriceMain .flightSelectCommon .flightListCommon .flightListCommonRight > .nth-child1 span {
+  color: #1f2c5c;
+}
+.flightPriceDetailWrapper .flightPriceMain .flightSelectCommon .flightListCommon .flightListCommonRight > .nth-child3 {
+  text-align: right;
+}
+.flightPriceDetailWrapper .flightPriceMain .flightSelectCommon .flightListCommon .flightListCommonRight > .nth-child3 .p1 span {
+  color: #00908c;
+}
+.flightPriceDetailWrapper .flightPriceMain .flightSelectCommon .flightListLine {
+  position: relative;
+  width: 900px;
+  margin: 0 auto;
+  border: none;
+}
+.flightPriceDetailWrapper .flightPriceMain .flightSelectCommon .flightListLine p {
+  position: absolute;
+  top: -2px;
+  left: 380px;
+  width: 130px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 14px;
+  text-align: center;
+  border: 1px solid #8ec060;
+  color: #8ec060;
+  z-index: 99;
+  background: #fff;
+}
+.flightPriceDetailWrapper .flightPriceMain .flightSelectCommon .flightListLine p span {
+  color: #808080;
+}
+.flightPriceDetailWrapper .flightPriceMain .flightSelectCommon .flightListLine p span b {
+  font-weight: 100;
+}
+.flightPriceDetailWrapper .flightPriceMain .flightActive {
+  border-color: #8ec060;
+}
+.flightPriceDetailWrapper .flightPriceMain .flightActive .flightBg .flightSelectTitle {
+  background: rgba(142, 192, 96, 0.8);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#C88EC060, 60, endColorstr=#C88EC060, 60);
+  color: #1f2c5c;
+}
+.flightPriceDetailWrapper .loadFlightMore {
+  position: relative;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  margin-bottom: 50px;
+  margin-top: -10px;
+}
+.flightPriceDetailWrapper .loadFlightMore img {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+}
+.flightPriceDetailWrapper .loadFlightMoreActive {
+  background-color: #f2f2f2;
+  border: none;
+}
+/* 机票规则详情 */
+.flightRuleDetail {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.flightRuleDetail > p {
+  font-family: Comfortaa-Bold;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.flightRuleDetail > p a {
+  font-size: 14px;
+  color: #00908c;
+}
+.flightRuleDetail > h2 {
+  font-weight: bold;
+  font-size: 18px;
+  color: #1f2c5c;
+  margin-bottom: 8px;
+}
+.flightRuleDetail .ruleContent .ruleContent1 {
+  margin-bottom: 30px;
+}
+.flightRuleDetail .ruleContent h3 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #808080;
+}
+.flightRuleDetail .ruleContent p {
+  font-size: 14px;
+  color: #808080;
+}
+.flightRuleDetail .ruleContent span {
+  font-size: 14px;
+  font-family: Comfortaa;
+}
+.flightRuleDetail .nextBtn {
+  overflow: hidden;
+  margin-bottom: 212px;
+  margin-top: 50px;
+}
+.flightRuleDetail .nextBtn a {
+  position: relative;
+  float: right;
+  display: inline-block;
+  background: #8ec060;
+  border-radius: 2px;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+}
+.flightRuleDetail .nextBtn a img {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+/* 价格合计 */
+.flightPriceTotleWrapper {
+  position: fixed;
+  bottom: 0;
+  z-index: 999;
+  width: 100%;
+  min-height: 142px;
+  background: #ffffff;
+  padding-bottom: 10px;
+  box-shadow: 0 -4px 20px 0 rgba(0, 0, 0, 0.16);
+}
+.flightPriceTotleWrapper .flightPriceTotle {
+  width: 960px;
+  margin: 0 auto;
+}
+.flightPriceTotleWrapper .flightPriceTotle > ul {
+  overflow: hidden;
+}
+.flightPriceTotleWrapper .flightPriceTotle > ul li {
+  float: left;
+  font-size: 14px;
+  color: #808080;
+  width: 16%;
+  text-align: center;
+}
+.flightPriceTotleWrapper .flightPriceTotle .priceTitle {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.flightPriceTotleWrapper .flightPriceTotle .priceContent {
+  padding-top: 10px;
+}
+.flightPriceTotleWrapper .flightPriceTotle .priceContent li {
+  font-weight: bold;
+  color: #1f2c5c;
+}
+.flightPriceTotleWrapper .flightPriceTotle .priceTotleBox {
+  height: 30px;
+  position: relative;
+  margin-top: 15px;
+}
+.flightPriceTotleWrapper .flightPriceTotle .priceTotleBox .priceTotle,
+.flightPriceTotleWrapper .flightPriceTotle .priceTotleBox .p1,
+.flightPriceTotleWrapper .flightPriceTotle .priceTotleBox .p2 {
+  float: left;
+  font-size: 14px;
+  color: #1f2c5c;
+}
+.flightPriceTotleWrapper .flightPriceTotle .priceTotleBox .priceTotle {
+  font-size: 14px;
+  color: #1f2c5c;
+}
+.flightPriceTotleWrapper .flightPriceTotle .priceTotleBox .priceTotle > h2 {
+  display: inline-block;
+  font-family: Comfortaa-Bold;
+  font-size: 18px;
+  color: #8ec060;
+  margin-left: 20px;
+}
+.flightPriceTotleWrapper .flightPriceTotle .priceTotleBox .p1 {
+  margin-left: 30px;
+}
+.flightPriceTotleWrapper .flightPriceTotle .priceTotleBox .p2 {
+  margin-left: 30px;
+}
+.flightPriceTotleWrapper .flightPriceTotle .priceTotleBox .p2 span {
+  color: #00908c;
+}
+.flightPriceTotleWrapper .flightPriceTotle .priceTotleBox .priceNext {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+.flightPriceTotleWrapper .flightPriceTotle .priceTotleBox .priceNext a {
+  display: inline-block;
+  background: #8ec060;
+  border-radius: 2px;
+  width: 140px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+}
+.flightPriceTotleWrapper .flightPriceTotle .priceTotleBox .priceNext a img {
+  vertical-align: text-bottom;
+}
+.flightPriceTotleWrapper .flightPriceTotle .priceTotleBox .priceNext a:hover {
+  background: #1f2c5c;
+}
+/* 修改公共样式 */
+.selectAirCommon span {
+  font-size: 14px !important;
+}
+.local_timeSelect > div p img {
+  margin-right: 10px !important;
+  vertical-align: bottom !important;
+}
+.CabinSelect p img {
+  margin-right: 10px !important;
+  vertical-align: bottom !important;
+}
+.bottomLine {
+  top: 70px !important;
+}
+.selectAir .fromcityMenu,
+.selectAir .tocityMenu,
+.selectAir .CabinMenu {
+  top: 70px !important;
+}
+.calendar {
+  position: relative;
+}
+/* 配置屏幕 针对小屏幕*/
+html {
+  font-size: 100px;
+}
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 50px;
+  }
+}
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 64px;
+  }
+}
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 82px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 100px;
+  }
+}
+@media (max-width: 980px), (max-device-width: 980px) {
+  .s-type {
+    display: inline-block;
+    width: 2.5rem;
+    height: 1.1rem;
+    line-height: 1.1rem;
+    color: black;
+  }
+}

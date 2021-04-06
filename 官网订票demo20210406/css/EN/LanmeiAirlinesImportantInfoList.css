@@ -1,0 +1,81 @@
+.importantInfoList {
+  width: 960px;
+  margin: 50px auto;
+}
+.importantInfoList .infoListCommon > span {
+  font-size: 14px;
+  color: #808080;
+}
+.importantInfoList .infoListCommon > h2 {
+  margin-top: 20px;
+}
+.importantInfoList .infoListCommon > h2 a {
+  font-size: 24px;
+  color: #1f2c5c;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+.importantInfoList .infoListCommon > h2 a:hover {
+  color: #8dbf60;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+.importantInfoList .infoListCommon > p {
+  font-size: 16px;
+  color: #ccc;
+  line-height: 26px;
+  margin-top: 20px;
+  text-indent: 2em;
+}
+.importantInfoList .infoListCommon > p a {
+  font-size: 16px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+.importantInfoList .infoListCommon > p a:hover {
+  color: #8dbf60;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+.importantInfoList .infoListCommon > div {
+  margin: 30px auto;
+  line-height: 26px;
+  text-indent: 2em;
+}
+.importantInfoList .infoListCommon > div a {
+  font-size: 16px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+.importantInfoList .infoListCommon > div a:hover {
+  color: #8dbf60;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+/* 配置屏幕 针对小屏幕*/
+@media screen and (max-width: 992px) {
+  .importantInfoList {
+    width: 100%;
+    padding: 0 0.15rem;
+    margin: 0.5rem auto 0.2rem;
+  }
+  .importantInfoList .infoListCommon > span {
+    font-size: 0.14rem;
+  }
+  .importantInfoList .infoListCommon > h2 {
+    margin-top: 0.1rem;
+  }
+  .importantInfoList .infoListCommon > h2 a {
+    font-size: 0.16rem;
+  }
+  .importantInfoList .infoListCommon > p {
+    font-size: 0.12rem;
+    line-height: 0.16rem;
+  }
+  .importantInfoList .infoListCommon > div {
+    margin: 0.1rem 0;
+  }
+  .importantInfoList .infoListCommon > div img {
+    width: 100%;
+  }
+}

@@ -1,0 +1,254 @@
+
+/* 运用表格选择时间 */
+.timeTableSelectWrapper{
+	width: 960px;
+	height: 1188px;
+	overflow:hidden;
+	padding:0 10px;
+	margin:0 auto;
+	margin-top: 10px;
+	.timeTableSelect{
+		width: 940px;
+		height: 907px;
+		padding-top: 10px;
+		padding-left: 10px;
+		background: #1f2c5c;
+		table{
+			width: 100%;
+			height: 100%;
+			background: #fff;
+			border-color:#ccc;
+			border-left:none;
+			border-top:none;
+			tbody{
+				tr{
+					td{
+						width: 12.5%;
+						height: 12.5%;
+						color:#999;
+						border-color:#ddd;
+						text-align: left;
+						padding-left: 16px;
+						cursor: pointer;
+						font-size:14px;
+						span{
+							color:#1f2c5c;
+							opacity:0.49;
+						}
+						h2,p{
+							font-weight:bold;
+							font-size:20px;
+							color:#1f2c5c;
+						}
+						p{
+							// display: inline-block;
+						}
+					}
+					[data-num='td-nth-child1']{
+						border-right:1px solid;
+					}
+					.tableLogo{
+						background: #1f2c5c !important;
+						border-left-color: #1f2c5c !important;
+						border-top-color: #1f2c5c !important;
+						padding-left: 4px;
+					}
+					.saleOver{
+						background: #ddd;
+						cursor: not-allowed;
+					}
+					.tableTitle{
+						background: #fff;
+						cursor: default;
+					}
+					.bgHover{
+						background:#DDECCF;
+					}
+					.clickHover{
+						background: #8EC060;
+						span,p,h2{
+							color: #fff;
+							opacity: 1;
+						}
+					}
+					.borderHover{
+						border:1px solid #8EC060;
+					}
+				}
+				[data-num='tr-nth-child4']{
+					[data-num='td-nth-child3']{
+						p{
+							color:#00908c;
+						}
+					}
+				}
+				[data-num='tr-nth-child1']{
+					border:1px solid;
+				}
+			}
+		}
+		.colorInstructions{
+			width: 960px;
+			padding:20px;
+			padding-left: 10px;
+			overflow:hidden;
+			h2{
+				float: left;
+				font-weight:bold;
+				font-size:18px;
+				color:#1f2c5c;
+				margin-right: 20px;
+			}
+			p{
+				float: left;
+				i{
+					display: inline-block;
+					background:#8ec060;
+					border-radius:2px;
+					width:20px;
+					height:20px;
+					margin-right: 10px;
+					vertical-align: top;
+				}
+				span{
+					font-size:14px;
+					color:#1f2c5c;
+				}
+			}
+			.nth-child2{
+				margin-left: 30px;
+				margin-right: 30px;
+				i{background: #00908c;}
+			}
+		}
+		.PayAttention{
+			width: 960px;
+			padding:0 20px;
+			padding-left: 10px;
+			overflow:hidden;
+			h2{
+				font-weight:bold;
+				font-size:18px;
+				color:#1f2c5c;
+			}
+			p{
+				color:#808080;
+				margin-top: 8px;
+			}
+		}
+		.nextBtn{
+			overflow:hidden;
+			margin-bottom: 70px;
+			margin-top: 50px;
+			a{
+				position: relative;
+				float: right;
+				display: inline-block;
+				background:#8ec060;
+				border-radius:2px;
+				width:200px;
+				height:40px;
+				line-height: 40px;
+				font-weight:bold;
+				font-size:20px;
+				color:#fff;
+				text-align: center;
+				img{
+					position: absolute;
+					right: 20px;
+					top: 10px;
+				}
+			}
+		}
+	}
+}
+
+.no-flight-info{
+	position: relative;
+	width: 960px;
+	margin:30px auto 70px;
+	text-align: center;
+	p{
+		position: absolute;
+		bottom: 0px;
+		left: 50%;
+		margin-left: -325px;
+		width: 650px;
+		height: 60px;
+		font-size:18px;
+		color:#ccc;
+	}
+}
+
+
+/* 修改公共样式 */
+.selectAirCommon{
+	span{font-size:14px !important;}
+}
+.local_timeSelect{
+	>div{
+		p{
+			img{
+				margin-right: 10px !important;
+				vertical-align: bottom !important;
+			}
+		}
+	}
+}
+.CabinSelect{
+	p{
+		img{
+			margin-right: 10px !important;
+			vertical-align: bottom !important;
+		}
+	}
+}
+
+.bottomLine{
+	top:70px !important;
+}
+
+.selectAir .fromcityMenu, .selectAir .tocityMenu, .selectAir .CabinMenu{
+	top: 70px !important;
+}
+
+.calendar{
+	position:relative;
+}
+
+
+/* 配置屏幕 针对小屏幕*/
+html {
+	font-size: 100px;
+}
+@media screen and (max-width: 768px) {
+	html {
+		font-size: 50px;
+	}
+}
+@media screen and (min-width: 768px) {
+	html {
+		font-size: 64px;
+	}
+}
+@media screen and (min-width: 992px) {
+	html {
+		font-size: 82px;
+	}
+}
+@media screen and (min-width: 1200px) {
+	html {
+		font-size: 100px;
+	}
+}
+
+@media (max-width: 980px), (max-device-width: 980px){
+	.s-type {
+		display: inline-block;
+		width: 2.5rem;
+		height: 1.1rem;
+		line-height: 1.1rem;
+		color: black;
+	}
+}
+

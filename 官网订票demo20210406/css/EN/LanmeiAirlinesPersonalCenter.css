@@ -1,0 +1,738 @@
+/* 定义变量 */
+.blur {
+  -webkit-filter: blur(10px);
+  /* Chrome, Opera */
+  -moz-filter: blur(10px);
+  -ms-filter: blur(10px);
+  filter: blur(10px);
+  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10, MakeShadow=false);
+  /* IE6~IE9 */
+}
+.personalCenter-wrapper {
+  position: relative;
+  width: 940px;
+  height: 200px;
+  margin: 0 auto;
+}
+.personalCenter-wrapper > .blur-box {
+  position: absolute;
+  width: 940px;
+  height: 200px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+.personalCenter-wrapper .personalCenter-content {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.09);
+}
+.personalCenter-wrapper .personalCenter-content .headPortrait {
+  float: left;
+  padding-left: 75px;
+  padding-top: 28px;
+}
+.personalCenter-wrapper .personalCenter-content .headPortrait .headPortraitTitle {
+  position: relative;
+  width: 110px;
+  height: 110px;
+  margin-bottom: 10px;
+}
+.personalCenter-wrapper .personalCenter-content .headPortrait .headPortraitTitle .headSelect {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+}
+.personalCenter-wrapper .personalCenter-content .headPortrait .headPortraitTitle .sexSelect {
+  position: absolute;
+  bottom: 8px;
+  right: 14px;
+}
+.personalCenter-wrapper .personalCenter-content .headPortrait > h2 {
+  width: 110px;
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.16);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.personalCenter-wrapper .personalCenter-content .personalInfo {
+  float: left;
+  padding-left: 76px;
+  padding-top: 42px;
+}
+.personalCenter-wrapper .personalCenter-content .personalInfo .DataIntegrity {
+  width: 240px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.16);
+}
+.personalCenter-wrapper .personalCenter-content .personalInfo .DataIntegrity .progressBar {
+  display: inline-block;
+  position: relative;
+  top: -8px;
+  left: 6px;
+}
+.personalCenter-wrapper .personalCenter-content .personalInfo .DataIntegrity .progressBar .progress_back {
+  position: absolute;
+  left: 0;
+  background: #f2f2f2;
+  border-radius: 100px;
+  width: 102px;
+  height: 8px;
+}
+.personalCenter-wrapper .personalCenter-content .personalInfo .DataIntegrity .progressBar .progress {
+  position: absolute;
+  left: 0;
+  top: 1px;
+  background: #8ec060;
+  border-radius: 100px;
+  width: 50px;
+  height: 6px;
+}
+.personalCenter-wrapper .personalCenter-content .personalInfo .DataIntegrity .personalEdit {
+  position: relative;
+  left: 106px;
+  top: -2px;
+  cursor: pointer;
+}
+.personalCenter-wrapper .personalCenter-content .personalInfo > p {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.16);
+}
+.personalCenter-wrapper .personalCenter-content .partingLine {
+  float: left;
+  background: #ffffff;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.16);
+  border-radius: 4px;
+  width: 2px;
+  height: 100px;
+  margin: 50px 35px 50px 60px;
+}
+.personalCenter-wrapper .personalCenter-content .cartSelect {
+  margin-top: 18px;
+}
+.personalCenter-wrapper .personalCenter-content .personalSetting {
+  position: absolute;
+  right: 0;
+  top: 0px;
+  cursor: pointer;
+}
+.personalInfo-wrapper {
+  width: 960px;
+  margin: 30px auto 30px;
+  padding: 0 10px;
+  overflow: hidden;
+}
+.personalInfo-wrapper .asideInfo {
+  float: left;
+  background: #ffffff;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.16);
+  border-radius: 2px;
+  width: 220px;
+  height: 462px;
+  text-align: center;
+}
+.personalInfo-wrapper .asideInfo .infoContent > li {
+  position: relative;
+  width: 220px;
+  height: 50px;
+  text-align: left;
+}
+.personalInfo-wrapper .asideInfo .infoContent > li a {
+  display: inline-block;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  padding-left: 30px;
+  font-size: 16px;
+  color: #1f2c5c;
+}
+.personalInfo-wrapper .asideInfo .infoContent > li .travle-menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  width: 100%;
+}
+.personalInfo-wrapper .asideInfo .infoContent > li .travle-menu > li a {
+  font-size: 14px;
+}
+.personalInfo-wrapper .asideInfo .infoContent > li .travle-menu > li a:hover {
+  color: #8ec060;
+}
+.personalInfo-wrapper .asideInfo .infoContent > li .travle-menu > li .active {
+  color: #8ec060;
+}
+.personalInfo-wrapper .asideInfo .infoContent > .active > a {
+  background: #8ec060;
+  color: #fff;
+}
+.modal .modal-dialog .modal-content .modal-body form .form-group {
+  font-size: 14px;
+  color: #808080;
+  font-weight: bold;
+  margin-left: 28px;
+  margin-bottom: 20px;
+}
+.modal .modal-dialog .modal-content .modal-body form .form-group > label {
+  width: 76px;
+  margin-right: 4px;
+  text-align: left;
+}
+.modal .modal-dialog .modal-content .modal-body form .form-group input {
+  width: 262px;
+}
+.modal .modal-dialog .modal-content .modal-body form .form-group .radio-inline {
+  margin-left: 20px;
+  font-size: 14px;
+  color: #808080;
+}
+.modal .modal-dialog .modal-content .modal-body form .form-group .radio-inline input {
+  width: 20px;
+  height: 20px;
+  margin-left: -26px;
+}
+.modal .modal-dialog .modal-content .modal-body form .form-group .menu-com {
+  display: none;
+  position: absolute;
+  top: 49px;
+  left: 84px;
+  width: 262px;
+  background: #fff;
+  border: 1px solid #8ec060;
+  z-index: 999;
+  border-top: none;
+  height: 220px;
+  overflow-y: scroll;
+}
+.modal .modal-dialog .modal-content .modal-body form .form-group .menu-com li {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  overflow: hidden;
+}
+.modal .modal-dialog .modal-content .modal-body form .form-group .menu-com li a {
+  display: block;
+}
+.modal .modal-dialog .modal-content .modal-body form .form-group .menu-com li a:hover {
+  color: #fff;
+  background: #8ec060;
+}
+.modal .modal-dialog .modal-content .modal-body form .form-birth > div {
+  width: 398px !important;
+  height: 50px !important;
+}
+.modal .modal-dialog .modal-content .modal-body form .form-birth > div input {
+  left: 29px;
+}
+.modal .modal-dialog .modal-content .modal-body form .form-head button {
+  width: 342px;
+  background: #f2f2f2;
+  color: #808080;
+  outline: none;
+  opacity: 0.8;
+  transition: all 0.6s;
+  -webkit-transition: all 0.6s;
+}
+.modal .modal-dialog .modal-content .modal-body form .form-head button:hover {
+  transition: all 0.6s;
+  -webkit-transition: all 0.6s;
+  background: #ddd;
+}
+.modal .modal-dialog .modal-content .modal-body form .form-sex {
+  width: 342px;
+  text-align: center;
+}
+.modal .modal-dialog .modal-content .modal-body form .form-submit button {
+  width: 342px;
+  background: #8ec060;
+  color: #fff;
+  font-size: 16px;
+  transition: all 0.6s;
+  -webkit-transition: all 0.6s;
+}
+.modal .modal-dialog .modal-content .modal-body form .form-submit button:hover {
+  background: #1f2c5c;
+  transition: all 0.6s;
+  -webkit-transition: all 0.6s;
+}
+.rightInfo {
+  width: 720px;
+  min-height: 100px;
+  padding: 10px;
+  padding-left: 20px;
+  float: right;
+}
+.rightInfo .ticket-wrapper .ticket-title {
+  overflow: hidden;
+}
+.rightInfo .ticket-wrapper .ticket-title > li {
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+.rightInfo .ticket-wrapper .ticket-title > li > a {
+  font-size: 18px;
+  color: #131c3e;
+}
+.rightInfo .ticket-wrapper .ticket-title > li > img {
+  margin-top: 10px;
+}
+.rightInfo .ticket-wrapper .ticket-title .ticket-order img {
+  display: none;
+}
+.rightInfo .ticket-wrapper #ticketOrder {
+  display: none;
+}
+.rightInfo .ticket-wrapper .ticket-search {
+  margin-top: 30px;
+  overflow: hidden;
+}
+.rightInfo .ticket-wrapper .ticket-search > li {
+  float: left;
+  width: 260px;
+}
+.rightInfo .ticket-wrapper .ticket-search > li p {
+  font-size: 14px;
+  font-weight: bold;
+  color: #8ec060;
+}
+.rightInfo .ticket-wrapper .ticket-search > li p img {
+  margin-right: 10px;
+}
+.rightInfo .ticket-wrapper .ticket-search > li input {
+  width: 100%;
+  height: 40px;
+  margin-top: 10px;
+  padding: 0 20px;
+  font-size: 14px;
+  color: #131c3e;
+  border: 1px solid #cccccc;
+  border-radius: 2px;
+}
+.rightInfo .ticket-wrapper .ticket-search .n2 {
+  margin-left: 40px;
+}
+.rightInfo .ticket-wrapper .ticket-search .n3 {
+  width: 90px;
+  margin-left: 40px;
+  padding-top: 32px;
+}
+.rightInfo .ticket-wrapper .ticket-search .n3 button {
+  width: 90px;
+  height: 40px;
+  color: #fff;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  background: #8ec060;
+  border-radius: 2px;
+}
+.rightInfo .ticket-wrapper .ticket-content-wrap {
+  margin-top: 30px;
+}
+.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-title {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 20px;
+  background: #f2f2f2;
+}
+.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-title .orderNum {
+  float: left;
+}
+.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-title .orderDate {
+  float: right;
+}
+.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-content {
+  overflow: hidden;
+  text-align: center;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed #ccc;
+}
+.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-content > div {
+  float: left;
+}
+.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-content .b-content-left {
+  width: 32%;
+}
+.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-content .b-content-left .from-time {
+  font-size: 18px;
+  font-weight: bold;
+}
+.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-content .b-content-left .from-code {
+  font-size: 36px;
+  font-weight: bold;
+}
+.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-content .b-content-left .from-local {
+  font-size: 13px;
+}
+.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-content .b-content-middle {
+  width: 34%;
+  margin-top: 14px;
+}
+.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-content .b-content-right {
+  width: 32%;
+}
+.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-content .b-content-right .to-time {
+  font-size: 18px;
+  font-weight: bold;
+}
+.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-content .b-content-right .to-code {
+  font-size: 36px;
+  font-weight: bold;
+}
+.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-content .b-content-right .to-local {
+  font-size: 13px;
+}
+.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-flight {
+  padding: 20px;
+  border-bottom: 1px dashed #ccc;
+}
+.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-flight > div {
+  overflow: hidden;
+}
+.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-flight > div .p1 {
+  float: left;
+}
+.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-flight > div .p2 {
+  float: right;
+}
+.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-flight .t-number {
+  margin-top: 10px;
+}
+.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-price {
+  padding: 20px;
+  overflow: hidden;
+}
+.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-price .t-changes,
+.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-price .t-details {
+  float: left;
+  font-size: 14px;
+  padding: 8px  20px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+}
+.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-price .t-details {
+  margin-left: 10px;
+}
+.rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-price .total-price {
+  float: right;
+  font-size: 20px;
+  font-weight: bold;
+}
+.rightInfo .ticket-wrapper .ticket-content-wrap .t-inner-gray {
+  color: #ccc;
+}
+.rightInfo .ticket-wrapper .ticket-content-wrap .t-inner-gray .b-content-middle .iconImg {
+  display: none;
+}
+.rightInfo .ticket-wrapper .ticket-content-wrap .t-inner-gray .t-changes,
+.rightInfo .ticket-wrapper .ticket-content-wrap .t-inner-gray .t-details {
+  background: #f2f2f2;
+}
+.rightInfo .ticket-wrapper .ticket-content-wrap .t-inner-valid {
+  color: #808080;
+}
+.rightInfo .ticket-wrapper .ticket-content-wrap .t-inner-valid .orderNum span {
+  color: #1f2c5c;
+}
+.rightInfo .ticket-wrapper .ticket-content-wrap .t-inner-valid .from-time,
+.rightInfo .ticket-wrapper .ticket-content-wrap .t-inner-valid .to-time {
+  color: #8ec060;
+}
+.rightInfo .ticket-wrapper .ticket-content-wrap .t-inner-valid .from-code,
+.rightInfo .ticket-wrapper .ticket-content-wrap .t-inner-valid .to-code,
+.rightInfo .ticket-wrapper .ticket-content-wrap .t-inner-valid .from-local,
+.rightInfo .ticket-wrapper .ticket-content-wrap .t-inner-valid .to-local {
+  color: #1f2c5c;
+}
+.rightInfo .ticket-wrapper .ticket-content-wrap .t-inner-valid .ticket-flight > div {
+  color: #1a1a1a;
+  font-weight: bold;
+}
+.rightInfo .ticket-wrapper .ticket-content-wrap .t-inner-valid .ticket-flight > div p span {
+  color: #808080;
+  font-weight: normal;
+}
+.rightInfo .ticket-wrapper .ticket-content-wrap .t-inner-valid .b-content-middle .iconImg-gray {
+  display: none;
+}
+.rightInfo .ticket-wrapper .ticket-content-wrap .t-inner-valid .t-changes {
+  background: #8ec060;
+  color: #fff;
+}
+.rightInfo .ticket-wrapper .ticket-content-wrap .t-inner-valid .t-details {
+  background: #1f2c5c;
+  color: #fff;
+}
+.rightInfo .ticket-wrapper .ticket-content-wrap .t-inner-valid .total-price {
+  color: #d0011b;
+}
+.rightInfo .myTravel-wrapper .myTravel {
+  display: none;
+  min-height: 230px;
+}
+.rightInfo .myTravel-wrapper .myTravel > li {
+  float: left;
+  width: 25%;
+  margin-top: 20px;
+  padding-left: 1%;
+  padding-right: 1%;
+  border-radius: 4px;
+  padding: 10px;
+  cursor: pointer;
+}
+.rightInfo .myTravel-wrapper .myTravel > li > h2 {
+  width: 100%;
+  height: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  background: -webkit-linear-gradient(0deg, #81E5FE 0%, #1639AE 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+}
+.rightInfo .myTravel-wrapper .myTravel > li > img {
+  width: 100%;
+}
+.rightInfo .myTravel-wrapper .myTravel > li > p {
+  color: #3772D5;
+  margin-top: 10px;
+  overflow: hidden;
+}
+.rightInfo .myTravel-wrapper .myTravel > li > p .m-s5-local,
+.rightInfo .myTravel-wrapper .myTravel > li > p .s1 {
+  float: left;
+}
+.rightInfo .myTravel-wrapper .myTravel > li > p .m-s5-see,
+.rightInfo .myTravel-wrapper .myTravel > li > p .s2 {
+  float: right;
+}
+.rightInfo .myTravel-wrapper .myTravel > li > p .m-s5-local {
+  margin-top: 3px;
+  margin-right: 6px;
+}
+.rightInfo .myTravel-wrapper .myTravel > li > p .m-s5-see {
+  margin-top: 5px;
+  margin-left: 6px;
+}
+.rightInfo .myTravel-wrapper .myTravel > li:hover {
+  box-shadow: 0 0 30px 0 #aac7f9;
+  transition: all .6s;
+  -webkit-transition: all .6s;
+}
+/* 配置屏幕 针对小屏幕*/
+@media screen and (max-width: 992px) {
+  .personalCenter-wrapper {
+    width: 100%;
+    margin-top: 0.4rem;
+  }
+  .personalCenter-wrapper .blur-box {
+    width: 100%;
+  }
+  .personalCenter-wrapper .personalCenter-content .cartSelect,
+  .personalCenter-wrapper .personalCenter-content .partingLine {
+    display: none;
+  }
+  .personalCenter-wrapper .personalCenter-content .headPortrait {
+    position: relative;
+    width: 50%;
+    height: 162px;
+    padding-left: 0;
+  }
+  .personalCenter-wrapper .personalCenter-content .headPortrait .headPortraitTitle {
+    position: absolute;
+    right: 20px;
+  }
+  .personalCenter-wrapper .personalCenter-content .headPortrait > h2 {
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+  }
+  .personalCenter-wrapper .personalCenter-content .personalInfo {
+    width: 50%;
+    padding-left: 20px;
+  }
+  .personalInfo-wrapper {
+    width: 100%;
+    margin: 20px auto 20px;
+  }
+  .personalInfo-wrapper .asideInfo {
+    float: none;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    padding-top: 0;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  .personalInfo-wrapper .asideInfo .infoContent {
+    overflow: hidden;
+  }
+  .personalInfo-wrapper .asideInfo .infoContent > li {
+    width: 25%;
+    float: left;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .personalInfo-wrapper .asideInfo .infoContent > li a {
+    padding-left: 0;
+  }
+  .personalInfo-wrapper .rightInfo {
+    float: none;
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+  }
+  .personalInfo-wrapper .rightInfo .ticket-wrapper .ticket-title > li > a {
+    display: block;
+  }
+  .personalInfo-wrapper .rightInfo .ticket-wrapper .ticket-search {
+    margin-top: 20px;
+  }
+  .personalInfo-wrapper .rightInfo .ticket-wrapper .ticket-content-wrap {
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .rightInfo .ticket-wrapper .ticket-search > li {
+    width: 100%;
+  }
+  .rightInfo .ticket-wrapper .ticket-search > .n2 {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  .rightInfo .ticket-wrapper .ticket-search > .n3 {
+    margin-left: 0;
+    padding-top: 10px;
+  }
+  .personalInfo-wrapper .asideInfo .infoContent li {
+    width: 33.33%;
+  }
+  .personalCenter-wrapper .personalCenter-content .headPortrait {
+    position: static;
+    width: auto;
+    padding-left: 0.2rem;
+  }
+  .personalCenter-wrapper .personalCenter-content .headPortrait .headPortraitTitle {
+    position: relative;
+  }
+  .personalCenter-wrapper .personalCenter-content .headPortrait > h2 {
+    position: static;
+    left: 0.2rem;
+  }
+  .personalCenter-wrapper .personalCenter-content .personalInfo {
+    width: auto;
+    padding-left: 0.2rem;
+  }
+}
+@media screen and (max-width: 560px) {
+  .personalInfo-wrapper .asideInfo .infoContent li {
+    height: 0.3rem;
+  }
+  .personalInfo-wrapper .asideInfo .infoContent li a {
+    font-size: 0.14rem;
+    height: 0.3rem;
+    line-height: 0.3rem;
+  }
+  .personalInfo-wrapper .rightInfo .ticket-wrapper .ticket-title > li > a {
+    font-size: 0.12rem;
+  }
+  .personalInfo-wrapper .rightInfo .ticket-wrapper .ticket-search {
+    margin-top: 0.1rem;
+  }
+  .rightInfo .ticket-wrapper .ticket-search > li p {
+    font-size: 0.12rem;
+  }
+  .rightInfo .ticket-wrapper .ticket-search > li p img {
+    width: 0.2rem;
+  }
+  .personalInfo-wrapper .rightInfo .ticket-wrapper .ticket-content-wrap {
+    margin-top: 0.1rem;
+  }
+  .rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-price .t-changes,
+  .rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-price .t-details,
+  .rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-price .total-price {
+    float: none;
+  }
+  .rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-price .total-price {
+    margin-top: 0.1rem;
+  }
+  .b-content-middle img {
+    width: 100%;
+  }
+  .personal-ticket img,
+  .ticket-order img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 460px) {
+  .personalCenter-wrapper .personalCenter-content .personalInfo {
+    display: none;
+  }
+  .personalCenter-wrapper .personalCenter-content .headPortrait {
+    width: 100%;
+    padding-left: 0;
+  }
+  .personalCenter-wrapper .personalCenter-content .headPortrait .headPortraitTitle {
+    position: absolute;
+    left: 50%;
+    margin-left: -55px;
+  }
+  .personalCenter-wrapper .personalCenter-content .headPortrait > h2 {
+    position: absolute;
+    left: 50%;
+    bottom: 36px;
+    margin-left: -55px;
+  }
+  .ticket-content-inner {
+    margin-bottom: 0.2rem;
+  }
+  .rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-title {
+    height: auto;
+    padding: 0 0.1rem;
+  }
+  .rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-title .orderNum,
+  .rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-title .orderDate {
+    float: none;
+  }
+  .rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-content {
+    margin-top: 0.1rem;
+    padding-bottom: 0.1rem;
+  }
+  .rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-flight {
+    padding: 0.1rem;
+  }
+  .rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-content .b-content-left .from-time {
+    font-size: 0.14rem;
+  }
+  .rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-content .b-content-right .to-time {
+    font-size: 0.14rem;
+  }
+  .rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-content .b-content-left .from-code {
+    font-size: 0.26rem;
+  }
+  .rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-content-box .c-box-content .b-content-right .to-code {
+    font-size: 0.26rem;
+  }
+  .rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-price {
+    padding: 0.1rem;
+    padding-left: 0;
+  }
+  .rightInfo .ticket-wrapper .ticket-content-wrap .ticket-content-inner .ticket-price .t-details {
+    margin-left: 0;
+  }
+}

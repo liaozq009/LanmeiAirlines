@@ -1,0 +1,162 @@
+/* 定义颜色变量 */
+.newsInfoWrapper {
+  width: 960px;
+  margin: 0 auto;
+  padding: 0 10px;
+  margin-top: 50px;
+}
+.newsInfoWrapper .newsInfoMain {
+  overflow: hidden;
+  width: 100%;
+}
+.newsInfoWrapper .newsInfoMain .dateInfoTitle {
+  overflow: hidden;
+  float: left;
+  width: 450px;
+  margin-bottom: 100px;
+}
+.newsInfoWrapper .newsInfoMain .dateInfoTitle > h2 {
+  font-size: 24px;
+  color: #1f2c5c;
+  margin-bottom: 20px;
+}
+.newsInfoWrapper .newsInfoMain .dateInfoTitle > img {
+  margin-bottom: 20px;
+}
+.newsInfoWrapper .newsInfoMain .dateInfoTitle > p {
+  float: left;
+  color: #ccc;
+  font-size: 14px;
+}
+.newsInfoWrapper .newsInfoMain .dateInfoTitle .p2 {
+  float: right;
+}
+.newsInfoWrapper .newsInfoMain .dateInfoTitle .p2 img {
+  margin-left: 10px;
+}
+.newsInfoWrapper .newsInfoMain .dateInfoTitle .p3 {
+  margin-left: 10px;
+}
+.newsInfoWrapper .newsInfoMain .rightImg {
+  float: right;
+  margin-left: 20px;
+  margin-bottom: 30px;
+}
+.newsInfoWrapper .newsInfoMain .content > p {
+  font-size: 16px;
+  color: #808080;
+  line-height: 26px;
+  margin-bottom: 20px;
+}
+.newsInfoWrapper .newsInfoMain .content > p img {
+  width: 100%;
+}
+.newsInfoWrapper .otherInfo {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  font-size: 14px;
+  overflow: hidden;
+}
+.newsInfoWrapper .otherInfo .Previous {
+  float: left;
+  cursor: pointer;
+  color: #cccccc;
+}
+.newsInfoWrapper .otherInfo .Previous img {
+  margin-right: 10px;
+}
+.newsInfoWrapper .otherInfo .Next {
+  float: right;
+  cursor: pointer;
+  color: #8ec060;
+}
+.newsInfoWrapper .otherInfo .Next img {
+  margin-left: 10px;
+}
+.pagination {
+  display: none;
+}
+/* 移动端新增代码 */
+.m-header {
+  display: none;
+}
+.lm-m-toTop {
+  display: none;
+}
+@media screen and (max-width: 992px) {
+  .lanmeiHeader {
+    display: none;
+  }
+  .footerInfo {
+    display: none;
+  }
+  .m-header {
+    display: block;
+    position: fixed;
+    top: 0;
+    z-index: 9;
+    width: 100%;
+    height: 0.4rem;
+    background: #1f2c5c;
+  }
+  .m-header i {
+    float: left;
+    color: #fff;
+    font-size: 0.16rem;
+    margin-top: 0.04rem;
+    margin-left: 0.1rem;
+  }
+  .m-header h2 {
+    width: 100%;
+    height: 0.4rem;
+    line-height: 0.4rem;
+    color: #fff;
+    font-size: 0.16rem;
+    text-align: center;
+  }
+  .newsInfoWrapper {
+    margin-top: 0.5rem;
+    width: 100%;
+    padding: 0 0.15rem;
+  }
+  .newsInfoWrapper .newsInfoMain .dateInfoTitle {
+    width: 100%;
+    margin-bottom: 0.2rem;
+  }
+  .newsInfoWrapper .newsInfoMain .dateInfoTitle > h2 {
+    font-size: 0.16rem;
+    margin-bottom: 0.1rem;
+  }
+  .newsInfoWrapper .newsInfoMain .dateInfoTitle > img {
+    width: 100%;
+    margin-bottom: 0.1rem;
+  }
+  .newsInfoWrapper .newsInfoMain .dateInfoTitle .p1,
+  .newsInfoWrapper .newsInfoMain .dateInfoTitle .p2,
+  .newsInfoWrapper .newsInfoMain .dateInfoTitle .p3 {
+    font-size: 0.12rem;
+  }
+  .newsInfoWrapper .newsInfoMain .rightImg {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 0.1rem;
+  }
+  .newsInfoWrapper .newsInfoMain > p {
+    margin-bottom: 0.1rem;
+    font-size: 0.12rem;
+    line-height: 0.2rem;
+  }
+  .newsInfoWrapper .newsInfoMain > p > img {
+    width: 100%;
+  }
+  .newsInfoWrapper .otherInfo {
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+  }
+  .newsInfoWrapper .otherInfo > div {
+    font-size: 0.14rem;
+  }
+  .newsInfoWrapper .otherInfo > div img {
+    width: 0.14rem;
+  }
+}

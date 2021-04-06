@@ -1,0 +1,1104 @@
+/* 定义颜色变量 */
+.buyTicketList .SelectFlight,
+.buyTicketList .PassengerInformation {
+  color: #1f2c5c;
+}
+/* 航班信息 */
+.flightInformationWrapper {
+  width: 960px;
+  padding: 0 10px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+.flightInformationWrapper .flightInformation {
+  border: 1px solid #ccc;
+}
+.flightInformationWrapper .flightInformation .flightInformationTitle {
+  height: 40px;
+  background: url(../../images/EN/flightInfoBg.png) no-repeat;
+}
+.flightInformationWrapper .flightInformation .flightInformationTitle h2 {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 30px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #ffffff;
+  background: rgba(142, 192, 96, 0.8);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#C88EC060", endColorstr="#C88EC060");
+}
+.flightInformationWrapper .flightInformation .flightInfoContent {
+  padding: 0px 30px;
+}
+.flightInformationWrapper .flightInformation .flightInfoContent .flightInfoContent1,
+.flightInformationWrapper .flightInformation .flightInfoContent .flightInfoContent2 {
+  height: 86px;
+  padding: 10px 0;
+}
+.flightInformationWrapper .flightInformation .flightInfoContent .flightInfoContent1 > div,
+.flightInformationWrapper .flightInformation .flightInfoContent .flightInfoContent2 > div {
+  float: left;
+}
+.flightInformationWrapper .flightInformation .flightInfoContent .flightInfoContent1 .flightInfo1,
+.flightInformationWrapper .flightInformation .flightInfoContent .flightInfoContent2 .flightInfo1,
+.flightInformationWrapper .flightInformation .flightInfoContent .flightInfoContent1 .flightInfo3,
+.flightInformationWrapper .flightInformation .flightInfoContent .flightInfoContent2 .flightInfo3 {
+  width: 230px;
+  height: 100%;
+}
+.flightInformationWrapper .flightInformation .flightInfoContent .flightInfoContent1 .flightInfo1 .p1,
+.flightInformationWrapper .flightInformation .flightInfoContent .flightInfoContent2 .flightInfo1 .p1,
+.flightInformationWrapper .flightInformation .flightInfoContent .flightInfoContent1 .flightInfo3 .p1,
+.flightInformationWrapper .flightInformation .flightInfoContent .flightInfoContent2 .flightInfo3 .p1 {
+  font-size: 14px;
+  color: #808080;
+  margin-bottom: 26px;
+}
+.flightInformationWrapper .flightInformation .flightInfoContent .flightInfoContent1 .flightInfo1 .p1 img,
+.flightInformationWrapper .flightInformation .flightInfoContent .flightInfoContent2 .flightInfo1 .p1 img,
+.flightInformationWrapper .flightInformation .flightInfoContent .flightInfoContent1 .flightInfo3 .p1 img,
+.flightInformationWrapper .flightInformation .flightInfoContent .flightInfoContent2 .flightInfo3 .p1 img {
+  margin-left: 30px;
+}
+.flightInformationWrapper .flightInformation .flightInfoContent .flightInfoContent1 .flightInfo1 .p1 span,
+.flightInformationWrapper .flightInformation .flightInfoContent .flightInfoContent2 .flightInfo1 .p1 span,
+.flightInformationWrapper .flightInformation .flightInfoContent .flightInfoContent1 .flightInfo3 .p1 span,
+.flightInformationWrapper .flightInformation .flightInfoContent .flightInfoContent2 .flightInfo3 .p1 span {
+  color: #8ec060;
+}
+.flightInformationWrapper .flightInformation .flightInfoContent .flightInfoContent1 .flightInfo2,
+.flightInformationWrapper .flightInformation .flightInfoContent .flightInfoContent2 .flightInfo2 {
+  width: 416px;
+  height: 100%;
+  position: relative;
+}
+.flightInformationWrapper .flightInformation .flightInfoContent .flightInfoContent1 .flightInfo2 .flightStart,
+.flightInformationWrapper .flightInformation .flightInfoContent .flightInfoContent2 .flightInfo2 .flightStart,
+.flightInformationWrapper .flightInformation .flightInfoContent .flightInfoContent1 .flightInfo2 .flightEnd,
+.flightInformationWrapper .flightInformation .flightInfoContent .flightInfoContent2 .flightInfo2 .flightEnd {
+  float: left;
+  width: 200px;
+  height: 100%;
+  line-height: 66px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  color: #1f2c5c;
+}
+.flightInformationWrapper .flightInformation .flightInfoContent .flightInfoContent1 .flightInfo2 img,
+.flightInformationWrapper .flightInformation .flightInfoContent .flightInfoContent2 .flightInfo2 img {
+  position: absolute;
+  top: 35%;
+  left: 44%;
+}
+.flightInformationWrapper .flightInformation .flightInfoContent .flightInfoContent1 .flightInfo3 .p1,
+.flightInformationWrapper .flightInformation .flightInfoContent .flightInfoContent2 .flightInfo3 .p1,
+.flightInformationWrapper .flightInformation .flightInfoContent .flightInfoContent1 .flightInfo3 .p2,
+.flightInformationWrapper .flightInformation .flightInfoContent .flightInfoContent2 .flightInfo3 .p2 {
+  text-align: right;
+}
+.flightInformationWrapper .flightInformation .flightInfoContent .flightInfoContent2 {
+  border-top: 1px dashed #ccc;
+}
+/* 乘客信息 */
+.passengerInfoWrite {
+  width: 960px;
+  margin: 0 auto;
+  padding: 0 10px;
+  margin-top: 50px;
+}
+.passengerInfoWrite input {
+  padding: 0 20px !important;
+}
+.passengerInfoWrite .passengerInfoTitle {
+  height: 36px;
+  line-height: 36px;
+  margin-bottom: 20px;
+}
+.passengerInfoWrite .passengerInfoTitle > h2 {
+  float: left;
+  font-weight: bold;
+  font-size: 20px;
+  color: #121c3e;
+  text-align: left;
+}
+.passengerInfoWrite .passengerInfoTitle > h2 img {
+  margin-right: 20px;
+}
+.passengerInfoWrite .passengerInfoTitle .warnTip {
+  float: left;
+  color: #d0011b;
+  margin-left: 30px;
+  text-align: left;
+}
+.passengerInfoWrite .PassengersCommon .PassengersTitleCommon {
+  position: relative;
+  background: #8ec060;
+  border-radius: 2px;
+  width: 940px;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 30px;
+  font-size: 14px;
+  color: #ffffff;
+  border-bottom-right-radius: 30px;
+  cursor: pointer;
+}
+.passengerInfoWrite .PassengersCommon .PassengersTitleCommon i {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 20px;
+  top: 0;
+}
+.passengerInfoWrite .PassengersCommon .PassengersTitleCommon .img01 {
+  background: url(../../images/EN/slideDown-icon.png) no-repeat 50%;
+}
+.passengerInfoWrite .PassengersCommon .PassengersTitleCommon .img02 {
+  background: url(../../images/EN/slideUp-icon.png) no-repeat 50%;
+}
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon {
+  padding-top: 20px;
+  overflow: hidden;
+}
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .nameSelect,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DocumentType,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .IssueAt,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .Nationality,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityDay,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityMon,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityYear,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthDay,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthMon,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthYear,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .FlyerCardNum,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .joinUs {
+  width: 300px;
+  height: 97px;
+  float: left;
+  position: relative;
+  margin-bottom: 20px;
+}
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .nameSelect p,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DocumentType p,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .IssueAt p,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .Nationality p,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityDay p,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityMon p,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityYear p,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthDay p,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthMon p,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthYear p,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .FlyerCardNum p,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .joinUs p {
+  font-weight: bold;
+  font-size: 14px;
+  color: #1f2c5c;
+}
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .nameSelect p b,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DocumentType p b,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .IssueAt p b,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .Nationality p b,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityDay p b,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityMon p b,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityYear p b,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthDay p b,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthMon p b,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthYear p b,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .FlyerCardNum p b,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .joinUs p b {
+  color: #8ec060;
+}
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .nameSelect input,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DocumentType input,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .IssueAt input,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .Nationality input,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityDay input,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityMon input,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityYear input,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthDay input,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthMon input,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthYear input,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .FlyerCardNum input,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .joinUs input {
+  margin-top: 10px;
+  border-bottom: none;
+  font-size: 14px;
+  color: #121c3e;
+  padding: 0 10px;
+  background: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 2px;
+  width: 300px;
+  height: 40px;
+  line-height: 40px;
+}
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .nameSelect > img,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DocumentType > img,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .IssueAt > img,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .Nationality > img,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityDay > img,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityMon > img,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityYear > img,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthDay > img,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthMon > img,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthYear > img,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .FlyerCardNum > img,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .joinUs > img {
+  position: absolute;
+  right: 10px;
+  top: 48px;
+}
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .nameSelect > ul,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DocumentType > ul,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .IssueAt > ul,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .Nationality > ul,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityDay > ul,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityMon > ul,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityYear > ul,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthDay > ul,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthMon > ul,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthYear > ul,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .FlyerCardNum > ul,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .joinUs > ul {
+  display: none;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 300px;
+  background: #fff;
+  border: 2px solid #8ec060;
+  z-index: 999;
+  border-top: none;
+  height: 130px;
+  overflow-y: scroll;
+}
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .nameSelect > ul > li,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DocumentType > ul > li,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .IssueAt > ul > li,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .Nationality > ul > li,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityDay > ul > li,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityMon > ul > li,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityYear > ul > li,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthDay > ul > li,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthMon > ul > li,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthYear > ul > li,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .FlyerCardNum > ul > li,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .joinUs > ul > li {
+  height: 40px;
+  line-height: 40px;
+}
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .nameSelect > ul > li a,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DocumentType > ul > li a,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .IssueAt > ul > li a,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .Nationality > ul > li a,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityDay > ul > li a,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityMon > ul > li a,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityYear > ul > li a,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthDay > ul > li a,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthMon > ul > li a,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthYear > ul > li a,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .FlyerCardNum > ul > li a,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .joinUs > ul > li a {
+  display: inline-block;
+  width: 100%;
+  heigth: 100%;
+  font-size: 14px;
+  padding: 0px 20px;
+}
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .nameSelect > ul > li a:hover,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DocumentType > ul > li a:hover,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .IssueAt > ul > li a:hover,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .Nationality > ul > li a:hover,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityDay > ul > li a:hover,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityMon > ul > li a:hover,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityYear > ul > li a:hover,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthDay > ul > li a:hover,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthMon > ul > li a:hover,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthYear > ul > li a:hover,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .FlyerCardNum > ul > li a:hover,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .joinUs > ul > li a:hover {
+  background: #8ec060;
+  color: #fff;
+}
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .nameSelect .DocumentTypeMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DocumentType .DocumentTypeMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .IssueAt .DocumentTypeMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .Nationality .DocumentTypeMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityDay .DocumentTypeMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityMon .DocumentTypeMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityYear .DocumentTypeMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthDay .DocumentTypeMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthMon .DocumentTypeMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthYear .DocumentTypeMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .FlyerCardNum .DocumentTypeMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .joinUs .DocumentTypeMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .nameSelect .IssueAtMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DocumentType .IssueAtMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .IssueAt .IssueAtMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .Nationality .IssueAtMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityDay .IssueAtMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityMon .IssueAtMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityYear .IssueAtMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthDay .IssueAtMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthMon .IssueAtMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthYear .IssueAtMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .FlyerCardNum .IssueAtMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .joinUs .IssueAtMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .nameSelect .NationalityMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DocumentType .NationalityMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .IssueAt .NationalityMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .Nationality .NationalityMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityDay .NationalityMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityMon .NationalityMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityYear .NationalityMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthDay .NationalityMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthMon .NationalityMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthYear .NationalityMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .FlyerCardNum .NationalityMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .joinUs .NationalityMenu {
+  width: 460px;
+}
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .nameSelect .PeriodValidityDayMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DocumentType .PeriodValidityDayMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .IssueAt .PeriodValidityDayMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .Nationality .PeriodValidityDayMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityDay .PeriodValidityDayMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityMon .PeriodValidityDayMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityYear .PeriodValidityDayMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthDay .PeriodValidityDayMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthMon .PeriodValidityDayMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthYear .PeriodValidityDayMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .FlyerCardNum .PeriodValidityDayMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .joinUs .PeriodValidityDayMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .nameSelect .PeriodValidityMonMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DocumentType .PeriodValidityMonMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .IssueAt .PeriodValidityMonMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .Nationality .PeriodValidityMonMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityDay .PeriodValidityMonMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityMon .PeriodValidityMonMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityYear .PeriodValidityMonMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthDay .PeriodValidityMonMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthMon .PeriodValidityMonMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthYear .PeriodValidityMonMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .FlyerCardNum .PeriodValidityMonMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .joinUs .PeriodValidityMonMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .nameSelect .PeriodValidityYearMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DocumentType .PeriodValidityYearMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .IssueAt .PeriodValidityYearMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .Nationality .PeriodValidityYearMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityDay .PeriodValidityYearMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityMon .PeriodValidityYearMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityYear .PeriodValidityYearMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthDay .PeriodValidityYearMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthMon .PeriodValidityYearMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthYear .PeriodValidityYearMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .FlyerCardNum .PeriodValidityYearMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .joinUs .PeriodValidityYearMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .nameSelect .DateBirthDayMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DocumentType .DateBirthDayMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .IssueAt .DateBirthDayMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .Nationality .DateBirthDayMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityDay .DateBirthDayMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityMon .DateBirthDayMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityYear .DateBirthDayMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthDay .DateBirthDayMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthMon .DateBirthDayMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthYear .DateBirthDayMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .FlyerCardNum .DateBirthDayMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .joinUs .DateBirthDayMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .nameSelect .DateBirthMonMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DocumentType .DateBirthMonMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .IssueAt .DateBirthMonMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .Nationality .DateBirthMonMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityDay .DateBirthMonMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityMon .DateBirthMonMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityYear .DateBirthMonMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthDay .DateBirthMonMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthMon .DateBirthMonMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthYear .DateBirthMonMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .FlyerCardNum .DateBirthMonMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .joinUs .DateBirthMonMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .nameSelect .DateBirthYearMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DocumentType .DateBirthYearMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .IssueAt .DateBirthYearMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .Nationality .DateBirthYearMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityDay .DateBirthYearMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityMon .DateBirthYearMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityYear .DateBirthYearMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthDay .DateBirthYearMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthMon .DateBirthYearMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthYear .DateBirthYearMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .FlyerCardNum .DateBirthYearMenu,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .joinUs .DateBirthYearMenu {
+  width: 140px;
+}
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .FirstName,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .LastName,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .IDNo,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .FlyerCardNum {
+  width: 300px;
+  height: 97px;
+  float: left;
+  position: relative;
+  margin-bottom: 20px;
+}
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .FirstName p,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .LastName p,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .IDNo p,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .FlyerCardNum p {
+  font-weight: bold;
+  font-size: 14px;
+  color: #1f2c5c;
+}
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .FirstName p b,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .LastName p b,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .IDNo p b,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .FlyerCardNum p b {
+  color: #8ec060;
+}
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .FirstName p span,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .LastName p span,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .IDNo p span,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .FlyerCardNum p span {
+  font-size: 14px;
+  color: #808080;
+}
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .FirstName input,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .LastName input,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .IDNo input,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .FlyerCardNum input {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #121c3e;
+  padding: 0 10px;
+  background: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 2px;
+  width: 300px;
+  height: 40px;
+}
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .FirstName .inputWrite,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .LastName .inputWrite,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .IDNo .inputWrite,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .FlyerCardNum .inputWrite {
+  border-color: #1f2c5c !important;
+}
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .FirstName .inputRight,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .LastName .inputRight,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .IDNo .inputRight,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .FlyerCardNum .inputRight {
+  border-color: #8ec060 !important;
+}
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .FirstName .inputError,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .LastName .inputError,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .IDNo .inputError,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .FlyerCardNum .inputError {
+  border-color: #d0011b !important;
+}
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .FirstName > span,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .LastName > span,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .IDNo > span,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .FlyerCardNum > span {
+  color: #d0011b;
+}
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .LastName {
+  margin: 0 20px 20px 20px;
+}
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DocumentType,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .IDNo,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .IssueAt,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .Nationality,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .FlyerCardNum {
+  width: 460px;
+}
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DocumentType input,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .IDNo input,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .IssueAt input,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .Nationality input,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .FlyerCardNum input {
+  width: 460px;
+}
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .IDNo,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .Nationality,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .joinUs {
+  margin-left: 20px;
+}
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityDay,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityMon,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityYear,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthDay,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthMon,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthYear {
+  width: 140px;
+}
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityDay input,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityMon input,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityYear input,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthDay input,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthMon input,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthYear input {
+  width: 140px;
+}
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityMon,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityYear,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthDay,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthMon,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthYear {
+  margin-left: 20px;
+}
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityMon p,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .PeriodValidityYear p,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthDay p,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthMon p,
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .DateBirthYear p {
+  height: 20px;
+}
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .joinUs {
+  width: 460px;
+}
+.passengerInfoWrite .PassengersCommon .PassengersContentCommon .joinUs a {
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  font-size: 14px;
+  color: #00908c;
+}
+.passengerInfoWrite .Passengers2 .PassengersTitleCommon {
+  background: #4aa374;
+}
+.passengerInfoWrite .Passengers3 .PassengersTitleCommon {
+  background: #00908c;
+}
+/* 联系 */
+.contactUsWrapper {
+  width: 960px;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 0 10px;
+}
+.contactUsWrapper .contactUsTitle {
+  height: 36px;
+  line-height: 36px;
+  margin-bottom: 20px;
+}
+.contactUsWrapper .contactUsTitle > h2 {
+  float: left;
+  font-weight: bold;
+  font-size: 20px;
+  color: #121c3e;
+  text-align: left;
+}
+.contactUsWrapper .contactUsTitle > h2 img {
+  margin-right: 20px;
+}
+.contactUsWrapper .contactUsContent {
+  overflow: hidden;
+}
+.contactUsWrapper .contactUsContent .countryMobileSelect {
+  width: 460px;
+  height: 97px;
+  position: relative;
+  margin-bottom: 20px;
+}
+.contactUsWrapper .contactUsContent .countryMobileSelect p {
+  font-weight: bold;
+  font-size: 14px;
+  color: #1f2c5c;
+}
+.contactUsWrapper .contactUsContent .countryMobileSelect p b {
+  color: #8ec060;
+}
+.contactUsWrapper .contactUsContent .countryMobileSelect input {
+  margin-top: 10px;
+  border-bottom: none;
+  font-size: 14px;
+  color: #121c3e;
+  padding: 0 10px;
+  background: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 2px;
+  width: 460px;
+  height: 40px;
+  line-height: 40px;
+}
+.contactUsWrapper .contactUsContent .countryMobileSelect > img {
+  position: absolute;
+  right: 10px;
+  top: 48px;
+}
+.contactUsWrapper .contactUsContent .countryMobileSelect .bottomLine {
+  width: 440px !important;
+}
+.contactUsWrapper .contactUsContent .countryMobileSelect > ul {
+  display: none;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 460px;
+  background: #fff;
+  border: 2px solid #8ec060;
+  z-index: 999;
+  border-top: none;
+  min-height: 130px;
+  max-height: 130px;
+  overflow-y: scroll;
+}
+.contactUsWrapper .contactUsContent .countryMobileSelect > ul > li {
+  height: 40px;
+  line-height: 40px;
+}
+.contactUsWrapper .contactUsContent .countryMobileSelect > ul > li a {
+  display: inline-block;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  padding: 0px 20px;
+}
+.contactUsWrapper .contactUsContent .countryMobileSelect > ul > li a:hover {
+  background: #8ec060;
+  color: #fff;
+}
+.contactUsWrapper .contactUsContent .contactMobile,
+.contactUsWrapper .contactUsContent .contactPasMobile,
+.contactUsWrapper .contactUsContent .contactEmail,
+.contactUsWrapper .contactUsContent .exampleTip {
+  width: 460px;
+  height: 97px;
+  float: left;
+  position: relative;
+  margin-bottom: 40px;
+}
+.contactUsWrapper .contactUsContent .contactMobile p,
+.contactUsWrapper .contactUsContent .contactPasMobile p,
+.contactUsWrapper .contactUsContent .contactEmail p,
+.contactUsWrapper .contactUsContent .exampleTip p {
+  font-weight: bold;
+  font-size: 14px;
+  color: #1f2c5c;
+}
+.contactUsWrapper .contactUsContent .contactMobile p b,
+.contactUsWrapper .contactUsContent .contactPasMobile p b,
+.contactUsWrapper .contactUsContent .contactEmail p b,
+.contactUsWrapper .contactUsContent .exampleTip p b {
+  color: #8ec060;
+}
+.contactUsWrapper .contactUsContent .contactMobile input,
+.contactUsWrapper .contactUsContent .contactPasMobile input,
+.contactUsWrapper .contactUsContent .contactEmail input,
+.contactUsWrapper .contactUsContent .exampleTip input {
+  margin: 10px 0;
+  border-bottom: none;
+  font-size: 14px;
+  color: #121c3e;
+  padding: 0 10px;
+  background: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 2px;
+  width: 460px;
+  height: 40px;
+}
+.contactUsWrapper .contactUsContent .contactMobile > span,
+.contactUsWrapper .contactUsContent .contactPasMobile > span,
+.contactUsWrapper .contactUsContent .contactEmail > span,
+.contactUsWrapper .contactUsContent .exampleTip > span {
+  color: #d0011b;
+}
+.contactUsWrapper .contactUsContent .exampleTip {
+  width: 460px;
+  margin-left: 20px;
+}
+.contactUsWrapper .contactUsContent .exampleTip span {
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  font-size: 14px;
+  color: #808080;
+}
+.contactUsWrapper .contactUsContent .emailExampleTip span {
+  color: #d0011b;
+  top: 28px;
+}
+.contactUsWrapper .contactUsContent .contactPassengers {
+  font-size: 14px;
+  color: #1f2c5c;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 10px;
+}
+.contactUsWrapper .contactUsContent .contactPassengers > span {
+  margin-right: 30px;
+}
+.contactUsWrapper .contactUsContent .contactPassengers label {
+  position: relative;
+}
+.contactUsWrapper .contactUsContent .contactPassengers label i {
+  display: inline-block;
+  border: 1px solid #1f2c5c;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: text-top;
+  cursor: pointer;
+}
+.contactUsWrapper .contactUsContent .contactPassengers label b {
+  display: none;
+  position: absolute;
+  left: 3px;
+  top: 5px;
+  background: #8ec060;
+  width: 11px;
+  height: 11px;
+  border-radius: 100%;
+}
+.contactUsWrapper .contactUsContent .contactPassengers .nth-child1 {
+  margin-right: 30px;
+}
+.contactUsWrapper .contactUsContent .contactPasMobile {
+  margin-bottom: 0;
+}
+.contactUsWrapper .contactUsContent .contactPasMobile p {
+  color: #808080;
+  font-weight: normal;
+}
+.contactUsWrapper .contactUsContent .mobilePasTip {
+  margin-bottom: 0;
+}
+/* 票价计算 */
+.ticketFareWrapper {
+  width: 960px;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 0 10px;
+}
+.ticketFareWrapper .ticketFareTitle {
+  height: 36px;
+  line-height: 36px;
+  margin-bottom: 20px;
+}
+.ticketFareWrapper .ticketFareTitle > h2 {
+  float: left;
+  font-weight: bold;
+  font-size: 20px;
+  color: #121c3e;
+  text-align: left;
+}
+.ticketFareWrapper .ticketFareTitle > h2 img {
+  margin-right: 20px;
+}
+.ticketFareWrapper .ticketFareContent .ticketFare,
+.ticketFareWrapper .ticketFareContent .fareInformation,
+.ticketFareWrapper .ticketFareContent .taxesSurcharges {
+  width: 960px;
+  margin: 0 auto;
+}
+.ticketFareWrapper .ticketFareContent .ticketFare .fareTitle,
+.ticketFareWrapper .ticketFareContent .fareInformation .fareTitle,
+.ticketFareWrapper .ticketFareContent .taxesSurcharges .fareTitle {
+  overflow: hidden;
+  padding: 0 30px;
+}
+.ticketFareWrapper .ticketFareContent .ticketFare .fareTitle h2,
+.ticketFareWrapper .ticketFareContent .fareInformation .fareTitle h2,
+.ticketFareWrapper .ticketFareContent .taxesSurcharges .fareTitle h2 {
+  float: left;
+  font-weight: bold;
+  font-size: 14px;
+  color: #1f2c5c;
+}
+.ticketFareWrapper .ticketFareContent .ticketFare .fareTitle p,
+.ticketFareWrapper .ticketFareContent .fareInformation .fareTitle p,
+.ticketFareWrapper .ticketFareContent .taxesSurcharges .fareTitle p {
+  float: right;
+  font-weight: bold;
+  font-size: 14px;
+  color: #8ec060;
+}
+.ticketFareWrapper .ticketFareContent .ticketFare .priceTitleComment,
+.ticketFareWrapper .ticketFareContent .fareInformation .priceTitleComment,
+.ticketFareWrapper .ticketFareContent .taxesSurcharges .priceTitleComment {
+  padding: 20px 30px 8px 40px;
+  overflow: hidden;
+}
+.ticketFareWrapper .ticketFareContent .ticketFare .priceTitleComment li,
+.ticketFareWrapper .ticketFareContent .fareInformation .priceTitleComment li,
+.ticketFareWrapper .ticketFareContent .taxesSurcharges .priceTitleComment li {
+  float: left;
+  font-size: 14px;
+  color: #808080;
+  width: 25%;
+  text-align: center;
+}
+.ticketFareWrapper .ticketFareContent .ticketFare .priceTitleComment .nth-child1,
+.ticketFareWrapper .ticketFareContent .fareInformation .priceTitleComment .nth-child1,
+.ticketFareWrapper .ticketFareContent .taxesSurcharges .priceTitleComment .nth-child1 {
+  text-align: left;
+}
+.ticketFareWrapper .ticketFareContent .ticketFare .priceTitleComment .nth-child4,
+.ticketFareWrapper .ticketFareContent .fareInformation .priceTitleComment .nth-child4,
+.ticketFareWrapper .ticketFareContent .taxesSurcharges .priceTitleComment .nth-child4 {
+  text-align: right;
+}
+.ticketFareWrapper .ticketFareContent .ticketFare .TicketDashedLine,
+.ticketFareWrapper .ticketFareContent .fareInformation .TicketDashedLine,
+.ticketFareWrapper .ticketFareContent .taxesSurcharges .TicketDashedLine {
+  text-align: center;
+}
+.ticketFareWrapper .ticketFareContent .ticketFare .priceContentComment,
+.ticketFareWrapper .ticketFareContent .fareInformation .priceContentComment,
+.ticketFareWrapper .ticketFareContent .taxesSurcharges .priceContentComment {
+  overflow: hidden;
+}
+.ticketFareWrapper .ticketFareContent .ticketFare .priceContentComment > ul,
+.ticketFareWrapper .ticketFareContent .fareInformation .priceContentComment > ul,
+.ticketFareWrapper .ticketFareContent .taxesSurcharges .priceContentComment > ul {
+  padding: 10px 30px 27px 40px;
+}
+.ticketFareWrapper .ticketFareContent .ticketFare .priceContentComment > ul li,
+.ticketFareWrapper .ticketFareContent .fareInformation .priceContentComment > ul li,
+.ticketFareWrapper .ticketFareContent .taxesSurcharges .priceContentComment > ul li {
+  float: left;
+  font-size: 14px;
+  width: 25%;
+  text-align: center;
+  font-weight: bold;
+  color: #666;
+}
+.ticketFareWrapper .ticketFareContent .ticketFare .priceContentComment > ul .nth-child1,
+.ticketFareWrapper .ticketFareContent .fareInformation .priceContentComment > ul .nth-child1,
+.ticketFareWrapper .ticketFareContent .taxesSurcharges .priceContentComment > ul .nth-child1 {
+  text-align: left;
+}
+.ticketFareWrapper .ticketFareContent .ticketFare .priceContentComment > ul .nth-child4,
+.ticketFareWrapper .ticketFareContent .fareInformation .priceContentComment > ul .nth-child4,
+.ticketFareWrapper .ticketFareContent .taxesSurcharges .priceContentComment > ul .nth-child4 {
+  text-align: right;
+}
+.ticketFareWrapper .ticketFareContent .fareInformation .fareInfoTitle .nth-child1 {
+  width: 30%;
+  text-align: left;
+}
+.ticketFareWrapper .ticketFareContent .fareInformation .fareInfoTitle .nth-child2,
+.ticketFareWrapper .ticketFareContent .fareInformation .fareInfoTitle .nth-child3 {
+  width: 18%;
+}
+.ticketFareWrapper .ticketFareContent .fareInformation .fareInfoTitle .nth-child4 {
+  width: 34%;
+  text-align: right;
+}
+.ticketFareWrapper .ticketFareContent .fareInformation .priceContentComment > ul .nth-child1 {
+  width: 30%;
+  text-align: left;
+}
+.ticketFareWrapper .ticketFareContent .fareInformation .priceContentComment > ul .nth-child2,
+.ticketFareWrapper .ticketFareContent .fareInformation .priceContentComment > ul .nth-child3 {
+  width: 18%;
+}
+.ticketFareWrapper .ticketFareContent .fareInformation .priceContentComment > ul .nth-child4 {
+  width: 34%;
+  text-align: right;
+}
+.ticketFareWrapper .ticketFareContent .taxesSurcharges .priceContentComment > ul .nth-child1 {
+  width: 50%;
+  text-align: left;
+}
+.ticketFareWrapper .ticketFareContent .taxesSurcharges .priceContentComment > ul .nth-child2 {
+  width: 50%;
+  text-align: right;
+}
+.ticketFareWrapper .ticketFareContent .promoCode {
+  width: 960px;
+  margin: 0 auto;
+  overflow: hidden;
+  height: 45px;
+  line-height: 45px;
+  padding: 0 30px;
+}
+.ticketFareWrapper .ticketFareContent .promoCode .discount {
+  float: left;
+  font-weight: bold;
+  font-size: 14px;
+  color: #1f2c5c;
+  line-height: 60px;
+}
+.ticketFareWrapper .ticketFareContent .promoCode .discount input {
+  background: #ffffff;
+  border: 1px solid #cccccc;
+  width: 238px;
+  height: 28px;
+  line-height: 28px;
+  margin-left: 10px;
+  padding: 0 5px;
+  vertical-align: text-bottom;
+}
+.ticketFareWrapper .ticketFareContent .promoCode .discountPrice {
+  float: left;
+  font-size: 14px;
+  line-height: 62px;
+  margin-left: 10px;
+  color: #d0011b;
+}
+.ticketFareWrapper .ticketFareContent .promoCode .totlePrice {
+  float: right;
+  font-weight: bold;
+  font-size: 14px;
+  color: #8ec060;
+}
+.ticketFareWrapper .ticketFareContent .promoCode .totlePrice h2 {
+  display: inline-block;
+  font-size: 36px;
+}
+/* 票价规则 */
+.flightRuleDetail {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+.flightRuleDetail > h2 {
+  font-weight: bold;
+  font-size: 14px;
+  color: #1f2c5c;
+  margin-bottom: 8px;
+}
+.flightRuleDetail > h2 a {
+  font-weight: bold;
+  font-size: 14px;
+  color: #00908c;
+}
+.flightRuleDetail .ruleContent .ruleContent1 {
+  margin-bottom: 30px;
+  padding: 0 10px;
+}
+.flightRuleDetail .ruleContent .ruleContent2 {
+  padding: 0 10px;
+}
+.flightRuleDetail .ruleContent h3 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #808080;
+}
+.flightRuleDetail .ruleContent p {
+  font-size: 14px;
+  color: #808080;
+}
+.flightRuleDetail .ruleContent span {
+  font-size: 14px;
+}
+/* 同意相关规定 */
+.statementWrapper {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.statementWrapper > h2 {
+  font-weight: bold;
+  font-size: 14px;
+  color: #1f2c5c;
+  margin-left: -10px;
+}
+.statementWrapper .agree {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.statementWrapper .agree b {
+  color: #8ec060;
+}
+.statementWrapper .agree input {
+  background: #ffffff;
+  border: 1px solid #8ec060;
+  border-radius: 1px;
+  width: 18px;
+  height: 18px;
+  margin: 0 10px;
+}
+.statementWrapper .agree span {
+  font-weight: bold;
+  font-size: 18px;
+  color: #666666;
+}
+.statementWrapper .p1 {
+  font-size: 14px;
+  color: #666666;
+  line-height: 20px;
+}
+.statementWrapper .p1 a {
+  color: #00908c;
+}
+.statementWrapper .p2 {
+  font-size: 14px;
+  color: #666666;
+  line-height: 20px;
+}
+.statementWrapper .p2 a {
+  color: #8ec060;
+}
+.statementWrapper .p3 {
+  font-size: 14px;
+  color: #d0011b;
+  line-height: 20px;
+}
+.statementWrapper .nextBtn {
+  overflow: hidden;
+  margin-bottom: 70px;
+  margin-top: 80px;
+}
+.statementWrapper .nextBtn a {
+  position: relative;
+  float: right;
+  display: inline-block;
+  background: #8ec060;
+  border-radius: 2px;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+}
+.statementWrapper .nextBtn a img {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+/* 修改公共样式 */
+.flightSelectWrapper .flightSelectCommon {
+  margin-bottom: 50px;
+}
+/* 配置屏幕 针对小屏幕*/
+html {
+  font-size: 100px;
+}
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 50px;
+  }
+}
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 64px;
+  }
+}
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 82px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 100px;
+  }
+}
+@media (max-width: 980px), (max-device-width: 980px) {
+  .s-type {
+    display: inline-block;
+    width: 2.5rem;
+    height: 1.1rem;
+    line-height: 1.1rem;
+    color: black;
+  }
+}

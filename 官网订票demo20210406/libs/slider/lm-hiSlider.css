@@ -1,0 +1,85 @@
+*{
+    box-sizing: border-box;
+}
+.hiSlider{
+    overflow: hidden;
+    background: #eee;
+}
+.hiSlider-item{
+    width: 100%;
+    float: left;
+}
+.hiSlider-item img{
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+/* jquery.hiSlider.css */
+.hiSlider-pages,
+.hiSlider-title{
+    position: absolute;
+    z-index: 3;
+}
+
+.hiSlider-btn-prev{
+    position: absolute;
+    z-index: 99;
+    bottom:10px;
+    left: 50%;
+    height: 48px;
+    width: 48px;
+    margin-left: -125px;
+    opacity: 0.5;
+}
+.hiSlider-btn-next{
+    position: absolute;
+    z-index: 99;
+    bottom:10px;
+    right: 50%;
+    height: 48px;
+    width: 48px;
+    margin-right: -125px;
+    opacity: 0.5;
+}
+.hiSlider-btn-prev:hover,
+.hiSlider-btn-next:hover{
+    opacity: 0.9;
+}
+.hiSlider-title{
+    bottom: 0;
+    width: 100%;
+    padding: 6px 0;
+    color: #fff;
+    text-indent: 10px;
+    background: rgba(0,0,0,.6);
+    z-index: 2;
+    font: 14px/2 "Microsoft YaHei", "Arial", "Tahoma"
+}
+.hiSlider-pages{
+    bottom: 20px;
+    left: 50%;
+    margin-left: -78px;
+    text-align: right;
+}
+.hiSlider-pages a{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 1px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #000 \9;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid #fff;
+    border-radius: 10px;
+    margin: 1px 12px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16);
+}
+.hiSlider-pages a.active{
+    width: 30px;
+    height: 14px;
+    background: #8EC060;
+    border-color: #8EC060;
+}
