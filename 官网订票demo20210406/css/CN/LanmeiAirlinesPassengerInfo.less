@@ -139,7 +139,7 @@
 		}
 		.PassengersContentCommon{
 			padding-top: 20px;
-			overflow: hidden;
+			// overflow: hidden;
 			.nameSelect,.DocumentType,.IssueAt,.Nationality,.PeriodValidityDay,.PeriodValidityMon,.PeriodValidityYear,.DateBirthDay,.DateBirthMon,.DateBirthYear,.FlyerCardNum,.joinUs{
 				width: 300px;
 				height: 97px;
@@ -276,6 +276,78 @@
 	}
 	.Passengers3{
 		.PassengersTitleCommon{background:#00908c;}
+	}
+}
+
+/* 航班保险 */
+.insurance-box {
+	font-size: 14px;
+	margin-bottom: 20px;
+	.content {
+		position: relative;
+		display: inline-block;
+		margin-right: 10px;
+		span {
+			color: @link;
+		}
+		img {
+			width: 20px;
+			cursor: pointer;
+		}
+	}
+	.detail {
+		position: relative;
+		display: inline-block;
+		.arrow {
+			display: none;
+			position: absolute;
+			left: 20px;
+			top: 50%;
+			margin-top: -10px;
+			width: 0;
+			height: 0;
+			border-top: 8px solid transparent;
+			border-right: 8px solid #4aa374;
+			border-bottom: 8px solid transparent;
+			z-index: 9;
+		}
+		.tooltip-box {
+			display: none;
+			position: absolute;
+			left: 28px;
+			top: -14px;
+			width: 500px;
+			.tooltip-content {
+				background-color: #ffffff;
+				border: 2px solid @link;
+				position: relative;
+				z-index: 9;
+				border-radius:3px;
+				padding: 10px;
+			}
+			table {
+				width: 100%;
+				th {
+					padding: 10px;
+				}
+				td {
+					border-top: 1px dashed #4aa374;
+					padding: 10px;
+				}
+			}
+		}
+		&:hover {
+			.arrow, .tooltip-box {
+				display: block;
+			}
+		}
+	}
+	.price {
+		color: @red;
+		margin-right: 10px;
+	}
+	.txt {
+		display: inline-block;
 	}
 }
 

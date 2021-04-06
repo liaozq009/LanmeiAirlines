@@ -26,7 +26,7 @@
   font-size: 20px;
   color: #ffffff;
   background: rgba(142, 192, 96, 0.8);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#C88EC060, 60, endColorstr=#C88EC060, 60);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#C88EC060, endColorstr=#C88EC060);
 }
 .flightInformationWrapper .flightInformation .flightInfoContent {
   padding: 0px 30px;
@@ -161,7 +161,6 @@
 }
 .passengerInfoWrite .PassengersCommon .PassengersContentCommon {
   padding-top: 20px;
-  overflow: hidden;
 }
 .passengerInfoWrite .PassengersCommon .PassengersContentCommon .nameSelect,
 .passengerInfoWrite .PassengersCommon .PassengersContentCommon .DocumentType,
@@ -571,6 +570,76 @@
 }
 .passengerInfoWrite .Passengers3 .PassengersTitleCommon {
   background: #00908c;
+}
+/* 航班保险 */
+.insurance-box {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.insurance-box .content {
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+}
+.insurance-box .content span {
+  color: #4aa374;
+}
+.insurance-box .content img {
+  width: 20px;
+  cursor: pointer;
+}
+.insurance-box .detail {
+  position: relative;
+  display: inline-block;
+}
+.insurance-box .detail .arrow {
+  display: none;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  margin-top: -10px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-right: 8px solid #4aa374;
+  border-bottom: 8px solid transparent;
+  z-index: 9;
+}
+.insurance-box .detail .tooltip-box {
+  display: none;
+  position: absolute;
+  left: 28px;
+  top: -14px;
+  width: 500px;
+}
+.insurance-box .detail .tooltip-box .tooltip-content {
+  background-color: #ffffff;
+  border: 2px solid #4aa374;
+  position: relative;
+  z-index: 9;
+  border-radius: 3px;
+  padding: 10px;
+}
+.insurance-box .detail .tooltip-box table {
+  width: 100%;
+}
+.insurance-box .detail .tooltip-box table th {
+  padding: 10px;
+}
+.insurance-box .detail .tooltip-box table td {
+  border-top: 1px dashed #4aa374;
+  padding: 10px;
+}
+.insurance-box .detail:hover .arrow,
+.insurance-box .detail:hover .tooltip-box {
+  display: block;
+}
+.insurance-box .price {
+  color: #d0011b;
+  margin-right: 10px;
+}
+.insurance-box .txt {
+  display: inline-block;
 }
 /* 联系 */
 .contactUsWrapper {
