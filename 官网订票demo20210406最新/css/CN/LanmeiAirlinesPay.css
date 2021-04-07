@@ -51,23 +51,23 @@
 }
 .passengerInfoDetail .passengerInfoDetailContent .passenger1 h2 {
   background: rgba(142, 192, 96, 0.7);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#B28EC060, 60, endColorstr=#B28EC060, 60);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#B28EC060, endColorstr=#B28EC060);
 }
 .passengerInfoDetail .passengerInfoDetailContent .passenger2 h2 {
   background: rgba(73, 163, 116, 0.7);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#B249A374, 74, endColorstr=#B249A374, 74);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#B249A374, endColorstr=#B249A374);
 }
 .passengerInfoDetail .passengerInfoDetailContent .passenger3 h2 {
   background: rgba(0, 144, 140, 0.7);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#B200908C, 8C, endColorstr=#B200908C, 8C);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#B200908C, endColorstr=#B200908C);
 }
 .passengerInfoDetail .passengerInfoDetailContent .passenger4 h2 {
   background: rgba(0, 108, 147, 0.7);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#B2006C93, 93, endColorstr=#B2006C93, 93);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#B2006C93, endColorstr=#B2006C93);
 }
 .passengerInfoDetail .passengerInfoDetailContent .passenger5 h2 {
   background: rgba(0, 64, 144, 0.7);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#B2004090, 90, endColorstr=#B2004090, 90);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#B2004090, endColorstr=#B2004090);
 }
 .passengerInfoDetail .contactInformation {
   padding-bottom: 20px;
@@ -157,6 +157,34 @@
   width: 50%;
   margin-bottom: 10px;
   text-align: center;
+}
+.ticketFareWrapper .ticketFareContent .ticketFare > ul .nth-child0,
+.ticketFareWrapper .ticketFareContent .fareInformation > ul .nth-child0,
+.ticketFareWrapper .ticketFareContent .taxesSurcharges > ul .nth-child0 {
+  color: #666;
+  font-size: 16px;
+}
+.ticketFareWrapper .ticketFareContent .ticketFare > ul .nth-child0-1,
+.ticketFareWrapper .ticketFareContent .fareInformation > ul .nth-child0-1,
+.ticketFareWrapper .ticketFareContent .taxesSurcharges > ul .nth-child0-1,
+.ticketFareWrapper .ticketFareContent .ticketFare > ul .nth-child0-3,
+.ticketFareWrapper .ticketFareContent .fareInformation > ul .nth-child0-3,
+.ticketFareWrapper .ticketFareContent .taxesSurcharges > ul .nth-child0-3,
+.ticketFareWrapper .ticketFareContent .ticketFare > ul .nth-child0-5,
+.ticketFareWrapper .ticketFareContent .fareInformation > ul .nth-child0-5,
+.ticketFareWrapper .ticketFareContent .taxesSurcharges > ul .nth-child0-5 {
+  text-align: left;
+}
+.ticketFareWrapper .ticketFareContent .ticketFare > ul .nth-child0-2,
+.ticketFareWrapper .ticketFareContent .fareInformation > ul .nth-child0-2,
+.ticketFareWrapper .ticketFareContent .taxesSurcharges > ul .nth-child0-2,
+.ticketFareWrapper .ticketFareContent .ticketFare > ul .nth-child0-4,
+.ticketFareWrapper .ticketFareContent .fareInformation > ul .nth-child0-4,
+.ticketFareWrapper .ticketFareContent .taxesSurcharges > ul .nth-child0-4,
+.ticketFareWrapper .ticketFareContent .ticketFare > ul .nth-child0-6,
+.ticketFareWrapper .ticketFareContent .fareInformation > ul .nth-child0-6,
+.ticketFareWrapper .ticketFareContent .taxesSurcharges > ul .nth-child0-6 {
+  text-align: right;
 }
 .ticketFareWrapper .ticketFareContent .ticketFare .priceTitleComment,
 .ticketFareWrapper .ticketFareContent .fareInformation .priceTitleComment,
