@@ -1121,23 +1121,6 @@ input.active {
 .flightSelectWrapper .flightSelectCommon .flightListCommon .flightListCommonRight > .nth-child3 .p2 span {
   color: #808080;
 }
-.flightSelectWrapper .flightSelectCommon .flightListCommon .flightListCommonLeft > .nth-child3 .p2 > p,
-.flightSelectWrapper .flightSelectCommon .flightListCommon .flightListCommonRight > .nth-child3 .p2 > p {
-  font-size: 14px;
-  display: inline-block;
-  margin-right: 10px;
-}
-.flightSelectWrapper .flightSelectCommon .flightListCommon .flightListCommonLeft > .nth-child3 .p2 > p span,
-.flightSelectWrapper .flightSelectCommon .flightListCommon .flightListCommonRight > .nth-child3 .p2 > p span {
-  color: #00908c;
-  font-weight: bold;
-}
-.flightSelectWrapper .flightSelectCommon .flightListCommon .flightListCommonLeft > .nth-child3 .p2 .s1 span,
-.flightSelectWrapper .flightSelectCommon .flightListCommon .flightListCommonRight > .nth-child3 .p2 .s1 span,
-.flightSelectWrapper .flightSelectCommon .flightListCommon .flightListCommonLeft > .nth-child3 .p2 .s2 span,
-.flightSelectWrapper .flightSelectCommon .flightListCommon .flightListCommonRight > .nth-child3 .p2 .s2 span {
-  color: #8ec060;
-}
 .flightSelectWrapper .flightSelectCommon .flightListCommon .flightListCommonLeft > .nth-child4,
 .flightSelectWrapper .flightSelectCommon .flightListCommon .flightListCommonRight > .nth-child4 {
   position: absolute;
